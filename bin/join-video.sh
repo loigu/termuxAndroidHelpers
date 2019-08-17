@@ -1,5 +1,8 @@
 #! /bin/bash
 
+if [ -z "$1" ]; then
+	echo "$0 first second [out]"
+	exit 0
 i="$1"
 j="$2"
 out="$3"

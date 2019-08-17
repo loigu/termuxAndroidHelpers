@@ -1,5 +1,11 @@
 #!/bin/bash
 
+
+if [ -z "$1" ]; then
+echo "$0 <fn in format 190707_0819_2> <from> <to> <label>"
+	exit 0
+fi
+
 base="$(pwd)"
 
 pref=/data/data/com.termux/files/home/audiobooks/recordings/shwe-oo-min/
