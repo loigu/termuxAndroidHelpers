@@ -19,6 +19,9 @@ to="$2"
 [ -z "${to}" ] && to=$(dirname "$1")/clean-$(basename "${1%.*}").mp3
 
 ffmpeg ${extra} -i "${from}" -codec:a libmp3lame -ac 1 -ar 16000 -q:a ${quality} -map 0 -af "lowpass=f=${lowpass},highpass=f=${highpass}" "${to}"
+ret=$?
 
 [ "$?" = 0 -a "${inplace}" = 1 ] && mv "${to}" "${from}"
+
+exit $ret
 
