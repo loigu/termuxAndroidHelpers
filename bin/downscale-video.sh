@@ -5,7 +5,7 @@ O="$2"
 [ -z "$O" ] && O="small-$I"
 
 [ -z "$bitrate" ] && bitrate=600k
-[ -z "$res" ] && res=854:480
+[ -z "$res" ] && res=854:-1
 
 ffmpeg -i "$I" -codec:v libx264 -tune zerolatency -preset slow -profile:v high -b:v $bitrate -maxrate $bitrate -bufsize 15000k -pix_fmt yuv420p -vf fps=fps=20,scale=$res -pass 1 -g 30 -bf 2 -an -f mp4 ${extra} /dev/null
 
