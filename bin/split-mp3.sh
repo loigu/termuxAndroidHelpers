@@ -3,7 +3,7 @@
 function print_help()
 {
 	echo $(basename "$0") '<infile> <time> [out1 out2]'
-	echo $(basename "$0") '-m <infile> <time1> [time2 time3 ...]'
+	echo $(basename "$0") '-m <infile> <outfile_prefix> <counter_start> <time1> [time2 time3 ...]'
 }
 
 if [ "$1" = '-h' -o -z "$1" ]; then
@@ -11,27 +11,23 @@ if [ "$1" = '-h' -o -z "$1" ]; then
 	exit 1
 fi
 
-function segment_name()
-{
-	echo "${1%.*}_$2.${1##*.}"
-}
-
-
 if [ "$1" = '-m' ]; then
 	shift
 	in="$1"
-	shift
+	outPrefix="$2"
+	i="$3"
+	shift 3
 
-	i=0
+	suffix="${in##*.}"
 	begin=0
 	for end in $*; do
-		out=$(segment_name "$in" $i)
+		out="${outPrefix}_$i.${suffix}"
 		ffmpeg -i "$in" -codec copy -ss "$begin" -to "$end" "${out}"
 
 		i=$(expr $i + 1)
 		begin="$end"
 	done
-	out=$(segment_name "$in" $i)
+	out="${outPrefix}_$i.${suffix}"
 	ffmpeg -i "$in" -codec copy -ss "$begin" "$out"
 else
 	in="$1"
