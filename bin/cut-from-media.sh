@@ -10,7 +10,7 @@ st="$2"
 end="$3"
 
 out="$4"
-[ -z "${out}" ] && out="${in%.*}_1.mp3"
+[ -z "${out}" ] && out="${in%.*}_1.${in##*.}"
 
-ffmpeg $extra -i "${in}" -acodec copy -ss "${st}" -to "${end}" "${out}"
+ffmpeg $extra -i "${in}" -codec copy -ss "${st}" -to "${end}" "${out}"
 
