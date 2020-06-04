@@ -9,7 +9,10 @@ shift 3
 
 split-mp3.sh -m "$in" "$rulePrefix" "$ruleIndex" "$@"
 
-for f in ${rulePrefix}*.mp3; do 
-	id3v2 -a 'ajahn khemmanando' -A 'per rule patimokkha' -t "${f%%.*}" "$f"
+COUNT=$(ls -1 ${rulePrefix}*.mp3 | wc -l)
+
+for f in ${rulePrefix}*.mp3; do
+	i=$(echo $f | sed -e "s/${rulePrefix}[^0-9]*\([0-9]*\).*/\1/")
+	id3v2 -a 'ajahn khemmanando' -T $i/$COUNT -A 'per rule patimokkha' -t "${f%%.*}" "$f"
 done
 
