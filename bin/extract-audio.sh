@@ -1,5 +1,7 @@
 #!/bin/bash
 
+[ "$1" = '-h' ] && echo $(basename "$0")" <from> <to>" && exit 0 
+
 from="$1"
 to="$2"
 if [ -z "${to}" ]; then
