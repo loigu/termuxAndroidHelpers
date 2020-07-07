@@ -6,11 +6,11 @@ if [ -z "$1" ]; then
 fi
 
 in="$1"
-st="$2"
-end="$3"
+st="-ss $2"
+[ "$3" != "-1" ] && end="-to $3"
 
 out="$4"
 [ -z "${out}" ] && out="${in%.*}_1.mp3"
 
-ffmpeg $extra -i "${in}" -acodec copy -ss "${st}" -to "${end}" "${out}"
+ffmpeg $extra -i "${in}" -acodec copy ${st} ${end} "${out}"
 
