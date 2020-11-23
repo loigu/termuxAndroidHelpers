@@ -1,13 +1,48 @@
 #!/bin/bash
 
-in="$1"
-st="$2"
+function print_help()
+{
+	echo $(basename "$0") '<infile> <time>'
+	echo $(basename "$0") '-m <infile> <outfile_prefix> <counter_start> <time1> [time2 time3 ...]'
+}
 
-out1="$3"
-out2="$4"
-[ -z"${out1}" ] && out1="${in%.*}_1.mp3"
-[ -z"${out2}" ] && out2="${in%.*}_2.mp3"
+if [ "$1" = '-h' -o -z "$1" ]; then
+	print_help
+	exit 1
+fi
 
-[ "${out1}" != '-' ] && ffmpeg -i "$in" -acodec copy  -to "$st" "${out1}"
+INDEX_LEN=2
+function print_fname()
+{
+	printf "%s_%02d.%s" "${outPrefix}" "$1" "${suffix}"
+}
 
-[ "${out2}" != '-' ] && ffmpeg -i "$in" -acodec copy  -ss "$st" "${out2}"
+if [ "$1" = '-m' ]; then
+	shift
+	in="$1"
+	outPrefix="$2"
+	suffix="${in##*.}"
+
+	i="$3"
+	shift 3
+else
+	in="$1"
+	st="$2"
+
+	outPrefix="${in%.*}"
+	suffix="${in##*.}"
+	shift 2
+fi
+
+trackBegin=0
+	
+for end in $*; do
+	ffmpeg ${extra} -i "$in" -codec copy -ss "$trackBegin" -to "$end" "$(print_fname $i)"
+
+	i=$(expr $i + 1)
+	trackBegin="$end"
+done
+
+printf -v out "%s_%02d.%s" "${outPrefix}" "$i" "${suffix}"
+ffmpeg ${extra} -i "$in" -codec copy -ss "$trackBegin" "$out"
+
