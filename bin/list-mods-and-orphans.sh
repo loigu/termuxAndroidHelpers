@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# TODO: list files fond in second dir and not in first too
+
 [ "$1" = '-f' ] && FORCE=1 && shift
 
 IN1="$1"
