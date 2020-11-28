@@ -5,6 +5,7 @@ basedir=$(pwd)
 quality="${quality:-8}"
 lowpass="${lowpass:-5500}"
 highpass="${highpass:-300}"
+bitrate="${bitrate:-16000}"
 
 src="$1"
 out="$2"
@@ -31,7 +32,7 @@ while read album; do
 	mkdir -p "${out}/${album}"
 	find "${album}" -maxdepth 1 -type f | \
 	while read track; do 
-		if ffmpeg -y -i "${track}" -codec:a libmp3lame -ac 1 -ar 16000 -q:a ${quality} -map 0 -af "lowpass=f=${lowpass},highpass=f=${highpass}" "${out}/${track}" </dev/null &>>debug.txt; then 
+		if ffmpeg -y -i "${track}" -codec:a libmp3lame -ac 1 -ar ${bitrate} -q:a ${quality} -map 0 -af "lowpass=f=${lowpass},highpass=f=${highpass}" "${out}/${track}" </dev/null &>>debug.txt; then 
 			echo "$track" >> "${out}/success"
 			echo -e "$track:\n\tsuccess"
 			[ $(size_diff "${track}" "${out}/${track}") -gt $(($(get_size "${track}") / 10)) ] && echo "${track}" >> "${out}/candidates"
