@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ -z "$1" ]; then
+if [ ! -f "$1" -o "$1" = '-h' ]; then
 	echo "$(basename $0) in start end [out]"
 	exit 0
 fi
