@@ -1,4 +1,5 @@
 #!/bin/bash
+# split mp3 to multiple files
 
 function print_help()
 {

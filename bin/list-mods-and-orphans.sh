@@ -1,6 +1,8 @@
 #!/bin/bash
+# compare two directories, list modified & orphaned files 
+# TODO: list files found in second dir and not in first too
 
-# TODO: list files fond in second dir and not in first too
+[ -z "$1" -o "$1" = "-h" ] && echo "[extra='-L' constraints='-not -path whatever']" $(basename "$0") [-f] "<indir1|infile1.md5> label1 <indir2|infile2.md5> label2 out-prefix" && exit
 
 [ "$1" = '-f' ] && FORCE=1 && shift
 
@@ -12,11 +14,12 @@ OUT="$5"
 
 [ -n "$OUT" ] && OUT="$OUT-"
 
-[ -z "$IN1" -o "$IN1" = "-h" ] && echo $(basename "$0") [-f] <indir1|infile1.md5> label1 <indir2|infile2.md5> label2 out-prefix && exit
+expr match "${IN1}" '.*/' && IN1="${IN1%/}"
+expr match "${IN2}" '.*/' && IN2="${IN2%/}"
 
 make_list()
 {
-	find "$1" -type f | while read f; do md5sum "$f" >> "$2"; done
+	find ${extra} "$1" -type f ${constraints} | while read f; do md5sum "$f" >> "$2"; done
 }
 
 
@@ -51,3 +54,4 @@ if [ -d "$IN2" ]; then
 fi
 
 process_lists
+

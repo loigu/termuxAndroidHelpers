@@ -1,4 +1,5 @@
 #!/bin/bash
+# cut out part of mp3 to a new file
 
 if [ -z "$1" ]; then
 	echo "$(basename $0) in start end [out]"

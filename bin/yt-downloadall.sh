@@ -1,4 +1,6 @@
 #!/bin/bash
+# download all listed youtube urls
+
 list=$1
 ok=ok
 q=$2

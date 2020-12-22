@@ -1,4 +1,5 @@
 #!/bin/bash
+# resize image
 
 [ -z "$quality" ] && quality=70
 [ -z "$res" ] && res='35%'

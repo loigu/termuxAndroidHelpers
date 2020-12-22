@@ -1,4 +1,5 @@
 #!/bin/bash
+# cut to a new file a part of media file (audio/video)
 
 if [ ! -f "$1" -o "$1" = '-h' ]; then
 	echo "$(basename $0) in start end [out]"

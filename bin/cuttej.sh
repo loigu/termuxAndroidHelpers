@@ -1,14 +1,15 @@
 #!/bin/bash
-
+# shorthand script for SUT quotes
 
 if [ -z "$1" ]; then
-echo "$0 <fn in format 190707>[_0819_2] <from> <to> <label>"
+echo "[RECORDINGS_DIR=..../recordings/] $0 <fn in format 190707>[_0819_2] <from> <to> <label>"
 	exit 0
 fi
 
 base="$(pwd)"
 
-pref=/data/data/com.termux/files/home/audiobooks/recordings/shwe-oo-min/
+RECORDINGS_DIR="${RECORDINGS_DIR:-/data/data/com.termux/files/home/audiobooks/recordings/}"
+pref="${RECORDINGS_DIR}/shwe-oo-min/"
 
 cd $pref
 

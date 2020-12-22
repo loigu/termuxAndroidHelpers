@@ -1,4 +1,5 @@
 #!/bin/bash
+# removes noise, cut high & low frequencies, shrinks to "voice" quality
 
 [ -z "$lowpass" ] && lowpass=5512
 [ -z "$highpass" ] && highpass=300
@@ -14,11 +15,15 @@ if [ -z "$1" -o "$1" = "-h" ]; then
 fi
 
 from="$1"
+bn=$(basename "${1%.*}").mp3
+dn=$(dirname "$1")
+
 to="$2"
 [ "$to" = "-i" ] && inplace=1 && to=""
-[ -z "${to}" ] && to=$(dirname "$1")/clean-$(basename "${1%.*}").mp3
 
-[ -d "$to" ] && to="$to/$(basename $from)"
+[ -z "${to}" ] && to="$dn/clean-$bn"
+
+[ -d "$to" ] && to="$to/$bn"
 
 ffmpeg ${extra} -i "${from}" -codec:a libmp3lame -ac 1 -ar 16000 -q:a ${quality} -map 0 -af "lowpass=f=${lowpass},highpass=f=${highpass}" "${to}"
 ret=$?

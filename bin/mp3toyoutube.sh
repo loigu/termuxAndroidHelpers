@@ -1,4 +1,5 @@
 #!/bin/bash
+# make mp3 into "static" video in format suitable for youtube upload
 
 if [ -z "$1" ]; then
 	echo "$0 <mp3> <image> [out.mov]"

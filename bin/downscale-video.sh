@@ -1,4 +1,7 @@
 #!/bin/bash
+# downscale video to lower res & bitrate
+
+[ -z "$1" -o "$1" = "-h" ] && echo "bitrate=600k;res=854:-1; $0 <in> [out>]" && exit
 
 I="$1"
 O="$2"

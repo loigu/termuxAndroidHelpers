@@ -1,4 +1,5 @@
 #! /bin/bash
+# join video files together
 
 if [ -z "$1" -o "$#" -lt 3 ]; then
 	echo "extra=y $0 [-k] <out> <first> <second> [...]"

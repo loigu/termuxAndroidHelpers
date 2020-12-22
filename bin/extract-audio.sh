@@ -1,4 +1,5 @@
 #!/bin/bash
+# extract mp3 audio from media file
 
 [ "$1" = '-h' ] && echo $(basename "$0")" <from> <to>" && exit 0 
 

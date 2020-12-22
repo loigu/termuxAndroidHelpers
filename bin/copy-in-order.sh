@@ -1,4 +1,5 @@
 #!/bin/bash
+# copy files in name order - ensure it is in the same order on fat (for stupid mp3 players)
 
 IN="$1"
 OUT="$2"
@@ -12,13 +13,13 @@ copy_dir()
 	cd "$1"
 	[ -n "$rel_path" ] && rel_path="$rel_path/$1" || rel_path="$1"
 	[ -d "$OUT/$rel_path" ] || mkdir -p "$OUT/$rel_path"
-	sync
+	sync -f "$OUT/$rel_path"
 
 	ls -1 | while read item; do
 		[ -f "$OUT/$rel_path/$item" ] && continue
 
 		[ -d "$item" ] && copy_dir "$item"
-		[ -f "$item" ] && cp "$item" "$OUT/$rel_path"  && sync
+		[ -f "$item" ] && cp "$item" "$OUT/$rel_path"  && sync -f "$OUT/$rel_path"
 	done
 
 	cd ..

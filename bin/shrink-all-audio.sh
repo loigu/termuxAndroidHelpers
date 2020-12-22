@@ -1,11 +1,8 @@
 #!/bin/bash
-[ "$1" = '-h' ] && echo -e"$0 <srcdir> <dstdir>\n\tdefaults: srcdir=.; dstdir=../small" && exit 0
-basedir=$(pwd)
+# clean & shring all audio recordings in directory (to somewhere else)
 
-quality="${quality:-8}"
-lowpass="${lowpass:-5500}"
-highpass="${highpass:-300}"
-bitrate="${bitrate:-16000}"
+[ -z "$1" -o "$1" = '-h' ] && echo -e"$0 <srcdir> <dstdir>\n\tdefaults: srcdir=.; dstdir=../small" && exit 0
+basedir=$(pwd)
 
 src="$1"
 out="$2"
@@ -31,8 +28,10 @@ find ./ -type d | \
 while read album; do
 	mkdir -p "${out}/${album}"
 	find "${album}" -maxdepth 1 -type f | \
-	while read track; do 
-		if ffmpeg -y -i "${track}" -codec:a libmp3lame -ac 1 -ar ${bitrate} -q:a ${quality} -map 0 -af "lowpass=f=${lowpass},highpass=f=${highpass}" "${out}/${track}" </dev/null &>>debug.txt; then 
+	while read track; do
+		extra=y
+		otrack="${track%.*}.mp3"
+		if clean-audio.sh "${track}" "${out}/${otrack}" </dev/null &>>debug.txt; then 
 			echo "$track" >> "${out}/success"
 			echo -e "$track:\n\tsuccess"
 			[ $(size_diff "${track}" "${out}/${track}") -gt $(($(get_size "${track}") / 10)) ] && echo "${track}" >> "${out}/candidates"

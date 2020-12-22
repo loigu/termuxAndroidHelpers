@@ -1,4 +1,5 @@
 #!/bin/bash
+# cut out segments of media file and "glue" them to single new file
 
 if [ -z "$1" -o -z "$2" ]; then
 	echo "$(basename $0) [-c] in out from-to from-to ..."
