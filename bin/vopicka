@@ -1,4 +1,0 @@
-#!/bin/bash
-
-ssha -At ypc 'ssh loki@localhost -p 2224'
-
