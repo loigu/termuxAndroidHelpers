@@ -1,7 +1,7 @@
 #!/bin/bash
 
 fmt_out() {
-	printf '%02d-%s.mp3' "$1" "$2"
+	printf '%s_%02d.mp3' "$1" "$2"
 }
 
 print_help() {
@@ -27,8 +27,13 @@ shift
 
 b=0
 for e in "$@"; do
-	cut-from-mp3.sh "$in" "$b" "$e" "$(fmt_out $i $prefix)"
+	name=$(fmt_out $prefix $i)
+	cut-from-mp3.sh "$in" "$b" "$e" "${name}"
+	id3v2 -A 'per rule patimokkha' -a 'Ajahn Khemmanando' -T $i -t "${name%%.mp3}" "${name}"
 	b=$e
 	i=$(($i + 1))
 done
-cut-from-mp3.sh "$in" $b -1 "$(fmt_out $i $prefix)"
+
+name=$(fmt_out $prefix $i)
+cut-from-mp3.sh "$in" $b -1 "${name}"
+id3v2 -A 'per rule patimokkha' -a 'Ajahn Khemmanando' -T $i -t "${name%%.mp3}" "${name}"
