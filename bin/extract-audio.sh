@@ -17,5 +17,5 @@ if [ -z "${to}" ]; then
 	to="$d/${f%%.*}.mp3"
 fi
 
-ffmpeg -i "${from}" -ac 1 -map 0 -f mp3 -vn -ar 22050 -ab 64000 "${to}"
+ffmpeg ${extra} -i "${from}" -ac 1 -map 0 -f mp3 -vn -ar 22050 -ab 64000 "${to}"
 
