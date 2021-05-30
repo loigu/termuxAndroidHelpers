@@ -1,0 +1,4 @@
+gpg --list-secret-keys
+gpg2 --pinentry-mode loopback --passphrase here
+gpg --list-keys
+gpg --send-keys '65B0F91318C83979112BAD41DAE69D324215FF7E'
