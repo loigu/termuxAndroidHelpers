@@ -29,7 +29,7 @@ while read album; do
 	mkdir -p "${out}/${album}"
 	find "${album}" -maxdepth 1 -type f | \
 	while read track; do
-		extra=y
+		extra=-y
 		otrack="${track%.*}.mp3"
 		if clean-audio.sh "${track}" "${out}/${otrack}" </dev/null &>>debug.txt; then 
 			echo "$track" >> "${out}/success"
