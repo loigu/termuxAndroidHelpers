@@ -1,29 +1,47 @@
 #!/bin/bash
 # compare two directories, list modified & orphaned files 
-# TODO: list files found in second dir and not in first too
 # consider sqlite3, size compare for update speedup
 
-[ -z "$1" -o "$1" = "-h" ] && echo "[extra='-L' constraints='-not -path whatever']" $(basename "$0") [-f -u -m] "<indir1|infile1.md5> label1 <indir2|infile2.md5> label2 out-prefix" && exit
+function print_help()
+{
+8	echo "[extra='-L' constraints='-not -path whatever']" $(basename "$0") [-hfum] "<indir1|infile1.md5> label1 <indir2|infile2.md5> label2 out-prefix"
+	echo -e'\th help
+		\tm md only
+		\tf force update all md5
+		\tu update md5 file
+		'
+}
 
-#todo check relative path comp
 #todo: proper readarg
 
-while expr match "$1" '^-[fum]$' &>/dev/null; do
-	[ "$1" = '-f' ] && FORCE=1 && shift
-	[ "$1" = '-u' ] && UPDATE=1 && shift
-	[ "$1" = '-m' ] && MD_ONLY=1 && shift
+DEF_EXCLUDES="-not -iname .hidden -not -iname .dropbox -not -iname .inside -not -iname .outside -not -iname .nomedia -not -iname .directory -not -iname .emptyshow -not -ipath '*\.Moonreader*'"
+
+while getopts "hfum" arg; do
+	case $arg in
+	h) print_help; exit 0 ;;
+	f) FORCE=1 ;;
+	u) UPDATE=1 ;;
+	m) MD_ONLY=1 ;;
+	*) echo "unknown arg $arg" >&2; print_help; exit 1 ;;
+	esac
 done
+shift $(($OPTIND - 1))
 
 IN1="$1"
 LABEL1="$2"
 IN2="$3"
 LABEL2="$4"
 OUT="$5"
+OLD_PWD=$(pwd)
 
-[ -n "$OUT" ] && OUT="$OUT-"
+[ -z "$IN1" ] && print_help && exit 1
 
-expr match "${IN1}" '.*/' &>/dev/null && IN1="${IN1%/}"
-expr match "${IN2}" '.*/' &>/dev/null && IN2="${IN2%/}"
+
+[ -n "$OUT" ] && OUT=$(readlink -f "$OUT")-
+
+#normalize & fullpath
+IN1=$(readlink -f "$IN1")
+IN2=$(readlink -f "$IN2")
 
 make_list()
 {
@@ -32,7 +50,8 @@ make_list()
 		mv "$2" "$old"
 	fi
 
-	find ${extra} "$1" -type f ${constraints} | \
+	local pth=$(pwd)
+	cd "$1" && find ${extra} . -type f $DEF_EXCLUDES ${constraints} | \
 	while read f; do
 		local m=''
 
@@ -40,6 +59,7 @@ make_list()
 		[ -z "$m" ] && m=$(md5sum "$f")
 		echo "$m" >> "$2"
 	done
+	cd "$pth"
 
 	sort -su -k 2 "$2" > "$old"
 	mv "$old" "$2"
@@ -48,40 +68,48 @@ make_list()
 
 process_lists()
 {
-	rm -f "$OUT$LABEL1-only" "$OUT$LABEL1-$LABEL2-dup"
+	rm -f "$OUT$LABEL2-mv" "$OUT$LABEL2-dup" "$OUT$LABEL2-changed" "$OUT$LABEL2-missing"
 
-	cat "$IN1" | while read md fl; do 
-		grep -q "${md}" "$IN2" && continue
+	cat "$IN1" | while read md fl; do
+		local count=0
+		# detect move & duplicates
+		grep "^${md}" "$IN2" | while read m f; do
+			count=$(expr $count + 1)
+			[ "$fl" != "$f" ] && echo "mv $fl $f" >> "$OUT$LABEL2-mv"
+			[ $count -gt 1 ] && echo "$fl $f" >> "$OUT$LABEL2-dup"
+		done
+
+		grep -q "^${md}" "$IN2"  && continue
+
 		name=$(basename "${fl}")
 		loc=$(grep -m 1 "\ ${name}\$" "$IN2")
 		if [ -z "${loc}" ]; then
-			echo -e "${md}\t${fl}" >> "$OUT$LABEL1-only"
+			echo -e "${md}\t${fl}" >> "$OUT$LABEL2-missing"
 		else
-			echo -e "${LABEL1}\t${fl}\t${LABEL2}\t${loc#*\ }" >> "$OUT$LABEL1-$LABEL2-dup"
+			echo -e "${LABEL1}\t${fl}\t${LABEL2}\t${loc#*\ }" >> "$OUT$LABEL2-changed"
 		fi
 	done 
 }
 
 #todo: +dry run / create batch
+#apply choice for whole dir?
 #add new (add duplicates)
 #move (beware of duplicates)
 #replace changed (ask first option)
 #delete removed (ask first, cleanup empty dirs)
 
-if [ -d "$IN1" ]; then
-	[ "$FORCE" = 1 ] && rm -f "$IN1.md5"
-	[ -f "$IN1.md5" -a -z "${UPDATE}" ] && IN1="$IN1.md5" && break
+function update_md5()
+{
+	local in_dir="$1"
+	local md_file="$2"
+	[ "$FORCE" = 1 ] && rm -f "$md_file"
+	[ -f "$md_file" -a -z "${UPDATE}" ] &&  break
 
-	make_list "$IN1" "$IN1.md5" && IN1="$IN1.md5"
-fi
+	make_list "$in_dir" "$md_file"
+}
 
-if [ -d "$IN2" ]; then
-	[ "$FORCE" = 1 ] && rm -f "$IN2.md5"
-	[ -f "$IN2.md5" -a -z "${UPDATE}" ] && IN2="$IN2.md5" && break
-
-	make_list "$IN2" "$IN2.md5" && IN2="$IN2.md5"
-fi
-
+[ -d "$IN1" ] && update_md5 "$IN1" "$IN1.md5" && IN1="$IN1.md5"
+[ -d "$IN2" ] && update_md5 "$IN2" "$IN2.md5" && IN2="$IN2.md5"
 [ -n "$MD_ONLY" ] && exit 0
 
 process_lists
