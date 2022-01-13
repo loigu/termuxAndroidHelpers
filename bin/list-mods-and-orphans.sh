@@ -4,18 +4,17 @@
 
 function print_help()
 {
-8	echo "[extra='-L' constraints='-not -path whatever']" $(basename "$0") [-hfum] "<indir1|infile1.md5> label1 <indir2|infile2.md5> label2 out-prefix"
-	echo -e'\th help
-		\tm md only
-		\tf force update all md5
-		\tu update md5 file
-		'
+	echo "[extra='-L' constraints='-not -path whatever']" $(basename "$0") "[-hfum] <indir1|infile1.md5> label1 <indir2|infile2.md5> label2 out-prefix" 
+	echo -e "\th help \
+		\n\tm md only \
+		\n\tf force update existing md5s \
+		\n\tu add&remove files into md5 file"
 }
 
-#todo: proper readarg
-
 DEF_EXCLUDES="-not -iname .hidden -not -iname .dropbox -not -iname .inside -not -iname .outside -not -iname .nomedia -not -iname .directory -not -iname .emptyshow -not -ipath '*\.Moonreader*'"
+# -not -iname position.sabp.dat"
 
+#todo: separate md5 compare and apply actions
 while getopts "hfum" arg; do
 	case $arg in
 	h) print_help; exit 0 ;;
@@ -68,21 +67,33 @@ make_list()
 
 process_lists()
 {
-	rm -f "$OUT$LABEL2-mv" "$OUT$LABEL2-dup" "$OUT$LABEL2-changed" "$OUT$LABEL2-missing"
+	rm -f "$OUT$LABEL2-mv" "$OUT$LABEL2-dup" "$OUT$LABEL2-changed" "$OUT$LABEL2-missing" "$OUT$LABEL1-dup"
+	
+	local last=''
+	local lmd=''
+	sort "$IN1" | while read md fl; do
+		#duplicates in source dir /?mirror?/
+		if [ "$lmd" = "$md" ]; then
+			#exist in target too - skip
+			grep -qF "$md $fl" "$IN2" && continue
 
-	cat "$IN1" | while read md fl; do
+			echo "cp '$last' '$fl' " >> "$OUT$LABEL1-dup" && continue
+		fi
+		last="$fl"
+		lmd="$md"
+
 		local count=0
-		# detect move & duplicates
+		# detect move & duplicates on out
 		grep "^${md}" "$IN2" | while read m f; do
 			count=$(expr $count + 1)
-			[ "$fl" != "$f" ] && echo "mv $fl $f" >> "$OUT$LABEL2-mv"
-			[ $count -gt 1 ] && echo "$fl $f" >> "$OUT$LABEL2-dup"
+			[ "$fl" != "$f" ] && echo "mv '$f' '$fl'" >> "$OUT$LABEL2-mv"
+			[ $count -gt 1 ] && echo "rm '$f'" >> "$OUT$LABEL2-dup"
 		done
 
 		grep -q "^${md}" "$IN2"  && continue
 
 		name=$(basename "${fl}")
-		loc=$(grep -m 1 "\ ${name}\$" "$IN2")
+		loc=$(grep -m 1 "/${name}$" "$IN2")
 		if [ -z "${loc}" ]; then
 			echo -e "${md}\t${fl}" >> "$OUT$LABEL2-missing"
 		else
@@ -103,7 +114,7 @@ function update_md5()
 	local in_dir="$1"
 	local md_file="$2"
 	[ "$FORCE" = 1 ] && rm -f "$md_file"
-	[ -f "$md_file" -a -z "${UPDATE}" ] &&  break
+	[ -f "$md_file" -a -z "${UPDATE}" ] && return 0
 
 	make_list "$in_dir" "$md_file"
 }
