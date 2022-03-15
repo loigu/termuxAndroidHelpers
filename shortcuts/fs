@@ -1,0 +1,2 @@
+#!/bin/bash
+ssh nanda@filesrv1 -i ~/.ssh/id_rsa

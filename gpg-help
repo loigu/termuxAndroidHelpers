@@ -1,3 +1,4 @@
+gpg-connect-agent reloadagent /bye
 gpg --list-secret-keys
 gpg2 --pinentry-mode loopback --passphrase here
 gpg --list-keys
