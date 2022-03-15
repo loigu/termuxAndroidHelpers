@@ -1,6 +1,7 @@
 #!/bin/bash
 # removes noise, cut high & low frequencies, shrinks to "voice" quality
 
+# 200 - 2500 for a.ariya voice
 [ -z "$lowpass" ] && lowpass=5512
 [ -z "$highpass" ] && highpass=300
 [ -z "$quality" ] && quality=9
