@@ -1,0 +1,968 @@
+17-04-22 00:12:08 - Jinak pokud
+17-04-22 00:12:08 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+17-04-22 00:12:08 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+17-04-22 00:12:08 - Blok akcí (Watchdog)
+17-04-22 00:12:08 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+17-04-22 00:12:08 - Jinak pokud
+17-04-22 00:12:08 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+17-04-22 00:12:08 - Jinak pokud
+17-04-22 00:12:08 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+17-04-22 00:12:08 - Pokud (pump status = shouldStart)
+17-04-22 00:12:08 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+17-04-22 00:12:08 - Invoking Macro: MainLoop
+17-04-22 00:12:08 - Interval: 00:01:00
+17-04-22 00:11:08 - Jinak pokud
+17-04-22 00:11:08 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+17-04-22 00:11:08 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+17-04-22 00:11:08 - Blok akcí (Watchdog)
+17-04-22 00:11:08 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+17-04-22 00:11:08 - Jinak pokud
+17-04-22 00:11:08 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+17-04-22 00:11:08 - Jinak pokud
+17-04-22 00:11:08 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+17-04-22 00:11:08 - Pokud (pump status = shouldStart)
+17-04-22 00:11:08 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+17-04-22 00:11:08 - Invoking Macro: MainLoop
+17-04-22 00:11:08 - Interval: 00:01:00
+17-04-22 00:10:08 - Jinak pokud
+17-04-22 00:10:08 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+17-04-22 00:10:08 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+17-04-22 00:10:08 - Blok akcí (Watchdog)
+17-04-22 00:10:08 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+17-04-22 00:10:08 - Jinak pokud
+17-04-22 00:10:08 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+17-04-22 00:10:08 - Jinak pokud
+17-04-22 00:10:08 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+17-04-22 00:10:08 - Pokud (pump status = shouldStart)
+17-04-22 00:10:08 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+17-04-22 00:10:08 - Invoking Macro: MainLoop
+17-04-22 00:10:08 - Interval: 00:01:00
+17-04-22 00:09:52 - Add cloned macro to JSON with id: -5004237654330892161
+17-04-22 00:09:08 - Jinak pokud
+17-04-22 00:09:08 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+17-04-22 00:09:08 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+17-04-22 00:09:08 - Blok akcí (Watchdog)
+17-04-22 00:09:08 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+17-04-22 00:09:08 - Jinak pokud
+17-04-22 00:09:08 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+17-04-22 00:09:08 - Jinak pokud
+17-04-22 00:09:08 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+17-04-22 00:09:08 - Pokud (pump status = shouldStart)
+17-04-22 00:09:08 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+17-04-22 00:09:08 - Invoking Macro: MainLoop
+17-04-22 00:09:08 - Interval: 00:01:00
+17-04-22 00:08:08 - Jinak pokud
+17-04-22 00:08:08 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+17-04-22 00:08:08 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+17-04-22 00:08:08 - Blok akcí (Watchdog)
+17-04-22 00:08:08 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+17-04-22 00:08:08 - Jinak pokud
+17-04-22 00:08:08 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+17-04-22 00:08:08 - Jinak pokud
+17-04-22 00:08:08 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+17-04-22 00:08:08 - Pokud (pump status = shouldStart)
+17-04-22 00:08:08 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+17-04-22 00:08:08 - Invoking Macro: MainLoop
+17-04-22 00:08:08 - Interval: 00:01:00
+17-04-22 00:08:01 - Add cloned macro to JSON with id: -6424299893486667637
+17-04-22 00:07:08 - Jinak pokud
+17-04-22 00:07:08 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+17-04-22 00:07:08 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+17-04-22 00:07:08 - Blok akcí (Watchdog)
+17-04-22 00:07:08 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+17-04-22 00:07:08 - Jinak pokud
+17-04-22 00:07:08 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+17-04-22 00:07:08 - Jinak pokud
+17-04-22 00:07:08 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+17-04-22 00:07:08 - Pokud (pump status = shouldStart)
+17-04-22 00:07:08 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+17-04-22 00:07:08 - Invoking Macro: MainLoop
+17-04-22 00:07:08 - Interval: 00:01:00
+17-04-22 00:06:08 - Jinak pokud
+17-04-22 00:06:08 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+17-04-22 00:06:08 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+17-04-22 00:06:08 - Blok akcí (Watchdog)
+17-04-22 00:06:08 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+17-04-22 00:06:08 - Jinak pokud
+17-04-22 00:06:08 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+17-04-22 00:06:08 - Jinak pokud
+17-04-22 00:06:08 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+17-04-22 00:06:08 - Pokud (pump status = shouldStart)
+17-04-22 00:06:08 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+17-04-22 00:06:08 - Invoking Macro: MainLoop
+17-04-22 00:06:08 - Interval: 00:01:00
+17-04-22 00:05:08 - Jinak pokud
+17-04-22 00:05:08 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+17-04-22 00:05:08 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+17-04-22 00:05:08 - Blok akcí (Watchdog)
+17-04-22 00:05:08 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+17-04-22 00:05:08 - Jinak pokud
+17-04-22 00:05:08 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+17-04-22 00:05:08 - Jinak pokud
+17-04-22 00:05:08 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+17-04-22 00:05:08 - Pokud (pump status = shouldStart)
+17-04-22 00:05:08 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+17-04-22 00:05:08 - Invoking Macro: MainLoop
+17-04-22 00:05:08 - Interval: 00:01:00
+17-04-22 00:04:08 - Jinak pokud
+17-04-22 00:04:08 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+17-04-22 00:04:08 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+17-04-22 00:04:08 - Blok akcí (Watchdog)
+17-04-22 00:04:08 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+17-04-22 00:04:08 - Jinak pokud
+17-04-22 00:04:08 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+17-04-22 00:04:08 - Jinak pokud
+17-04-22 00:04:08 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+17-04-22 00:04:08 - Pokud (pump status = shouldStart)
+17-04-22 00:04:08 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+17-04-22 00:04:08 - Invoking Macro: MainLoop
+17-04-22 00:04:08 - Interval: 00:01:00
+17-04-22 00:03:08 - Jinak pokud
+17-04-22 00:03:08 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+17-04-22 00:03:08 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+17-04-22 00:03:08 - Blok akcí (Watchdog)
+17-04-22 00:03:08 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+17-04-22 00:03:08 - Jinak pokud
+17-04-22 00:03:08 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+17-04-22 00:03:08 - Jinak pokud
+17-04-22 00:03:08 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+17-04-22 00:03:08 - Pokud (pump status = shouldStart)
+17-04-22 00:03:08 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+17-04-22 00:03:08 - Invoking Macro: MainLoop
+17-04-22 00:03:08 - Interval: 00:01:00
+17-04-22 00:02:08 - Jinak pokud
+17-04-22 00:02:08 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+17-04-22 00:02:08 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+17-04-22 00:02:08 - Blok akcí (Watchdog)
+17-04-22 00:02:08 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+17-04-22 00:02:08 - Jinak pokud
+17-04-22 00:02:08 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+17-04-22 00:02:08 - Jinak pokud
+17-04-22 00:02:08 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+17-04-22 00:02:08 - Pokud (pump status = shouldStart)
+17-04-22 00:02:08 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+17-04-22 00:02:08 - Invoking Macro: MainLoop
+17-04-22 00:02:08 - Interval: 00:01:00
+17-04-22 00:01:08 - Jinak pokud
+17-04-22 00:01:08 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+17-04-22 00:01:08 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+17-04-22 00:01:07 - Blok akcí (Watchdog)
+17-04-22 00:01:07 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+17-04-22 00:01:07 - Jinak pokud
+17-04-22 00:01:07 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+17-04-22 00:01:07 - Jinak pokud
+17-04-22 00:01:07 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+17-04-22 00:01:07 - Pokud (pump status = shouldStart)
+17-04-22 00:01:07 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+17-04-22 00:01:07 - Invoking Macro: MainLoop
+17-04-22 00:01:07 - Interval: 00:01:00
+17-04-22 00:00:07 - Jinak pokud
+17-04-22 00:00:07 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+17-04-22 00:00:07 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+17-04-22 00:00:07 - Blok akcí (Watchdog)
+17-04-22 00:00:07 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+17-04-22 00:00:07 - Jinak pokud
+17-04-22 00:00:07 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+17-04-22 00:00:07 - Jinak pokud
+17-04-22 00:00:07 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+17-04-22 00:00:07 - Pokud (pump status = shouldStart)
+17-04-22 00:00:07 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+17-04-22 00:00:07 - Invoking Macro: MainLoop
+17-04-22 00:00:07 - Interval: 00:01:00
+16-04-22 23:59:07 - Jinak pokud
+16-04-22 23:59:07 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 23:59:07 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 23:59:07 - Blok akcí (Watchdog)
+16-04-22 23:59:07 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:59:07 - Jinak pokud
+16-04-22 23:59:07 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:59:07 - Jinak pokud
+16-04-22 23:59:07 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 23:59:07 - Pokud (pump status = shouldStart)
+16-04-22 23:59:07 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 23:59:07 - Invoking Macro: MainLoop
+16-04-22 23:59:07 - Interval: 00:01:00
+16-04-22 23:58:07 - Jinak pokud
+16-04-22 23:58:07 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 23:58:07 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 23:58:07 - Blok akcí (Watchdog)
+16-04-22 23:58:07 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:58:07 - Jinak pokud
+16-04-22 23:58:07 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:58:07 - Jinak pokud
+16-04-22 23:58:07 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 23:58:07 - Pokud (pump status = shouldStart)
+16-04-22 23:58:07 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 23:58:07 - Invoking Macro: MainLoop
+16-04-22 23:58:07 - Interval: 00:01:00
+16-04-22 23:57:07 - Jinak pokud
+16-04-22 23:57:07 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 23:57:07 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 23:57:07 - Blok akcí (Watchdog)
+16-04-22 23:57:07 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:57:07 - Jinak pokud
+16-04-22 23:57:07 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:57:07 - Jinak pokud
+16-04-22 23:57:07 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 23:57:07 - Pokud (pump status = shouldStart)
+16-04-22 23:57:07 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 23:57:07 - Invoking Macro: MainLoop
+16-04-22 23:57:07 - Interval: 00:01:00
+16-04-22 23:56:07 - Jinak pokud
+16-04-22 23:56:07 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 23:56:07 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 23:56:07 - Blok akcí (Watchdog)
+16-04-22 23:56:07 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:56:07 - Jinak pokud
+16-04-22 23:56:07 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:56:07 - Jinak pokud
+16-04-22 23:56:07 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 23:56:07 - Pokud (pump status = shouldStart)
+16-04-22 23:56:07 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 23:56:07 - Invoking Macro: MainLoop
+16-04-22 23:56:07 - Interval: 00:01:00
+16-04-22 23:55:07 - Jinak pokud
+16-04-22 23:55:07 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 23:55:07 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 23:55:07 - Blok akcí (Watchdog)
+16-04-22 23:55:07 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:55:07 - Jinak pokud
+16-04-22 23:55:07 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:55:07 - Jinak pokud
+16-04-22 23:55:07 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 23:55:07 - Pokud (pump status = shouldStart)
+16-04-22 23:55:07 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 23:55:07 - Invoking Macro: MainLoop
+16-04-22 23:55:07 - Interval: 00:01:00
+16-04-22 23:54:07 - Jinak pokud
+16-04-22 23:54:07 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 23:54:07 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 23:54:07 - Blok akcí (Watchdog)
+16-04-22 23:54:07 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:54:07 - Jinak pokud
+16-04-22 23:54:07 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:54:07 - Jinak pokud
+16-04-22 23:54:07 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 23:54:07 - Pokud (pump status = shouldStart)
+16-04-22 23:54:07 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 23:54:07 - Invoking Macro: MainLoop
+16-04-22 23:54:07 - Interval: 00:01:00
+16-04-22 23:53:07 - Jinak pokud
+16-04-22 23:53:07 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 23:53:07 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 23:53:07 - Blok akcí (Watchdog)
+16-04-22 23:53:07 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:53:07 - Jinak pokud
+16-04-22 23:53:07 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:53:07 - Jinak pokud
+16-04-22 23:53:07 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 23:53:07 - Pokud (pump status = shouldStart)
+16-04-22 23:53:07 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 23:53:07 - Invoking Macro: MainLoop
+16-04-22 23:53:07 - Interval: 00:01:00
+16-04-22 23:52:07 - Jinak pokud
+16-04-22 23:52:07 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 23:52:07 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 23:52:07 - Blok akcí (Watchdog)
+16-04-22 23:52:07 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:52:07 - Jinak pokud
+16-04-22 23:52:07 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:52:07 - Jinak pokud
+16-04-22 23:52:07 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 23:52:07 - Pokud (pump status = shouldStart)
+16-04-22 23:52:07 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 23:52:07 - Invoking Macro: MainLoop
+16-04-22 23:52:07 - Interval: 00:01:00
+16-04-22 23:51:07 - Jinak pokud
+16-04-22 23:51:07 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 23:51:07 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 23:51:07 - Blok akcí (Watchdog)
+16-04-22 23:51:07 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:51:07 - Jinak pokud
+16-04-22 23:51:07 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:51:07 - Jinak pokud
+16-04-22 23:51:07 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 23:51:07 - Pokud (pump status = shouldStart)
+16-04-22 23:51:07 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 23:51:07 - Invoking Macro: MainLoop
+16-04-22 23:51:07 - Interval: 00:01:00
+16-04-22 23:50:07 - Jinak pokud
+16-04-22 23:50:07 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 23:50:07 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 23:50:07 - Blok akcí (Watchdog)
+16-04-22 23:50:07 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:50:07 - Jinak pokud
+16-04-22 23:50:07 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:50:07 - Jinak pokud
+16-04-22 23:50:07 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 23:50:07 - Pokud (pump status = shouldStart)
+16-04-22 23:50:07 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 23:50:07 - Invoking Macro: MainLoop
+16-04-22 23:50:07 - Interval: 00:01:00
+16-04-22 23:49:07 - Jinak pokud
+16-04-22 23:49:07 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 23:49:07 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 23:49:07 - Blok akcí (Watchdog)
+16-04-22 23:49:07 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:49:07 - Jinak pokud
+16-04-22 23:49:07 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:49:07 - Jinak pokud
+16-04-22 23:49:07 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 23:49:07 - Pokud (pump status = shouldStart)
+16-04-22 23:49:07 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 23:49:07 - Invoking Macro: MainLoop
+16-04-22 23:49:07 - Interval: 00:01:00
+16-04-22 23:48:07 - Jinak pokud
+16-04-22 23:48:07 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 23:48:07 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 23:48:07 - Blok akcí (Watchdog)
+16-04-22 23:48:07 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:48:07 - Jinak pokud
+16-04-22 23:48:07 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:48:07 - Jinak pokud
+16-04-22 23:48:07 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 23:48:07 - Pokud (pump status = shouldStart)
+16-04-22 23:48:07 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 23:48:07 - Invoking Macro: MainLoop
+16-04-22 23:48:07 - Interval: 00:01:00
+16-04-22 23:47:07 - Jinak pokud
+16-04-22 23:47:07 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 23:47:07 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 23:47:07 - Blok akcí (Watchdog)
+16-04-22 23:47:07 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:47:07 - Jinak pokud
+16-04-22 23:47:07 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:47:07 - Jinak pokud
+16-04-22 23:47:07 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 23:47:07 - Pokud (pump status = shouldStart)
+16-04-22 23:47:07 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 23:47:07 - Invoking Macro: MainLoop
+16-04-22 23:47:07 - Interval: 00:01:00
+16-04-22 23:46:07 - Jinak pokud
+16-04-22 23:46:07 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 23:46:07 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 23:46:07 - Blok akcí (Watchdog)
+16-04-22 23:46:07 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:46:07 - Jinak pokud
+16-04-22 23:46:07 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:46:07 - Jinak pokud
+16-04-22 23:46:07 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 23:46:07 - Pokud (pump status = shouldStart)
+16-04-22 23:46:07 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 23:46:07 - Invoking Macro: MainLoop
+16-04-22 23:46:07 - Interval: 00:01:00
+16-04-22 23:45:06 - Jinak pokud
+16-04-22 23:45:06 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 23:45:06 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 23:45:06 - Blok akcí (Watchdog)
+16-04-22 23:45:06 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:45:06 - Jinak pokud
+16-04-22 23:45:06 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:45:06 - Jinak pokud
+16-04-22 23:45:06 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 23:45:06 - Pokud (pump status = shouldStart)
+16-04-22 23:45:06 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 23:45:06 - Invoking Macro: MainLoop
+16-04-22 23:45:06 - Interval: 00:01:00
+16-04-22 23:44:06 - Jinak pokud
+16-04-22 23:44:06 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 23:44:06 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 23:44:06 - Blok akcí (Watchdog)
+16-04-22 23:44:06 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:44:06 - Jinak pokud
+16-04-22 23:44:06 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:44:06 - Jinak pokud
+16-04-22 23:44:06 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 23:44:06 - Pokud (pump status = shouldStart)
+16-04-22 23:44:06 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 23:44:06 - Invoking Macro: MainLoop
+16-04-22 23:44:06 - Interval: 00:01:00
+16-04-22 23:43:06 - Jinak pokud
+16-04-22 23:43:06 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 23:43:06 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 23:43:06 - Blok akcí (Watchdog)
+16-04-22 23:43:06 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:43:06 - Jinak pokud
+16-04-22 23:43:06 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:43:06 - Jinak pokud
+16-04-22 23:43:06 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 23:43:06 - Pokud (pump status = shouldStart)
+16-04-22 23:43:06 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 23:43:06 - Invoking Macro: MainLoop
+16-04-22 23:43:06 - Interval: 00:01:00
+16-04-22 23:42:06 - Jinak pokud
+16-04-22 23:42:06 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 23:42:06 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 23:42:06 - Blok akcí (Watchdog)
+16-04-22 23:42:06 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:42:06 - Jinak pokud
+16-04-22 23:42:06 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:42:06 - Jinak pokud
+16-04-22 23:42:06 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 23:42:06 - Pokud (pump status = shouldStart)
+16-04-22 23:42:06 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 23:42:06 - Invoking Macro: MainLoop
+16-04-22 23:42:06 - Interval: 00:01:00
+16-04-22 23:41:06 - Jinak pokud
+16-04-22 23:41:06 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 23:41:06 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 23:41:06 - Blok akcí (Watchdog)
+16-04-22 23:41:06 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:41:06 - Jinak pokud
+16-04-22 23:41:06 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:41:06 - Jinak pokud
+16-04-22 23:41:06 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 23:41:06 - Pokud (pump status = shouldStart)
+16-04-22 23:41:06 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 23:41:06 - Invoking Macro: MainLoop
+16-04-22 23:41:06 - Interval: 00:01:00
+16-04-22 23:40:06 - Jinak pokud
+16-04-22 23:40:06 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 23:40:06 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 23:40:06 - Blok akcí (Watchdog)
+16-04-22 23:40:06 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:40:06 - Jinak pokud
+16-04-22 23:40:06 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:40:06 - Jinak pokud
+16-04-22 23:40:06 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 23:40:06 - Pokud (pump status = shouldStart)
+16-04-22 23:40:06 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 23:40:06 - Invoking Macro: MainLoop
+16-04-22 23:40:06 - Interval: 00:01:00
+16-04-22 23:39:06 - Jinak pokud
+16-04-22 23:39:06 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 23:39:06 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 23:39:06 - Blok akcí (Watchdog)
+16-04-22 23:39:06 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:39:06 - Jinak pokud
+16-04-22 23:39:06 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:39:06 - Jinak pokud
+16-04-22 23:39:06 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 23:39:06 - Pokud (pump status = shouldStart)
+16-04-22 23:39:06 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 23:39:06 - Invoking Macro: MainLoop
+16-04-22 23:39:06 - Interval: 00:01:00
+16-04-22 23:38:06 - Jinak pokud
+16-04-22 23:38:06 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 23:38:06 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 23:38:06 - Blok akcí (Watchdog)
+16-04-22 23:38:06 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:38:06 - Jinak pokud
+16-04-22 23:38:06 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:38:06 - Jinak pokud
+16-04-22 23:38:06 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 23:38:06 - Pokud (pump status = shouldStart)
+16-04-22 23:38:06 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 23:38:06 - Invoking Macro: MainLoop
+16-04-22 23:38:06 - Interval: 00:01:00
+16-04-22 23:37:05 - Removing all macros
+16-04-22 23:30:00 - Removing all macros
+16-04-22 23:29:17 - Jinak pokud
+16-04-22 23:29:17 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 23:29:17 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 23:29:17 - Blok akcí (Watchdog)
+16-04-22 23:29:17 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:29:17 - Jinak pokud
+16-04-22 23:29:17 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:29:17 - Jinak pokud
+16-04-22 23:29:17 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 23:29:17 - Pokud (pump status = shouldStart)
+16-04-22 23:29:17 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 23:29:16 - Invoking Macro: MainLoop
+16-04-22 23:29:16 - Interval: 00:01:00
+16-04-22 23:28:16 - Removing all macros
+16-04-22 23:27:53 - Removing all macros
+16-04-22 23:09:00 - Hodnota upravena z 0 na 3600
+16-04-22 23:08:46 - Hodnota upravena z 0 na 4
+16-04-22 23:08:39 - Hodnota upravena z 0 na 3
+16-04-22 23:08:25 - Hodnota upravena z 0 na 2
+16-04-22 23:08:20 - Hodnota upravena z 0 na 1
+16-04-22 23:07:48 - Removing all macros
+16-04-22 23:07:42 - Jinak pokud
+16-04-22 23:07:42 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 23:07:42 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 23:07:42 - Blok akcí (Watchdog)
+16-04-22 23:07:42 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:07:42 - Jinak pokud
+16-04-22 23:07:42 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:07:42 - Jinak pokud
+16-04-22 23:07:42 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 23:07:42 - Pokud (pump status = shouldStart)
+16-04-22 23:07:42 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 23:07:42 - Invoking Macro: MainLoop
+16-04-22 23:07:42 - Interval: 00:01:00
+16-04-22 23:06:42 - Jinak pokud
+16-04-22 23:06:42 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 23:06:42 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 23:06:42 - Blok akcí (Watchdog)
+16-04-22 23:06:42 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:06:42 - Jinak pokud
+16-04-22 23:06:42 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:06:42 - Jinak pokud
+16-04-22 23:06:42 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 23:06:42 - Pokud (pump status = shouldStart)
+16-04-22 23:06:42 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 23:06:42 - Invoking Macro: MainLoop
+16-04-22 23:06:42 - Interval: 00:01:00
+16-04-22 23:05:40 - Jinak pokud
+16-04-22 23:05:40 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 23:05:40 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 23:05:40 - Blok akcí (Watchdog)
+16-04-22 23:05:40 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:05:40 - Jinak pokud
+16-04-22 23:05:40 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:05:40 - Jinak pokud
+16-04-22 23:05:40 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 23:05:40 - Pokud (pump status = shouldStart)
+16-04-22 23:05:40 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 23:05:40 - Invoking Macro: MainLoop
+16-04-22 23:05:40 - Interval: 00:01:00
+16-04-22 23:04:40 - Jinak pokud
+16-04-22 23:04:40 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 23:04:40 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 23:04:40 - Blok akcí (Watchdog)
+16-04-22 23:04:40 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:04:40 - Jinak pokud
+16-04-22 23:04:40 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:04:40 - Jinak pokud
+16-04-22 23:04:40 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 23:04:40 - Pokud (pump status = shouldStart)
+16-04-22 23:04:40 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 23:04:40 - Invoking Macro: MainLoop
+16-04-22 23:04:40 - Interval: 00:01:00
+16-04-22 23:04:29 - Upload Service destroyed
+16-04-22 23:03:49 - Using OAUTH
+16-04-22 23:03:49 - Sending to Email
+16-04-22 23:03:40 - Jinak pokud
+16-04-22 23:03:40 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 23:03:40 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 23:03:40 - Blok akcí (Watchdog)
+16-04-22 23:03:40 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:03:40 - Jinak pokud
+16-04-22 23:03:40 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:03:40 - Jinak pokud
+16-04-22 23:03:40 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 23:03:40 - Pokud (pump status = shouldStart)
+16-04-22 23:03:40 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 23:03:40 - Invoking Macro: MainLoop
+16-04-22 23:03:40 - Interval: 00:01:00
+16-04-22 23:02:49 - Using OAUTH
+16-04-22 23:02:49 - Sending to Email
+16-04-22 23:02:40 - Jinak pokud
+16-04-22 23:02:40 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 23:02:40 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 23:02:40 - Blok akcí (Watchdog)
+16-04-22 23:02:40 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:02:40 - Jinak pokud
+16-04-22 23:02:40 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:02:40 - Jinak pokud
+16-04-22 23:02:40 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 23:02:40 - Pokud (pump status = shouldStart)
+16-04-22 23:02:40 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 23:02:40 - Invoking Macro: MainLoop
+16-04-22 23:02:40 - Interval: 00:01:00
+16-04-22 23:02:23 - Hodnota upravena z  na 
+16-04-22 23:01:49 - Using OAUTH
+16-04-22 23:01:49 - Sending to Email
+16-04-22 23:01:40 - Jinak pokud
+16-04-22 23:01:40 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 23:01:40 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 23:01:40 - Blok akcí (Watchdog)
+16-04-22 23:01:40 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:01:40 - Jinak pokud
+16-04-22 23:01:40 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:01:40 - Jinak pokud
+16-04-22 23:01:40 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 23:01:40 - Pokud (pump status = shouldStart)
+16-04-22 23:01:40 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 23:01:40 - Invoking Macro: MainLoop
+16-04-22 23:01:40 - Interval: 00:01:00
+16-04-22 23:00:49 - Using OAUTH
+16-04-22 23:00:49 - Sending to Email
+16-04-22 23:00:40 - Jinak pokud
+16-04-22 23:00:40 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 23:00:40 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 23:00:40 - Blok akcí (Watchdog)
+16-04-22 23:00:40 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:00:40 - Jinak pokud
+16-04-22 23:00:40 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 23:00:40 - Jinak pokud
+16-04-22 23:00:40 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 23:00:40 - Pokud (pump status = shouldStart)
+16-04-22 23:00:40 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 23:00:40 - Invoking Macro: MainLoop
+16-04-22 23:00:40 - Interval: 00:01:00
+16-04-22 23:00:01 - A: Pokud (eventDuration = 0 A eventStart != 0) did not invoke because constraint failed: Proměnná (EventEnd)
+16-04-22 23:00:01 - Pokud (eventDuration = 0 A eventStart != 0)
+16-04-22 23:00:01 - Invoking Macro: EventEnd
+16-04-22 23:00:01 - Událost ukončena (pump water)
+16-04-22 22:59:49 - Using OAUTH
+16-04-22 22:59:49 - Sending to Email
+16-04-22 22:59:40 - Jinak pokud
+16-04-22 22:59:40 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 22:59:40 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 22:59:40 - Blok akcí (Watchdog)
+16-04-22 22:59:40 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 22:59:40 - Jinak pokud
+16-04-22 22:59:40 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 22:59:40 - Jinak pokud
+16-04-22 22:59:40 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 22:59:40 - Pokud (pump status = shouldStart)
+16-04-22 22:59:40 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 22:59:40 - Invoking Macro: MainLoop
+16-04-22 22:59:40 - Interval: 00:01:00
+16-04-22 22:59:19 - Using OAUTH
+16-04-22 22:59:19 - Sending to Email
+16-04-22 22:58:49 - Using OAUTH
+16-04-22 22:58:49 - Sending to Email
+16-04-22 22:58:44 - Upload Service created
+16-04-22 22:58:43 - Odeslat e-mail: Well report for day 2022.04.16 / Daily minutes: 9
+16-04-22 22:58:43 - Pokud (Stav mobilních služeb (Nedostupné))
+16-04-22 22:58:43 - Hodnota upravena z 584 na 0
+16-04-22 22:58:43 - Nastavit proměnnou (dailyCount: 0)
+16-04-22 22:58:43 - Hodnota upravena z 0 na 9
+16-04-22 22:58:43 - Nastavit proměnnou (countMinutes: [v=dailyCount] / 60)
+16-04-22 22:58:43 - Hodnota upravena z  na 2022.04.16
+16-04-22 22:58:43 - Nastavit proměnnou (day: 2022.04.16)
+16-04-22 22:58:43 - Blok akcí (Daily report)
+16-04-22 22:58:43 - Invoking Macro: Daily report
+16-04-22 22:58:43 - TESTING MACRO:Daily report
+16-04-22 22:58:40 - Jinak pokud
+16-04-22 22:58:40 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 22:58:40 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 22:58:40 - Blok akcí (Watchdog)
+16-04-22 22:58:40 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 22:58:40 - Jinak pokud
+16-04-22 22:58:40 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 22:58:40 - Jinak pokud
+16-04-22 22:58:40 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 22:58:40 - Pokud (pump status = shouldStart)
+16-04-22 22:58:40 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 22:58:40 - Invoking Macro: MainLoop
+16-04-22 22:58:40 - Interval: 00:01:00
+16-04-22 22:57:55 - Jinak pokud
+16-04-22 22:57:55 - Hodnota upravena z 5 na 0
+16-04-22 22:57:55 - Nastavit proměnnou (pump status: [v=off])
+16-04-22 22:57:55 - Hodnota upravena z 1650129918 na 0
+16-04-22 22:57:55 - Nastavit proměnnou (pumpStartTime: 0)
+16-04-22 22:57:55 - Hodnota upravena z 427 na 584
+16-04-22 22:57:55 - Nastavit proměnnou (dailyCount: [v=dailyCount] + [system_time] - [v=pumpStartTime])
+16-04-22 22:57:55 - A: Pokud (pump status != stopping) did not invoke because constraint failed: Proměnná (Offsms)
+16-04-22 22:57:55 - Pokud (pump status != stopping)
+16-04-22 22:57:55 - Blok akcí (Offsms)
+16-04-22 22:57:55 - Pokud (sms obsahuje The relay is OFF)
+16-04-22 22:57:55 - Hodnota upravena z The relay is ON na The relay is OFF
+16-04-22 22:57:55 - Nastavit proměnnou (sms: The relay is OFF)
+16-04-22 22:57:55 - Invoking Macro: WellSmsReceived
+16-04-22 22:57:55 - SMS zpráva od Water Motor Kahambana (Libovolný obsah)
+16-04-22 22:57:43 - SMS Sent to: +94 77 872 0359
+16-04-22 22:57:40 - Sending SMS to: +94 77 872 0359 Message = 2565#OFF#
+16-04-22 22:57:40 - Jinak pokud
+16-04-22 22:57:40 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 22:57:40 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 22:57:40 - Blok akcí (Watchdog)
+16-04-22 22:57:40 - Hodnota upravena z 94 na 0
+16-04-22 22:57:40 - Nastavit proměnnou (eventDuration: 0)
+16-04-22 22:57:40 - Hodnota upravena z 1650130012 na 0
+16-04-22 22:57:40 - Nastavit proměnnou (offTime: 0)
+16-04-22 22:57:40 - Hodnota upravena z 3 na 5
+16-04-22 22:57:40 - Nastavit proměnnou (pump status: [v=stopping])
+16-04-22 22:57:40 - Odeslat SMS '2565#OFF#'
+16-04-22 22:57:40 - Pokud (Stav mobilních služeb (Dostupné))
+16-04-22 22:57:40 - Blok akcí (ScheduleStopSms)
+16-04-22 22:57:40 - Jinak pokud
+16-04-22 22:57:40 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 22:57:40 - Jinak pokud
+16-04-22 22:57:40 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 22:57:40 - Pokud (pump status = shouldStart)
+16-04-22 22:57:40 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 22:57:40 - Invoking Macro: MainLoop
+16-04-22 22:57:40 - Interval: 00:01:00
+16-04-22 22:56:40 - Jinak pokud
+16-04-22 22:56:40 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 22:56:40 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 22:56:40 - Blok akcí (Watchdog)
+16-04-22 22:56:40 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 22:56:40 - Jinak pokud
+16-04-22 22:56:40 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 22:56:40 - Jinak pokud
+16-04-22 22:56:40 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 22:56:40 - Pokud (pump status = shouldStart)
+16-04-22 22:56:40 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 22:56:40 - Invoking Macro: MainLoop
+16-04-22 22:56:40 - Interval: 00:01:00
+16-04-22 22:56:35 - Hodnota upravena z 0 na 1650130012
+16-04-22 22:56:35 - Nastavit proměnnou (offTime: [v=pumpStartTime] + [v=eventDuration])
+16-04-22 22:56:35 - Pokud (pumpStartTime > 0 A eventDuration > 0)
+16-04-22 22:56:35 - Blok akcí (CalculateEndTime)
+16-04-22 22:56:35 - Hodnota upravena z 1650129901 na 0
+16-04-22 22:56:35 - Nastavit proměnnou (eventStart: 0)
+16-04-22 22:56:35 - Hodnota upravena z 0 na 94
+16-04-22 22:56:35 - Nastavit proměnnou (eventDuration: [system_time] - [v=eventStart])
+16-04-22 22:56:35 - Pokud (eventDuration = 0 A eventStart != 0)
+16-04-22 22:56:35 - Invoking Macro: EventEnd
+16-04-22 22:56:35 - Událost ukončena (pump water)
+16-04-22 22:56:35 - TESTING MACRO:EventEnd
+16-04-22 22:55:40 - Jinak pokud
+16-04-22 22:55:40 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 22:55:40 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 22:55:40 - Blok akcí (Watchdog)
+16-04-22 22:55:40 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 22:55:40 - Jinak pokud
+16-04-22 22:55:40 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 22:55:40 - Jinak pokud
+16-04-22 22:55:40 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 22:55:40 - Pokud (pump status = shouldStart)
+16-04-22 22:55:40 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 22:55:40 - Invoking Macro: MainLoop
+16-04-22 22:55:40 - Interval: 00:01:00
+16-04-22 22:55:18 - Hodnota upravena z 2 na 3
+16-04-22 22:55:18 - Nastavit proměnnou (pump status: [v=on])
+16-04-22 22:55:18 - A: Pokud (pumpStartTime > 0 A eventDuration > 0) did not invoke because constraint failed: Proměnná (CalculateEndTime)
+16-04-22 22:55:18 - Pokud (pumpStartTime > 0 A eventDuration > 0)
+16-04-22 22:55:18 - Blok akcí (CalculateEndTime)
+16-04-22 22:55:18 - Hodnota upravena z 0 na 1650129918
+16-04-22 22:55:18 - Nastavit proměnnou (pumpStartTime: [system_time])
+16-04-22 22:55:18 - Pokud (pump status != on)
+16-04-22 22:55:18 - A: Pokud (pump status != starting) did not invoke because constraint failed: Proměnná (Onsms)
+16-04-22 22:55:18 - Pokud (pump status != starting)
+16-04-22 22:55:18 - Blok akcí (Onsms)
+16-04-22 22:55:18 - Jinak pokud
+16-04-22 22:55:18 - A: Pokud (sms obsahuje The relay is OFF) did not invoke because constraint failed: Proměnná (WellSmsReceived)
+16-04-22 22:55:18 - Pokud (sms obsahuje The relay is OFF)
+16-04-22 22:55:18 - Hodnota upravena z The relay is OFF na The relay is ON
+16-04-22 22:55:18 - Nastavit proměnnou (sms: The relay is ON)
+16-04-22 22:55:18 - Invoking Macro: WellSmsReceived
+16-04-22 22:55:18 - SMS zpráva od Water Motor Kahambana (Libovolný obsah)
+16-04-22 22:55:07 - SMS Sent to: +94 77 872 0359
+16-04-22 22:55:01 - Sending SMS to: +94 77 872 0359 Message = 2565#ON#
+16-04-22 22:55:01 - Hodnota upravena z 0 na 2
+16-04-22 22:55:01 - Nastavit proměnnou (pump status: [v=starting])
+16-04-22 22:55:01 - Odeslat SMS '2565#ON#'
+16-04-22 22:55:01 - Pokud (Stav mobilních služeb (Dostupné))
+16-04-22 22:55:01 - Blok akcí (ScheduleStartSms)
+16-04-22 22:55:01 - Hodnota upravena z 0 na 1650129901
+16-04-22 22:55:01 - Nastavit proměnnou (eventStart: [system_time])
+16-04-22 22:55:01 - Pokud (eventStart = 0 A pump status = off A eventDuration = 0)
+16-04-22 22:55:01 - Invoking Macro: EventStart
+16-04-22 22:55:01 - Událost spuštěna (pump water)
+16-04-22 22:55:01 - A: Pokud (eventDuration = 0 A eventStart != 0) did not invoke because constraint failed: Proměnná (EventEnd)
+16-04-22 22:55:01 - Pokud (eventDuration = 0 A eventStart != 0)
+16-04-22 22:55:01 - Invoking Macro: EventEnd
+16-04-22 22:55:01 - Událost ukončena (pump water)
+16-04-22 22:54:40 - Jinak pokud
+16-04-22 22:54:40 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 22:54:40 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 22:54:40 - Blok akcí (Watchdog)
+16-04-22 22:54:40 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 22:54:40 - Jinak pokud
+16-04-22 22:54:40 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 22:54:40 - Jinak pokud
+16-04-22 22:54:40 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 22:54:40 - Pokud (pump status = shouldStart)
+16-04-22 22:54:40 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 22:54:40 - Invoking Macro: MainLoop
+16-04-22 22:54:40 - Interval: 00:01:00
+16-04-22 22:53:40 - Jinak pokud
+16-04-22 22:53:40 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 22:53:40 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 22:53:40 - Blok akcí (Watchdog)
+16-04-22 22:53:40 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 22:53:40 - Jinak pokud
+16-04-22 22:53:40 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 22:53:40 - Jinak pokud
+16-04-22 22:53:40 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 22:53:40 - Pokud (pump status = shouldStart)
+16-04-22 22:53:40 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 22:53:40 - Invoking Macro: MainLoop
+16-04-22 22:53:40 - Interval: 00:01:00
+16-04-22 22:52:40 - Jinak pokud
+16-04-22 22:52:40 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 22:52:40 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 22:52:40 - Blok akcí (Watchdog)
+16-04-22 22:52:40 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 22:52:40 - Jinak pokud
+16-04-22 22:52:40 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 22:52:40 - Jinak pokud
+16-04-22 22:52:40 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 22:52:40 - Pokud (pump status = shouldStart)
+16-04-22 22:52:40 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 22:52:40 - Invoking Macro: MainLoop
+16-04-22 22:52:40 - Interval: 00:01:00
+16-04-22 22:51:56 - Jinak pokud
+16-04-22 22:51:56 - Hodnota upravena z 5 na 0
+16-04-22 22:51:56 - Nastavit proměnnou (pump status: [v=off])
+16-04-22 22:51:56 - Hodnota upravena z 1650129316 na 0
+16-04-22 22:51:56 - Nastavit proměnnou (pumpStartTime: 0)
+16-04-22 22:51:56 - Hodnota upravena z 27 na 427
+16-04-22 22:51:56 - Nastavit proměnnou (dailyCount: [v=dailyCount] + [system_time] - [v=pumpStartTime])
+16-04-22 22:51:56 - A: Pokud (pump status != stopping) did not invoke because constraint failed: Proměnná (Offsms)
+16-04-22 22:51:56 - Pokud (pump status != stopping)
+16-04-22 22:51:56 - Blok akcí (Offsms)
+16-04-22 22:51:56 - Pokud (sms obsahuje The relay is OFF)
+16-04-22 22:51:56 - Hodnota upravena z The relay is ON na The relay is OFF
+16-04-22 22:51:56 - Nastavit proměnnou (sms: The relay is OFF)
+16-04-22 22:51:56 - Invoking Macro: WellSmsReceived
+16-04-22 22:51:56 - SMS zpráva od Water Motor Kahambana (Libovolný obsah)
+16-04-22 22:51:43 - SMS Sent to: +94 77 872 0359
+16-04-22 22:51:40 - Sending SMS to: +94 77 872 0359 Message = 2565#OFF#
+16-04-22 22:51:40 - Jinak pokud
+16-04-22 22:51:40 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 22:51:40 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 22:51:40 - Blok akcí (Watchdog)
+16-04-22 22:51:40 - Jinak pokud
+16-04-22 22:51:40 - Hodnota upravena z 4 na 5
+16-04-22 22:51:40 - Nastavit proměnnou (pump status: [v=stopping])
+16-04-22 22:51:40 - Odeslat SMS '2565#OFF#'
+16-04-22 22:51:40 - Pokud (Stav mobilních služeb (Dostupné))
+16-04-22 22:51:40 - Blok akcí (ScheduleStopSms)
+16-04-22 22:51:40 - Jinak pokud
+16-04-22 22:51:40 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 22:51:40 - Pokud (pump status = shouldStart)
+16-04-22 22:51:40 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 22:51:40 - Invoking Macro: MainLoop
+16-04-22 22:51:40 - Interval: 00:01:00
+16-04-22 22:50:40 - Jinak pokud
+16-04-22 22:50:40 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 22:50:40 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 22:50:40 - Blok akcí (Watchdog)
+16-04-22 22:50:40 - Hodnota upravena z 300 na 0
+16-04-22 22:50:40 - Nastavit proměnnou (eventDuration: 0)
+16-04-22 22:50:40 - Hodnota upravena z 1650129616 na 0
+16-04-22 22:50:40 - Nastavit proměnnou (offTime: 0)
+16-04-22 22:50:40 - Hodnota upravena z 3 na 4
+16-04-22 22:50:40 - Nastavit proměnnou (pump status: [v=shouldStop])
+16-04-22 22:50:40 - A: Pokud (Stav mobilních služeb (Dostupné)) did not invoke because constraint failed: Stav mobilních služeb (ScheduleStopSms)
+16-04-22 22:50:40 - Pokud (Stav mobilních služeb (Dostupné))
+16-04-22 22:50:40 - Blok akcí (ScheduleStopSms)
+16-04-22 22:50:40 - Jinak pokud
+16-04-22 22:50:40 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 22:50:40 - Jinak pokud
+16-04-22 22:50:40 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 22:50:40 - Pokud (pump status = shouldStart)
+16-04-22 22:50:40 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 22:50:40 - Invoking Macro: MainLoop
+16-04-22 22:50:40 - Interval: 00:01:00
+16-04-22 22:50:01 - A: Pokud (eventStart = 0 A pump status = off A eventDuration = 0) did not invoke because constraint failed: Proměnná (EventStart)
+16-04-22 22:50:01 - Pokud (eventStart = 0 A pump status = off A eventDuration = 0)
+16-04-22 22:50:01 - Invoking Macro: EventStart
+16-04-22 22:50:01 - Událost spuštěna (pump water)
+16-04-22 22:50:01 - Hodnota upravena z 0 na 1650129616
+16-04-22 22:50:01 - Nastavit proměnnou (offTime: [v=pumpStartTime] + [v=eventDuration])
+16-04-22 22:50:01 - Pokud (pumpStartTime > 0 A eventDuration > 0)
+16-04-22 22:50:01 - Blok akcí (CalculateEndTime)
+16-04-22 22:50:01 - Hodnota upravena z 1650129301 na 0
+16-04-22 22:50:01 - Nastavit proměnnou (eventStart: 0)
+16-04-22 22:50:01 - Hodnota upravena z 0 na 300
+16-04-22 22:50:01 - Nastavit proměnnou (eventDuration: [system_time] - [v=eventStart])
+16-04-22 22:50:01 - Pokud (eventDuration = 0 A eventStart != 0)
+16-04-22 22:50:01 - Invoking Macro: EventEnd
+16-04-22 22:50:01 - Událost ukončena (pump water)
+16-04-22 22:49:40 - Jinak pokud
+16-04-22 22:49:40 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 22:49:40 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 22:49:40 - Blok akcí (Watchdog)
+16-04-22 22:49:40 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 22:49:40 - Jinak pokud
+16-04-22 22:49:40 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 22:49:40 - Jinak pokud
+16-04-22 22:49:40 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 22:49:40 - Pokud (pump status = shouldStart)
+16-04-22 22:49:40 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 22:49:40 - Invoking Macro: MainLoop
+16-04-22 22:49:40 - Interval: 00:01:00
+16-04-22 22:48:40 - Jinak pokud
+16-04-22 22:48:40 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 22:48:40 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 22:48:40 - Blok akcí (Watchdog)
+16-04-22 22:48:40 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 22:48:40 - Jinak pokud
+16-04-22 22:48:40 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 22:48:40 - Jinak pokud
+16-04-22 22:48:40 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 22:48:40 - Pokud (pump status = shouldStart)
+16-04-22 22:48:40 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 22:48:40 - Invoking Macro: MainLoop
+16-04-22 22:48:40 - Interval: 00:01:00
+16-04-22 22:47:38 - Jinak pokud
+16-04-22 22:47:38 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 22:47:38 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 22:47:38 - Blok akcí (Watchdog)
+16-04-22 22:47:38 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 22:47:38 - Jinak pokud
+16-04-22 22:47:38 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 22:47:38 - Jinak pokud
+16-04-22 22:47:38 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 22:47:38 - Pokud (pump status = shouldStart)
+16-04-22 22:47:38 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 22:47:38 - Invoking Macro: MainLoop
+16-04-22 22:47:38 - Interval: 00:01:00
+16-04-22 22:46:38 - Jinak pokud
+16-04-22 22:46:38 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 22:46:38 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 22:46:38 - Blok akcí (Watchdog)
+16-04-22 22:46:38 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 22:46:38 - Jinak pokud
+16-04-22 22:46:38 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 22:46:38 - Jinak pokud
+16-04-22 22:46:38 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 22:46:38 - Pokud (pump status = shouldStart)
+16-04-22 22:46:38 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 22:46:38 - Invoking Macro: MainLoop
+16-04-22 22:46:38 - Interval: 00:01:00
+16-04-22 22:45:38 - Jinak pokud
+16-04-22 22:45:38 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 22:45:38 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 22:45:38 - Blok akcí (Watchdog)
+16-04-22 22:45:38 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 22:45:38 - Jinak pokud
+16-04-22 22:45:38 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 22:45:38 - Jinak pokud
+16-04-22 22:45:38 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 22:45:38 - Pokud (pump status = shouldStart)
+16-04-22 22:45:38 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 22:45:38 - Invoking Macro: MainLoop
+16-04-22 22:45:38 - Interval: 00:01:00
+16-04-22 22:45:16 - Hodnota upravena z 2 na 3
+16-04-22 22:45:16 - Nastavit proměnnou (pump status: [v=on])
+16-04-22 22:45:16 - A: Pokud (pumpStartTime > 0 A eventDuration > 0) did not invoke because constraint failed: Proměnná (CalculateEndTime)
+16-04-22 22:45:16 - Pokud (pumpStartTime > 0 A eventDuration > 0)
+16-04-22 22:45:16 - Blok akcí (CalculateEndTime)
+16-04-22 22:45:16 - Hodnota upravena z 0 na 1650129316
+16-04-22 22:45:16 - Nastavit proměnnou (pumpStartTime: [system_time])
+16-04-22 22:45:16 - Pokud (pump status != on)
+16-04-22 22:45:16 - A: Pokud (pump status != starting) did not invoke because constraint failed: Proměnná (Onsms)
+16-04-22 22:45:16 - Pokud (pump status != starting)
+16-04-22 22:45:16 - Blok akcí (Onsms)
+16-04-22 22:45:16 - Jinak pokud
+16-04-22 22:45:16 - A: Pokud (sms obsahuje The relay is OFF) did not invoke because constraint failed: Proměnná (WellSmsReceived)
+16-04-22 22:45:16 - Pokud (sms obsahuje The relay is OFF)
+16-04-22 22:45:16 - Hodnota upravena z The relay is OFF na The relay is ON
+16-04-22 22:45:16 - Nastavit proměnnou (sms: The relay is ON)
+16-04-22 22:45:16 - Invoking Macro: WellSmsReceived
+16-04-22 22:45:16 - SMS zpráva od Water Motor Kahambana (Libovolný obsah)
+16-04-22 22:45:04 - SMS Sent to: +94 77 872 0359
+16-04-22 22:45:01 - Sending SMS to: +94 77 872 0359 Message = 2565#ON#
+16-04-22 22:45:01 - Hodnota upravena z 0 na 2
+16-04-22 22:45:01 - Nastavit proměnnou (pump status: [v=starting])
+16-04-22 22:45:01 - Odeslat SMS '2565#ON#'
+16-04-22 22:45:01 - Pokud (Stav mobilních služeb (Dostupné))
+16-04-22 22:45:01 - Blok akcí (ScheduleStartSms)
+16-04-22 22:45:01 - Hodnota upravena z 0 na 1650129301
+16-04-22 22:45:01 - Nastavit proměnnou (eventStart: [system_time])
+16-04-22 22:45:01 - Pokud (eventStart = 0 A pump status = off A eventDuration = 0)
+16-04-22 22:45:01 - Invoking Macro: EventStart
+16-04-22 22:45:01 - Událost spuštěna (pump water)
+16-04-22 22:44:38 - Jinak pokud
+16-04-22 22:44:38 - A: Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime]) did not invoke because constraint failed: Proměnná (Watchdog)
+16-04-22 22:44:38 - Pokud (pump status = on A pumpStartTime < [system_time] - [v=maxPumpTime])
+16-04-22 22:44:38 - Blok akcí (Watchdog)
+16-04-22 22:44:38 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 22:44:38 - Jinak pokud
+16-04-22 22:44:38 - A: Jinak pokud did not invoke because constraint failed: Proměnná (MainLoop)
+16-04-22 22:44:38 - Jinak pokud
+16-04-22 22:44:38 - A: Pokud (pump status = shouldStart) did not invoke because no constraints were true (Podmínka)
+16-04-22 22:44:38 - Pokud (pump status = shouldStart)
+16-04-22 22:44:38 - Pokud (Makro(a) povoleno(a): [WellSmsReceived])
+16-04-22 22:44:38 - Invoking Macro: MainLoop
+16-04-22 22:44:38 - Interval: 00:01:00
