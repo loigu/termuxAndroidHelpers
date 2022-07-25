@@ -1,0 +1,6 @@
+[submodule "external/MHTifier"]
+	path = external/MHTifier
+	url = git@github.com:Modified/MHTifier
+[submodule "external/KindleUnpack"]
+	path = external/KindleUnpack
+	url = git@github.com:kevinhendricks/KindleUnpack
