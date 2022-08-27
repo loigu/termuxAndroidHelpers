@@ -1,0 +1,1 @@
+termux-media-player stop
