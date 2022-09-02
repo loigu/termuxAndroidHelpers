@@ -1,1 +1,642 @@
-{"isInputExpanded":true,"isOutputExpanded":true,"isTestMode":true,"exportedActionBlocks":[],"isActionBlock":true,"isBeingImported":false,"isClonedInstance":false,"isFavourite":false,"localVariables":[{"dictionary":{"entries":[],"isArray":false,"variableType":4,"type":"Dictionary"},"isLocalVar":true,"m_booleanValue":false,"m_decimalValue":0.0,"m_intValue":0,"m_name":"user","m_stringValue":"","m_type":2,"supportsInput":true,"supportsOutput":false},{"dictionary":{"entries":[],"isArray":false,"variableType":4,"type":"Dictionary"},"isLocalVar":true,"m_booleanValue":false,"m_decimalValue":0.0,"m_intValue":0,"m_name":"pump time min","m_stringValue":"","m_type":1,"supportsInput":false,"supportsOutput":true}],"m_GUID":-8092611678626209959,"m_actionList":[{"childrenCollapsed":false,"m_SIGUID":-6361497876582696073,"m_classType":"IfConditionAction","m_constraintList":[{"checkCase":false,"dictionaryKeys":{"keys":[]},"dictionaryType":2,"enableRegex":false,"m_booleanValue":false,"m_doubleValue":0.0,"m_intCompareVariable":false,"m_intGreaterThan":false,"m_intLessThan":false,"m_intNotEqual":false,"m_intValue":0,"m_otherValueToCompare":{"dictionary":{"entries":[],"isArray":false,"variableType":4,"type":"Dictionary"},"isLocalVar":true,"m_booleanValue":false,"m_decimalValue":0.0,"m_intValue":0,"m_name":"pump time min","m_stringValue":"","m_type":1,"supportsInput":false,"supportsOutput":true},"m_stringComparisonType":0,"m_stringEqual":true,"m_stringValue":"samana","m_variable":{"dictionary":{"entries":[],"isArray":false,"variableType":4,"type":"Dictionary"},"isLocalVar":true,"m_booleanValue":false,"m_decimalValue":0.0,"m_intValue":0,"m_name":"user","m_stringValue":"","m_type":2,"supportsInput":true,"supportsOutput":false},"m_SIGUID":-5933541643760124029,"m_classType":"MacroDroidVariableConstraint","m_constraintList":[],"m_isDisabled":false,"m_isOrCondition":false},{"checkCase":false,"dictionaryKeys":{"keys":[]},"dictionaryType":2,"enableRegex":false,"m_booleanValue":false,"m_doubleValue":0.0,"m_intCompareVariable":false,"m_intGreaterThan":false,"m_intLessThan":false,"m_intNotEqual":false,"m_intValue":0,"m_otherValueToCompare":{"dictionary":{"entries":[],"isArray":false,"variableType":4,"type":"Dictionary"},"isLocalVar":true,"m_booleanValue":false,"m_decimalValue":0.0,"m_intValue":0,"m_name":"pump time min","m_stringValue":"","m_type":1,"supportsInput":false,"supportsOutput":true},"m_stringComparisonType":0,"m_stringEqual":true,"m_stringValue":"1000l tank","m_variable":{"dictionary":{"entries":[],"isArray":false,"variableType":4,"type":"Dictionary"},"isLocalVar":true,"m_booleanValue":false,"m_decimalValue":0.0,"m_intValue":0,"m_name":"user","m_stringValue":"","m_type":2,"supportsInput":true,"supportsOutput":false},"workingOtherVarToCompare":{"dictionary":{"entries":[],"isArray":false,"variableType":4,"type":"Dictionary"},"isLocalVar":true,"m_booleanValue":false,"m_decimalValue":0.0,"m_intValue":0,"m_name":"pump time min","m_stringValue":"","m_type":1,"supportsInput":false,"supportsOutput":true},"m_SIGUID":-5230358965224827952,"m_classType":"MacroDroidVariableConstraint","m_constraintList":[],"m_isDisabled":false,"m_isOrCondition":false},{"checkCase":false,"dictionaryKeys":{"keys":[]},"dictionaryType":2,"enableRegex":false,"m_booleanValue":false,"m_doubleValue":0.0,"m_intCompareVariable":false,"m_intGreaterThan":false,"m_intLessThan":false,"m_intNotEqual":false,"m_intValue":0,"m_otherValueToCompare":{"dictionary":{"entries":[],"isArray":false,"variableType":4,"type":"Dictionary"},"isLocalVar":true,"m_booleanValue":false,"m_decimalValue":0.0,"m_intValue":0,"m_name":"pump time min","m_stringValue":"","m_type":1,"supportsInput":false,"supportsOutput":true},"m_stringComparisonType":0,"m_stringEqual":true,"m_stringValue":"Jagath","m_variable":{"dictionary":{"entries":[],"isArray":false,"variableType":4,"type":"Dictionary"},"isLocalVar":true,"m_booleanValue":false,"m_decimalValue":0.0,"m_intValue":0,"m_name":"user","m_stringValue":"","m_type":2,"supportsInput":true,"supportsOutput":false},"m_SIGUID":-5234690352311630874,"m_classType":"MacroDroidVariableConstraint","m_constraintList":[],"m_isDisabled":false,"m_isOrCondition":false}],"m_isDisabled":false,"m_isOrCondition":true},{"dictionaryKeys":[],"dictionaryOrArrayType":-1,"m_booleanInvert":false,"m_darkMode":-1,"m_doubleRandomMax":0.0,"m_doubleRandomMin":0.0,"m_falseLabel":"Nepravda","m_intExpression":false,"m_intRandom":false,"m_intRandomMax":0,"m_intRandomMin":0,"m_intValueDecrement":false,"m_intValueIncrement":false,"m_newBooleanValue":false,"m_newDoubleValue":0.0,"m_newIntValue":45,"m_trueLabel":"Pravda","m_userPrompt":false,"m_userPromptEmptyAtStart":false,"m_userPromptPassword":false,"m_userPromptShowCancel":true,"m_userPromptStopAfterCancel":true,"m_variable":{"dictionary":{"entries":[],"isArray":false,"variableType":4,"type":"Dictionary"},"isLocalVar":true,"m_booleanValue":false,"m_decimalValue":0.0,"m_intValue":0,"m_name":"pump time min","m_stringValue":"","m_type":1,"supportsInput":false,"supportsOutput":true},"m_SIGUID":-6061841090629961552,"m_classType":"SetVariableAction","m_constraintList":[],"m_isDisabled":false,"m_isOrCondition":false},{"m_SIGUID":-6261062300472984163,"m_classType":"ElseIfConditionAction","m_constraintList":[{"checkCase":false,"dictionaryKeys":{"keys":[]},"dictionaryType":2,"enableRegex":false,"m_booleanValue":false,"m_doubleValue":0.0,"m_intCompareVariable":false,"m_intGreaterThan":false,"m_intLessThan":false,"m_intNotEqual":false,"m_intValue":0,"m_otherValueToCompare":{"dictionary":{"entries":[],"isArray":false,"variableType":4,"type":"Dictionary"},"isLocalVar":true,"m_booleanValue":false,"m_decimalValue":0.0,"m_intValue":0,"m_name":"pump time min","m_stringValue":"","m_type":1,"supportsInput":false,"supportsOutput":true},"m_stringComparisonType":0,"m_stringEqual":true,"m_stringValue":"2000l tank","m_variable":{"dictionary":{"entries":[],"isArray":false,"variableType":4,"type":"Dictionary"},"isLocalVar":true,"m_booleanValue":false,"m_decimalValue":0.0,"m_intValue":0,"m_name":"user","m_stringValue":"","m_type":2,"supportsInput":true,"supportsOutput":false},"m_SIGUID":-7408615249037876956,"m_classType":"MacroDroidVariableConstraint","m_constraintList":[],"m_isDisabled":false,"m_isOrCondition":false}],"m_isDisabled":false,"m_isOrCondition":false},{"dictionaryKeys":[],"dictionaryOrArrayType":-1,"m_booleanInvert":false,"m_darkMode":-1,"m_doubleRandomMax":0.0,"m_doubleRandomMin":0.0,"m_falseLabel":"Nepravda","m_intExpression":false,"m_intRandom":false,"m_intRandomMax":0,"m_intRandomMin":0,"m_intValueDecrement":false,"m_intValueIncrement":false,"m_newBooleanValue":false,"m_newDoubleValue":0.0,"m_newIntValue":30,"m_trueLabel":"Pravda","m_userPrompt":false,"m_userPromptEmptyAtStart":false,"m_userPromptPassword":false,"m_userPromptShowCancel":true,"m_userPromptStopAfterCancel":true,"m_variable":{"dictionary":{"entries":[],"isArray":false,"variableType":4,"type":"Dictionary"},"isLocalVar":true,"m_booleanValue":false,"m_decimalValue":0.0,"m_intValue":0,"m_name":"pump time min","m_stringValue":"","m_type":1,"supportsInput":false,"supportsOutput":true},"m_SIGUID":-6402514198512680869,"m_classType":"SetVariableAction","m_constraintList":[],"m_isDisabled":false,"m_isOrCondition":false},{"m_SIGUID":-6888783771197079890,"m_classType":"ElseIfConditionAction","m_constraintList":[{"checkCase":false,"dictionaryKeys":{"keys":[]},"dictionaryType":2,"enableRegex":false,"m_booleanValue":false,"m_doubleValue":0.0,"m_intCompareVariable":false,"m_intGreaterThan":false,"m_intLessThan":false,"m_intNotEqual":false,"m_intValue":0,"m_otherValueToCompare":{"dictionary":{"entries":[],"isArray":false,"variableType":4,"type":"Dictionary"},"isLocalVar":true,"m_booleanValue":false,"m_decimalValue":0.0,"m_intValue":0,"m_name":"pump time min","m_stringValue":"","m_type":1,"supportsInput":false,"supportsOutput":true},"m_stringComparisonType":0,"m_stringEqual":true,"m_stringValue":"5000l tank","m_variable":{"dictionary":{"entries":[],"isArray":false,"variableType":4,"type":"Dictionary"},"isLocalVar":true,"m_booleanValue":false,"m_decimalValue":0.0,"m_intValue":0,"m_name":"user","m_stringValue":"","m_type":2,"supportsInput":true,"supportsOutput":false},"m_SIGUID":-6792955787889512796,"m_classType":"MacroDroidVariableConstraint","m_constraintList":[],"m_isDisabled":false,"m_isOrCondition":false}],"m_isDisabled":false,"m_isOrCondition":false},{"dictionaryKeys":[],"dictionaryOrArrayType":-1,"m_booleanInvert":false,"m_darkMode":-1,"m_doubleRandomMax":0.0,"m_doubleRandomMin":0.0,"m_falseLabel":"Nepravda","m_intExpression":false,"m_intRandom":false,"m_intRandomMax":0,"m_intRandomMin":0,"m_intValueDecrement":false,"m_intValueIncrement":false,"m_newBooleanValue":false,"m_newDoubleValue":0.0,"m_newIntValue":90,"m_trueLabel":"Pravda","m_userPrompt":false,"m_userPromptEmptyAtStart":false,"m_userPromptPassword":false,"m_userPromptShowCancel":true,"m_userPromptStopAfterCancel":true,"m_variable":{"dictionary":{"entries":[],"isArray":false,"variableType":4,"type":"Dictionary"},"isLocalVar":true,"m_booleanValue":false,"m_decimalValue":0.0,"m_intValue":0,"m_name":"pump time min","m_stringValue":"","m_type":1,"supportsInput":false,"supportsOutput":true},"m_SIGUID":-5010011200444918396,"m_classType":"SetVariableAction","m_constraintList":[],"m_isDisabled":false,"m_isOrCondition":false},{"m_SIGUID":-7386482515738645547,"m_classType":"ElseIfConditionAction","m_constraintList":[{"checkCase":false,"dictionaryKeys":{"keys":[]},"dictionaryType":2,"enableRegex":false,"m_booleanValue":false,"m_doubleValue":0.0,"m_intCompareVariable":false,"m_intGreaterThan":false,"m_intLessThan":false,"m_intNotEqual":false,"m_intValue":0,"m_otherValueToCompare":{"dictionary":{"entries":[],"isArray":false,"variableType":4,"type":"Dictionary"},"isLocalVar":true,"m_booleanValue":false,"m_decimalValue":0.0,"m_intValue":0,"m_name":"pump time min","m_stringValue":"","m_type":1,"supportsInput":false,"supportsOutput":true},"m_stringComparisonType":0,"m_stringEqual":true,"m_stringValue":"pansale","m_variable":{"dictionary":{"entries":[],"isArray":false,"variableType":4,"type":"Dictionary"},"isLocalVar":true,"m_booleanValue":false,"m_decimalValue":0.0,"m_intValue":0,"m_name":"user","m_stringValue":"","m_type":2,"supportsInput":true,"supportsOutput":false},"m_SIGUID":-5697903645254276615,"m_classType":"MacroDroidVariableConstraint","m_constraintList":[],"m_isDisabled":false,"m_isOrCondition":false}],"m_isDisabled":false,"m_isOrCondition":false},{"dictionaryKeys":[],"dictionaryOrArrayType":-1,"m_booleanInvert":false,"m_darkMode":-1,"m_doubleRandomMax":0.0,"m_doubleRandomMin":0.0,"m_falseLabel":"Nepravda","m_intExpression":false,"m_intRandom":false,"m_intRandomMax":0,"m_intRandomMin":0,"m_intValueDecrement":false,"m_intValueIncrement":false,"m_newBooleanValue":false,"m_newDoubleValue":0.0,"m_newIntValue":15,"m_trueLabel":"Pravda","m_userPrompt":false,"m_userPromptEmptyAtStart":false,"m_userPromptPassword":false,"m_userPromptShowCancel":true,"m_userPromptStopAfterCancel":true,"m_variable":{"dictionary":{"entries":[],"isArray":false,"variableType":4,"type":"Dictionary"},"isLocalVar":true,"m_booleanValue":false,"m_decimalValue":0.0,"m_intValue":0,"m_name":"pump time min","m_stringValue":"","m_type":1,"supportsInput":false,"supportsOutput":true},"m_SIGUID":-7735632580401255247,"m_classType":"SetVariableAction","m_constraintList":[],"m_isDisabled":false,"m_isOrCondition":false},{"m_SIGUID":-6226464977201112608,"m_classType":"EndIfAction","m_constraintList":[],"m_isDisabled":false,"m_isOrCondition":false}],"m_category":"Uncategorized","m_constraintList":[],"m_description":"","m_descriptionOpen":false,"m_enabled":true,"m_excludeLog":false,"m_headingColor":0,"m_isOrCondition":false,"m_name":"User to pump time","m_triggerList":[]}
+{
+    "isInputExpanded": true,
+    "isOutputExpanded": true,
+    "isTestMode": true,
+    "exportedActionBlocks": [],
+    "isActionBlock": true,
+    "isBeingImported": false,
+    "isClonedInstance": false,
+    "isFavourite": false,
+    "localVariables": [
+        {
+            "dictionary": {
+                "entries": [],
+                "isArray": false,
+                "variableType": 4,
+                "type": "Dictionary"
+            },
+            "isLocalVar": true,
+            "m_booleanValue": false,
+            "m_decimalValue": 0.0,
+            "m_intValue": 0,
+            "m_name": "user",
+            "m_stringValue": "",
+            "m_type": 2,
+            "supportsInput": true,
+            "supportsOutput": false
+        },
+        {
+            "dictionary": {
+                "entries": [],
+                "isArray": false,
+                "variableType": 4,
+                "type": "Dictionary"
+            },
+            "isLocalVar": true,
+            "m_booleanValue": false,
+            "m_decimalValue": 0.0,
+            "m_intValue": 0,
+            "m_name": "pump time min",
+            "m_stringValue": "",
+            "m_type": 1,
+            "supportsInput": false,
+            "supportsOutput": true
+        }
+    ],
+    "m_GUID": -7053429740545719143,
+    "m_actionList": [
+        {
+            "childrenCollapsed": false,
+            "m_SIGUID": -6361497876582696073,
+            "m_classType": "IfConditionAction",
+            "m_constraintList": [
+                {
+                    "checkCase": false,
+                    "dictionaryKeys": {
+                        "keys": []
+                    },
+                    "dictionaryType": 2,
+                    "enableRegex": false,
+                    "m_booleanValue": false,
+                    "m_doubleValue": 0.0,
+                    "m_intCompareVariable": false,
+                    "m_intGreaterThan": false,
+                    "m_intLessThan": false,
+                    "m_intNotEqual": false,
+                    "m_intValue": 0,
+                    "m_otherValueToCompare": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": true,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 0,
+                        "m_name": "pump time min",
+                        "m_stringValue": "",
+                        "m_type": 1,
+                        "supportsInput": false,
+                        "supportsOutput": true
+                    },
+                    "m_stringComparisonType": 0,
+                    "m_stringEqual": true,
+                    "m_stringValue": "samana",
+                    "m_variable": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": true,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 0,
+                        "m_name": "user",
+                        "m_stringValue": "",
+                        "m_type": 2,
+                        "supportsInput": true,
+                        "supportsOutput": false
+                    },
+                    "m_SIGUID": -5933541643760124029,
+                    "m_classType": "MacroDroidVariableConstraint",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "checkCase": false,
+                    "dictionaryKeys": {
+                        "keys": []
+                    },
+                    "dictionaryType": 2,
+                    "enableRegex": false,
+                    "m_booleanValue": false,
+                    "m_doubleValue": 0.0,
+                    "m_intCompareVariable": false,
+                    "m_intGreaterThan": false,
+                    "m_intLessThan": false,
+                    "m_intNotEqual": false,
+                    "m_intValue": 0,
+                    "m_otherValueToCompare": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": true,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 0,
+                        "m_name": "pump time min",
+                        "m_stringValue": "",
+                        "m_type": 1,
+                        "supportsInput": false,
+                        "supportsOutput": true
+                    },
+                    "m_stringComparisonType": 0,
+                    "m_stringEqual": true,
+                    "m_stringValue": "1000l tank",
+                    "m_variable": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": true,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 0,
+                        "m_name": "user",
+                        "m_stringValue": "",
+                        "m_type": 2,
+                        "supportsInput": true,
+                        "supportsOutput": false
+                    },
+                    "workingOtherVarToCompare": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": true,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 0,
+                        "m_name": "pump time min",
+                        "m_stringValue": "",
+                        "m_type": 1,
+                        "supportsInput": false,
+                        "supportsOutput": true
+                    },
+                    "m_SIGUID": -5230358965224827952,
+                    "m_classType": "MacroDroidVariableConstraint",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "checkCase": false,
+                    "dictionaryKeys": {
+                        "keys": []
+                    },
+                    "dictionaryType": 2,
+                    "enableRegex": false,
+                    "m_booleanValue": false,
+                    "m_doubleValue": 0.0,
+                    "m_intCompareVariable": false,
+                    "m_intGreaterThan": false,
+                    "m_intLessThan": false,
+                    "m_intNotEqual": false,
+                    "m_intValue": 0,
+                    "m_otherValueToCompare": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": true,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 0,
+                        "m_name": "pump time min",
+                        "m_stringValue": "",
+                        "m_type": 1,
+                        "supportsInput": false,
+                        "supportsOutput": true
+                    },
+                    "m_stringComparisonType": 0,
+                    "m_stringEqual": true,
+                    "m_stringValue": "Jagath",
+                    "m_variable": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": true,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 0,
+                        "m_name": "user",
+                        "m_stringValue": "",
+                        "m_type": 2,
+                        "supportsInput": true,
+                        "supportsOutput": false
+                    },
+                    "m_SIGUID": -5234690352311630874,
+                    "m_classType": "MacroDroidVariableConstraint",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                }
+            ],
+            "m_isDisabled": false,
+            "m_isOrCondition": true
+        },
+        {
+            "dictionaryKeys": [],
+            "dictionaryOrArrayType": -1,
+            "m_booleanInvert": false,
+            "m_darkMode": -1,
+            "m_doubleRandomMax": 0.0,
+            "m_doubleRandomMin": 0.0,
+            "m_falseLabel": "Nepravda",
+            "m_intExpression": false,
+            "m_intRandom": false,
+            "m_intRandomMax": 0,
+            "m_intRandomMin": 0,
+            "m_intValueDecrement": false,
+            "m_intValueIncrement": false,
+            "m_newBooleanValue": false,
+            "m_newDoubleValue": 0.0,
+            "m_newIntValue": 45,
+            "m_trueLabel": "Pravda",
+            "m_userPrompt": false,
+            "m_userPromptEmptyAtStart": false,
+            "m_userPromptPassword": false,
+            "m_userPromptShowCancel": true,
+            "m_userPromptStopAfterCancel": true,
+            "m_variable": {
+                "dictionary": {
+                    "entries": [],
+                    "isArray": false,
+                    "variableType": 4,
+                    "type": "Dictionary"
+                },
+                "isLocalVar": true,
+                "m_booleanValue": false,
+                "m_decimalValue": 0.0,
+                "m_intValue": 0,
+                "m_name": "pump time min",
+                "m_stringValue": "",
+                "m_type": 1,
+                "supportsInput": false,
+                "supportsOutput": true
+            },
+            "m_SIGUID": -6061841090629961552,
+            "m_classType": "SetVariableAction",
+            "m_constraintList": [],
+            "m_isDisabled": false,
+            "m_isOrCondition": false
+        },
+        {
+            "m_SIGUID": -6261062300472984163,
+            "m_classType": "ElseIfConditionAction",
+            "m_constraintList": [
+                {
+                    "checkCase": false,
+                    "dictionaryKeys": {
+                        "keys": []
+                    },
+                    "dictionaryType": 2,
+                    "enableRegex": false,
+                    "m_booleanValue": false,
+                    "m_doubleValue": 0.0,
+                    "m_intCompareVariable": false,
+                    "m_intGreaterThan": false,
+                    "m_intLessThan": false,
+                    "m_intNotEqual": false,
+                    "m_intValue": 0,
+                    "m_otherValueToCompare": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": true,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 0,
+                        "m_name": "pump time min",
+                        "m_stringValue": "",
+                        "m_type": 1,
+                        "supportsInput": false,
+                        "supportsOutput": true
+                    },
+                    "m_stringComparisonType": 0,
+                    "m_stringEqual": true,
+                    "m_stringValue": "2000l tank",
+                    "m_variable": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": true,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 0,
+                        "m_name": "user",
+                        "m_stringValue": "",
+                        "m_type": 2,
+                        "supportsInput": true,
+                        "supportsOutput": false
+                    },
+                    "m_SIGUID": -7408615249037876956,
+                    "m_classType": "MacroDroidVariableConstraint",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                }
+            ],
+            "m_isDisabled": false,
+            "m_isOrCondition": false
+        },
+        {
+            "dictionaryKeys": [],
+            "dictionaryOrArrayType": -1,
+            "m_booleanInvert": false,
+            "m_darkMode": -1,
+            "m_doubleRandomMax": 0.0,
+            "m_doubleRandomMin": 0.0,
+            "m_falseLabel": "Nepravda",
+            "m_intExpression": false,
+            "m_intRandom": false,
+            "m_intRandomMax": 0,
+            "m_intRandomMin": 0,
+            "m_intValueDecrement": false,
+            "m_intValueIncrement": false,
+            "m_newBooleanValue": false,
+            "m_newDoubleValue": 0.0,
+            "m_newIntValue": 30,
+            "m_trueLabel": "Pravda",
+            "m_userPrompt": false,
+            "m_userPromptEmptyAtStart": false,
+            "m_userPromptPassword": false,
+            "m_userPromptShowCancel": true,
+            "m_userPromptStopAfterCancel": true,
+            "m_variable": {
+                "dictionary": {
+                    "entries": [],
+                    "isArray": false,
+                    "variableType": 4,
+                    "type": "Dictionary"
+                },
+                "isLocalVar": true,
+                "m_booleanValue": false,
+                "m_decimalValue": 0.0,
+                "m_intValue": 0,
+                "m_name": "pump time min",
+                "m_stringValue": "",
+                "m_type": 1,
+                "supportsInput": false,
+                "supportsOutput": true
+            },
+            "m_SIGUID": -6402514198512680869,
+            "m_classType": "SetVariableAction",
+            "m_constraintList": [],
+            "m_isDisabled": false,
+            "m_isOrCondition": false
+        },
+        {
+            "m_SIGUID": -6888783771197079890,
+            "m_classType": "ElseIfConditionAction",
+            "m_constraintList": [
+                {
+                    "checkCase": false,
+                    "dictionaryKeys": {
+                        "keys": []
+                    },
+                    "dictionaryType": 2,
+                    "enableRegex": false,
+                    "m_booleanValue": false,
+                    "m_doubleValue": 0.0,
+                    "m_intCompareVariable": false,
+                    "m_intGreaterThan": false,
+                    "m_intLessThan": false,
+                    "m_intNotEqual": false,
+                    "m_intValue": 0,
+                    "m_otherValueToCompare": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": true,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 0,
+                        "m_name": "pump time min",
+                        "m_stringValue": "",
+                        "m_type": 1,
+                        "supportsInput": false,
+                        "supportsOutput": true
+                    },
+                    "m_stringComparisonType": 0,
+                    "m_stringEqual": true,
+                    "m_stringValue": "5000l tank",
+                    "m_variable": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": true,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 0,
+                        "m_name": "user",
+                        "m_stringValue": "",
+                        "m_type": 2,
+                        "supportsInput": true,
+                        "supportsOutput": false
+                    },
+                    "m_SIGUID": -6792955787889512796,
+                    "m_classType": "MacroDroidVariableConstraint",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                }
+            ],
+            "m_isDisabled": false,
+            "m_isOrCondition": false
+        },
+        {
+            "dictionaryKeys": [],
+            "dictionaryOrArrayType": -1,
+            "m_booleanInvert": false,
+            "m_darkMode": -1,
+            "m_doubleRandomMax": 0.0,
+            "m_doubleRandomMin": 0.0,
+            "m_falseLabel": "Nepravda",
+            "m_intExpression": false,
+            "m_intRandom": false,
+            "m_intRandomMax": 0,
+            "m_intRandomMin": 0,
+            "m_intValueDecrement": false,
+            "m_intValueIncrement": false,
+            "m_newBooleanValue": false,
+            "m_newDoubleValue": 0.0,
+            "m_newIntValue": 90,
+            "m_trueLabel": "Pravda",
+            "m_userPrompt": false,
+            "m_userPromptEmptyAtStart": false,
+            "m_userPromptPassword": false,
+            "m_userPromptShowCancel": true,
+            "m_userPromptStopAfterCancel": true,
+            "m_variable": {
+                "dictionary": {
+                    "entries": [],
+                    "isArray": false,
+                    "variableType": 4,
+                    "type": "Dictionary"
+                },
+                "isLocalVar": true,
+                "m_booleanValue": false,
+                "m_decimalValue": 0.0,
+                "m_intValue": 0,
+                "m_name": "pump time min",
+                "m_stringValue": "",
+                "m_type": 1,
+                "supportsInput": false,
+                "supportsOutput": true
+            },
+            "m_SIGUID": -5010011200444918396,
+            "m_classType": "SetVariableAction",
+            "m_constraintList": [],
+            "m_isDisabled": false,
+            "m_isOrCondition": false
+        },
+        {
+            "m_SIGUID": -7386482515738645547,
+            "m_classType": "ElseIfConditionAction",
+            "m_constraintList": [
+                {
+                    "checkCase": false,
+                    "dictionaryKeys": {
+                        "keys": []
+                    },
+                    "dictionaryType": 2,
+                    "enableRegex": false,
+                    "m_booleanValue": false,
+                    "m_doubleValue": 0.0,
+                    "m_intCompareVariable": false,
+                    "m_intGreaterThan": false,
+                    "m_intLessThan": false,
+                    "m_intNotEqual": false,
+                    "m_intValue": 0,
+                    "m_otherValueToCompare": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": true,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 0,
+                        "m_name": "pump time min",
+                        "m_stringValue": "",
+                        "m_type": 1,
+                        "supportsInput": false,
+                        "supportsOutput": true
+                    },
+                    "m_stringComparisonType": 0,
+                    "m_stringEqual": true,
+                    "m_stringValue": "pansale",
+                    "m_variable": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": true,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 0,
+                        "m_name": "user",
+                        "m_stringValue": "",
+                        "m_type": 2,
+                        "supportsInput": true,
+                        "supportsOutput": false
+                    },
+                    "m_SIGUID": -5697903645254276615,
+                    "m_classType": "MacroDroidVariableConstraint",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                }
+            ],
+            "m_isDisabled": false,
+            "m_isOrCondition": false
+        },
+        {
+            "dictionaryKeys": [],
+            "dictionaryOrArrayType": -1,
+            "m_booleanInvert": false,
+            "m_darkMode": -1,
+            "m_doubleRandomMax": 0.0,
+            "m_doubleRandomMin": 0.0,
+            "m_falseLabel": "Nepravda",
+            "m_intExpression": false,
+            "m_intRandom": false,
+            "m_intRandomMax": 0,
+            "m_intRandomMin": 0,
+            "m_intValueDecrement": false,
+            "m_intValueIncrement": false,
+            "m_newBooleanValue": false,
+            "m_newDoubleValue": 0.0,
+            "m_newIntValue": 15,
+            "m_trueLabel": "Pravda",
+            "m_userPrompt": false,
+            "m_userPromptEmptyAtStart": false,
+            "m_userPromptPassword": false,
+            "m_userPromptShowCancel": true,
+            "m_userPromptStopAfterCancel": true,
+            "m_variable": {
+                "dictionary": {
+                    "entries": [],
+                    "isArray": false,
+                    "variableType": 4,
+                    "type": "Dictionary"
+                },
+                "isLocalVar": true,
+                "m_booleanValue": false,
+                "m_decimalValue": 0.0,
+                "m_intValue": 0,
+                "m_name": "pump time min",
+                "m_stringValue": "",
+                "m_type": 1,
+                "supportsInput": false,
+                "supportsOutput": true
+            },
+            "m_SIGUID": -7735632580401255247,
+            "m_classType": "SetVariableAction",
+            "m_constraintList": [],
+            "m_isDisabled": false,
+            "m_isOrCondition": false
+        },
+        {
+            "m_SIGUID": -6226464977201112608,
+            "m_classType": "EndIfAction",
+            "m_constraintList": [],
+            "m_isDisabled": false,
+            "m_isOrCondition": false
+        }
+    ],
+    "m_category": "Uncategorized",
+    "m_constraintList": [],
+    "m_description": "",
+    "m_descriptionOpen": false,
+    "m_enabled": true,
+    "m_excludeLog": false,
+    "m_headingColor": 0,
+    "m_isOrCondition": false,
+    "m_name": "User to pump time",
+    "m_triggerList": []
+}
