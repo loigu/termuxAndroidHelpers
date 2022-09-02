@@ -44,7 +44,7 @@
             "isLocalVar": false,
             "m_booleanValue": false,
             "m_decimalValue": 0.0,
-            "m_intValue": 900,
+            "m_intValue": 1800,
             "m_name": "defaultEventLength",
             "m_stringValue": "",
             "m_type": 1,
@@ -265,6 +265,23 @@
             "isLocalVar": false,
             "m_booleanValue": false,
             "m_decimalValue": 0.0,
+            "m_intValue": 1,
+            "m_name": "prio_warning",
+            "m_stringValue": "",
+            "m_type": 1,
+            "supportsInput": true,
+            "supportsOutput": true
+        },
+        {
+            "dictionary": {
+                "entries": [],
+                "isArray": false,
+                "variableType": 4,
+                "type": "Dictionary"
+            },
+            "isLocalVar": false,
+            "m_booleanValue": false,
+            "m_decimalValue": 0.0,
             "m_intValue": 2,
             "m_name": "pump status",
             "m_stringValue": "",
@@ -375,4 +392,4 @@
             "supportsOutput": true
         }
     ]
-   } 
+}
