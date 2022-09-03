@@ -10,7 +10,7 @@
             "isLocalVar": false,
             "m_booleanValue": false,
             "m_decimalValue": 0.0,
-            "m_intValue": 0,
+            "m_intValue": 120,
             "m_name": "assumedEventDuration",
             "m_stringValue": "",
             "m_type": 1,
@@ -27,7 +27,7 @@
             "isLocalVar": false,
             "m_booleanValue": false,
             "m_decimalValue": 0.0,
-            "m_intValue": 1834,
+            "m_intValue": 1044,
             "m_name": "dailyCount",
             "m_stringValue": "",
             "m_type": 1,
@@ -44,24 +44,7 @@
             "isLocalVar": false,
             "m_booleanValue": false,
             "m_decimalValue": 0.0,
-            "m_intValue": 1800,
-            "m_name": "defaultEventLength",
-            "m_stringValue": "",
-            "m_type": 1,
-            "supportsInput": true,
-            "supportsOutput": true
-        },
-        {
-            "dictionary": {
-                "entries": [],
-                "isArray": false,
-                "variableType": 4,
-                "type": "Dictionary"
-            },
-            "isLocalVar": false,
-            "m_booleanValue": false,
-            "m_decimalValue": 0.0,
-            "m_intValue": 900,
+            "m_intValue": 0,
             "m_name": "eventDuration",
             "m_stringValue": "",
             "m_type": 1,
@@ -78,7 +61,7 @@
             "isLocalVar": false,
             "m_booleanValue": false,
             "m_decimalValue": 0.0,
-            "m_intValue": 1662093141,
+            "m_intValue": 1662207308,
             "m_name": "last well sms recieved",
             "m_stringValue": "",
             "m_type": 1,
@@ -95,24 +78,7 @@
             "isLocalVar": false,
             "m_booleanValue": false,
             "m_decimalValue": 0.0,
-            "m_intValue": 0,
-            "m_name": "lastPumpState",
-            "m_stringValue": "",
-            "m_type": 1,
-            "supportsInput": true,
-            "supportsOutput": true
-        },
-        {
-            "dictionary": {
-                "entries": [],
-                "isArray": false,
-                "variableType": 4,
-                "type": "Dictionary"
-            },
-            "isLocalVar": false,
-            "m_booleanValue": false,
-            "m_decimalValue": 0.0,
-            "m_intValue": 1662093127,
+            "m_intValue": 1662207309,
             "m_name": "lastPumpStateChange",
             "m_stringValue": "",
             "m_type": 1,
@@ -163,7 +129,7 @@
             "isLocalVar": false,
             "m_booleanValue": false,
             "m_decimalValue": 0.0,
-            "m_intValue": 0,
+            "m_intValue": 1662207002,
             "m_name": "newEventStart",
             "m_stringValue": "",
             "m_type": 1,
@@ -282,7 +248,7 @@
             "isLocalVar": false,
             "m_booleanValue": false,
             "m_decimalValue": 0.0,
-            "m_intValue": 2,
+            "m_intValue": 0,
             "m_name": "pump status",
             "m_stringValue": "",
             "m_type": 1,
@@ -384,12 +350,12 @@
             "isLocalVar": false,
             "m_booleanValue": false,
             "m_decimalValue": 0.0,
-            "m_intValue": 2700,
+            "m_intValue": 0,
             "m_name": "userPumpTime",
             "m_stringValue": "",
             "m_type": 1,
             "supportsInput": true,
             "supportsOutput": true
         }
-    ]
-}
+   ]
+  } 
