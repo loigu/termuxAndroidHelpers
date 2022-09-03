@@ -608,7 +608,7 @@
     "m_category": "Neza\u0159azen\u00e9",
     "m_constraintList": [],
     "m_description": "",
-    "m_descriptionOpen": true,
+    "m_descriptionOpen": false,
     "m_enabled": true,
     "m_excludeLog": false,
     "m_headingColor": 0,

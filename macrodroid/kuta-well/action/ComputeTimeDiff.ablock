@@ -2,7 +2,6 @@
     "isInputExpanded": true,
     "isOutputExpanded": true,
     "isTestMode": true,
-    "exportedActionBlocks": [],
     "isActionBlock": true,
     "isBeingImported": false,
     "isClonedInstance": false,
@@ -177,7 +176,7 @@
                     },
                     "m_stringComparisonType": 1,
                     "m_stringEqual": true,
-                    "m_stringValue": "01/01/1970",
+                    "m_stringValue": "1970",
                     "m_variable": {
                         "dictionary": {
                             "entries": [],
@@ -195,7 +194,98 @@
                         "supportsInput": true,
                         "supportsOutput": false
                     },
+                    "workingOtherVarToCompare": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": false,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 0,
+                        "m_name": "diffSecond",
+                        "m_stringValue": "",
+                        "m_type": 1,
+                        "supportsInput": false,
+                        "supportsOutput": true
+                    },
                     "m_SIGUID": -8316170943883485239,
+                    "m_classType": "MacroDroidVariableConstraint",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "checkCase": false,
+                    "dictionaryKeys": {
+                        "keys": []
+                    },
+                    "dictionaryType": 2,
+                    "enableRegex": false,
+                    "m_booleanValue": false,
+                    "m_doubleValue": 0.0,
+                    "m_intCompareVariable": false,
+                    "m_intGreaterThan": false,
+                    "m_intLessThan": false,
+                    "m_intNotEqual": false,
+                    "m_intValue": 0,
+                    "m_otherValueToCompare": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": false,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 0,
+                        "m_name": "diffSecond",
+                        "m_stringValue": "",
+                        "m_type": 1,
+                        "supportsInput": false,
+                        "supportsOutput": true
+                    },
+                    "m_stringComparisonType": 1,
+                    "m_stringEqual": true,
+                    "m_stringValue": "70",
+                    "m_variable": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": false,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 0,
+                        "m_name": "endDate",
+                        "m_stringValue": "19/04/2022",
+                        "m_type": 2,
+                        "supportsInput": true,
+                        "supportsOutput": false
+                    },
+                    "workingOtherVarToCompare": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": false,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 0,
+                        "m_name": "diffSecond",
+                        "m_stringValue": "",
+                        "m_type": 1,
+                        "supportsInput": false,
+                        "supportsOutput": true
+                    },
+                    "m_SIGUID": -6406418026647833108,
                     "m_classType": "MacroDroidVariableConstraint",
                     "m_constraintList": [],
                     "m_isDisabled": false,
@@ -203,11 +293,11 @@
                 }
             ],
             "m_isDisabled": false,
-            "m_isOrCondition": false
+            "m_isOrCondition": true
         },
         {
             "m_logDateAndTime": true,
-            "m_logText": "macrodroid bug - 0 end date,  assuming 15min",
+            "m_logText": "macrodroid bug - 0 end date",
             "m_SIGUID": -4764318538140917303,
             "m_classType": "LogAction",
             "m_constraintList": [],
@@ -221,9 +311,8 @@
             "m_darkMode": -1,
             "m_doubleRandomMax": 0.0,
             "m_doubleRandomMin": 0.0,
-            "m_expression": "{v=defaultEventLength}",
             "m_falseLabel": "False",
-            "m_intExpression": true,
+            "m_intExpression": false,
             "m_intRandom": false,
             "m_intRandomMax": 0,
             "m_intRandomMin": 0,
@@ -231,7 +320,7 @@
             "m_intValueIncrement": false,
             "m_newBooleanValue": false,
             "m_newDoubleValue": 0.0,
-            "m_newIntValue": 0,
+            "m_newIntValue": -1,
             "m_trueLabel": "True",
             "m_userPrompt": false,
             "m_userPromptEmptyAtStart": false,
@@ -256,53 +345,6 @@
                 "supportsOutput": true
             },
             "m_SIGUID": -8175535642608370605,
-            "m_classType": "SetVariableAction",
-            "m_constraintList": [],
-            "m_isDisabled": false,
-            "m_isOrCondition": false
-        },
-        {
-            "dictionaryKeys": [],
-            "dictionaryOrArrayType": -1,
-            "m_booleanInvert": false,
-            "m_darkMode": -1,
-            "m_doubleRandomMax": 0.0,
-            "m_doubleRandomMin": 0.0,
-            "m_expression": "{lv=diffSecond}",
-            "m_falseLabel": "False",
-            "m_intExpression": true,
-            "m_intRandom": false,
-            "m_intRandomMax": 0,
-            "m_intRandomMin": 0,
-            "m_intValueDecrement": false,
-            "m_intValueIncrement": false,
-            "m_newBooleanValue": false,
-            "m_newDoubleValue": 0.0,
-            "m_newIntValue": 0,
-            "m_trueLabel": "True",
-            "m_userPrompt": false,
-            "m_userPromptEmptyAtStart": false,
-            "m_userPromptPassword": false,
-            "m_userPromptShowCancel": true,
-            "m_userPromptStopAfterCancel": true,
-            "m_variable": {
-                "dictionary": {
-                    "entries": [],
-                    "isArray": false,
-                    "variableType": 4,
-                    "type": "Dictionary"
-                },
-                "isLocalVar": false,
-                "m_booleanValue": false,
-                "m_decimalValue": 0.0,
-                "m_intValue": 0,
-                "m_name": "assumedEventDuration",
-                "m_stringValue": "",
-                "m_type": 1,
-                "supportsInput": true,
-                "supportsOutput": true
-            },
-            "m_SIGUID": -5580629963136138927,
             "m_classType": "SetVariableAction",
             "m_constraintList": [],
             "m_isDisabled": false,
