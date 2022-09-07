@@ -1,5 +1,9 @@
 #!/bin/bash
 
 export PATH="${PATH}:~/bin:~/.shortcuts"
-alias json_prettyprint="python -m json.tool"
+function json_prettyprint()
+{
+	python -m json.tool "$@"
+}
+export -f json_prettyprint
 
