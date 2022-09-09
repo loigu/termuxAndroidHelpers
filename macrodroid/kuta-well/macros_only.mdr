@@ -1,0 +1,3473 @@
+{
+    "activityRecognitionUpdateRate": 120,
+    "categoryList": {
+        "categories": [
+            {
+                "color": -855310,
+                "isExpanded": true,
+                "isLocked": false,
+                "name": "Neza\u0159azen\u00e9"
+            },
+            {
+                "color": -855310,
+                "isExpanded": true,
+                "isLocked": false,
+                "name": "Uncategorized"
+            }
+        ]
+    },
+    "cellTowerGroups": [],
+    "cellTowerUpdateRate": 5,
+    "cellTowerUseAlarm": true,
+    "cellTowersIgnore": [],
+    "deviceFacingConstraintWorkWithScreenOff": false,
+    "drawerConfiguration": {
+        "backgroundColor": -1,
+        "drawerItems": [],
+        "headerColor": -12692882,
+        "leftSide": false,
+        "swipeAreaColor": -7829368,
+        "swipeAreaHeight": 20,
+        "swipeAreaOffset": 40,
+        "swipeAreaOpacity": 80,
+        "swipeAreaWidth": 14,
+        "visibleSwipeAreaWidth": 0
+    },
+    "enableExperimentalFeatures": true,
+    "enableRootFeatures": false,
+    "exportAppVersion": 5260008,
+    "exportFormat": 2,
+    "flipWithScreenOff": false,
+    "forceBlackBackground": false,
+    "homeScreenTileConfig": {
+        "tiles": [
+            {
+                "tileId": 2,
+                "tileType": "basic"
+            },
+            {
+                "tileId": 23,
+                "tileType": "basic"
+            },
+            {
+                "tileId": 7,
+                "tileType": "basic"
+            },
+            {
+                "tileId": 8,
+                "tileType": "basic"
+            },
+            {
+                "tileId": 12,
+                "tileType": "basic"
+            },
+            {
+                "tileId": 11,
+                "tileType": "basic"
+            },
+            {
+                "tileId": 6,
+                "tileType": "basic"
+            },
+            {
+                "tileId": 5,
+                "tileType": "basic"
+            },
+            {
+                "tileId": 9,
+                "tileType": "basic"
+            },
+            {
+                "tileId": 18,
+                "tileType": "basic"
+            },
+            {
+                "tileId": 10,
+                "tileType": "basic"
+            },
+            {
+                "tileId": 24,
+                "tileType": "basic"
+            },
+            {
+                "tileId": 20,
+                "tileType": "basic"
+            },
+            {
+                "tileId": 21,
+                "tileType": "basic"
+            },
+            {
+                "tileId": 25,
+                "tileType": "basic"
+            },
+            {
+                "tileId": 22,
+                "tileType": "basic"
+            },
+            {
+                "tileId": 13,
+                "tileType": "basic"
+            },
+            {
+                "tileId": 14,
+                "tileType": "basic"
+            },
+            {
+                "tileId": 15,
+                "tileType": "basic"
+            },
+            {
+                "tileId": 16,
+                "tileType": "basic"
+            },
+            {
+                "tileId": 17,
+                "tileType": "basic"
+            }
+        ]
+    },
+    "lightSensorUpdateRate": 0,
+    "locationUpdateRate": 10,
+    "macroList": [
+        {
+            "exportedActionBlocks": [],
+            "isActionBlock": false,
+            "isBeingImported": false,
+            "isClonedInstance": false,
+            "isFavourite": false,
+            "localVariables": [
+                {
+                    "dictionary": {
+                        "entries": [],
+                        "isArray": false,
+                        "variableType": 4,
+                        "type": "Dictionary"
+                    },
+                    "isLocalVar": true,
+                    "m_booleanValue": false,
+                    "m_decimalValue": 0.0,
+                    "m_intValue": 299,
+                    "m_name": "trueEventLength",
+                    "m_stringValue": "",
+                    "m_type": 1,
+                    "supportsInput": false,
+                    "supportsOutput": true
+                }
+            ],
+            "m_GUID": -4819354688867697664,
+            "m_actionList": [
+                {
+                    "childrenCollapsed": false,
+                    "m_SIGUID": -6237787556773868544,
+                    "m_classType": "IfConditionAction",
+                    "m_constraintList": [
+                        {
+                            "checkCase": false,
+                            "dictionaryKeys": {
+                                "keys": []
+                            },
+                            "dictionaryType": 1,
+                            "enableRegex": false,
+                            "m_booleanValue": false,
+                            "m_doubleValue": 0.0,
+                            "m_intCompareVariable": false,
+                            "m_intGreaterThan": true,
+                            "m_intLessThan": false,
+                            "m_intNotEqual": false,
+                            "m_intValue": 0,
+                            "m_stringComparisonType": 0,
+                            "m_stringEqual": true,
+                            "m_variable": {
+                                "dictionary": {
+                                    "entries": [],
+                                    "isArray": false,
+                                    "variableType": 4,
+                                    "type": "Dictionary"
+                                },
+                                "isLocalVar": false,
+                                "m_booleanValue": false,
+                                "m_decimalValue": 0.0,
+                                "m_intValue": 120,
+                                "m_name": "assumedEventDuration",
+                                "m_stringValue": "",
+                                "m_type": 1,
+                                "supportsInput": true,
+                                "supportsOutput": true
+                            },
+                            "m_SIGUID": -7250046972384712704,
+                            "m_classType": "MacroDroidVariableConstraint",
+                            "m_constraintList": [],
+                            "m_isDisabled": false,
+                            "m_isOrCondition": false
+                        }
+                    ],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "childrenCollapsed": false,
+                    "m_SIGUID": -6211145326859229184,
+                    "m_classType": "IfConditionAction",
+                    "m_constraintList": [
+                        {
+                            "checkCase": false,
+                            "dictionaryKeys": {
+                                "keys": []
+                            },
+                            "dictionaryType": 1,
+                            "enableRegex": false,
+                            "m_booleanValue": false,
+                            "m_doubleValue": 0.0,
+                            "m_intCompareVariable": false,
+                            "m_intGreaterThan": true,
+                            "m_intLessThan": false,
+                            "m_intNotEqual": false,
+                            "m_intValue": 0,
+                            "m_stringComparisonType": 0,
+                            "m_stringEqual": true,
+                            "m_variable": {
+                                "dictionary": {
+                                    "entries": [],
+                                    "isArray": false,
+                                    "variableType": 4,
+                                    "type": "Dictionary"
+                                },
+                                "isLocalVar": false,
+                                "m_booleanValue": false,
+                                "m_decimalValue": 0.0,
+                                "m_intValue": 0,
+                                "m_name": "newEventStart",
+                                "m_stringValue": "",
+                                "m_type": 1,
+                                "supportsInput": true,
+                                "supportsOutput": true
+                            },
+                            "m_SIGUID": -7495111244685555712,
+                            "m_classType": "MacroDroidVariableConstraint",
+                            "m_constraintList": [],
+                            "m_isDisabled": false,
+                            "m_isOrCondition": false
+                        },
+                        {
+                            "checkCase": false,
+                            "dictionaryKeys": {
+                                "keys": []
+                            },
+                            "dictionaryType": 1,
+                            "enableRegex": false,
+                            "m_booleanValue": false,
+                            "m_doubleValue": 0.0,
+                            "m_intCompareVariable": false,
+                            "m_intGreaterThan": true,
+                            "m_intLessThan": false,
+                            "m_intNotEqual": false,
+                            "m_intValue": 0,
+                            "m_stringComparisonType": 0,
+                            "m_stringEqual": true,
+                            "m_variable": {
+                                "dictionary": {
+                                    "entries": [],
+                                    "isArray": false,
+                                    "variableType": 4,
+                                    "type": "Dictionary"
+                                },
+                                "isLocalVar": false,
+                                "m_booleanValue": false,
+                                "m_decimalValue": 0.0,
+                                "m_intValue": 0,
+                                "m_name": "eventDuration",
+                                "m_stringValue": "",
+                                "m_type": 1,
+                                "supportsInput": false,
+                                "supportsOutput": true
+                            },
+                            "m_SIGUID": -7725377368113938432,
+                            "m_classType": "MacroDroidVariableConstraint",
+                            "m_constraintList": [],
+                            "m_isDisabled": false,
+                            "m_isOrCondition": false
+                        }
+                    ],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "dictionaryKeys": [],
+                    "dictionaryOrArrayType": -1,
+                    "m_booleanInvert": false,
+                    "m_darkMode": -1,
+                    "m_doubleRandomMax": 0.0,
+                    "m_doubleRandomMin": 0.0,
+                    "m_expression": "[system_time] - [v=newEventStart]",
+                    "m_falseLabel": "False",
+                    "m_intExpression": true,
+                    "m_intRandom": false,
+                    "m_intRandomMax": 0,
+                    "m_intRandomMin": 0,
+                    "m_intValueDecrement": false,
+                    "m_intValueIncrement": false,
+                    "m_newBooleanValue": false,
+                    "m_newDoubleValue": 0.0,
+                    "m_newIntValue": 0,
+                    "m_trueLabel": "True",
+                    "m_userPrompt": false,
+                    "m_userPromptEmptyAtStart": false,
+                    "m_userPromptPassword": false,
+                    "m_userPromptShowCancel": true,
+                    "m_userPromptStopAfterCancel": true,
+                    "m_variable": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": true,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 300,
+                        "m_name": "trueEventLength",
+                        "m_stringValue": "",
+                        "m_type": 1,
+                        "supportsInput": false,
+                        "supportsOutput": true
+                    },
+                    "m_SIGUID": -8771894048797221888,
+                    "m_classType": "SetVariableAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "actionBlockId": -6264103696203197515,
+                    "actionBlockName": "Notification",
+                    "inputDictionaryMap": {},
+                    "inputVarsMap": {
+                        "priority": "{v=prio_info}",
+                        "message": "correcting event duration ([v=eventDuration]), true event length: [lv=trueEventLength]"
+                    },
+                    "outputDictionaryMap": {},
+                    "outputVarsMap": {},
+                    "m_SIGUID": -8235640797290592256,
+                    "m_classType": "ActionBlockAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "dictionaryKeys": [],
+                    "dictionaryOrArrayType": -1,
+                    "m_booleanInvert": false,
+                    "m_darkMode": -1,
+                    "m_doubleRandomMax": 0.0,
+                    "m_doubleRandomMin": 0.0,
+                    "m_expression": "[lv=trueEventLength]",
+                    "m_falseLabel": "False",
+                    "m_intExpression": true,
+                    "m_intRandom": false,
+                    "m_intRandomMax": 0,
+                    "m_intRandomMin": 0,
+                    "m_intValueDecrement": false,
+                    "m_intValueIncrement": false,
+                    "m_newBooleanValue": false,
+                    "m_newDoubleValue": 0.0,
+                    "m_newIntValue": 0,
+                    "m_trueLabel": "True",
+                    "m_userPrompt": false,
+                    "m_userPromptEmptyAtStart": false,
+                    "m_userPromptPassword": false,
+                    "m_userPromptShowCancel": true,
+                    "m_userPromptStopAfterCancel": true,
+                    "m_variable": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": false,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 900,
+                        "m_name": "eventDuration",
+                        "m_stringValue": "",
+                        "m_type": 1,
+                        "supportsInput": false,
+                        "supportsOutput": true
+                    },
+                    "m_SIGUID": -4676011795567884288,
+                    "m_classType": "SetVariableAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "getByName": false,
+                    "isCategoryLocked": false,
+                    "m_GUID": -6036032765155088384,
+                    "m_ignoreConstraints": true,
+                    "m_macroName": "MainLoop",
+                    "m_useOffStatus": false,
+                    "m_userPromptTitle": "Run Macro",
+                    "m_waitToComplete": true,
+                    "m_SIGUID": -6840315041565602816,
+                    "m_classType": "ForceMacroRunAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -8396208078493491200,
+                    "m_classType": "ElseAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "actionBlockId": -6264103696203197515,
+                    "actionBlockName": "Notification",
+                    "inputDictionaryMap": {},
+                    "inputVarsMap": {
+                        "priority": "{v=prio_warning}",
+                        "message": "event end with eventDuration 0 but assumed event end {v=assumedEventDuration}, maybe repeated event longer than default event lenght? "
+                    },
+                    "outputDictionaryMap": {},
+                    "outputVarsMap": {},
+                    "m_SIGUID": -6465915428566745088,
+                    "m_classType": "ActionBlockAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -7300695025103208448,
+                    "m_classType": "EndIfAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "dictionaryKeys": [],
+                    "dictionaryOrArrayType": -1,
+                    "m_booleanInvert": false,
+                    "m_darkMode": -1,
+                    "m_doubleRandomMax": 0.0,
+                    "m_doubleRandomMin": 0.0,
+                    "m_falseLabel": "False",
+                    "m_intExpression": false,
+                    "m_intRandom": false,
+                    "m_intRandomMax": 0,
+                    "m_intRandomMin": 0,
+                    "m_intValueDecrement": false,
+                    "m_intValueIncrement": false,
+                    "m_newBooleanValue": false,
+                    "m_newDoubleValue": 0.0,
+                    "m_newIntValue": 0,
+                    "m_trueLabel": "True",
+                    "m_userPrompt": false,
+                    "m_userPromptEmptyAtStart": false,
+                    "m_userPromptPassword": false,
+                    "m_userPromptShowCancel": true,
+                    "m_userPromptStopAfterCancel": true,
+                    "m_variable": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": false,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 0,
+                        "m_name": "assumedEventDuration",
+                        "m_stringValue": "",
+                        "m_type": 1,
+                        "supportsInput": true,
+                        "supportsOutput": true
+                    },
+                    "m_SIGUID": -6718359401628770304,
+                    "m_classType": "SetVariableAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -5357150873770194944,
+                    "m_classType": "EndIfAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "dictionaryKeys": [],
+                    "dictionaryOrArrayType": -1,
+                    "m_booleanInvert": false,
+                    "m_darkMode": -1,
+                    "m_doubleRandomMax": 0.0,
+                    "m_doubleRandomMin": 0.0,
+                    "m_falseLabel": "False",
+                    "m_intExpression": false,
+                    "m_intRandom": false,
+                    "m_intRandomMax": 0,
+                    "m_intRandomMin": 0,
+                    "m_intValueDecrement": false,
+                    "m_intValueIncrement": false,
+                    "m_newBooleanValue": false,
+                    "m_newDoubleValue": 0.0,
+                    "m_newIntValue": 0,
+                    "m_trueLabel": "True",
+                    "m_userPrompt": false,
+                    "m_userPromptEmptyAtStart": false,
+                    "m_userPromptPassword": false,
+                    "m_userPromptShowCancel": true,
+                    "m_userPromptStopAfterCancel": true,
+                    "m_variable": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": false,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 0,
+                        "m_name": "newEventStart",
+                        "m_stringValue": "",
+                        "m_type": 1,
+                        "supportsInput": true,
+                        "supportsOutput": true
+                    },
+                    "m_SIGUID": -9014486602915968000,
+                    "m_classType": "SetVariableAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                }
+            ],
+            "m_category": "WellControl",
+            "m_constraintList": [],
+            "m_description": "",
+            "m_descriptionOpen": false,
+            "m_enabled": true,
+            "m_excludeLog": false,
+            "m_headingColor": 0,
+            "m_isOrCondition": false,
+            "m_name": "EventEnd",
+            "m_triggerList": [
+                {
+                    "enableRegex": true,
+                    "m_advanceTimeSeconds": 0,
+                    "m_availability": 0,
+                    "m_calendarId": "4",
+                    "m_calendarName": "dhamma.way.place@gmail.com (Kuta well pump scheduling)",
+                    "m_checkInAdvance": false,
+                    "m_detailText": "",
+                    "m_eventStart": false,
+                    "m_ignoreAllDay": true,
+                    "m_negativeAdvanceCheck": false,
+                    "m_titleText": "Pump water*",
+                    "m_SIGUID": -8338957782066656256,
+                    "m_classType": "CalendarTrigger",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                }
+            ]
+        },
+        {
+            "exportedActionBlocks": [],
+            "isActionBlock": false,
+            "isBeingImported": false,
+            "isClonedInstance": false,
+            "isFavourite": false,
+            "localVariables": [
+                {
+                    "dictionary": {
+                        "entries": [],
+                        "isArray": false,
+                        "variableType": 4,
+                        "type": "Dictionary"
+                    },
+                    "isLocalVar": true,
+                    "m_booleanValue": false,
+                    "m_decimalValue": 0.0,
+                    "m_intValue": 0,
+                    "m_name": "sms",
+                    "m_stringValue": "Report status",
+                    "m_type": 2,
+                    "supportsInput": true,
+                    "supportsOutput": true
+                }
+            ],
+            "m_GUID": -9182557638152155136,
+            "m_actionList": [
+                {
+                    "dictionaryKeys": [],
+                    "dictionaryOrArrayType": -1,
+                    "m_booleanInvert": false,
+                    "m_darkMode": -1,
+                    "m_doubleRandomMax": 0.0,
+                    "m_doubleRandomMin": 0.0,
+                    "m_falseLabel": "Nepravda",
+                    "m_intExpression": false,
+                    "m_intRandom": false,
+                    "m_intRandomMax": 0,
+                    "m_intRandomMin": 0,
+                    "m_intValueDecrement": false,
+                    "m_intValueIncrement": false,
+                    "m_newBooleanValue": false,
+                    "m_newDoubleValue": 0.0,
+                    "m_newIntValue": 0,
+                    "m_newStringValue": "{sms_message}",
+                    "m_trueLabel": "Pravda",
+                    "m_userPrompt": false,
+                    "m_userPromptEmptyAtStart": false,
+                    "m_userPromptPassword": false,
+                    "m_userPromptShowCancel": true,
+                    "m_userPromptStopAfterCancel": true,
+                    "m_variable": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": true,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 0,
+                        "m_name": "sms",
+                        "m_stringValue": "",
+                        "m_type": 2,
+                        "supportsInput": true,
+                        "supportsOutput": true
+                    },
+                    "m_SIGUID": -6031580829200189440,
+                    "m_classType": "SetVariableAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "actionBlockId": -6264103696203197515,
+                    "actionBlockName": "Notification",
+                    "inputDictionaryMap": {},
+                    "inputVarsMap": {
+                        "priority": "{v=prio_info}",
+                        "message": "sms recieved: {sms_message}"
+                    },
+                    "outputDictionaryMap": {},
+                    "outputVarsMap": {},
+                    "m_SIGUID": -6721079209045002240,
+                    "m_classType": "ActionBlockAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "childrenCollapsed": false,
+                    "m_SIGUID": -6461258975511399424,
+                    "m_classType": "IfConditionAction",
+                    "m_constraintList": [
+                        {
+                            "m_not": false,
+                            "m_siGuidThatInvoked": -8913679054519462912,
+                            "m_triggerName": "SMS from Water Well Motor: Any Content",
+                            "m_SIGUID": -6751832562084742144,
+                            "m_classType": "TriggerThatInvokedConstraint",
+                            "m_constraintList": [],
+                            "m_isDisabled": false,
+                            "m_isOrCondition": false
+                        }
+                    ],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "actionBlockId": -8627859110863821125,
+                    "actionBlockName": "WellSmsRecieved",
+                    "inputDictionaryMap": {},
+                    "inputVarsMap": {
+                        "sms": "{sms_message}"
+                    },
+                    "outputDictionaryMap": {},
+                    "outputVarsMap": {},
+                    "m_SIGUID": -8602927156681667584,
+                    "m_classType": "ActionBlockAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -8822423793880969216,
+                    "m_classType": "ElseIfConditionAction",
+                    "m_constraintList": [
+                        {
+                            "m_not": false,
+                            "m_siGuidThatInvoked": -8396727842337939456,
+                            "m_triggerName": "SMS from WellControl: Any Content",
+                            "m_SIGUID": -9057353139875251200,
+                            "m_classType": "TriggerThatInvokedConstraint",
+                            "m_constraintList": [],
+                            "m_isDisabled": false,
+                            "m_isOrCondition": false
+                        }
+                    ],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "childrenCollapsed": false,
+                    "m_SIGUID": -7714134126634850304,
+                    "m_classType": "IfConditionAction",
+                    "m_constraintList": [
+                        {
+                            "categoryName": "WellControl",
+                            "option": 0,
+                            "m_SIGUID": -6939669374823404544,
+                            "m_classType": "CategoryEnabledConstraint",
+                            "m_constraintList": [],
+                            "m_isDisabled": false,
+                            "m_isOrCondition": false
+                        },
+                        {
+                            "checkCase": false,
+                            "dictionaryKeys": {
+                                "keys": []
+                            },
+                            "dictionaryType": 2,
+                            "enableRegex": false,
+                            "m_booleanValue": false,
+                            "m_doubleValue": 0.0,
+                            "m_intCompareVariable": false,
+                            "m_intGreaterThan": false,
+                            "m_intLessThan": false,
+                            "m_intNotEqual": false,
+                            "m_intValue": 0,
+                            "m_otherValueToCompare": {
+                                "dictionary": {
+                                    "entries": [],
+                                    "isArray": false,
+                                    "variableType": 4,
+                                    "type": "Dictionary"
+                                },
+                                "isLocalVar": false,
+                                "m_booleanValue": false,
+                                "m_decimalValue": 0.0,
+                                "m_intValue": 0,
+                                "m_name": "assumedEventDuration",
+                                "m_stringValue": "",
+                                "m_type": 1,
+                                "supportsInput": true,
+                                "supportsOutput": true
+                            },
+                            "m_stringComparisonType": 1,
+                            "m_stringEqual": true,
+                            "m_stringValue": "enable",
+                            "m_variable": {
+                                "dictionary": {
+                                    "entries": [],
+                                    "isArray": false,
+                                    "variableType": 4,
+                                    "type": "Dictionary"
+                                },
+                                "isLocalVar": false,
+                                "m_booleanValue": false,
+                                "m_decimalValue": 0.0,
+                                "m_intValue": 0,
+                                "m_name": "sms",
+                                "m_stringValue": "The relay is OFF",
+                                "m_type": 2,
+                                "supportsInput": false,
+                                "supportsOutput": true
+                            },
+                            "m_SIGUID": -5399987676465603584,
+                            "m_classType": "MacroDroidVariableConstraint",
+                            "m_constraintList": [],
+                            "m_isDisabled": false,
+                            "m_isOrCondition": false
+                        }
+                    ],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": true
+                },
+                {
+                    "actionBlockId": -9167459519265138650,
+                    "actionBlockName": "Parse user sms",
+                    "inputDictionaryMap": {},
+                    "inputVarsMap": {
+                        "sender number": "{sms_number}",
+                        "sms": "{sms_message}",
+                        "sender name": "{sms_name}"
+                    },
+                    "outputDictionaryMap": {},
+                    "outputVarsMap": {},
+                    "m_SIGUID": -7015360396525418496,
+                    "m_classType": "ActionBlockAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -6798513983639400448,
+                    "m_classType": "ElseAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_addToMessageLog": false,
+                    "m_contact": {
+                        "m_id": "Hardwired_Number",
+                        "m_lookupKey": "Hardwired_Number",
+                        "m_name": "[Select Number]"
+                    },
+                    "m_messageContent": "System disabled, ask the operator what's the problem",
+                    "m_number": "{sms_number}",
+                    "m_prePopulate": false,
+                    "m_simId": 0,
+                    "m_SIGUID": -5099155945580183552,
+                    "m_classType": "SendSMSAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -8145233193110137856,
+                    "m_classType": "EndIfAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -7765548443929953280,
+                    "m_classType": "EndIfAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                }
+            ],
+            "m_category": "UserInput",
+            "m_constraintList": [],
+            "m_description": "",
+            "m_descriptionOpen": false,
+            "m_enabled": true,
+            "m_excludeLog": false,
+            "m_headingColor": 0,
+            "m_isOrCondition": false,
+            "m_name": "SmsReceived",
+            "m_triggerList": [
+                {
+                    "enableRegex": false,
+                    "isExcludeContact": false,
+                    "m_exactMatch": false,
+                    "m_excludes": false,
+                    "m_groupIdList": [
+                        "12"
+                    ],
+                    "m_groupNameList": [
+                        "WellControl"
+                    ],
+                    "m_option": 1,
+                    "m_smsContent": "",
+                    "m_smsFromList": [],
+                    "m_smsNumberExclude": false,
+                    "m_SIGUID": -8396727842337939456,
+                    "m_classType": "IncomingSMSTrigger",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "enableRegex": false,
+                    "isExcludeContact": false,
+                    "m_exactMatch": false,
+                    "m_excludes": false,
+                    "m_groupIdList": [],
+                    "m_groupNameList": [],
+                    "m_option": 0,
+                    "m_smsContent": "",
+                    "m_smsFromList": [
+                        {
+                            "m_id": "7",
+                            "m_lookupKey": "298i23",
+                            "m_name": "Water Well Motor"
+                        }
+                    ],
+                    "m_smsNumberExclude": false,
+                    "m_SIGUID": -8913679054519462912,
+                    "m_classType": "IncomingSMSTrigger",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                }
+            ]
+        },
+        {
+            "exportedActionBlocks": [],
+            "isActionBlock": false,
+            "isBeingImported": false,
+            "isClonedInstance": false,
+            "isFavourite": false,
+            "localVariables": [
+                {
+                    "dictionary": {
+                        "entries": [],
+                        "isArray": false,
+                        "variableType": 4,
+                        "type": "Dictionary"
+                    },
+                    "isLocalVar": false,
+                    "m_booleanValue": false,
+                    "m_decimalValue": 0.0,
+                    "m_intValue": 1800,
+                    "m_name": "newEventDuration",
+                    "m_stringValue": "",
+                    "m_type": 1,
+                    "supportsInput": true,
+                    "supportsOutput": true
+                }
+            ],
+            "m_GUID": -7519393887754601472,
+            "m_actionList": [
+                {
+                    "childrenCollapsed": false,
+                    "m_SIGUID": -5941412740085528576,
+                    "m_classType": "IfConditionAction",
+                    "m_constraintList": [
+                        {
+                            "checkCase": false,
+                            "dictionaryKeys": {
+                                "keys": []
+                            },
+                            "dictionaryType": 1,
+                            "enableRegex": false,
+                            "m_booleanValue": false,
+                            "m_doubleValue": 0.0,
+                            "m_intCompareVariable": true,
+                            "m_intGreaterThan": false,
+                            "m_intLessThan": false,
+                            "m_intNotEqual": true,
+                            "m_intValue": 0,
+                            "m_otherValueToCompare": {
+                                "dictionary": {
+                                    "entries": [],
+                                    "isArray": false,
+                                    "variableType": 4,
+                                    "type": "Dictionary"
+                                },
+                                "isLocalVar": false,
+                                "m_booleanValue": false,
+                                "m_decimalValue": 0.0,
+                                "m_intValue": 0,
+                                "m_name": "off",
+                                "m_stringValue": "",
+                                "m_type": 1,
+                                "supportsInput": true,
+                                "supportsOutput": true
+                            },
+                            "m_stringComparisonType": 0,
+                            "m_stringEqual": true,
+                            "m_variable": {
+                                "dictionary": {
+                                    "entries": [],
+                                    "isArray": false,
+                                    "variableType": 4,
+                                    "type": "Dictionary"
+                                },
+                                "isLocalVar": false,
+                                "m_booleanValue": false,
+                                "m_decimalValue": 0.0,
+                                "m_intValue": 2,
+                                "m_name": "pump status",
+                                "m_stringValue": "",
+                                "m_type": 1,
+                                "supportsInput": true,
+                                "supportsOutput": true
+                            },
+                            "workingOtherVarToCompare": {
+                                "dictionary": {
+                                    "entries": [],
+                                    "isArray": false,
+                                    "variableType": 4,
+                                    "type": "Dictionary"
+                                },
+                                "isLocalVar": false,
+                                "m_booleanValue": false,
+                                "m_decimalValue": 0.0,
+                                "m_intValue": 0,
+                                "m_name": "off",
+                                "m_stringValue": "",
+                                "m_type": 1,
+                                "supportsInput": true,
+                                "supportsOutput": true
+                            },
+                            "m_SIGUID": -8774460690074639360,
+                            "m_classType": "MacroDroidVariableConstraint",
+                            "m_constraintList": [],
+                            "m_isDisabled": false,
+                            "m_isOrCondition": false
+                        }
+                    ],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "actionBlockId": -6264103696203197515,
+                    "actionBlockName": "Notification",
+                    "inputDictionaryMap": {},
+                    "inputVarsMap": {
+                        "priority": "{v=prio_warning}",
+                        "message": "ignoring event start while pump is not off (pump status {v=pump status}) "
+                    },
+                    "outputDictionaryMap": {},
+                    "outputVarsMap": {},
+                    "m_SIGUID": -6633100864782409728,
+                    "m_classType": "ActionBlockAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -6109678092485084160,
+                    "m_classType": "ElseAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "actionBlockId": -5097023956134120318,
+                    "actionBlockName": "ComputeTimeDiff",
+                    "inputDictionaryMap": {},
+                    "inputVarsMap": {
+                        "startDate": "[calendar_start_date]",
+                        "startTime": "[calendar_start_time]",
+                        "endDate": "[calendar_end_date]",
+                        "endTime": "[calendar_end_time]"
+                    },
+                    "outputDictionaryMap": {},
+                    "outputVarsMap": {
+                        "end": "[Nejsou nastaven\u00e9 \u017e\u00e1dn\u00e9 prom\u011bnn\u00e9]",
+                        "start": "[Nejsou nastaven\u00e9 \u017e\u00e1dn\u00e9 prom\u011bnn\u00e9]",
+                        "diffSecond": "newEventDuration"
+                    },
+                    "m_SIGUID": -5437777909904855040,
+                    "m_classType": "ActionBlockAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "childrenCollapsed": false,
+                    "m_SIGUID": -8168872749773233152,
+                    "m_classType": "IfConditionAction",
+                    "m_constraintList": [
+                        {
+                            "checkCase": false,
+                            "dictionaryKeys": {
+                                "keys": []
+                            },
+                            "dictionaryType": 1,
+                            "enableRegex": false,
+                            "m_booleanValue": false,
+                            "m_doubleValue": 0.0,
+                            "m_expression": "[lv=newEventDuration]",
+                            "m_intCompareVariable": false,
+                            "m_intGreaterThan": true,
+                            "m_intLessThan": false,
+                            "m_intNotEqual": false,
+                            "m_intValue": 0,
+                            "m_otherValueToCompare": {
+                                "dictionary": {
+                                    "entries": [],
+                                    "isArray": false,
+                                    "variableType": 4,
+                                    "type": "Dictionary"
+                                },
+                                "isLocalVar": false,
+                                "m_booleanValue": false,
+                                "m_decimalValue": 0.0,
+                                "m_intValue": 0,
+                                "m_name": "newEventDuration",
+                                "m_stringValue": "",
+                                "m_type": 1,
+                                "supportsInput": true,
+                                "supportsOutput": true
+                            },
+                            "m_stringComparisonType": 0,
+                            "m_stringEqual": true,
+                            "m_variable": {
+                                "dictionary": {
+                                    "entries": [],
+                                    "isArray": false,
+                                    "variableType": 4,
+                                    "type": "Dictionary"
+                                },
+                                "isLocalVar": false,
+                                "m_booleanValue": false,
+                                "m_decimalValue": 0.0,
+                                "m_intValue": 3600,
+                                "m_name": "maxPumpTime",
+                                "m_stringValue": "",
+                                "m_type": 1,
+                                "supportsInput": true,
+                                "supportsOutput": true
+                            },
+                            "workingOtherVarToCompare": {
+                                "dictionary": {
+                                    "entries": [],
+                                    "isArray": false,
+                                    "variableType": 4,
+                                    "type": "Dictionary"
+                                },
+                                "isLocalVar": false,
+                                "m_booleanValue": false,
+                                "m_decimalValue": 0.0,
+                                "m_intValue": 0,
+                                "m_name": "newEventDuration",
+                                "m_stringValue": "",
+                                "m_type": 1,
+                                "supportsInput": true,
+                                "supportsOutput": true
+                            },
+                            "m_SIGUID": -7495210556022511616,
+                            "m_classType": "MacroDroidVariableConstraint",
+                            "m_constraintList": [],
+                            "m_isDisabled": false,
+                            "m_isOrCondition": false
+                        }
+                    ],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "childrenCollapsed": false,
+                    "m_SIGUID": -8914334147474246656,
+                    "m_classType": "IfConditionAction",
+                    "m_constraintList": [
+                        {
+                            "checkCase": false,
+                            "dictionaryKeys": {
+                                "keys": []
+                            },
+                            "dictionaryType": 1,
+                            "enableRegex": false,
+                            "m_booleanValue": false,
+                            "m_doubleValue": 0.0,
+                            "m_intCompareVariable": false,
+                            "m_intGreaterThan": false,
+                            "m_intLessThan": false,
+                            "m_intNotEqual": false,
+                            "m_intValue": -1,
+                            "m_stringComparisonType": 0,
+                            "m_stringEqual": true,
+                            "m_variable": {
+                                "dictionary": {
+                                    "entries": [],
+                                    "isArray": false,
+                                    "variableType": 4,
+                                    "type": "Dictionary"
+                                },
+                                "isLocalVar": false,
+                                "m_booleanValue": false,
+                                "m_decimalValue": 0.0,
+                                "m_intValue": 120,
+                                "m_name": "newEventDuration",
+                                "m_stringValue": "",
+                                "m_type": 1,
+                                "supportsInput": true,
+                                "supportsOutput": true
+                            },
+                            "m_SIGUID": -4969564031992440832,
+                            "m_classType": "MacroDroidVariableConstraint",
+                            "m_constraintList": [],
+                            "m_isDisabled": false,
+                            "m_isOrCondition": false
+                        }
+                    ],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "dictionaryKeys": [],
+                    "dictionaryOrArrayType": -1,
+                    "m_booleanInvert": false,
+                    "m_darkMode": -1,
+                    "m_doubleRandomMax": 0.0,
+                    "m_doubleRandomMin": 0.0,
+                    "m_expression": "{v=maxPumpTime} / 2",
+                    "m_falseLabel": "Nepravda",
+                    "m_intExpression": true,
+                    "m_intRandom": false,
+                    "m_intRandomMax": 0,
+                    "m_intRandomMin": 0,
+                    "m_intValueDecrement": false,
+                    "m_intValueIncrement": false,
+                    "m_newBooleanValue": false,
+                    "m_newDoubleValue": 0.0,
+                    "m_newIntValue": 0,
+                    "m_trueLabel": "Pravda",
+                    "m_userPrompt": false,
+                    "m_userPromptEmptyAtStart": false,
+                    "m_userPromptPassword": false,
+                    "m_userPromptShowCancel": true,
+                    "m_userPromptStopAfterCancel": true,
+                    "m_variable": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": false,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 120,
+                        "m_name": "newEventDuration",
+                        "m_stringValue": "",
+                        "m_type": 1,
+                        "supportsInput": true,
+                        "supportsOutput": true
+                    },
+                    "m_SIGUID": -7819021981421246464,
+                    "m_classType": "SetVariableAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "dictionaryKeys": [],
+                    "dictionaryOrArrayType": -1,
+                    "m_booleanInvert": false,
+                    "m_darkMode": -1,
+                    "m_doubleRandomMax": 0.0,
+                    "m_doubleRandomMin": 0.0,
+                    "m_expression": "{lv=newEventDuration}",
+                    "m_falseLabel": "Nepravda",
+                    "m_intExpression": true,
+                    "m_intRandom": false,
+                    "m_intRandomMax": 0,
+                    "m_intRandomMin": 0,
+                    "m_intValueDecrement": false,
+                    "m_intValueIncrement": false,
+                    "m_newBooleanValue": false,
+                    "m_newDoubleValue": 0.0,
+                    "m_newIntValue": 0,
+                    "m_trueLabel": "Pravda",
+                    "m_userPrompt": false,
+                    "m_userPromptEmptyAtStart": false,
+                    "m_userPromptPassword": false,
+                    "m_userPromptShowCancel": true,
+                    "m_userPromptStopAfterCancel": true,
+                    "m_variable": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": false,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 120,
+                        "m_name": "assumedEventDuration",
+                        "m_stringValue": "",
+                        "m_type": 1,
+                        "supportsInput": true,
+                        "supportsOutput": true
+                    },
+                    "m_SIGUID": -5365125126445696000,
+                    "m_classType": "SetVariableAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "actionBlockId": -6264103696203197515,
+                    "actionBlockName": "Notification",
+                    "inputDictionaryMap": {},
+                    "inputVarsMap": {
+                        "priority": "{v=prio_info}",
+                        "message": "unknown event length, assuming {v=assumedEventDuration} event length"
+                    },
+                    "outputDictionaryMap": {},
+                    "outputVarsMap": {},
+                    "m_SIGUID": -7241566564016229376,
+                    "m_classType": "ActionBlockAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -5252674882223227904,
+                    "m_classType": "EndIfAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "actionBlockId": -6264103696203197515,
+                    "actionBlockName": "Notification",
+                    "inputDictionaryMap": {},
+                    "inputVarsMap": {
+                        "priority": "{v=prio_info}",
+                        "message": "new event duration [lv=newEventDuration]"
+                    },
+                    "outputDictionaryMap": {},
+                    "outputVarsMap": {},
+                    "m_SIGUID": -5940683939356853248,
+                    "m_classType": "ActionBlockAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "dictionaryKeys": [],
+                    "dictionaryOrArrayType": -1,
+                    "m_booleanInvert": false,
+                    "m_darkMode": -1,
+                    "m_doubleRandomMax": 0.0,
+                    "m_doubleRandomMin": 0.0,
+                    "m_expression": "[lv=newEventDuration]",
+                    "m_falseLabel": "Nepravda",
+                    "m_intExpression": true,
+                    "m_intRandom": false,
+                    "m_intRandomMax": 0,
+                    "m_intRandomMin": 0,
+                    "m_intValueDecrement": false,
+                    "m_intValueIncrement": false,
+                    "m_newBooleanValue": false,
+                    "m_newDoubleValue": 0.0,
+                    "m_newIntValue": 0,
+                    "m_trueLabel": "Pravda",
+                    "m_userPrompt": false,
+                    "m_userPromptEmptyAtStart": false,
+                    "m_userPromptPassword": false,
+                    "m_userPromptShowCancel": true,
+                    "m_userPromptStopAfterCancel": true,
+                    "m_variable": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": false,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 0,
+                        "m_name": "eventDuration",
+                        "m_stringValue": "",
+                        "m_type": 1,
+                        "supportsInput": false,
+                        "supportsOutput": true
+                    },
+                    "m_SIGUID": -8079559552359095296,
+                    "m_classType": "SetVariableAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -6506396545302504448,
+                    "m_classType": "ElseAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "actionBlockId": -6264103696203197515,
+                    "actionBlockName": "Notification",
+                    "inputDictionaryMap": {},
+                    "inputVarsMap": {
+                        "priority": "{v=prio_warning}",
+                        "message": "combined event length ([lv=newEventDuration]) too long, trimming to [v=maxPumpTime]"
+                    },
+                    "outputDictionaryMap": {},
+                    "outputVarsMap": {},
+                    "m_SIGUID": -5667012957290555392,
+                    "m_classType": "ActionBlockAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "dictionaryKeys": [],
+                    "dictionaryOrArrayType": -1,
+                    "m_booleanInvert": false,
+                    "m_darkMode": -1,
+                    "m_doubleRandomMax": 0.0,
+                    "m_doubleRandomMin": 0.0,
+                    "m_expression": "[v=maxPumpTime]",
+                    "m_falseLabel": "Nepravda",
+                    "m_intExpression": true,
+                    "m_intRandom": false,
+                    "m_intRandomMax": 0,
+                    "m_intRandomMin": 0,
+                    "m_intValueDecrement": false,
+                    "m_intValueIncrement": false,
+                    "m_newBooleanValue": false,
+                    "m_newDoubleValue": 0.0,
+                    "m_newIntValue": 0,
+                    "m_trueLabel": "Pravda",
+                    "m_userPrompt": false,
+                    "m_userPromptEmptyAtStart": false,
+                    "m_userPromptPassword": false,
+                    "m_userPromptShowCancel": true,
+                    "m_userPromptStopAfterCancel": true,
+                    "m_variable": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": false,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 0,
+                        "m_name": "eventDuration",
+                        "m_stringValue": "",
+                        "m_type": 1,
+                        "supportsInput": false,
+                        "supportsOutput": true
+                    },
+                    "m_SIGUID": -6863423886535725056,
+                    "m_classType": "SetVariableAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -5952728211142553600,
+                    "m_classType": "EndIfAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "actionBlockId": -6383176269547704320,
+                    "actionBlockName": "ScheduleStartSms",
+                    "inputDictionaryMap": {},
+                    "inputVarsMap": {},
+                    "outputDictionaryMap": {},
+                    "outputVarsMap": {},
+                    "m_SIGUID": -5703748531735899136,
+                    "m_classType": "ActionBlockAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "dictionaryKeys": [],
+                    "dictionaryOrArrayType": -1,
+                    "m_booleanInvert": false,
+                    "m_darkMode": -1,
+                    "m_doubleRandomMax": 0.0,
+                    "m_doubleRandomMin": 0.0,
+                    "m_expression": "[system_time]",
+                    "m_falseLabel": "False",
+                    "m_intExpression": true,
+                    "m_intRandom": false,
+                    "m_intRandomMax": 0,
+                    "m_intRandomMin": 0,
+                    "m_intValueDecrement": false,
+                    "m_intValueIncrement": false,
+                    "m_newBooleanValue": false,
+                    "m_newDoubleValue": 0.0,
+                    "m_newIntValue": 0,
+                    "m_trueLabel": "True",
+                    "m_userPrompt": false,
+                    "m_userPromptEmptyAtStart": false,
+                    "m_userPromptPassword": false,
+                    "m_userPromptShowCancel": true,
+                    "m_userPromptStopAfterCancel": true,
+                    "m_variable": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": false,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 1655438401,
+                        "m_name": "newEventStart",
+                        "m_stringValue": "",
+                        "m_type": 1,
+                        "supportsInput": true,
+                        "supportsOutput": true
+                    },
+                    "m_SIGUID": -5488552312923996160,
+                    "m_classType": "SetVariableAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -8206700417133826048,
+                    "m_classType": "EndIfAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                }
+            ],
+            "m_category": "WellControl",
+            "m_constraintList": [],
+            "m_description": "",
+            "m_descriptionOpen": false,
+            "m_enabled": true,
+            "m_excludeLog": false,
+            "m_headingColor": 0,
+            "m_isOrCondition": false,
+            "m_name": "EventStart",
+            "m_triggerList": [
+                {
+                    "enableRegex": true,
+                    "m_advanceTimeSeconds": 0,
+                    "m_availability": 0,
+                    "m_calendarId": "4",
+                    "m_calendarName": "dhamma.way.place@gmail.com (Kuta well pump scheduling)",
+                    "m_checkInAdvance": false,
+                    "m_detailText": "",
+                    "m_eventStart": true,
+                    "m_ignoreAllDay": true,
+                    "m_negativeAdvanceCheck": false,
+                    "m_titleText": "Pump water*",
+                    "m_SIGUID": -5496036260269270016,
+                    "m_classType": "CalendarTrigger",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                }
+            ]
+        },
+        {
+            "exportedActionBlocks": [],
+            "isActionBlock": false,
+            "isBeingImported": false,
+            "isClonedInstance": false,
+            "isFavourite": false,
+            "localVariables": [],
+            "m_GUID": -6036032765155088384,
+            "m_actionList": [
+                {
+                    "childrenCollapsed": false,
+                    "m_SIGUID": -9173373044385530880,
+                    "m_classType": "IfConditionAction",
+                    "m_constraintList": [
+                        {
+                            "m_not": false,
+                            "m_siGuidThatInvoked": -7110378985687379968,
+                            "m_triggerName": "MacroDroid inicializov\u00e1n",
+                            "m_SIGUID": -5336069740821616640,
+                            "m_classType": "TriggerThatInvokedConstraint",
+                            "m_constraintList": [],
+                            "m_isDisabled": false,
+                            "m_isOrCondition": false
+                        }
+                    ],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "actionBlockId": -6264103696203197515,
+                    "actionBlockName": "Notification",
+                    "inputDictionaryMap": {},
+                    "inputVarsMap": {
+                        "priority": "{v=prio_info}",
+                        "message": "macrodroid started, doing reset..."
+                    },
+                    "outputDictionaryMap": {},
+                    "outputVarsMap": {},
+                    "m_SIGUID": -7009724231059780608,
+                    "m_classType": "ActionBlockAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "actionBlockId": -8352169004948919115,
+                    "actionBlockName": "Reset",
+                    "inputDictionaryMap": {},
+                    "inputVarsMap": {},
+                    "outputDictionaryMap": {},
+                    "outputVarsMap": {},
+                    "m_SIGUID": -7771239280587565056,
+                    "m_classType": "ActionBlockAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -5416647368900892672,
+                    "m_classType": "ElseIfConditionAction",
+                    "m_constraintList": [
+                        {
+                            "m_not": false,
+                            "m_siGuidThatInvoked": -5810779114882236416,
+                            "m_triggerName": "Den/\u010das: 00:00 Po - Ne",
+                            "m_SIGUID": -6533396557438902272,
+                            "m_classType": "TriggerThatInvokedConstraint",
+                            "m_constraintList": [],
+                            "m_isDisabled": false,
+                            "m_isOrCondition": false
+                        }
+                    ],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "actionBlockId": -7250518306863894654,
+                    "actionBlockName": "LogStatsAndClear",
+                    "inputDictionaryMap": {},
+                    "inputVarsMap": {},
+                    "outputDictionaryMap": {},
+                    "outputVarsMap": {},
+                    "m_SIGUID": -7388018569485285376,
+                    "m_classType": "ActionBlockAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -6933754312381223936,
+                    "m_classType": "ElseAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "childrenCollapsed": false,
+                    "m_SIGUID": -7792913036045446144,
+                    "m_classType": "IfConditionAction",
+                    "m_constraintList": [
+                        {
+                            "m_enabled": true,
+                            "m_macroIds": [
+                                -9182557638152155136
+                            ],
+                            "m_macroNames": [
+                                "SmsReceived"
+                            ],
+                            "m_SIGUID": -8401677526387918848,
+                            "m_classType": "MacroEnabledConstraint",
+                            "m_constraintList": [],
+                            "m_isDisabled": false,
+                            "m_isOrCondition": false
+                        }
+                    ],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "childrenCollapsed": false,
+                    "m_SIGUID": -8539822761233950720,
+                    "m_classType": "IfConditionAction",
+                    "m_constraintList": [
+                        {
+                            "m_option": 0,
+                            "m_SIGUID": -8189991789849278464,
+                            "m_classType": "SignalOnOffConstraint",
+                            "m_constraintList": [],
+                            "m_isDisabled": false,
+                            "m_isOrCondition": false
+                        }
+                    ],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "childrenCollapsed": false,
+                    "m_SIGUID": -6832420509021093888,
+                    "m_classType": "IfConditionAction",
+                    "m_constraintList": [
+                        {
+                            "checkCase": false,
+                            "dictionaryType": -1,
+                            "enableRegex": false,
+                            "m_booleanValue": false,
+                            "m_doubleValue": 0.0,
+                            "m_intCompareVariable": true,
+                            "m_intGreaterThan": false,
+                            "m_intLessThan": false,
+                            "m_intNotEqual": false,
+                            "m_intValue": 0,
+                            "m_otherValueToCompare": {
+                                "dictionary": {
+                                    "entries": [],
+                                    "isArray": false,
+                                    "variableType": 4,
+                                    "type": "Dictionary"
+                                },
+                                "isLocalVar": false,
+                                "m_booleanValue": false,
+                                "m_decimalValue": 0.0,
+                                "m_intValue": 1,
+                                "m_name": "shouldStart",
+                                "m_stringValue": "",
+                                "m_type": 1,
+                                "supportsInput": true,
+                                "supportsOutput": true
+                            },
+                            "m_stringComparisonType": 0,
+                            "m_stringEqual": true,
+                            "m_variable": {
+                                "dictionary": {
+                                    "entries": [],
+                                    "isArray": false,
+                                    "variableType": 4,
+                                    "type": "Dictionary"
+                                },
+                                "isLocalVar": false,
+                                "m_booleanValue": false,
+                                "m_decimalValue": 0.0,
+                                "m_intValue": 0,
+                                "m_name": "pump status",
+                                "m_stringValue": "",
+                                "m_type": 1,
+                                "supportsInput": true,
+                                "supportsOutput": true
+                            },
+                            "m_SIGUID": -8688706156834684928,
+                            "m_classType": "MacroDroidVariableConstraint",
+                            "m_constraintList": [],
+                            "m_isDisabled": false,
+                            "m_isOrCondition": false
+                        }
+                    ],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "actionBlockId": -6383176269547704320,
+                    "actionBlockName": "ScheduleStartSms",
+                    "inputDictionaryMap": {},
+                    "inputVarsMap": {},
+                    "outputDictionaryMap": {},
+                    "outputVarsMap": {},
+                    "m_SIGUID": -6222189046834896896,
+                    "m_classType": "ActionBlockAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -9221737226008924160,
+                    "m_classType": "ElseIfConditionAction",
+                    "m_constraintList": [
+                        {
+                            "checkCase": false,
+                            "dictionaryType": -1,
+                            "enableRegex": false,
+                            "m_booleanValue": false,
+                            "m_doubleValue": 0.0,
+                            "m_intCompareVariable": true,
+                            "m_intGreaterThan": false,
+                            "m_intLessThan": false,
+                            "m_intNotEqual": false,
+                            "m_intValue": 0,
+                            "m_otherValueToCompare": {
+                                "dictionary": {
+                                    "entries": [],
+                                    "isArray": false,
+                                    "variableType": 4,
+                                    "type": "Dictionary"
+                                },
+                                "isLocalVar": false,
+                                "m_booleanValue": false,
+                                "m_decimalValue": 0.0,
+                                "m_intValue": 4,
+                                "m_name": "shouldStop",
+                                "m_stringValue": "",
+                                "m_type": 1,
+                                "supportsInput": true,
+                                "supportsOutput": true
+                            },
+                            "m_stringComparisonType": 0,
+                            "m_stringEqual": true,
+                            "m_variable": {
+                                "dictionary": {
+                                    "entries": [],
+                                    "isArray": false,
+                                    "variableType": 4,
+                                    "type": "Dictionary"
+                                },
+                                "isLocalVar": false,
+                                "m_booleanValue": false,
+                                "m_decimalValue": 0.0,
+                                "m_intValue": 0,
+                                "m_name": "pump status",
+                                "m_stringValue": "",
+                                "m_type": 1,
+                                "supportsInput": true,
+                                "supportsOutput": true
+                            },
+                            "m_SIGUID": -8233692266359286784,
+                            "m_classType": "MacroDroidVariableConstraint",
+                            "m_constraintList": [],
+                            "m_isDisabled": false,
+                            "m_isOrCondition": false
+                        }
+                    ],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "actionBlockId": -7485193186305615146,
+                    "actionBlockName": "ScheduleStopSms",
+                    "inputDictionaryMap": {},
+                    "inputVarsMap": {},
+                    "outputDictionaryMap": {},
+                    "outputVarsMap": {},
+                    "m_SIGUID": -4854701995825665024,
+                    "m_classType": "ActionBlockAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -8059369707512986624,
+                    "m_classType": "EndIfAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -5621064658094790656,
+                    "m_classType": "EndIfAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "childrenCollapsed": false,
+                    "m_SIGUID": -6613868998971374592,
+                    "m_classType": "IfConditionAction",
+                    "m_constraintList": [
+                        {
+                            "checkCase": false,
+                            "dictionaryType": -1,
+                            "enableRegex": false,
+                            "m_booleanValue": false,
+                            "m_doubleValue": 0.0,
+                            "m_intCompareVariable": true,
+                            "m_intGreaterThan": false,
+                            "m_intLessThan": false,
+                            "m_intNotEqual": false,
+                            "m_intValue": 0,
+                            "m_otherValueToCompare": {
+                                "dictionary": {
+                                    "entries": [],
+                                    "isArray": false,
+                                    "variableType": 4,
+                                    "type": "Dictionary"
+                                },
+                                "isLocalVar": false,
+                                "m_booleanValue": false,
+                                "m_decimalValue": 0.0,
+                                "m_intValue": 3,
+                                "m_name": "on",
+                                "m_stringValue": "",
+                                "m_type": 1,
+                                "supportsInput": true,
+                                "supportsOutput": true
+                            },
+                            "m_stringComparisonType": 0,
+                            "m_stringEqual": true,
+                            "m_variable": {
+                                "dictionary": {
+                                    "entries": [],
+                                    "isArray": false,
+                                    "variableType": 4,
+                                    "type": "Dictionary"
+                                },
+                                "isLocalVar": false,
+                                "m_booleanValue": false,
+                                "m_decimalValue": 0.0,
+                                "m_intValue": 0,
+                                "m_name": "pump status",
+                                "m_stringValue": "",
+                                "m_type": 1,
+                                "supportsInput": true,
+                                "supportsOutput": true
+                            },
+                            "m_SIGUID": -6839351525096032256,
+                            "m_classType": "MacroDroidVariableConstraint",
+                            "m_constraintList": [],
+                            "m_isDisabled": false,
+                            "m_isOrCondition": false
+                        },
+                        {
+                            "checkCase": false,
+                            "dictionaryKeys": {
+                                "keys": []
+                            },
+                            "dictionaryType": 1,
+                            "enableRegex": false,
+                            "m_booleanValue": false,
+                            "m_doubleValue": 0.0,
+                            "m_expression": "[stopwatch=pumpTime] + [v=minPumpTime]",
+                            "m_intCompareVariable": false,
+                            "m_intGreaterThan": false,
+                            "m_intLessThan": true,
+                            "m_intNotEqual": false,
+                            "m_intValue": 0,
+                            "m_otherValueToCompare": {
+                                "dictionary": {
+                                    "entries": [],
+                                    "isArray": false,
+                                    "variableType": 4,
+                                    "type": "Dictionary"
+                                },
+                                "isLocalVar": false,
+                                "m_booleanValue": false,
+                                "m_decimalValue": 0.0,
+                                "m_intValue": 1617,
+                                "m_name": "dailyCount",
+                                "m_stringValue": "",
+                                "m_type": 1,
+                                "supportsInput": true,
+                                "supportsOutput": true
+                            },
+                            "m_stringComparisonType": 0,
+                            "m_stringEqual": true,
+                            "m_variable": {
+                                "dictionary": {
+                                    "entries": [],
+                                    "isArray": false,
+                                    "variableType": 4,
+                                    "type": "Dictionary"
+                                },
+                                "isLocalVar": false,
+                                "m_booleanValue": false,
+                                "m_decimalValue": 0.0,
+                                "m_intValue": 0,
+                                "m_name": "eventDuration",
+                                "m_stringValue": "",
+                                "m_type": 1,
+                                "supportsInput": false,
+                                "supportsOutput": true
+                            },
+                            "m_SIGUID": -8827927591250058240,
+                            "m_classType": "MacroDroidVariableConstraint",
+                            "m_constraintList": [],
+                            "m_isDisabled": false,
+                            "m_isOrCondition": false
+                        }
+                    ],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_option": 2,
+                    "m_stopwatchName": "pumpTime",
+                    "m_SIGUID": -4696411747030589440,
+                    "m_classType": "StopWatchAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "dictionaryKeys": [],
+                    "dictionaryOrArrayType": -1,
+                    "m_booleanInvert": false,
+                    "m_darkMode": -1,
+                    "m_doubleRandomMax": 0.0,
+                    "m_doubleRandomMin": 0.0,
+                    "m_falseLabel": "Nepravda",
+                    "m_intExpression": false,
+                    "m_intRandom": false,
+                    "m_intRandomMax": 0,
+                    "m_intRandomMin": 0,
+                    "m_intValueDecrement": false,
+                    "m_intValueIncrement": false,
+                    "m_newBooleanValue": false,
+                    "m_newDoubleValue": 0.0,
+                    "m_newIntValue": 0,
+                    "m_trueLabel": "Pravda",
+                    "m_userPrompt": false,
+                    "m_userPromptEmptyAtStart": false,
+                    "m_userPromptPassword": false,
+                    "m_userPromptShowCancel": true,
+                    "m_userPromptStopAfterCancel": true,
+                    "m_variable": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": false,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 0,
+                        "m_name": "eventDuration",
+                        "m_stringValue": "",
+                        "m_type": 1,
+                        "supportsInput": false,
+                        "supportsOutput": true
+                    },
+                    "m_SIGUID": -6492741179794286592,
+                    "m_classType": "SetVariableAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "actionBlockId": -7485193186305615146,
+                    "actionBlockName": "ScheduleStopSms",
+                    "inputDictionaryMap": {},
+                    "inputVarsMap": {},
+                    "outputDictionaryMap": {},
+                    "outputVarsMap": {},
+                    "m_SIGUID": -5472194810631322624,
+                    "m_classType": "ActionBlockAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -7828381023924751360,
+                    "m_classType": "EndIfAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "actionBlockId": -7853478174669360864,
+                    "actionBlockName": "Watchdog",
+                    "inputDictionaryMap": {},
+                    "inputVarsMap": {},
+                    "outputDictionaryMap": {},
+                    "outputVarsMap": {},
+                    "m_SIGUID": -4824970645773367296,
+                    "m_classType": "ActionBlockAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -5674489623208347648,
+                    "m_classType": "ElseIfConditionAction",
+                    "m_constraintList": [
+                        {
+                            "checkCase": false,
+                            "dictionaryType": -1,
+                            "enableRegex": false,
+                            "m_booleanValue": false,
+                            "m_doubleValue": 0.0,
+                            "m_intCompareVariable": true,
+                            "m_intGreaterThan": false,
+                            "m_intLessThan": false,
+                            "m_intNotEqual": true,
+                            "m_intValue": 0,
+                            "m_otherValueToCompare": {
+                                "dictionary": {
+                                    "entries": [],
+                                    "isArray": false,
+                                    "variableType": 4,
+                                    "type": "Dictionary"
+                                },
+                                "isLocalVar": false,
+                                "m_booleanValue": false,
+                                "m_decimalValue": 0.0,
+                                "m_intValue": 0,
+                                "m_name": "off",
+                                "m_stringValue": "",
+                                "m_type": 1,
+                                "supportsInput": true,
+                                "supportsOutput": true
+                            },
+                            "m_stringComparisonType": 0,
+                            "m_stringEqual": true,
+                            "m_variable": {
+                                "dictionary": {
+                                    "entries": [],
+                                    "isArray": false,
+                                    "variableType": 4,
+                                    "type": "Dictionary"
+                                },
+                                "isLocalVar": false,
+                                "m_booleanValue": false,
+                                "m_decimalValue": 0.0,
+                                "m_intValue": 0,
+                                "m_name": "pump status",
+                                "m_stringValue": "",
+                                "m_type": 1,
+                                "supportsInput": true,
+                                "supportsOutput": true
+                            },
+                            "m_SIGUID": -5108215349059176448,
+                            "m_classType": "MacroDroidVariableConstraint",
+                            "m_constraintList": [],
+                            "m_isDisabled": false,
+                            "m_isOrCondition": false
+                        }
+                    ],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "actionBlockId": -8352169004948919115,
+                    "actionBlockName": "Reset",
+                    "inputDictionaryMap": {},
+                    "inputVarsMap": {},
+                    "outputDictionaryMap": {},
+                    "outputVarsMap": {},
+                    "m_SIGUID": -6927529583502873600,
+                    "m_classType": "ActionBlockAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -6834994103065211904,
+                    "m_classType": "EndIfAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -8254807967957943296,
+                    "m_classType": "EndIfAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                }
+            ],
+            "m_category": "WellControl",
+            "m_constraintList": [],
+            "m_description": "",
+            "m_descriptionOpen": false,
+            "m_enabled": true,
+            "m_excludeLog": false,
+            "m_headingColor": 0,
+            "m_isOrCondition": false,
+            "m_name": "MainLoop",
+            "m_triggerList": [
+                {
+                    "checkCase": false,
+                    "dictionaryKeys": {
+                        "keys": []
+                    },
+                    "dictionaryType": 1,
+                    "enableRegex": false,
+                    "m_anyValueChange": true,
+                    "m_booleanValue": false,
+                    "m_doubleValue": 0.0,
+                    "m_intCompareVariable": false,
+                    "m_intGreaterThan": false,
+                    "m_intLessThan": false,
+                    "m_intNotEqual": false,
+                    "m_intValue": 0,
+                    "m_stringComparisonType": 0,
+                    "m_stringEqual": true,
+                    "m_stringValue": "",
+                    "m_variable": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": false,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 5,
+                        "m_name": "pump status",
+                        "m_stringValue": "",
+                        "m_type": 1,
+                        "supportsInput": true,
+                        "supportsOutput": true
+                    },
+                    "m_SIGUID": -5947749393373792256,
+                    "m_classType": "VariableTrigger",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_signalOn": true,
+                    "m_SIGUID": -8380333713773832192,
+                    "m_classType": "SignalOnOffTrigger",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "dontUseAlarm": false,
+                    "m_seconds": 0,
+                    "m_stopwatchName": "pumpTime",
+                    "m_variableName": "eventDuration",
+                    "m_SIGUID": -6474507697776837632,
+                    "m_classType": "StopwatchTrigger",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_ignoreReferenceStartTime": true,
+                    "m_minutes": 0,
+                    "m_seconds": 900,
+                    "m_startHour": 0,
+                    "m_startMinute": 0,
+                    "m_useAlarm": true,
+                    "m_SIGUID": -6779884519250198528,
+                    "m_classType": "RegularIntervalTrigger",
+                    "m_comment": "Just for the watchdog... ",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_alarmId": "e3b435b7-a44f-4f5a-a93e-07ecd4660a9a",
+                    "m_daysOfWeek": [
+                        true,
+                        true,
+                        true,
+                        true,
+                        true,
+                        true,
+                        true
+                    ],
+                    "m_hour": 0,
+                    "m_minute": 0,
+                    "m_second": 0,
+                    "m_useAlarm": true,
+                    "m_SIGUID": -5810779114882236416,
+                    "m_classType": "TimerTrigger",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -7110378985687379968,
+                    "m_classType": "MacroDroidInitialisedTrigger",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                }
+            ]
+        },
+        {
+            "exportedActionBlocks": [],
+            "isActionBlock": false,
+            "isBeingImported": false,
+            "isClonedInstance": false,
+            "isFavourite": false,
+            "localVariables": [
+                {
+                    "dictionary": {
+                        "entries": [],
+                        "isArray": false,
+                        "variableType": 4,
+                        "type": "Dictionary"
+                    },
+                    "isLocalVar": true,
+                    "m_booleanValue": false,
+                    "m_decimalValue": 0.0,
+                    "m_intValue": 45,
+                    "m_name": "runTimeMin",
+                    "m_stringValue": "",
+                    "m_type": 1,
+                    "supportsInput": true,
+                    "supportsOutput": true
+                }
+            ],
+            "m_GUID": -4703012205649336320,
+            "m_actionList": [
+                {
+                    "childrenCollapsed": false,
+                    "m_SIGUID": -6889841811826755584,
+                    "m_classType": "IfConditionAction",
+                    "m_constraintList": [
+                        {
+                            "categoryName": "WellControl",
+                            "option": 1,
+                            "m_SIGUID": -8581641911021985792,
+                            "m_classType": "CategoryEnabledConstraint",
+                            "m_constraintList": [],
+                            "m_isDisabled": false,
+                            "m_isOrCondition": false
+                        }
+                    ],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "childrenCollapsed": false,
+                    "m_SIGUID": -7738801802024502272,
+                    "m_classType": "IfConditionAction",
+                    "m_constraintList": [
+                        {
+                            "m_locked": true,
+                            "m_SIGUID": -6160457708509648896,
+                            "m_classType": "DeviceLockedConstraint",
+                            "m_constraintList": [],
+                            "m_isDisabled": false,
+                            "m_isOrCondition": false
+                        }
+                    ],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "action": 6,
+                    "uiInteractionConfiguration": {
+                        "durationMs": 250,
+                        "endX": 50,
+                        "endY": 1000,
+                        "startX": 50,
+                        "startY": 50,
+                        "waitBeforeNext": true,
+                        "type": "Gesture"
+                    },
+                    "m_SIGUID": -9076317843771563008,
+                    "m_classType": "UIInteractionAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -5429614490763727872,
+                    "m_classType": "EndIfAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_secondaryClassType": "MessageDialogAction",
+                    "blockNextAction": true,
+                    "m_iconBgColor": -769226,
+                    "m_imageResourceId": 0,
+                    "m_macroGUIDToRun": 0,
+                    "m_notificationChannelType": 0,
+                    "m_notificationSubject": "system disabled",
+                    "m_notificationText": "Ask operator what's the problem... ",
+                    "m_overwriteExisting": false,
+                    "m_priority": 0,
+                    "m_ringtoneIndex": 0,
+                    "m_ringtoneName": "Default",
+                    "m_runMacroWhenPressed": false,
+                    "notificationActionButtons": [],
+                    "notificationChannelName": "Notification action",
+                    "preventBackButtonClosing": false,
+                    "m_SIGUID": -5485953677986542592,
+                    "m_classType": "MessageDialogAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -6802388039964653568,
+                    "m_classType": "ElseAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "childrenCollapsed": false,
+                    "m_SIGUID": -5640001454650675200,
+                    "m_classType": "IfConditionAction",
+                    "m_constraintList": [
+                        {
+                            "checkCase": false,
+                            "dictionaryKeys": {
+                                "keys": []
+                            },
+                            "dictionaryType": 1,
+                            "enableRegex": false,
+                            "m_booleanValue": false,
+                            "m_doubleValue": 0.0,
+                            "m_intCompareVariable": true,
+                            "m_intGreaterThan": false,
+                            "m_intLessThan": false,
+                            "m_intNotEqual": true,
+                            "m_intValue": 0,
+                            "m_otherValueToCompare": {
+                                "dictionary": {
+                                    "entries": [],
+                                    "isArray": false,
+                                    "variableType": 4,
+                                    "type": "Dictionary"
+                                },
+                                "isLocalVar": false,
+                                "m_booleanValue": false,
+                                "m_decimalValue": 0.0,
+                                "m_intValue": 0,
+                                "m_name": "off",
+                                "m_stringValue": "",
+                                "m_type": 1,
+                                "supportsInput": true,
+                                "supportsOutput": true
+                            },
+                            "m_stringComparisonType": 0,
+                            "m_stringEqual": true,
+                            "m_variable": {
+                                "dictionary": {
+                                    "entries": [],
+                                    "isArray": false,
+                                    "variableType": 4,
+                                    "type": "Dictionary"
+                                },
+                                "isLocalVar": false,
+                                "m_booleanValue": false,
+                                "m_decimalValue": 0.0,
+                                "m_intValue": 0,
+                                "m_name": "pump status",
+                                "m_stringValue": "",
+                                "m_type": 1,
+                                "supportsInput": true,
+                                "supportsOutput": true
+                            },
+                            "m_SIGUID": -8371490817895078912,
+                            "m_classType": "MacroDroidVariableConstraint",
+                            "m_constraintList": [],
+                            "m_isDisabled": false,
+                            "m_isOrCondition": false
+                        }
+                    ],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "childrenCollapsed": false,
+                    "m_SIGUID": -7408064049510217728,
+                    "m_classType": "IfConditionAction",
+                    "m_constraintList": [
+                        {
+                            "m_not": false,
+                            "m_siGuidThatInvoked": -8499719487719831552,
+                            "m_triggerName": "Notification Bar Button",
+                            "m_SIGUID": -6520944033216216064,
+                            "m_classType": "TriggerThatInvokedConstraint",
+                            "m_constraintList": [],
+                            "m_isDisabled": false,
+                            "m_isOrCondition": false
+                        }
+                    ],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "childrenCollapsed": true,
+                    "m_SIGUID": -8049106538658430976,
+                    "m_classType": "IfConditionAction",
+                    "m_constraintList": [
+                        {
+                            "m_locked": true,
+                            "m_SIGUID": -8440444250790316032,
+                            "m_classType": "DeviceLockedConstraint",
+                            "m_constraintList": [],
+                            "m_isDisabled": false,
+                            "m_isOrCondition": false
+                        }
+                    ],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "action": 6,
+                    "uiInteractionConfiguration": {
+                        "durationMs": 250,
+                        "endX": 50,
+                        "endY": 1000,
+                        "startX": 50,
+                        "startY": 50,
+                        "waitBeforeNext": true,
+                        "type": "Gesture"
+                    },
+                    "m_SIGUID": -7574305874739121152,
+                    "m_classType": "UIInteractionAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -5032240506708598784,
+                    "m_classType": "EndIfAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "negativeText": "Cancel",
+                    "positiveText": "OK",
+                    "quitOnBackPressed": false,
+                    "text": "Do you want to stop the pump?",
+                    "title": "Really stop?",
+                    "childrenCollapsed": false,
+                    "m_SIGUID": -8462124984280441856,
+                    "m_classType": "IfConfirmedThenAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "actionBlockId": -7485193186305615146,
+                    "actionBlockName": "ScheduleStopSms",
+                    "inputDictionaryMap": {},
+                    "inputVarsMap": {},
+                    "outputDictionaryMap": {},
+                    "outputVarsMap": {},
+                    "m_SIGUID": -7242826787908888271,
+                    "m_classType": "ActionBlockAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -7410295633710017536,
+                    "m_classType": "EndIfAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -5124522791762000896,
+                    "m_classType": "ElseAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_secondaryClassType": "MessageDialogAction",
+                    "blockNextAction": false,
+                    "m_iconBgColor": -769226,
+                    "m_imageResourceId": 0,
+                    "m_macroGUIDToRun": 0,
+                    "m_notificationChannelType": 0,
+                    "m_notificationSubject": "pump already running ",
+                    "m_notificationText": "the pump is running right now",
+                    "m_overwriteExisting": false,
+                    "m_priority": 0,
+                    "m_ringtoneIndex": 0,
+                    "m_ringtoneName": "Default",
+                    "m_runMacroWhenPressed": false,
+                    "notificationActionButtons": [],
+                    "notificationChannelName": "Notification action",
+                    "preventBackButtonClosing": false,
+                    "m_SIGUID": -5940621648402130944,
+                    "m_classType": "MessageDialogAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -7816007910001884160,
+                    "m_classType": "EndIfAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -5515747196908064768,
+                    "m_classType": "ElseAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "childrenCollapsed": false,
+                    "m_SIGUID": -8758884568315800576,
+                    "m_classType": "IfConditionAction",
+                    "m_constraintList": [
+                        {
+                            "m_not": false,
+                            "m_siGuidThatInvoked": -8343845760303195136,
+                            "m_triggerName": "Widget Button (Custom)",
+                            "m_SIGUID": -4707925062407615488,
+                            "m_classType": "TriggerThatInvokedConstraint",
+                            "m_constraintList": [],
+                            "m_isDisabled": false,
+                            "m_isOrCondition": false
+                        }
+                    ],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "dictionaryKeys": [],
+                    "dictionaryOrArrayType": -1,
+                    "m_booleanInvert": false,
+                    "m_darkMode": 1,
+                    "m_doubleRandomMax": 0.0,
+                    "m_doubleRandomMin": 0.0,
+                    "m_falseLabel": "False",
+                    "m_intExpression": false,
+                    "m_intRandom": false,
+                    "m_intRandomMax": 0,
+                    "m_intRandomMin": 0,
+                    "m_intValueDecrement": false,
+                    "m_intValueIncrement": false,
+                    "m_newBooleanValue": false,
+                    "m_newDoubleValue": 0.0,
+                    "m_newIntValue": 0,
+                    "m_trueLabel": "True",
+                    "m_userPrompt": true,
+                    "m_userPromptEmptyAtStart": false,
+                    "m_userPromptMessage": "how long should the pump run (minutes)?",
+                    "m_userPromptPassword": false,
+                    "m_userPromptShowCancel": true,
+                    "m_userPromptStopAfterCancel": true,
+                    "m_userPromptTitle": "for how long",
+                    "m_variable": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": true,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 20,
+                        "m_name": "runTimeMin",
+                        "m_stringValue": "",
+                        "m_type": 1,
+                        "supportsInput": true,
+                        "supportsOutput": true
+                    },
+                    "m_SIGUID": -4639174187325732864,
+                    "m_classType": "SetVariableAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -5115573060837068800,
+                    "m_classType": "ElseIfConditionAction",
+                    "m_constraintList": [
+                        {
+                            "m_not": false,
+                            "m_siGuidThatInvoked": -5084760921387595776,
+                            "m_triggerName": "Notification Bar Button",
+                            "m_SIGUID": -8949429319567501312,
+                            "m_classType": "TriggerThatInvokedConstraint",
+                            "m_constraintList": [],
+                            "m_isDisabled": false,
+                            "m_isOrCondition": false
+                        }
+                    ],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "dictionaryKeys": [],
+                    "dictionaryOrArrayType": -1,
+                    "m_booleanInvert": false,
+                    "m_darkMode": -1,
+                    "m_doubleRandomMax": 0.0,
+                    "m_doubleRandomMin": 0.0,
+                    "m_expression": "15",
+                    "m_falseLabel": "False",
+                    "m_intExpression": true,
+                    "m_intRandom": false,
+                    "m_intRandomMax": 0,
+                    "m_intRandomMin": 0,
+                    "m_intValueDecrement": false,
+                    "m_intValueIncrement": false,
+                    "m_newBooleanValue": false,
+                    "m_newDoubleValue": 0.0,
+                    "m_newIntValue": 0,
+                    "m_trueLabel": "True",
+                    "m_userPrompt": false,
+                    "m_userPromptEmptyAtStart": false,
+                    "m_userPromptPassword": false,
+                    "m_userPromptShowCancel": true,
+                    "m_userPromptStopAfterCancel": true,
+                    "m_variable": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": true,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 15,
+                        "m_name": "runTimeMin",
+                        "m_stringValue": "",
+                        "m_type": 1,
+                        "supportsInput": true,
+                        "supportsOutput": true
+                    },
+                    "m_SIGUID": -7332164047377517568,
+                    "m_classType": "SetVariableAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -5733741345333044224,
+                    "m_classType": "ElseIfConditionAction",
+                    "m_constraintList": [
+                        {
+                            "m_not": false,
+                            "m_siGuidThatInvoked": -6233093923789982720,
+                            "m_triggerName": "Notification Bar Button",
+                            "m_SIGUID": -8041080416775127040,
+                            "m_classType": "TriggerThatInvokedConstraint",
+                            "m_constraintList": [],
+                            "m_isDisabled": false,
+                            "m_isOrCondition": false
+                        }
+                    ],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "dictionaryKeys": [],
+                    "dictionaryOrArrayType": -1,
+                    "m_booleanInvert": false,
+                    "m_darkMode": -1,
+                    "m_doubleRandomMax": 0.0,
+                    "m_doubleRandomMin": 0.0,
+                    "m_expression": "30",
+                    "m_falseLabel": "False",
+                    "m_intExpression": true,
+                    "m_intRandom": false,
+                    "m_intRandomMax": 0,
+                    "m_intRandomMin": 0,
+                    "m_intValueDecrement": false,
+                    "m_intValueIncrement": false,
+                    "m_newBooleanValue": false,
+                    "m_newDoubleValue": 0.0,
+                    "m_newIntValue": 0,
+                    "m_trueLabel": "True",
+                    "m_userPrompt": false,
+                    "m_userPromptEmptyAtStart": false,
+                    "m_userPromptPassword": false,
+                    "m_userPromptShowCancel": true,
+                    "m_userPromptStopAfterCancel": true,
+                    "m_variable": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": true,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 15,
+                        "m_name": "runTimeMin",
+                        "m_stringValue": "",
+                        "m_type": 1,
+                        "supportsInput": true,
+                        "supportsOutput": true
+                    },
+                    "m_SIGUID": -8770714440758332416,
+                    "m_classType": "SetVariableAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -6636632115162183680,
+                    "m_classType": "ElseIfConditionAction",
+                    "m_constraintList": [
+                        {
+                            "m_not": false,
+                            "m_siGuidThatInvoked": -8628738487032848384,
+                            "m_triggerName": "Notification Bar Button",
+                            "m_SIGUID": -4779297076213065728,
+                            "m_classType": "TriggerThatInvokedConstraint",
+                            "m_constraintList": [],
+                            "m_isDisabled": false,
+                            "m_isOrCondition": false
+                        }
+                    ],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "dictionaryKeys": [],
+                    "dictionaryOrArrayType": -1,
+                    "m_booleanInvert": false,
+                    "m_darkMode": -1,
+                    "m_doubleRandomMax": 0.0,
+                    "m_doubleRandomMin": 0.0,
+                    "m_expression": "45",
+                    "m_falseLabel": "False",
+                    "m_intExpression": true,
+                    "m_intRandom": false,
+                    "m_intRandomMax": 0,
+                    "m_intRandomMin": 0,
+                    "m_intValueDecrement": false,
+                    "m_intValueIncrement": false,
+                    "m_newBooleanValue": false,
+                    "m_newDoubleValue": 0.0,
+                    "m_newIntValue": 0,
+                    "m_trueLabel": "True",
+                    "m_userPrompt": false,
+                    "m_userPromptEmptyAtStart": false,
+                    "m_userPromptPassword": false,
+                    "m_userPromptShowCancel": true,
+                    "m_userPromptStopAfterCancel": true,
+                    "m_variable": {
+                        "dictionary": {
+                            "entries": [],
+                            "isArray": false,
+                            "variableType": 4,
+                            "type": "Dictionary"
+                        },
+                        "isLocalVar": true,
+                        "m_booleanValue": false,
+                        "m_decimalValue": 0.0,
+                        "m_intValue": 15,
+                        "m_name": "runTimeMin",
+                        "m_stringValue": "",
+                        "m_type": 1,
+                        "supportsInput": true,
+                        "supportsOutput": true
+                    },
+                    "m_SIGUID": -8635897936748319744,
+                    "m_classType": "SetVariableAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -6497132508593996800,
+                    "m_classType": "EndIfAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "childrenCollapsed": false,
+                    "m_SIGUID": -6713961782273636352,
+                    "m_classType": "IfConditionAction",
+                    "m_constraintList": [
+                        {
+                            "m_locked": true,
+                            "m_SIGUID": -8396812874733215744,
+                            "m_classType": "DeviceLockedConstraint",
+                            "m_constraintList": [],
+                            "m_isDisabled": false,
+                            "m_isOrCondition": false
+                        }
+                    ],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "action": 6,
+                    "uiInteractionConfiguration": {
+                        "durationMs": 250,
+                        "endX": 50,
+                        "endY": 1000,
+                        "startX": 50,
+                        "startY": 50,
+                        "waitBeforeNext": true,
+                        "type": "Gesture"
+                    },
+                    "m_SIGUID": -8622654096418057216,
+                    "m_classType": "UIInteractionAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -7987601509676077056,
+                    "m_classType": "EndIfAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "negativeText": "Cancel",
+                    "positiveText": "OK",
+                    "quitOnBackPressed": false,
+                    "text": "Run pump for {lv=runTimeMin} min?",
+                    "title": "Are you sure?",
+                    "childrenCollapsed": false,
+                    "m_SIGUID": -6728844143849155584,
+                    "m_classType": "IfConfirmedThenAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "actionBlockId": -5895514509042727131,
+                    "actionBlockName": "UserPumpRequest",
+                    "inputDictionaryMap": {},
+                    "inputVarsMap": {
+                        "runTimeMin": "{lv=runTimeMin}",
+                        "user": "well phone button"
+                    },
+                    "outputDictionaryMap": {},
+                    "outputVarsMap": {},
+                    "m_SIGUID": -8149406688708566016,
+                    "m_classType": "ActionBlockAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -7340339842105375744,
+                    "m_classType": "EndIfAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -5235565990475336704,
+                    "m_classType": "EndIfAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "m_SIGUID": -5139099200470299648,
+                    "m_classType": "EndIfAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                }
+            ],
+            "m_category": "UserInput",
+            "m_constraintList": [],
+            "m_description": "",
+            "m_descriptionOpen": false,
+            "m_enabled": true,
+            "m_excludeLog": false,
+            "m_headingColor": 0,
+            "m_isOrCondition": false,
+            "m_name": "UserInteraction",
+            "m_triggerList": [
+                {
+                    "m_imageId": 2131232109,
+                    "m_imageResourceName": "material_ic_opacity_24px_svg",
+                    "m_widgetLabel": "pump water",
+                    "m_widgetType": 4,
+                    "m_SIGUID": -8343845760303195136,
+                    "m_classType": "WidgetPressedTrigger",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "REQUEST_CODE_SELECT_BUTTON": 427824,
+                    "m_collapseNotification": true,
+                    "m_id": 0,
+                    "m_SIGUID": -5084760921387595776,
+                    "m_classType": "NotificationButtonTrigger",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "REQUEST_CODE_SELECT_BUTTON": 427824,
+                    "m_collapseNotification": true,
+                    "m_id": 1,
+                    "m_SIGUID": -6233093923789982720,
+                    "m_classType": "NotificationButtonTrigger",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "REQUEST_CODE_SELECT_BUTTON": 427824,
+                    "m_collapseNotification": true,
+                    "m_id": 2,
+                    "m_SIGUID": -8628738487032848384,
+                    "m_classType": "NotificationButtonTrigger",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "REQUEST_CODE_SELECT_BUTTON": 427824,
+                    "m_collapseNotification": true,
+                    "m_id": 3,
+                    "m_SIGUID": -8499719487719831552,
+                    "m_classType": "NotificationButtonTrigger",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                }
+            ]
+        }
+    ],
+    "mediaButtonPassThroughUnhandled": true,
+    "notificationButtonBarConfig": "4,material_ic_battery_20_24px_svg,null,2131231600,;5,material_ic_battery_60_24px_svg,null,2131231603,;6,material_ic_battery_90_24px_svg,null,2131231605,;3,not_icon_adblock,null,2131232536,",
+    "notificationButtonBarIconTint": -16777216,
+    "proximityWorkWithScreenOff": false,
+    "quickRunMacroIds": [],
+    "quickSettingsData": {
+        "quickSettingsButtonList": [
+            {
+                "collapseOnPress": false,
+                "enabled": false,
+                "image": 0,
+                "imageName": "ic_settings_applications_white_24dp",
+                "isToggle": true,
+                "label": "",
+                "toggleOn": true
+            },
+            {
+                "collapseOnPress": false,
+                "enabled": false,
+                "image": 0,
+                "imageName": "ic_settings_applications_white_24dp",
+                "isToggle": true,
+                "label": "",
+                "toggleOn": true
+            },
+            {
+                "collapseOnPress": false,
+                "enabled": false,
+                "image": 0,
+                "imageName": "ic_settings_applications_white_24dp",
+                "isToggle": true,
+                "label": "",
+                "toggleOn": true
+            },
+            {
+                "collapseOnPress": false,
+                "enabled": false,
+                "image": 0,
+                "imageName": "ic_settings_applications_white_24dp",
+                "isToggle": true,
+                "label": "",
+                "toggleOn": true
+            },
+            {
+                "collapseOnPress": false,
+                "enabled": false,
+                "image": 0,
+                "imageName": "ic_settings_applications_white_24dp",
+                "isToggle": true,
+                "label": "",
+                "toggleOn": true
+            },
+            {
+                "collapseOnPress": false,
+                "enabled": false,
+                "image": 0,
+                "imageName": "ic_settings_applications_white_24dp",
+                "isToggle": true,
+                "label": "",
+                "toggleOn": true
+            },
+            {
+                "collapseOnPress": false,
+                "enabled": false,
+                "image": 0,
+                "imageName": "ic_settings_applications_white_24dp",
+                "isToggle": true,
+                "label": "",
+                "toggleOn": true
+            },
+            {
+                "collapseOnPress": false,
+                "enabled": false,
+                "image": 0,
+                "imageName": "ic_settings_applications_white_24dp",
+                "isToggle": true,
+                "label": "",
+                "toggleOn": true
+            }
+        ]
+    },
+    "recordMicrophoneHideFromMediaLibrary": false,
+    "shakeDetectionRate": "Normal",
+    "shakeSensitivity": "3",
+    "shakeWorkWithScreenOff": false,
+    "shareLastPhotoNotifyFail": false,
+    "shareLastPhotoNotifyWhenDone": false,
+    "shareLastPhotoRetryPeriod": 0,
+    "shareLocationNotifyFail": false,
+    "shareLocationNotifyWhenDone": false,
+    "shareLocationRetryPeriod": 0,
+    "smsMonitorInbox": true,
+    "smtpServerConfig": {
+        "password": "Tathagata",
+        "serverAddress": "smtp.gmail.com",
+        "serverPort": "587",
+        "startTlsEnabled": false,
+        "useAuthentication": true,
+        "username": "dhamma.way.place@gmail.com"
+    },
+    "spokenTextAudioStream": 5,
+    "stopWatches": [
+        "pumpTime"
+    ],
+    "sunsetSunriseLocation": "",
+    "templateMacrosAutoTranslate": false,
+    "udpNotifyFailure": true,
+    "userIcons": [],
+    "variables": [
+        {
+            "dictionary": {
+                "entries": [],
+                "isArray": false,
+                "variableType": 4,
+                "type": "Dictionary"
+            },
+            "isLocalVar": false,
+            "m_booleanValue": false,
+            "m_decimalValue": 0.0,
+            "m_intValue": 0,
+            "m_name": "assumedEventDuration",
+            "m_stringValue": "",
+            "m_type": 1,
+            "supportsInput": true,
+            "supportsOutput": true
+        },
+        {
+            "dictionary": {
+                "entries": [],
+                "isArray": false,
+                "variableType": 4,
+                "type": "Dictionary"
+            },
+            "isLocalVar": false,
+            "m_booleanValue": false,
+            "m_decimalValue": 0.0,
+            "m_intValue": 32691,
+            "m_name": "dailyCount",
+            "m_stringValue": "",
+            "m_type": 1,
+            "supportsInput": true,
+            "supportsOutput": true
+        },
+        {
+            "dictionary": {
+                "entries": [],
+                "isArray": false,
+                "variableType": 4,
+                "type": "Dictionary"
+            },
+            "isLocalVar": false,
+            "m_booleanValue": false,
+            "m_decimalValue": 0.0,
+            "m_intValue": 0,
+            "m_name": "eventDuration",
+            "m_stringValue": "",
+            "m_type": 1,
+            "supportsInput": false,
+            "supportsOutput": true
+        },
+        {
+            "dictionary": {
+                "entries": [],
+                "isArray": false,
+                "variableType": 4,
+                "type": "Dictionary"
+            },
+            "isLocalVar": false,
+            "m_booleanValue": false,
+            "m_decimalValue": 0.0,
+            "m_intValue": 1662630494,
+            "m_name": "last well sms recieved",
+            "m_stringValue": "",
+            "m_type": 1,
+            "supportsInput": true,
+            "supportsOutput": true
+        },
+        {
+            "dictionary": {
+                "entries": [],
+                "isArray": false,
+                "variableType": 4,
+                "type": "Dictionary"
+            },
+            "isLocalVar": false,
+            "m_booleanValue": false,
+            "m_decimalValue": 0.0,
+            "m_intValue": 1662630495,
+            "m_name": "lastPumpStateChange",
+            "m_stringValue": "",
+            "m_type": 1,
+            "supportsInput": true,
+            "supportsOutput": true
+        },
+        {
+            "dictionary": {
+                "entries": [],
+                "isArray": false,
+                "variableType": 4,
+                "type": "Dictionary"
+            },
+            "isLocalVar": false,
+            "m_booleanValue": false,
+            "m_decimalValue": 0.0,
+            "m_intValue": 3600,
+            "m_name": "maxPumpTime",
+            "m_stringValue": "",
+            "m_type": 1,
+            "supportsInput": true,
+            "supportsOutput": true
+        },
+        {
+            "dictionary": {
+                "entries": [],
+                "isArray": false,
+                "variableType": 4,
+                "type": "Dictionary"
+            },
+            "isLocalVar": false,
+            "m_booleanValue": false,
+            "m_decimalValue": 0.0,
+            "m_intValue": 60,
+            "m_name": "minPumpTime",
+            "m_stringValue": "",
+            "m_type": 1,
+            "supportsInput": true,
+            "supportsOutput": true
+        },
+        {
+            "dictionary": {
+                "entries": [],
+                "isArray": false,
+                "variableType": 4,
+                "type": "Dictionary"
+            },
+            "isLocalVar": false,
+            "m_booleanValue": false,
+            "m_decimalValue": 0.0,
+            "m_intValue": 0,
+            "m_name": "newEventStart",
+            "m_stringValue": "",
+            "m_type": 1,
+            "supportsInput": true,
+            "supportsOutput": true
+        },
+        {
+            "dictionary": {
+                "entries": [],
+                "isArray": false,
+                "variableType": 4,
+                "type": "Dictionary"
+            },
+            "isLocalVar": false,
+            "m_booleanValue": false,
+            "m_decimalValue": 0.0,
+            "m_intValue": 0,
+            "m_name": "off",
+            "m_stringValue": "",
+            "m_type": 1,
+            "supportsInput": true,
+            "supportsOutput": true
+        },
+        {
+            "dictionary": {
+                "entries": [],
+                "isArray": false,
+                "variableType": 4,
+                "type": "Dictionary"
+            },
+            "isLocalVar": false,
+            "m_booleanValue": false,
+            "m_decimalValue": 0.0,
+            "m_intValue": 3,
+            "m_name": "on",
+            "m_stringValue": "",
+            "m_type": 1,
+            "supportsInput": true,
+            "supportsOutput": true
+        },
+        {
+            "dictionary": {
+                "entries": [],
+                "isArray": false,
+                "variableType": 4,
+                "type": "Dictionary"
+            },
+            "isLocalVar": false,
+            "m_booleanValue": false,
+            "m_decimalValue": 0.0,
+            "m_intValue": 0,
+            "m_name": "prio_error",
+            "m_stringValue": "",
+            "m_type": 1,
+            "supportsInput": true,
+            "supportsOutput": true
+        },
+        {
+            "dictionary": {
+                "entries": [],
+                "isArray": false,
+                "variableType": 4,
+                "type": "Dictionary"
+            },
+            "isLocalVar": false,
+            "m_booleanValue": false,
+            "m_decimalValue": 0.0,
+            "m_intValue": 6,
+            "m_name": "prio_info",
+            "m_stringValue": "",
+            "m_type": 1,
+            "supportsInput": true,
+            "supportsOutput": true
+        },
+        {
+            "dictionary": {
+                "entries": [],
+                "isArray": false,
+                "variableType": 4,
+                "type": "Dictionary"
+            },
+            "isLocalVar": false,
+            "m_booleanValue": false,
+            "m_decimalValue": 0.0,
+            "m_intValue": 4,
+            "m_name": "prio_notification",
+            "m_stringValue": "",
+            "m_type": 1,
+            "supportsInput": true,
+            "supportsOutput": true
+        },
+        {
+            "dictionary": {
+                "entries": [],
+                "isArray": false,
+                "variableType": 4,
+                "type": "Dictionary"
+            },
+            "isLocalVar": false,
+            "m_booleanValue": false,
+            "m_decimalValue": 0.0,
+            "m_intValue": 1,
+            "m_name": "prio_warning",
+            "m_stringValue": "",
+            "m_type": 1,
+            "supportsInput": true,
+            "supportsOutput": true
+        },
+        {
+            "dictionary": {
+                "entries": [],
+                "isArray": false,
+                "variableType": 4,
+                "type": "Dictionary"
+            },
+            "isLocalVar": false,
+            "m_booleanValue": false,
+            "m_decimalValue": 0.0,
+            "m_intValue": 0,
+            "m_name": "pump status",
+            "m_stringValue": "",
+            "m_type": 1,
+            "supportsInput": true,
+            "supportsOutput": true
+        },
+        {
+            "dictionary": {
+                "entries": [],
+                "isArray": false,
+                "variableType": 4,
+                "type": "Dictionary"
+            },
+            "isLocalVar": false,
+            "m_booleanValue": false,
+            "m_decimalValue": 0.0,
+            "m_intValue": 0,
+            "m_name": "pumpStartTime",
+            "m_stringValue": "",
+            "m_type": 1,
+            "supportsInput": true,
+            "supportsOutput": true
+        },
+        {
+            "dictionary": {
+                "entries": [],
+                "isArray": false,
+                "variableType": 4,
+                "type": "Dictionary"
+            },
+            "isLocalVar": false,
+            "m_booleanValue": false,
+            "m_decimalValue": 0.0,
+            "m_intValue": 1,
+            "m_name": "shouldStart",
+            "m_stringValue": "",
+            "m_type": 1,
+            "supportsInput": true,
+            "supportsOutput": true
+        },
+        {
+            "dictionary": {
+                "entries": [],
+                "isArray": false,
+                "variableType": 4,
+                "type": "Dictionary"
+            },
+            "isLocalVar": false,
+            "m_booleanValue": false,
+            "m_decimalValue": 0.0,
+            "m_intValue": 4,
+            "m_name": "shouldStop",
+            "m_stringValue": "",
+            "m_type": 1,
+            "supportsInput": true,
+            "supportsOutput": true
+        },
+        {
+            "dictionary": {
+                "entries": [],
+                "isArray": false,
+                "variableType": 4,
+                "type": "Dictionary"
+            },
+            "isLocalVar": false,
+            "m_booleanValue": false,
+            "m_decimalValue": 0.0,
+            "m_intValue": 2,
+            "m_name": "starting",
+            "m_stringValue": "",
+            "m_type": 1,
+            "supportsInput": true,
+            "supportsOutput": true
+        },
+        {
+            "dictionary": {
+                "entries": [],
+                "isArray": false,
+                "variableType": 4,
+                "type": "Dictionary"
+            },
+            "isLocalVar": false,
+            "m_booleanValue": false,
+            "m_decimalValue": 0.0,
+            "m_intValue": 5,
+            "m_name": "stopping",
+            "m_stringValue": "",
+            "m_type": 1,
+            "supportsInput": true,
+            "supportsOutput": true
+        },
+        {
+            "dictionary": {
+                "entries": [],
+                "isArray": false,
+                "variableType": 4,
+                "type": "Dictionary"
+            },
+            "isLocalVar": false,
+            "m_booleanValue": false,
+            "m_decimalValue": 0.0,
+            "m_intValue": 2100,
+            "m_name": "userPumpTime",
+            "m_stringValue": "",
+            "m_type": 1,
+            "supportsInput": true,
+            "supportsOutput": true
+        }
+    ],
+    "vibrateOnFlip": true,
+    "vibrateOnShake": true,
+    "weatherTriggerLocation": "",
+    "weatherUpdateRate": 30,
+    "widgetButtonVibrateOnPress": true,
+    "wifiSSIDBackgroundScanRate": 2
+}
