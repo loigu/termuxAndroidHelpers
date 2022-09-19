@@ -31,14 +31,15 @@ while read album; do
 	while read track; do
 		extra=-y
 		otrack="${track%.*}.mp3"
+		echo -n "$track:" 
 		if clean-audio.sh "${track}" "${out}/${otrack}" </dev/null &>>debug.txt; then 
 			echo "$track" >> "${out}/success"
-			echo -e "$track:\n\tsuccess"
+			echo -e "\tsuccess"
 			[ $(size_diff "${track}" "${out}/${otrack}") -gt $(($(get_size "${track}") / 10)) ] && echo "${track}" >> "${out}/candidates"
 		else 
 			echo "$track" >> "${out}/failed"
-			echo -e "$track:\n\tfail"
-			rm "${out}/${otrack}"
+			echo -e "\tfail"
+			rm -f "${out}/${otrack}"
 		fi
 	done
 done
