@@ -7,3 +7,8 @@ function json_prettyprint()
 }
 export -f json_prettyprint
 
+function rsync-resume()
+{
+	rsync -avz --partial --append-verify "$@"
+}
+export -f rsync-resume
