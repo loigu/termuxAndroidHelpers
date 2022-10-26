@@ -472,7 +472,7 @@
                     "isLocalVar": true,
                     "m_booleanValue": false,
                     "m_decimalValue": 0.0,
-                    "m_intValue": 589,
+                    "m_intValue": 775,
                     "m_name": "trueEventLength",
                     "m_stringValue": "",
                     "m_type": 1,
@@ -3694,7 +3694,7 @@
                     "m_decimalValue": 0.0,
                     "m_intValue": 0,
                     "m_name": "sms",
-                    "m_stringValue": "Pansale:no water",
+                    "m_stringValue": "pump 10 min",
                     "m_type": 2,
                     "supportsInput": true,
                     "supportsOutput": false
@@ -4618,7 +4618,7 @@
                                 "m_decimalValue": 0.0,
                                 "m_intValue": 0,
                                 "m_name": "sms",
-                                "m_stringValue": "Pansale:no water",
+                                "m_stringValue": "pump 10 min",
                                 "m_type": 2,
                                 "supportsInput": true,
                                 "supportsOutput": false
@@ -4656,7 +4656,7 @@
                     "m_textManipulation": {
                         "type": "ExtractTextManipulation",
                         "params": [
-                            "pump ([0-9]*) min*",
+                            "pump ([0-9]*) ?min*",
                             "1"
                         ]
                     },
@@ -6568,7 +6568,7 @@
                     "m_decimalValue": 0.0,
                     "m_intValue": 0,
                     "m_name": "sms",
-                    "m_stringValue": "Disable system",
+                    "m_stringValue": "Pump 60 min",
                     "m_type": 2,
                     "supportsInput": true,
                     "supportsOutput": true
@@ -9505,7 +9505,7 @@
                     "m_isOrCondition": false
                 },
                 {
-                    "m_alarmId": "88b1c1e5-6bb1-4a1c-bc33-9ee478d2c299",
+                    "m_alarmId": "855a3f62-c9d8-4f20-b8a5-71b145013233",
                     "m_daysOfWeek": [
                         true,
                         true,
@@ -9551,7 +9551,7 @@
                     "isLocalVar": true,
                     "m_booleanValue": false,
                     "m_decimalValue": 0.0,
-                    "m_intValue": 20,
+                    "m_intValue": 30,
                     "m_name": "runTimeMin",
                     "m_stringValue": "",
                     "m_type": 1,
@@ -10732,6 +10732,38 @@
                     "m_isOrCondition": false
                 },
                 {
+                    "m_addToMessageLog": false,
+                    "m_contact": {
+                        "m_id": "Hardwired_Number",
+                        "m_lookupKey": "Hardwired_Number",
+                        "m_name": "[Vyberte \u010d\u00edslo]"
+                    },
+                    "m_messageContent": "2565#OFF#",
+                    "m_number": "+94 77 872 0359",
+                    "m_prePopulate": false,
+                    "m_simId": 0,
+                    "m_SIGUID": -8818352838715618506,
+                    "m_classType": "SendSMSAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
+                    "actionBlockId": -8453018306271081662,
+                    "actionBlockName": "ChangeState",
+                    "inputDictionaryMap": {},
+                    "inputVarsMap": {
+                        "newState": "{v=off}"
+                    },
+                    "outputDictionaryMap": {},
+                    "outputVarsMap": {},
+                    "m_SIGUID": -6213380939945909643,
+                    "m_classType": "ActionBlockAction",
+                    "m_constraintList": [],
+                    "m_isDisabled": false,
+                    "m_isOrCondition": false
+                },
+                {
                     "m_SIGUID": -7211719393956339359,
                     "m_classType": "EndIfAction",
                     "m_constraintList": [],
@@ -11345,7 +11377,7 @@
             "isLocalVar": false,
             "m_booleanValue": false,
             "m_decimalValue": 0.0,
-            "m_intValue": 3919,
+            "m_intValue": 0,
             "m_name": "dailyCount",
             "m_stringValue": "",
             "m_type": 1,
@@ -11362,7 +11394,7 @@
             "isLocalVar": false,
             "m_booleanValue": false,
             "m_decimalValue": 0.0,
-            "m_intValue": 0,
+            "m_intValue": 3600,
             "m_name": "eventDuration",
             "m_stringValue": "",
             "m_type": 1,
@@ -11379,7 +11411,7 @@
             "isLocalVar": false,
             "m_booleanValue": false,
             "m_decimalValue": 0.0,
-            "m_intValue": 1663590115,
+            "m_intValue": 1666750988,
             "m_name": "last well sms recieved",
             "m_stringValue": "",
             "m_type": 1,
@@ -11396,7 +11428,7 @@
             "isLocalVar": false,
             "m_booleanValue": false,
             "m_decimalValue": 0.0,
-            "m_intValue": 1663590116,
+            "m_intValue": 1666751490,
             "m_name": "lastPumpStateChange",
             "m_stringValue": "",
             "m_type": 1,
@@ -11566,7 +11598,7 @@
             "isLocalVar": false,
             "m_booleanValue": false,
             "m_decimalValue": 0.0,
-            "m_intValue": 0,
+            "m_intValue": 2,
             "m_name": "pump status",
             "m_stringValue": "",
             "m_type": 1,
@@ -11668,7 +11700,7 @@
             "isLocalVar": false,
             "m_booleanValue": false,
             "m_decimalValue": 0.0,
-            "m_intValue": 2820,
+            "m_intValue": 4800,
             "m_name": "userPumpTime",
             "m_stringValue": "",
             "m_type": 1,
