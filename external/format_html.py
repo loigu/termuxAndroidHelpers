@@ -23,14 +23,27 @@ import sys
 
 # But, we'll read from standard input, so we can pipe output to it
 # i.e. run with cat filename.html | this_file.py
-data = sys.stdin.readlines()
+raw = sys.stdin
+out = sys.stdout
+if len(sys.argv) == 3:
+    raw = open(sys.argv[1], 'r')
+    out = open(sys.argv[2], 'w+')
+elif len(sys.argv) == 2 and sys.argv[1] == "-h":
+    print("usage: cat html | " + sys.argv[0] + " > out")
+    print("\t" + sys.argv[0] + " infile outfile")
+    sys.exit(0)
+
+data = raw.readlines()
+raw.close()
 # print "Counted", len(data), "lines."
 data = "".join(data)
 # die
 #sys.exit()
 
 #root = data.tostring(sliderRoot) #convert the generated HTML to a string
-soup = bs(data)                #make BeautifulSoup
+soup = bs(data, features="html.parser")                #make BeautifulSoup
 prettyHTML=soup.prettify()   #prettify the html
 
-print (prettyHTML)
+out.write(prettyHTML)
+out.close()
+# print (prettyHTML)
