@@ -1,0 +1,16 @@
+host ypc.cz
+	HostName ypc.cz
+	Port 34212
+	IdentityFile ~/.ssh/id_rsa
+host ypc
+	HostName ypc.cz
+	Port 34212
+	User loki
+host fs
+	HostName filesrv1.fritz.box
+	User nanda
+	Port 22
+host fs-direct fsd
+	HostName sbsmtc.duckdns.org
+	User nanda
+	Port 2222

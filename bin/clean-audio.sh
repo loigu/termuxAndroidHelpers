@@ -2,7 +2,13 @@
 # removes noise, cut high & low frequencies, shrinks to "voice" quality
 
 # 200 - 2500 for a.ariya voice
-[ -z "$lowpass" ] && lowpass=5512
+if [ "$quality" = 8 ]; then
+	export lowpass=5512
+	export highpass=250
+	export quality=8
+fi
+
+[ -z "$lowpass" ] && lowpass=2500
 [ -z "$highpass" ] && highpass=300
 [ -z "$quality" ] && quality=9
 
