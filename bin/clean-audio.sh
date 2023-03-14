@@ -6,6 +6,9 @@
 [ -z "$highpass" ] && highpass=300
 [ -z "$quality" ] && quality=9
 
+#no video by default
+video=-vn
+
 if [ -z "$1" -o "$1" = "-h" ]; then
 	echo -e "\thighpass=$highpass"
 	echo -e "\tlowpass=$lowpass"
@@ -26,7 +29,7 @@ to="$2"
 
 [ -d "$to" ] && to="$to/$bn"
 
-ffmpeg ${extra} -i "${from}" -codec:a libmp3lame -ac 1 -ar 16000 -q:a ${quality} -map 0 -map_metadata 0:s:0 -af "lowpass=f=${lowpass},highpass=f=${highpass}" "${to}"
+ffmpeg ${extra} -loglevel warning -stats -i "${from}" -codec:a libmp3lame -ac 1 -ar 16000 -q:a ${quality} -map 0 -map_metadata 0:s:0 -af "lowpass=f=${lowpass},highpass=f=${highpass}" ${video} "${to}" 
 ret=$?
 
 [ "$?" = 0 -a "${inplace}" = 1 ] && mv "${to}" "${from}"
