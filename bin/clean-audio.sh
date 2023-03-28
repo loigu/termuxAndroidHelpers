@@ -6,16 +6,24 @@ if [ "$quality" = 8 ]; then
 	export lowpass=5512
 	export highpass=250
 	export quality=8
+	export rate=16000
 fi
 
 [ -z "$lowpass" ] && lowpass=2500
 [ -z "$highpass" ] && highpass=300
 [ -z "$quality" ] && quality=9
+[ -z "$rate" ] && rate=11025
+
+[ -n "$normalize" ] && af=',speechnorm=e=50:r=0.0001:l=1'
 
 if [ -z "$1" -o "$1" = "-h" ]; then
 	echo -e "\thighpass=$highpass"
 	echo -e "\tlowpass=$lowpass"
 	echo -e "\tquality=$quality"
+	echo -e "\trate=$rate"
+	echo -e "\textra=-y"
+	echo -e "\tnormalize ~ af=,speechnorm=e=50:r=0.0001:l=1"
+
 	echo "$0 from [to]"
 	echo "to == -i -> inplace"
 	exit 0
@@ -32,7 +40,7 @@ to="$2"
 
 [ -d "$to" ] && to="$to/$bn"
 
-ffmpeg ${extra} -i "${from}" -codec:a libmp3lame -ac 1 -ar 16000 -q:a ${quality} -map 0 -map_metadata 0:s:0 -af "lowpass=f=${lowpass},highpass=f=${highpass}" "${to}"
+ffmpeg ${extra} -i "${from}" -codec:a libmp3lame -ac 1 -ar ${rate} -q:a ${quality} -map 0 -map_metadata 0:s:0 -af "lowpass=f=${lowpass},highpass=f=${highpass}${af}" ${extra2} "${to}"
 ret=$?
 
 [ "$?" = 0 -a "${inplace}" = 1 ] && mv "${to}" "${from}"
