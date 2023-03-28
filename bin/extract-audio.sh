@@ -1,13 +1,13 @@
 #!/bin/bash
 # extract mp3 audio from media file
 
-[ "$1" = '-h' ] && echo $(basename "$0")" <from> <to>" && exit 0 
-
 from="$1"
 to="$2"
 
-if [ -z "$from" ]; then
-	echo ${basename $0} from [to]
+if [ -z "$from" ] || [ "$1" = '-h' ] ; then
+	echo $(basename "$0") from [to]
+	echo subscript extras:
+	clean-audio.sh -h
 	exit 1
 fi
 
@@ -17,5 +17,6 @@ if [ -z "${to}" ]; then
 	to="$d/${f%%.*}.mp3"
 fi
 
-ffmpeg ${extra} -i "${from}" -ac 1 -map 0 -f mp3 -vn -ar 22050 -ab 64000 "${to}"
+export extra
+clean-audio.sh "$from" "$to"
 
