@@ -472,7 +472,7 @@
                     "isLocalVar": true,
                     "m_booleanValue": false,
                     "m_decimalValue": 0.0,
-                    "m_intValue": 1501,
+                    "m_intValue": 1500,
                     "m_name": "trueEventLength",
                     "m_stringValue": "",
                     "m_type": 1,
@@ -2685,9 +2685,9 @@
                     "m_contact": {
                         "m_id": "Hardwired_Number",
                         "m_lookupKey": "Hardwired_Number",
-                        "m_name": "[Vyberte \u010d\u00edslo]"
+                        "m_name": "[Select Number]"
                     },
-                    "m_messageContent": "2565#OFF#",
+                    "m_messageContent": "SN2565COMFXXX",
                     "m_number": "+94 77 872 0359",
                     "m_prePopulate": false,
                     "m_simId": 0,
@@ -2798,7 +2798,7 @@
                         "m_lookupKey": "Hardwired_Number",
                         "m_name": "[Select Number]"
                     },
-                    "m_messageContent": "2565#ON#",
+                    "m_messageContent": "SN2565COMNXXX",
                     "m_number": "+94 77 872 0359",
                     "m_prePopulate": false,
                     "m_simId": 0,
@@ -6662,7 +6662,7 @@
                     "m_decimalValue": 0.0,
                     "m_intValue": 0,
                     "m_name": "sms",
-                    "m_stringValue": "Report status",
+                    "m_stringValue": "SW1 IS OFF;\nSW2 IS OFF;\nSW3 IS OFF;\nSW4 IS OFF;\n",
                     "m_type": 2,
                     "supportsInput": true,
                     "supportsOutput": true
@@ -7066,7 +7066,7 @@
                     "m_SIGUID": -8435443739051861562,
                     "m_classType": "SetVariableAction",
                     "m_constraintList": [],
-                    "m_isDisabled": false,
+                    "m_isDisabled": true,
                     "m_isOrCondition": false
                 },
                 {
@@ -8889,7 +8889,10 @@
                     "m_constraintList": [
                         {
                             "checkCase": false,
-                            "dictionaryType": -1,
+                            "dictionaryKeys": {
+                                "keys": []
+                            },
+                            "dictionaryType": 2,
                             "enableRegex": false,
                             "m_booleanValue": false,
                             "m_doubleValue": 0.0,
@@ -8917,8 +8920,62 @@
                             },
                             "m_stringComparisonType": 1,
                             "m_stringEqual": true,
-                            "m_stringValue": "The relay is OFF",
+                            "m_stringValue": "STATE IS ALL OFF",
                             "m_variable": {
+                                "dictionary": {
+                                    "entries": [],
+                                    "isArray": false,
+                                    "variableType": 4,
+                                    "type": "Dictionary"
+                                },
+                                "isLocalVar": true,
+                                "m_booleanValue": false,
+                                "m_decimalValue": 0.0,
+                                "m_intValue": 0,
+                                "m_name": "sms",
+                                "m_stringValue": "",
+                                "m_type": 2,
+                                "supportsInput": true,
+                                "supportsOutput": false
+                            },
+                            "workingOtherVarToCompare": {
+                                "dictionary": {
+                                    "entries": [],
+                                    "isArray": false,
+                                    "variableType": 4,
+                                    "type": "Dictionary"
+                                },
+                                "isLocalVar": false,
+                                "m_booleanValue": false,
+                                "m_decimalValue": 0.0,
+                                "m_intValue": 1814,
+                                "m_name": "dailyCount",
+                                "m_stringValue": "",
+                                "m_type": 1,
+                                "supportsInput": true,
+                                "supportsOutput": true
+                            },
+                            "m_SIGUID": -5398722272884290385,
+                            "m_classType": "MacroDroidVariableConstraint",
+                            "m_constraintList": [],
+                            "m_isDisabled": false,
+                            "m_isOrCondition": false
+                        },
+                        {
+                            "checkCase": false,
+                            "dictionaryKeys": {
+                                "keys": []
+                            },
+                            "dictionaryType": 2,
+                            "enableRegex": false,
+                            "m_booleanValue": false,
+                            "m_doubleValue": 0.0,
+                            "m_intCompareVariable": false,
+                            "m_intGreaterThan": false,
+                            "m_intLessThan": false,
+                            "m_intNotEqual": false,
+                            "m_intValue": 0,
+                            "m_otherValueToCompare": {
                                 "dictionary": {
                                     "entries": [],
                                     "isArray": false,
@@ -8929,13 +8986,50 @@
                                 "m_booleanValue": false,
                                 "m_decimalValue": 0.0,
                                 "m_intValue": 0,
-                                "m_name": "sms",
-                                "m_stringValue": "The relay is OFF",
-                                "m_type": 2,
-                                "supportsInput": false,
+                                "m_name": "assumedEventDuration",
+                                "m_stringValue": "",
+                                "m_type": 1,
+                                "supportsInput": true,
                                 "supportsOutput": true
                             },
-                            "m_SIGUID": -5398722272884290385,
+                            "m_stringComparisonType": 1,
+                            "m_stringEqual": true,
+                            "m_stringValue": "SW1 IS OFF",
+                            "m_variable": {
+                                "dictionary": {
+                                    "entries": [],
+                                    "isArray": false,
+                                    "variableType": 4,
+                                    "type": "Dictionary"
+                                },
+                                "isLocalVar": true,
+                                "m_booleanValue": false,
+                                "m_decimalValue": 0.0,
+                                "m_intValue": 0,
+                                "m_name": "sms",
+                                "m_stringValue": "",
+                                "m_type": 2,
+                                "supportsInput": true,
+                                "supportsOutput": false
+                            },
+                            "workingOtherVarToCompare": {
+                                "dictionary": {
+                                    "entries": [],
+                                    "isArray": false,
+                                    "variableType": 4,
+                                    "type": "Dictionary"
+                                },
+                                "isLocalVar": false,
+                                "m_booleanValue": false,
+                                "m_decimalValue": 0.0,
+                                "m_intValue": 0,
+                                "m_name": "assumedEventDuration",
+                                "m_stringValue": "",
+                                "m_type": 1,
+                                "supportsInput": true,
+                                "supportsOutput": true
+                            },
+                            "m_SIGUID": -8800083455172197796,
                             "m_classType": "MacroDroidVariableConstraint",
                             "m_constraintList": [],
                             "m_isDisabled": false,
@@ -8943,7 +9037,7 @@
                         }
                     ],
                     "m_isDisabled": false,
-                    "m_isOrCondition": false
+                    "m_isOrCondition": true
                 },
                 {
                     "actionBlockId": -5637069152768999120,
@@ -8964,7 +9058,10 @@
                     "m_constraintList": [
                         {
                             "checkCase": false,
-                            "dictionaryType": -1,
+                            "dictionaryKeys": {
+                                "keys": []
+                            },
+                            "dictionaryType": 2,
                             "enableRegex": false,
                             "m_booleanValue": false,
                             "m_doubleValue": 0.0,
@@ -8992,8 +9089,62 @@
                             },
                             "m_stringComparisonType": 1,
                             "m_stringEqual": true,
-                            "m_stringValue": "The relay is ON",
+                            "m_stringValue": "STATE IS ALL ON",
                             "m_variable": {
+                                "dictionary": {
+                                    "entries": [],
+                                    "isArray": false,
+                                    "variableType": 4,
+                                    "type": "Dictionary"
+                                },
+                                "isLocalVar": true,
+                                "m_booleanValue": false,
+                                "m_decimalValue": 0.0,
+                                "m_intValue": 0,
+                                "m_name": "sms",
+                                "m_stringValue": "",
+                                "m_type": 2,
+                                "supportsInput": true,
+                                "supportsOutput": false
+                            },
+                            "workingOtherVarToCompare": {
+                                "dictionary": {
+                                    "entries": [],
+                                    "isArray": false,
+                                    "variableType": 4,
+                                    "type": "Dictionary"
+                                },
+                                "isLocalVar": false,
+                                "m_booleanValue": false,
+                                "m_decimalValue": 0.0,
+                                "m_intValue": 1814,
+                                "m_name": "dailyCount",
+                                "m_stringValue": "",
+                                "m_type": 1,
+                                "supportsInput": true,
+                                "supportsOutput": true
+                            },
+                            "m_SIGUID": -6286079213787197009,
+                            "m_classType": "MacroDroidVariableConstraint",
+                            "m_constraintList": [],
+                            "m_isDisabled": false,
+                            "m_isOrCondition": false
+                        },
+                        {
+                            "checkCase": false,
+                            "dictionaryKeys": {
+                                "keys": []
+                            },
+                            "dictionaryType": 2,
+                            "enableRegex": false,
+                            "m_booleanValue": false,
+                            "m_doubleValue": 0.0,
+                            "m_intCompareVariable": false,
+                            "m_intGreaterThan": false,
+                            "m_intLessThan": false,
+                            "m_intNotEqual": false,
+                            "m_intValue": 0,
+                            "m_otherValueToCompare": {
                                 "dictionary": {
                                     "entries": [],
                                     "isArray": false,
@@ -9004,13 +9155,50 @@
                                 "m_booleanValue": false,
                                 "m_decimalValue": 0.0,
                                 "m_intValue": 0,
-                                "m_name": "sms",
-                                "m_stringValue": "The relay is OFF",
-                                "m_type": 2,
-                                "supportsInput": false,
+                                "m_name": "assumedEventDuration",
+                                "m_stringValue": "",
+                                "m_type": 1,
+                                "supportsInput": true,
                                 "supportsOutput": true
                             },
-                            "m_SIGUID": -6286079213787197009,
+                            "m_stringComparisonType": 1,
+                            "m_stringEqual": true,
+                            "m_stringValue": "SW1 IS ON",
+                            "m_variable": {
+                                "dictionary": {
+                                    "entries": [],
+                                    "isArray": false,
+                                    "variableType": 4,
+                                    "type": "Dictionary"
+                                },
+                                "isLocalVar": true,
+                                "m_booleanValue": false,
+                                "m_decimalValue": 0.0,
+                                "m_intValue": 0,
+                                "m_name": "sms",
+                                "m_stringValue": "",
+                                "m_type": 2,
+                                "supportsInput": true,
+                                "supportsOutput": false
+                            },
+                            "workingOtherVarToCompare": {
+                                "dictionary": {
+                                    "entries": [],
+                                    "isArray": false,
+                                    "variableType": 4,
+                                    "type": "Dictionary"
+                                },
+                                "isLocalVar": false,
+                                "m_booleanValue": false,
+                                "m_decimalValue": 0.0,
+                                "m_intValue": 0,
+                                "m_name": "assumedEventDuration",
+                                "m_stringValue": "",
+                                "m_type": 1,
+                                "supportsInput": true,
+                                "supportsOutput": true
+                            },
+                            "m_SIGUID": -7046794931880490220,
                             "m_classType": "MacroDroidVariableConstraint",
                             "m_constraintList": [],
                             "m_isDisabled": false,
@@ -9018,7 +9206,7 @@
                         }
                     ],
                     "m_isDisabled": false,
-                    "m_isOrCondition": false
+                    "m_isOrCondition": true
                 },
                 {
                     "actionBlockId": -7968500893379991728,
@@ -9731,7 +9919,7 @@
                     "m_isOrCondition": false
                 },
                 {
-                    "m_alarmId": "2db15855-33de-43dd-a580-257e9cb6923b",
+                    "m_alarmId": "cd3cb895-95d1-4825-be5a-5378b2f34b79",
                     "m_daysOfWeek": [
                         true,
                         true,
@@ -9777,7 +9965,7 @@
                     "isLocalVar": true,
                     "m_booleanValue": false,
                     "m_decimalValue": 0.0,
-                    "m_intValue": 7,
+                    "m_intValue": 1,
                     "m_name": "runTimeMin",
                     "m_stringValue": "",
                     "m_type": 1,
@@ -10962,9 +11150,9 @@
                     "m_contact": {
                         "m_id": "Hardwired_Number",
                         "m_lookupKey": "Hardwired_Number",
-                        "m_name": "[Vyberte \u010d\u00edslo]"
+                        "m_name": "[Select Number]"
                     },
-                    "m_messageContent": "2565#OFF#",
+                    "m_messageContent": "SN2565COMFXXX",
                     "m_number": "+94 77 872 0359",
                     "m_prePopulate": false,
                     "m_simId": 0,
@@ -11035,7 +11223,7 @@
                     "isLocalVar": true,
                     "m_booleanValue": false,
                     "m_decimalValue": 0.0,
-                    "m_intValue": 4,
+                    "m_intValue": 0,
                     "m_name": "priority",
                     "m_stringValue": "",
                     "m_type": 1,
@@ -11116,10 +11304,10 @@
                     "m_contact": {
                         "m_id": "Hardwired_Number",
                         "m_lookupKey": "Hardwired_Number",
-                        "m_name": "[Vyberte \u010d\u00edslo]"
+                        "m_name": "[Select Number]"
                     },
                     "m_messageContent": "Water system warning:{lv=message}",
-                    "m_number": "+94 76 094 2247",
+                    "m_number": "076 378 2339",
                     "m_prePopulate": false,
                     "m_simId": 0,
                     "m_SIGUID": -5555936484200088501,
@@ -11252,6 +11440,7 @@
             "isInputExpanded": false,
             "isOutputExpanded": false,
             "isTestMode": true,
+            "exportedActionBlocks": [],
             "isActionBlock": true,
             "isBeingImported": false,
             "isClonedInstance": false,
@@ -11603,7 +11792,7 @@
             "isLocalVar": false,
             "m_booleanValue": false,
             "m_decimalValue": 0.0,
-            "m_intValue": 0,
+            "m_intValue": 4747,
             "m_name": "dailyCount",
             "m_stringValue": "",
             "m_type": 1,
@@ -11637,7 +11826,7 @@
             "isLocalVar": false,
             "m_booleanValue": false,
             "m_decimalValue": 0.0,
-            "m_intValue": 1677837589,
+            "m_intValue": 1680925919,
             "m_name": "last well sms recieved",
             "m_stringValue": "",
             "m_type": 1,
@@ -11654,7 +11843,7 @@
             "isLocalVar": false,
             "m_booleanValue": false,
             "m_decimalValue": 0.0,
-            "m_intValue": 1677838488,
+            "m_intValue": 1680924956,
             "m_name": "lastPumpStateChange",
             "m_stringValue": "",
             "m_type": 1,
@@ -11671,7 +11860,7 @@
             "isLocalVar": false,
             "m_booleanValue": false,
             "m_decimalValue": 0.0,
-            "m_intValue": 1677837589,
+            "m_intValue": 1680924951,
             "m_name": "lastResetTime",
             "m_stringValue": "",
             "m_type": 1,
@@ -11841,7 +12030,7 @@
             "isLocalVar": false,
             "m_booleanValue": false,
             "m_decimalValue": 0.0,
-            "m_intValue": 5,
+            "m_intValue": 0,
             "m_name": "pump status",
             "m_stringValue": "",
             "m_type": 1,
@@ -11960,7 +12149,7 @@
             "isLocalVar": false,
             "m_booleanValue": false,
             "m_decimalValue": 0.0,
-            "m_intValue": 4380,
+            "m_intValue": 3300,
             "m_name": "userPumpTime",
             "m_stringValue": "",
             "m_type": 1,
