@@ -9,12 +9,20 @@ if [ "$quality" = 8 ]; then
 	export rate=16000
 fi
 
+if [ "$preset" = pannavudho ]; then
+	export highpass=500
+        export lowpass=3600
+	export volume="2"
+fi
+
+
 [ -z "$lowpass" ] && lowpass=2500
 [ -z "$highpass" ] && highpass=300
 [ -z "$quality" ] && quality=9
 [ -z "$rate" ] && rate=11025
 
 [ -n "$normalize" ] && af=',speechnorm=e=50:r=0.0001:l=1'
+[ -n "$volume" ] && af="$af,volume=$volume"
 
 #no video by default
 video=-vn
@@ -25,7 +33,10 @@ if [ -z "$1" -o "$1" = "-h" ]; then
 	echo -e "\tquality=$quality"
 	echo -e "\trate=$rate"
 	echo -e "\textra=-y"
-	echo -e "\tnormalize ~ af=,speechnorm=e=50:r=0.0001:l=1"
+	echo -e "\tnormalize=y ~ af=,speechnorm=e=50:r=0.0001:l=1"
+	echo -e "\tvolume=2 ~ af=,volume=2"
+	echo -e "\tpresets... "
+	echo -e "\t\tpreset=pannavudho ~ highpass=500,lowpass=3600,volume=30dB"
 
 	echo "$0 from [to]"
 	echo "to == -i -> inplace"
