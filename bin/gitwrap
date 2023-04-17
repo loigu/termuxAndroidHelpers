@@ -1,5 +1,0 @@
-#!/bin/bash
-# git wrapper to use key in termux session
-
-ssh-agent bash -c "ssh-add; git $*"
-
