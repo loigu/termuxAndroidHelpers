@@ -8,6 +8,5 @@ case "$1" in
  *) echo "$0 <d|u> srcpath destpath"; exit 1;;
 esac
 
-. "$TERMUX_HELPERS/bin/ensure-ssh-agent.sh"
 rsync -avPx -e 'ssh -p 2222' --size-only "$from" "$to"
 
