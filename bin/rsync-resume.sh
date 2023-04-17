@@ -1,3 +1,5 @@
 #!/bin/bash
 . "$TERMUX_HELPERS/bin/ensure-ssh-agent.sh"
-ssh fs-direct
+
+rsync -avz -P --append-verify "$@"
+

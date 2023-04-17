@@ -1,2 +1,4 @@
 #!/bin/bash
-ssh nanda@filesrv1 -i ~/.ssh/id_rsa
+. "$TERMUX_HELPERS/bin/ensure-ssh-agent.sh"
+
+ssh nanda@filesrv1 
