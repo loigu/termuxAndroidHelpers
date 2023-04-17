@@ -5,6 +5,8 @@ export TERMUX_HELPERS="$HOME/termuxAndroidHelpers"
 
 export PATH="${PATH}:$TERMUX_HELPERS/bin:$TERMUX_HELPERS/shortcuts"
 
+export SSH_AUTH_SOCK="$HOME/.ssh_agent.sock"
+
 function json_prettyprint()
 {
 	python -m json.tool "$@"
