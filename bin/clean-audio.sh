@@ -54,7 +54,7 @@ to="$2"
 
 [ -d "$to" ] && to="$to/$bn"
 
-ffmpeg ${extra} -loglevel warning -nostdin -stats -i "${from}" -codec:a libmp3lame -ac 1 -ar ${rate} -q:a ${quality} -map 0 -map_metadata 0:s:0 -af "lowpass=f=${lowpass},highpass=f=${highpass}${af}" ${video} ${extra2} "${to}" 
+ffmpeg -nostdin ${extra} -loglevel warning -stats -i "${from}" -codec:a libmp3lame -ac 1 -ar ${rate} -q:a ${quality} -map 0 -map_metadata 0:s:0 -af "lowpass=f=${lowpass},highpass=f=${highpass}${af}" ${video} ${extra2} "${to}" </dev/zero
 ret=$?
 
 [ "$?" = 0 -a "${inplace}" = 1 ] && mv "${to}" "${from}"
