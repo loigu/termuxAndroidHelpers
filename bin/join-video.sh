@@ -13,7 +13,7 @@ shift
 
 for i in $(seq 1 $#); do
 	in="$(eval echo \$$i)"
-	ffmpeg ${extra} -i "$in" -c copy -bsf:v h264_mp4toannexb -f mpegts "$in.ts" 
+	ffmpeg -nostdin ${extra} -i "$in" -c copy -bsf:v h264_mp4toannexb -f mpegts "$in.ts" 
 	[ -n "${colist}" ] && colist="$colist|"
 	colist="$colist$in.ts"
 done

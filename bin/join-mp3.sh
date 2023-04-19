@@ -18,5 +18,5 @@ for i in "$@"; do
 	colist="${colist}${i}"
 done
 
-ffmpeg ${extra} -i "concat:$colist" -c copy  "$out"
+ffmpeg ${extra} -nostdin -i "concat:$colist" -c copy  "$out"
 [ $? = 0 -a "$keep" = 0 ] && rm "$@" || echo "keeping sources (ffmpeg ret $?)"

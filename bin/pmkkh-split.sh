@@ -28,12 +28,12 @@ shift
 b=0
 for e in "$@"; do
 	name=$(fmt_out $prefix $i)
-	cut-from-mp3.sh "$in" "$b" "$e" "${name}"
+	cut-from-media.sh "$in" "$b" "$e" "${name}"
 	id3v2 -A 'per rule patimokkha' -a 'Ajahn Khemmanando' -T $i -t "${name%%.mp3}" "${name}"
 	b=$e
 	i=$(($i + 1))
 done
 
 name=$(fmt_out $prefix $i)
-cut-from-mp3.sh "$in" $b -1 "${name}"
+cut-from-media.sh "$in" $b -1 "${name}"
 id3v2 -A 'per rule patimokkha' -a 'Ajahn Khemmanando' -T $i -t "${name%%.mp3}" "${name}"

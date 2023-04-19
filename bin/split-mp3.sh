@@ -38,12 +38,12 @@ fi
 trackBegin=0
 	
 for end in $*; do
-	ffmpeg ${extra} -i "$in" -codec copy -ss "$trackBegin" -to "$end" "$(print_fname $i)"
+	ffmpeg -nostdin ${extra} -i "$in" -codec copy -ss "$trackBegin" -to "$end" "$(print_fname $i)"
 
 	i=$(expr $i + 1)
 	trackBegin="$end"
 done
 
-printf -v out "%s_%02d.%s" "${outPrefix}" "$i" "${suffix}"
-ffmpeg ${extra} -i "$in" -codec copy -ss "$trackBegin" "$out"
+out=$(print_fname $i)
+ffmpeg -nostdin ${extra} -i "$in" -codec copy -ss "$trackBegin" "$out"
 

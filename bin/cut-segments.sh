@@ -30,31 +30,30 @@ function media_type()
 	file --mime-type -F ''  "$1"  |cut -d " " -f 2 | cut -d '/' -f 1
 }
 
+segments=()
 for s in "$@"; do
 	st=$(echo $s|cut -d \- -f 1)
 	end=$(echo $s|cut -d \- -f 2)
 
-	ffmpeg $extra -i "${in}" -codec copy -ss "${st}" -to "${end}" "$(segname ${out} ${seg})"
+	segments[$seg]=$(segname "$out" "$seg")
+	cut-from-media.sh "${in}" "${st}" "${end}" "${segments[$seg]}"
 
 	seg=$(expr $seg + 1)
 done
 seg=$(expr $seg - 1)
 
-segments="$(segname $out 0)"
-for seg in $(seq 1 $seg); do
-	segments="$segments|$(segname $out $seg)"
-done
-
 case $(media_type "$in") in
 	audio)
-		ffmpeg $extra -i "concat:$segments" -c copy $out
+		join-mp3.sh  "$out" "${segments[@]}"
+
 	;;
 	video)
-		join-video.sh $(test "$do_cleanup" = 1 || echo -k) "${out}" $(echo $segments | tr '|' ' ')
+		join-video.sh $(test "$do_cleanup" = 1 || echo -k) "${out}" "${segments[@]}"
 	;;
 	*)
 		echo unknown media type $(media_type "$1")
 	;;
 esac
-[ "$do_cleanup" = 1 ] && rm $(echo $segments | tr '|' ' ')
+
+[ "$do_cleanup" = 1 ] && rm -f "${segments[@]}"
 

@@ -13,7 +13,7 @@ pref="${RECORDINGS_DIR}/shwe-oo-min/"
 
 cd $pref
 
-cut-from-mp3.sh ffmpeg/$1*.[mM][pP]3 $2 $3 quotes/20$1-tejaniya-$4.mp3
+cut-from-media.sh ffmpeg/$1*.[mM][pP]3 $2 $3 quotes/20$1-tejaniya-$4.mp3
 
 cd "$base"
 
