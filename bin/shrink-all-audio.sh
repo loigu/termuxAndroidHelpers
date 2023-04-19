@@ -6,11 +6,12 @@ basedir=$(pwd)
 
 src="$1"
 out="$2"
-[ -z "$src" ] && src='.'
-[ -z "$out" ] && out='../small'
+[ -z "$src" ] && src="$basedir"
+[ -z "$out" ] && out=$(dirname "$src")/$(basename "$src")-small
 
+src=$(readlink -f "$src")
 mkdir -p "${out}"
-out=$(cd "$out" && pwd)
+out=$(readlink -f "$out")
 
 rm -rf "${out}/debug.txt" "${out}/success" "${out}/failed" "${out}/candidates"
 
@@ -23,21 +24,23 @@ size_diff()
 	expr $(get_size "$1") - $(get_size "$2")
 }
 
+export extra=-y
 cd "$src"
-find ./ -type d | \
-while read album; do
+albums=( "$(find ./ -type d)" )
+for album in "${albums[@]}"; do
 	mkdir -p "${out}/${album}"
-	find "${album}" -maxdepth 1 -type f | \
-	while read track; do
-		extra=-y
-		otrack="${track%.*}.mp3"
-		echo -n "$track:" 
-		if clean-audio.sh "${track}" "${out}/${otrack}" </dev/null &>>debug.txt; then 
-			echo "$track" >> "${out}/success"
+	cd "$src/$album"
+	tracks=( "$(find . -maxdepth 1 -type f)" )
+	for track in "${tracks[@]}"; do
+		ftrack="$album/$track"
+		otrack="${album}/${track%.*}.mp3"
+		echo -n "$ftrack:" 
+		if clean-audio.sh "${track}" "${out}/${otrack}" </dev/zero &>>debug.txt; then 
+			echo "$ftrack" >> "${out}/success"
 			echo -e "\tsuccess"
-			[ $(size_diff "${track}" "${out}/${otrack}") -gt $(($(get_size "${track}") / 10)) ] && echo "${track}" >> "${out}/candidates"
+			[ $(size_diff "${track}" "${out}/${otrack}") -gt $(($(get_size "${track}") / 10)) ] && echo "${ftrack}" >> "${out}/candidates"
 		else 
-			echo "$track" >> "${out}/failed"
+			echo "$ftrack" >> "${out}/failed"
 			echo -e "\tfail"
 			rm -f "${out}/${otrack}"
 		fi
