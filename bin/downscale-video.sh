@@ -8,8 +8,14 @@ O="$2"
 if [ -z "$O" ]; then
 	d=$(dirname "$I")
 	f=$(basename "$I")
-	O="$d/small-$f"
+	O="$d/small-${f%%.*}.mp4"
 fi
+
+if [ "${O##*.}" != mp4 ]; then
+       echo "invalid extension, changing to mp4" >&2
+       O="${O%%.*}.mp4"
+fi
+
 
 [ -z "$bitrate" ] && bitrate=600k
 [ -z "$res" ] && res=854:-1
