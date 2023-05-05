@@ -9,12 +9,15 @@ function clean_junk()
 	# remove div & paragraph style
 	# remove all other page breaks & divs
 	# remove styles
+	# remove usage & empty paragraphs
 	
 	sed -e 's/&#160;/\ /g' -e 's/<br\/>//g' | \
 	sed -e 's/div\(.*\)style="position:relative;width:[0-9]*px;height:[0-9]*px;\(.*\)"/div\1\ \2/g' | \
 	sed -e 's/p\ style="position:absolute;top:[0-9]*px;left:[0-9]*px;white-space:nowrap"\ \(class="ft[0-9]*"\)/p \1/g' | \
 	sed -z -e 's/<\/p>\n[^\n]*<\/div>\n[^\n]*<!-- Page [0-9]* -->\(\n[^\n]*\)\{6\}\n<p[^>]*>//g' | \
-	sed -z -e 's/<a name="[0-9]*"><\/a>\(\n[^\n]*\)\{3\}\(\n[^\n]*.ft[0-9]*[^\n]*\)*\(\n[^\n]*\)\{2\}//g'
+	sed -z -e 's/<a name="[0-9]*"><\/a>\(\n[^\n]*\)\{3\}\(\n[^\n]*.ft[0-9]*[^\n]*\)*\(\n[^\n]*\)\{2\}//g' | \
+	sed -z -e 's/[a-zA-Zř]*\( určen\)*\( jen\)*\( pouze\)* k soukromému užití[0-9]*//g' -e 's/[\ \t\n]*[[:space:]]*<p[^>]*>[[:space:]]*[\ \t\n]*<\/p>[\ \t]*//g'
+	# -e '/^[[:space:]]*$/d'
 
 }
 
@@ -95,8 +98,9 @@ echo '</body>
 </html>
 ' >> "$targ"
 
-mv "$targ" "_$targ"
-cat "_$targ" | clean_junk > "$targ"
+cat "$targ" | clean_junk > "_$targ"
+mv "_$targ" "$targ"
+
 }
 
 function gen_docx()
