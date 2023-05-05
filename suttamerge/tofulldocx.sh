@@ -1,6 +1,22 @@
 #!/bin/bash
 #
 targ=all.html
+[ -n "$1" ] && targ="$1"
+
+function clean_junk()
+{
+	# use normal spaces, remove artificial linebreaks
+	# remove div & paragraph style
+	# remove all other page breaks & divs
+	# remove styles
+	
+	sed -e 's/&#160;/\ /g' -e 's/<br\/>//g' | \
+	sed -e 's/div\(.*\)style="position:relative;width:[0-9]*px;height:[0-9]*px;\(.*\)"/div\1\ \2/g' | \
+	sed -e 's/p\ style="position:absolute;top:[0-9]*px;left:[0-9]*px;white-space:nowrap"\ \(class="ft[0-9]*"\)/p \1/g' | \
+	sed -z -e 's/<\/p>\n[^\n]*<\/div>\n[^\n]*<!-- Page [0-9]* -->\(\n[^\n]*\)\{6\}\n<p[^>]*>//g' | \
+	sed -z -e 's/<a name="[0-9]*"><\/a>\(\n[^\n]*\)\{3\}\(\n[^\n]*.ft[0-9]*[^\n]*\)*\(\n[^\n]*\)\{2\}//g'
+
+}
 
 function gen_html()
 {
@@ -8,19 +24,21 @@ function gen_html()
 	to=$(readlink -f "$2")
 	cd "$from"
 	find . -iname "*.pdf" |while read f;do
-	dn=$(dirname "$f")
-	mkdir -p "$to/$dn"
-	pdftohtml -noframes -q -p -s -nodrm -i "$f" "$to/${f%%.pdf}.html"; done
+		dn=$(dirname "$f")
+		mkdir -p "$to/$dn"
+		pdftohtml -noframes -q -p -s -nodrm -i -stdout "$f" "$to/${f%%.pdf}.html"
+	done
 }
 
-# todo: grep from first file
+function join_html()
+{
 echo '<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title>Tipitaka cesky</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <meta name="generator" content="pdftohtml 0.36"/>
-<meta name="date" content="2023-01-11T11:09:55+00:00"/>
+<meta name="date" content="2023-05-05T11:09:55+00:00"/>
 <style type="text/css">
 <!--
 .xflip {
@@ -44,36 +62,52 @@ echo '<!DOCTYPE html>
     transform: scaleX(-1) scaleY(-1);
     filter: fliph + flipv;
 }
+h1, h2 {page-break-before: always;}
 -->
 </style>
 </head>
-<body bgcolor="#A0A0A0" vlink="blue" link="blue">' > "$targ"
+<body  vlink="blue" link="blue">' > "$targ"
 
 nik=''
 find */ -iname '*.html'|while read f;do 
 	nnik=${f%%/*}
 	if [ "$nik" != "$nnik" ];then 
-		echo "<h1>$nnik</h1>" >> "$targ"
+		echo -e "<h1>$nnik</h1>\n<div class=\"nikaya\">\n" >> "$targ"
 		nik="$nnik"
+		tail="</div> <!--end of $nnik nikaya-->\n"
+	else
+		tail=''
 	fi
 
 	title=$(grep '<title>' "$f" |sed -e 's/.*>\([^<]*\)<.*/\1/')
-	echo "<h2>$title</h2>" >> "$targ"
+	echo -e "<h2>$title</h2>\n<div class=\"sutta-div\">" >> "$targ"
+	tail="$tail</div><!--end of sutta $title-->\n"
 
 	pl=$(grep "Page 1" "$f"  -n  |head -n 1 | cut -d : -f 1)
 	ll=$(grep "</body" "$f"  -n  |tail -n 1 | cut -d : -f 1)
 	# targ="${f%%.html}-h2.html"; head -n  $(( "${p}" - 1 )) "$f" > "$targ"
 	head -n $(( $ll - 1 )) "$f" | tail -n +$(( $pl + 1 ))  >> "$targ"
+	echo -e "$tail" >> "$targ"
 
-	#tail -n  +$(( "$p" + 1 )) "$f" >> "$targ"
 done
 
 echo '</body>
 </html>
 ' >> "$targ"
-pandoc "$targ" -o "${targ%%.*}.docx"
 
-# find . -iname '*-h2.html' -o -iname '*-head.html' |sort>list
+mv "$targ" "_$targ"
+cat "_$targ" | clean_junk > "$targ"
+}
+
+function gen_docx()
+{
+	pandoc "$targ" -o "${targ%%.*}.docx"
+}
+
+# gen_html
+join_html
+gen_docx
+
 # arr=()
 # while read f;do  arr+=( "$f" ); done<list
 # pandoc "${arr[@]}" -o all.docx
