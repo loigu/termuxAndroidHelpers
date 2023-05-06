@@ -107,10 +107,15 @@ function gen_docx()
 {
 	pandoc "$targ" -o "${targ%%.*}.docx"
 }
+function gen_epub()
+{
+	local res=$(dirname "${BASH_SOURCE}")/res
+	pandoc --toc --toc-depth=2 --epub-metadata="${res}/metadata.yaml" --epub-cover-image="$res/cover.jpg" --css="$res/book.css" -o "${targ%%.*}.epub" "$targ"
+}
 
 # gen_html
 join_html
-gen_docx
+gen_epub
 
 # arr=()
 # while read f;do  arr+=( "$f" ); done<list
