@@ -1,7 +1,6 @@
 #!/bin/bash
 #
 targ=all.html
-[ -n "$1" ] && targ="$1"
 
 function clean_junk()
 {
@@ -70,7 +69,7 @@ h1, h2 {page-break-before: always;}
 </style>
 </head>
 <body  vlink="blue" link="blue">' > "$targ"
-
+#todo: pandoc --file-scope
 nik=''
 find */ -iname '*.html'|while read f;do 
 	nnik=${f%%/*}
@@ -103,19 +102,27 @@ mv "_$targ" "$targ"
 
 }
 
-function gen_docx()
+function gen_doc()
 {
-	pandoc "$targ" -o "${targ%%.*}.docx"
+	pandoc "$source" --toc -o "${targ}"
 }
 function gen_epub()
 {
 	local res=$(dirname "${BASH_SOURCE}")/res
-	pandoc --toc --toc-depth=2 --epub-metadata="${res}/metadata.yaml" --epub-cover-image="$res/cover.jpg" --css="$res/book.css" -o "${targ%%.*}.epub" "$targ"
+	pandoc --toc --toc-depth=2 --epub-metadata="${res}/metadata.yaml" --epub-cover-image="$res/cover.jpg" --css="$res/book.css" -o "${targ}" "$source"
 }
 
-# gen_html
-join_html
-gen_epub
+for targ in "$@"; do
+ext="${targ##*.}"
+[ -z "$source" ] && source="${targ%%.*}.html"
+
+case "$ext" in
+	gen) gen_html ;;
+	html) join_html && source="$targ" ;;
+	epub) gen_epub ;;
+	*) gen_doc ;;
+esac
+done
 
 # arr=()
 # while read f;do  arr+=( "$f" ); done<list
