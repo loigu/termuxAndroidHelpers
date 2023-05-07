@@ -1,0 +1,7 @@
+mv 'Khuddaka Nikaya - Suttanipāta/Cunda.html' 'Khuddaka Nikaya - Suttanipāta/Snp1.5_Cunda.html'
+mv 'Khuddaka Nikaya - Suttanipāta/Kasibha¦äradva¦äja.html' 'Khuddaka Nikaya - Suttanipāta/Snp1.4_Kasibha¦äradva¦äja.html'
+mv 'Khuddaka Nikaya - Suttanipāta/Miluji¦üci¦ü Laskavost.html' 'Khuddaka Nikaya - Suttanipāta/Snp1.8_Miluji¦üci¦ü Laskavost.html'
+mv 'Khuddaka Nikaya - Suttanipāta/Mora¦ülni¦ü ostuda.html' 'Khuddaka Nikaya - Suttanipāta/Snp2.3_Mora¦ülni¦ü ostuda.html'
+mv 'Khuddaka Nikaya - Suttanipāta/Mrs¦îina.html' 'Khuddaka Nikaya - Suttanipāta/Snp2.3_Mrs¦îina.html'
+mv 'Khuddaka Nikaya - Suttanipāta/Vi¦üte¦îzstvi¦ü.html' 'Khuddaka Nikaya - Suttanipāta/Snp1.11_Vi¦üte¦îzstvi¦ü.html'
+mv 'Khuddaka Nikaya - Suttanipāta/Vyvrhel.html' 'Khuddaka Nikaya - Suttanipāta/Snp1.7_Vyvrhel.html'
