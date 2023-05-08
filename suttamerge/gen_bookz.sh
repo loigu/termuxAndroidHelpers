@@ -1,6 +1,7 @@
 #!/bin/bash
 #
-targ=all.html
+
+script_dir=$(dirname "${BASH_SOURCE}")
 
 function clean_junk()
 {
@@ -40,7 +41,7 @@ echo '<!DOCTYPE html>
 <title>Tipitaka cesky</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <meta name="generator" content="pdftohtml 0.36"/>
-<meta name="date" content="2023-05-05T11:09:55+00:00"/>
+<meta name="date" content="'"$(date '+%F %H:%m')"'"/>
 <style type="text/css">
 <!--
 .xflip {
@@ -69,9 +70,10 @@ h1, h2 {page-break-before: always;}
 </style>
 </head>
 <body  vlink="blue" link="blue">' > "$targ"
-#todo: pandoc --file-scope
 nik=''
-find */ -iname '*.html'|while read f;do 
+. "$script_dir/sutta_sort.sh"
+
+find */ -iname '*.html' | sutta_sort -d | while read f;do 
 	nnik=${f%%/*}
 	if [ "$nik" != "$nnik" ];then 
 		echo -e "<h1>$nnik</h1>\n<div class=\"nikaya\">\n" >> "$targ"
@@ -80,8 +82,13 @@ find */ -iname '*.html'|while read f;do
 	else
 		tail=''
 	fi
-
+	
 	title=$(grep '<title>' "$f" |sed -e 's/.*>\([^<]*\)<.*/\1/')
+
+	fn=$(basename "$f")
+	expr match "$fn" "[a-zA-Z]*[0-9.]*_.*" &>/dev/null && \
+		title="$(echo "$fn" | cut -d '_' -f 1) - $title"
+
 	echo -e "<h2>$title</h2>\n<div class=\"sutta-div\">" >> "$targ"
 	tail="$tail</div><!--end of sutta $title-->\n"
 
@@ -108,21 +115,39 @@ function gen_doc()
 }
 function gen_epub()
 {
-	local res=$(dirname "${BASH_SOURCE}")/res
+	local res="$script_dir/res"
+
 	pandoc --toc --toc-depth=2 --epub-metadata="${res}/metadata.yaml" --epub-cover-image="$res/cover.jpg" --css="$res/book.css" -o "${targ}" "$source"
 }
 
-for targ in "$@"; do
-ext="${targ##*.}"
-[ -z "$source" ] && source="${targ%%.*}.html"
+# check to see if this file is being run or sourced from another script
 
-case "$ext" in
-	gen) gen_html ;;
-	html) join_html && source="$targ" ;;
-	epub) gen_epub ;;
-	*) gen_doc ;;
-esac
-done
+function _is_sourced()
+{
+        # https://unix.stackexchange.com/a/215279
+        [ "${#FUNCNAME[@]}" -ge 2 ] \
+        && [ "${FUNCNAME[0]}" = '_is_sourced' ] \
+	&& [ "${FUNCNAME[1]}" = 'source' ]
+}
+
+function _main()
+{
+	for targ in "$@"; do
+		ext="${targ##*.}"
+		[ -z "$source" ] && source="${targ%%.*}.html"
+
+	case "$ext" in
+		gen) gen_html ;;
+		html) join_html && source="$targ" ;;
+		epub) gen_epub ;;
+		*) gen_doc ;;
+	esac
+	done
+}
+
+if ! _is_sourced; then
+	_main "$@"
+fi
 
 # arr=()
 # while read f;do  arr+=( "$f" ); done<list
