@@ -21,6 +21,8 @@ function clean_junk()
 
 }
 
+
+cache_file=".sutta_list.cache"
 function gen_html()
 {
 	from=$(readlink -f "$1")
@@ -31,6 +33,8 @@ function gen_html()
 		mkdir -p "$to/$dn"
 		pdftohtml -noframes -q -p -s -nodrm -i -stdout "$f" "$to/${f%%.pdf}.html"
 	done
+	
+	rm -f "$cache_file"
 }
 
 function join_html()
@@ -65,44 +69,84 @@ echo '<!DOCTYPE html>
     transform: scaleX(-1) scaleY(-1);
     filter: fliph + flipv;
 }
-h1, h2 {page-break-before: always;}
+h1, h2, h3, h4 {page-break-before: always;}
 -->
 </style>
 </head>
 <body  vlink="blue" link="blue">' > "$targ"
-nik=''
-. "$script_dir/sutta_sort.sh"
+	prev_nik=''
+	prev_maj=''
 
-find */ -iname '*.html' | sutta_sort -d | while read f;do 
-	nnik=${f%%/*}
-	if [ "$nik" != "$nnik" ];then 
-		echo -e "<h1>$nnik</h1>\n<div class=\"nikaya\">\n" >> "$targ"
-		nik="$nnik"
-		tail="</div> <!--end of $nnik nikaya-->\n"
-	else
-		tail=''
+	#
+	sutta_level=2
+	if [ "$multilevel_toc" = 'y' ]; then
+		sutta_level=4
+	fi
+
+if [ "$use_cache" != 'y' ] || [ ! -f "$cache_file" ]; then
+	. "$script_dir/sutta_sort.sh"
+	find */ -iname '*.html' | sutta_sort -d > "$cache_file"
+fi
+
+while read f;do 
+	fn=$(basename "$f")
+	pref="${fn%%_*}"
+        nik="${pref%%[0-9]*}"
+
+	# new nikaya
+	if [ "$nik" != "$prev_nik" ];then 
+		#we got multilevel toc started
+		[ -n "$prev_maj" ] && \
+			echo "</div> <!--end of $prev_nik$prev_maj -->" >> "$targ" && \
+			prev_maj=''
+
+		# we got started nikaya
+		[ -n "$prev_nik" ] && \
+			echo "</div> <!--end of $prev_nik -->" >> "$targ"
+		dn=$(dirname "${f}")
+		echo -e "<h1 id=\"$nik\">${dn}</h1>\n<div class=\"nikaya-div\">\n" >> "$targ"
+		prev_nik="$nik"
 	fi
 	
-	title=$(grep '<title>' "$f" |sed -e 's/.*>\([^<]*\)<.*/\1/')
+	if [ "$multilevel_toc" = 'y' ]; then
+		num="${pref##*[a-zA-Z]}"
+		maj="${num%%.*}"        
+		min=0
+		expr match "$num" '[0-9]*\.[0-9]*' &>/dev/null && \
+			min="${num##*.}"
+		
+		# non-zero min ~ multilevel - subc change
+		if [ "$min" != 0 -a "$maj" != "$prev_maj" ]; then
+			# got started one
+			[ -n "$prev_maj" ] && \
+				echo "</div> <!--end of $nik$prev_maj -->" >> "$targ"
 
-	fn=$(basename "$f")
-	expr match "$fn" "[a-zA-Z]*[0-9.]*_.*" &>/dev/null && \
-		title="$(echo "$fn" | cut -d '_' -f 1) - $title"
+			##SN - level 3,other level 2
+			[ "$nik" = "SN" ] && sublevel=3 || sublevel=2
+			echo -e "<h$sublevel id=\"$nik$maj\">${maj}</h$sublevel>\n<div class=\"sublevel$sublevel-div\">\n" >> "$targ"
 
-	echo -e "<h2>$title</h2>\n<div class=\"sutta-div\">" >> "$targ"
-	tail="$tail</div><!--end of sutta $title-->\n"
+			prev_maj="$maj"
+		fi
+	fi
+
+	# name=$(grep '<title>' "$f" |sed -e 's/.*>\([^<]*\)<.*/\1/')
+	name="${fn%.*}"; name=${name##*_}
+	title="${pref} - ${name}"
+	echo -e "<h${sutta_level} id=\"$pref\">$title</h${sutta_level}>\n<div class=\"sutta-div\">" >> "$targ"
 
 	pl=$(grep "Page 1" "$f"  -n  |head -n 1 | cut -d : -f 1)
 	ll=$(grep "</body" "$f"  -n  |tail -n 1 | cut -d : -f 1)
 	# targ="${f%%.html}-h2.html"; head -n  $(( "${p}" - 1 )) "$f" > "$targ"
 	head -n $(( $ll - 1 )) "$f" | tail -n +$(( $pl + 1 ))  >> "$targ"
-	echo -e "$tail" >> "$targ"
+	echo "</div><!--end of sutta $title-->" >> "$targ"
 
-done
+done < "$cache_file"
 
-echo '</body>
-</html>
-' >> "$targ"
+# assume last nikaya SN ~ has subchapters
+[ "$multilevel_toc" = 'y' ] && echo '</div>' >> "$targ"
+
+# assume some nikaya div
+echo -e '</div>\n</body>\n</html>\n' >> "$targ"
 
 cat "$targ" | clean_junk > "_$targ"
 mv "_$targ" "$targ"
@@ -117,7 +161,7 @@ function gen_epub()
 {
 	local res="$script_dir/res"
 
-	pandoc --toc --toc-depth=2 --epub-metadata="${res}/metadata.yaml" --epub-cover-image="$res/cover.jpg" --css="$res/book.css" -o "${targ}" "$source"
+	pandoc --toc --toc-depth=4 --epub-metadata="${res}/metadata.yaml" --epub-cover-image="$res/cover.jpg" --css="$res/book.css" -o "${targ}" "$source"
 }
 
 # check to see if this file is being run or sourced from another script
@@ -129,6 +173,10 @@ function _is_sourced()
         && [ "${FUNCNAME[0]}" = '_is_sourced' ] \
 	&& [ "${FUNCNAME[1]}" = 'source' ]
 }
+
+
+[ -z "$use_cache" ] && export use_cache=y
+[ -z "$multilevel_toc" ] && export multilevel_toc=y
 
 function _main()
 {
