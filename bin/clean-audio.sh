@@ -55,7 +55,7 @@ to="$2"
 [ -d "$to" ] && to="$to/$bn"
 
 if [ "${to##*.}" != mp3 ]; then
-	echo "invalid extension, changing to mp3" >&
+	echo "invalid extension, changing to mp3" >&2
 	to="${to%%.*}.mp3" 
 fi
 
