@@ -155,7 +155,8 @@ mv "_$targ" "$targ"
 
 function gen_doc()
 {
-	pandoc "$source" --toc -o "${targ}"
+	local res="$script_dir/res"
+	pandoc "$source" --toc --toc-depth=4 --metadata-file="$res/metadata.yaml" -o "${targ}"
 }
 function gen_epub()
 {
