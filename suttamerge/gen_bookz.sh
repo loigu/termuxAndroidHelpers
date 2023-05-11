@@ -23,17 +23,45 @@ function clean_junk()
 
 
 cache_file=".sutta_list.cache"
-function gen_html()
+function convert_pdf()
 {
-	from=$(readlink -f "$1")
-	to=$(readlink -f "$2")
+	local from=$(readlink -f "$1")
+	local to=$(readlink -f "$2")
+	local start="$PWD"
 	cd "$from"
 	find . -iname "*.pdf" |while read f;do
 		dn=$(dirname "$f")
 		mkdir -p "$to/$dn"
 		pdftohtml -noframes -q -p -s -nodrm -i -stdout "$f" "$to/${f%%.pdf}.html"
 	done
-	
+
+	cd "$start"
+}
+
+function convert_docx()
+{	
+	local from=$(readlink -f "$1")
+	local to=$(readlink -f "$2")
+	local start="$PWD"
+	cd "$from"
+
+	find . -iname "*.docx" | while read f;do 
+		fn=$(basename "$f")
+		pref="${fn%%_*}"
+		name="${fn%.*}"; name=${name##*_}
+		title="${pref} - ${name}"
+
+		pandoc --standalone --metadata title="$title" "$f" -o "${to}/${f%%.docx}.html"
+	done
+
+	cd "$start"
+}
+
+function gen_html()
+{
+	convert_pdf pdf html
+	convert_docx docx html
+
 	rm -f "$cache_file"
 }
 
@@ -134,7 +162,12 @@ while read f;do
 	title="${pref} - ${name}"
 	echo -e "<h${sutta_level} id=\"$pref\">$title</h${sutta_level}>\n<div class=\"sutta-div\">" >> "$targ"
 
-	pl=$(grep "Page 1" "$f"  -n  |head -n 1 | cut -d : -f 1)
+	# docx conversion
+	pl=$(grep '</header>' "$f" -n |head -n 1 |cut -d : -f 1)
+
+	#pdf conversion
+	[ -z "$pl" ] && \
+		pl=$(grep "Page 1" "$f"  -n  |head -n 1 | cut -d : -f 1)
 	ll=$(grep "</body" "$f"  -n  |tail -n 1 | cut -d : -f 1)
 	# targ="${f%%.html}-h2.html"; head -n  $(( "${p}" - 1 )) "$f" > "$targ"
 	head -n $(( $ll - 1 )) "$f" | tail -n +$(( $pl + 1 ))  >> "$targ"
