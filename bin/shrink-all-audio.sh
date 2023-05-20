@@ -25,12 +25,17 @@ size_diff()
 }
 
 export extra=-y
+
 cd "$src"
-albums=( "$(find ./ -type d)" )
+alist=$(mktemp)
+find ./* -type d >"$alist"
+albums=(); while read f;do albums+=( "$f" ); done<"$alist"
 for album in "${albums[@]}"; do
 	mkdir -p "${out}/${album}"
 	cd "$src/$album"
-	tracks=( "$(find . -maxdepth 1 -type f)" )
+
+	find . -maxdepth 1 -type f >"$alist"
+	tracks=(); while read f;do tracks+=( "$f" ); done<"$alist"
 	for track in "${tracks[@]}"; do
 		ftrack="$album/$track"
 		otrack="${album}/${track%.*}.mp3"
@@ -46,5 +51,6 @@ for album in "${albums[@]}"; do
 		fi
 	done
 done
+rm "$alist"
 
 cd "$basedir"

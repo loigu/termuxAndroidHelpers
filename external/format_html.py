@@ -28,7 +28,9 @@ out = sys.stdout
 if len(sys.argv) == 3:
     raw = open(sys.argv[1], 'r')
     out = open(sys.argv[2], 'w+')
-elif len(sys.argv) == 2 and sys.argv[1] == "-h":
+elif len(sys.argv) == 2:
+    raw = open(sys.argv[1], 'r')
+elif len(sys.argv) == 1 and sys.argv[1] == "-h":
     print("usage: cat html | " + sys.argv[0] + " > out")
     print("\t" + sys.argv[0] + " infile outfile")
     sys.exit(0)

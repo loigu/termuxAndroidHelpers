@@ -3,7 +3,7 @@
 export TERMUX_HELPERS="$HOME/termuxAndroidHelpers"
 [ -d "$TERMUX_HELPERS" ] || echo "WARNING: termux helpers not found" >&2
 
-export PATH="${PATH}:$TERMUX_HELPERS/bin:$TERMUX_HELPERS/shortcuts"
+export PATH="${PATH}:$TERMUX_HELPERS/bin:$TERMUX_HELPERS/shortcuts" # :$TERMUX_HELPERS/suttamerge"
 
 export SSH_AUTH_SOCK="$HOME/.ssh_agent.sock"
 
