@@ -8,11 +8,11 @@ body {
 
 }
 /* Title page */
- #cover-image {width: 100%; }
+ cover-image cover.jpg {width: 100%; }
 
 /* Use the media query because Kindles don't support max-width */
 @media not amzn-mobi, not amzn-kf8 {
-  #cover-image img { max-width: 100%; }
+  cover-image cover.jpg { max-width: 100%; }
 }
 
 
