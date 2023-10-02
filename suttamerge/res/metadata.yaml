@@ -1,7 +1,12 @@
 ---
-title: Tipitaka česky
-subtitle: překlad ct. Ayya Bodhi
-author: 
-- The Tathāgata
-publisher: Nanda bhikkhu
-rights: © 2022 Ayya Bodhi (for personal use only)
+title:
+- type: main
+  text: Tipitaka česky
+- type: subtitle
+  text: export 2023-09-16
+creator:
+- role: author                                          
+  text: the Tathagata
+- role: translator
+  text: Ayya Bodhi
+rights: (C) 2023 Ayya Bodhi
