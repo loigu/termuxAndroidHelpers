@@ -54,13 +54,14 @@ make_list()
 	while read f; do
 		local m=''
 
-		[ -f "$old" ] && m=$(grep -m 1 "\ ${f}\$" "$old")
+		[ -f "$old" ] && m=$(grep -m 1 " ${f}\$" "$old")
 		[ -z "$m" ] && m=$(md5sum "$f")
 		echo "$m" >> "$2"
 	done
 	cd "$pth"
 
 	sort -su -k 2 "$2" > "$old"
+	cp "$2" "$2-unsorted"
 	mv "$old" "$2"
 }
 
