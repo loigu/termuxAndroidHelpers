@@ -195,7 +195,12 @@ function gen_epub()
 {
 	local res="$script_dir/res"
 
-	pandoc --toc --toc-depth=4 --epub-metadata="${res}/metadata.yaml" --epub-cover-image="$res/cover.jpg" --css="$res/book.css" -o "${targ}" "$source"
+	pandoc --toc --toc-depth=4 --strip-empty-paragraphs  --epub-metadata="${res}/metadata.yaml" --epub-cover-image="$res/cover.jpg" --css="$res/book.css" -o "${targ}" "$source"
+}
+
+function gen_pdf()
+{
+	pandoc "$source" --toc --toc-depth=4 -o "${targ}" --shift-heading-level-by=-3 --top-level-division chapter
 }
 
 # check to see if this file is being run or sourced from another script
