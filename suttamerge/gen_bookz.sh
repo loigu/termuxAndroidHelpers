@@ -200,7 +200,7 @@ function gen_epub()
 
 function gen_pdf()
 {
-	pandoc "$source" --toc --toc-depth=4 -o "${targ}" --shift-heading-level-by=-3 --top-level-division chapter
+	pandoc "$source" --toc --toc-depth=4 -o "${targ}" --shift-heading-level-by=-3 --top-level-division chapter --pdf-engine xelatex
 }
 
 # check to see if this file is being run or sourced from another script
