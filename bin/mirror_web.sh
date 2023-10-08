@@ -61,6 +61,7 @@ function help()
 	echo -e "$0 cmd [args] \n\
 		\tmirror_local, mirror_skip_existing [wget args] <domain/url>: local redownloads, converts links to local, skip existing does not convert links \n\
 		\t\t-R mp3,pdf skip files with extension\n\
+		\t\t--reject-regex '/dir/|/dir/|part-of-url\n\
 		\tlink_local <dir>: transform links in dir to relative local - assuming <dir> is root domain name\n\
 		\tprettyfi <dir> prettyfi html files in directory recursivelly\n"
 }
