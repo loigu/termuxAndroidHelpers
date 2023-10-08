@@ -3,7 +3,7 @@ from pathlib import Path
 from json import loads
 import sys, os
 
-head='<!DOCTYPE html><html lang="si" style="max-width: 360px; transition: all 0s ease-in-out 0s; --dock-left: 0px; transform: translate(0px, -1231.72px) scale(1);"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">\n'
+head='<!DOCTYPE html><html lang="si"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">\n'
 head += '<style type="text/css">\n<!--\n'    
 head += '.pali-text{ font-style: italic;}\n.sinhala-text{}\n.sutta-title{ font-weight: bold; }\nh1 { page-break-before: always; }\n' 
 head += '-->\n</style>\n' 
