@@ -13,6 +13,7 @@ if [ "$preset" = pannavudho ]; then
 	export highpass=500
         export lowpass=3600
 	export volume="2"
+	export rate=16000
 fi
 
 
@@ -25,7 +26,7 @@ fi
 [ -n "$volume" ] && af="$af,volume=$volume"
 
 #no video by default
-video=-vn
+[ -z "$video" ] && video=-vn
 
 if [ -z "$1" -o "$1" = "-h" ]; then
 	echo -e "\thighpass=$highpass"

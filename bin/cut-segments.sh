@@ -7,6 +7,11 @@ if [ -z "$1" -o -z "$2" ]; then
 	exit 0
 fi
 
+bindir=$(readlink -f "$0")
+bindir=$(dirname "$bindir")
+
+source "${bindir}/common_include.sh"
+
 do_cleanup=0
 if [ "$1" = -c ]; then
 	do_cleanup=1
@@ -23,11 +28,6 @@ seg=0
 function segname()
 {
 	echo $(dirname "$1")/$2-$(basename "$1")
-}
-
-function media_type()
-{
-	file --mime-type -F ''  "$1"  |cut -d " " -f 2 | cut -d '/' -f 1
 }
 
 segments=()
