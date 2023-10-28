@@ -21,7 +21,7 @@ from=$(readlink -f "$1")
 to="$2"
 [ "$to" != -i ] && to=$(readlink -f "$2")
 
-bindir=$(readlink -f "$0")
+bindir=$(readlink -f "$BASH_SOURCE")
 bindir=$(dirname "$bindir")
 source "${bindir}/common_include.sh"
 
