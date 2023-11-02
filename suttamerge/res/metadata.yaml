@@ -1,12 +1,14 @@
 ---
-title:
-- type: main
-  text: Tipitaka česky
-- type: subtitle
-  text: export 2023-09-16
+title: Tipitaka česky
 creator:
 - role: author                                          
   text: the Tathagata
 - role: translator
-  text: Ayya Bodhi
+  text: Ayya Bodhi, Bhikkhu Gavésakó, Štěpán Chromovský, Miroslav Rozehnal, Josef Marx
 rights: (C) 2023 Ayya Bodhi
+  # fontfamily: libertinus
+lang: cs-CZ
+block-headings: true
+  # documentclass: book
+indent: true
+papersize: a4

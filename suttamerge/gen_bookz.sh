@@ -2,6 +2,7 @@
 #
 
 script_dir=$(dirname "${BASH_SOURCE}")
+res="$script_dir/res"
 
 function clean_junk()
 {
@@ -188,19 +189,17 @@ mv "_$targ" "$targ"
 
 function gen_doc()
 {
-	local res="$script_dir/res"
 	pandoc "$source" --toc --toc-depth=4 --metadata-file="$res/metadata.yaml" -o "${targ}"
 }
+
 function gen_epub()
 {
-	local res="$script_dir/res"
-
-	pandoc --toc --toc-depth=4 --strip-empty-paragraphs  --epub-metadata="${res}/metadata.yaml" --epub-cover-image="$res/cover.jpg" --css="$res/book.css" -o "${targ}" "$source"
+	pandoc --toc --toc-depth=4 --strip-empty-paragraphs  --metadata-file="${res}/metadata.yaml" --metadata "subtitle: export $(date +%y-%m-%d)" --epub-cover-image="$res/cover.jpg" --css="$res/book.css" -o "${targ}" "$source"
 }
 
 function gen_pdf()
 {
-	pandoc "$source" --toc --toc-depth=4 -o "${targ}" --shift-heading-level-by=-3 --top-level-division chapter --pdf-engine xelatex
+	pandoc "$source" --toc --toc-depth=4 -o "${targ}" --shift-heading-level-by=-2 --top-level-division part --pdf-engine xelatex
 }
 
 # check to see if this file is being run or sourced from another script
@@ -212,6 +211,22 @@ function _is_sourced()
         && [ "${FUNCNAME[0]}" = '_is_sourced' ] \
 	&& [ "${FUNCNAME[1]}" = 'source' ]
 }
+
+function gdocs_to_epub()
+{
+	pandoc --strip-empty-paragraphs --toc --toc-depth=4  --metadata-file="$res/metadata.yaml"  -M "subtitle=$(date '+%Y-%m-%d %H:%m')" --epub-cover-image="$res/cover.jpg" --css="$res/book.css" -o tipitaka_cesky.epub \
+	anguttara-nikaya-cesky[0-9]*.docx \
+	digha-nikaya-cesky[0-9]*.docx \
+	'majjhima_nikaya česky 1 - 50 '[0-9]*.docx \
+	'majjhima_nikaya česky 51 - 100 '[0-9]*.docx \
+	'majjhima_nikaya česky 101 - 152 '[0-9]*.docx \
+	samyutta-nikaya-cesky[0-9]*.docx \
+	khuddakapatha.docx dhammapada.docx \
+	udana.docx itivuttaka.docx \
+	suttanipata-cesky[0-9]*.docx \
+	petavatthu-cesky[0-9]*.docx "$@"
+}
+
 
 
 [ -z "$use_cache" ] && export use_cache=y
@@ -227,7 +242,8 @@ function _main()
 		gen) gen_html ;;
 		html) join_html && source="$targ" ;;
 		epub) gen_epub ;;
-		*) gen_doc ;;
+		gdocs) gdocs_to_epub "$@" ;;
+		*) gen_doc "$@" ;;
 	esac
 	done
 }
@@ -239,5 +255,4 @@ fi
 # arr=()
 # while read f;do  arr+=( "$f" ); done<list
 # pandoc "${arr[@]}" -o all.docx
-
 
