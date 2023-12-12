@@ -28,7 +28,7 @@ export extra=-y
 
 cd "$src"
 alist=$(mktemp)
-find ./* -type d >"$alist"
+find . -type d >"$alist"
 albums=(); while read f;do albums+=( "$f" ); done<"$alist"
 for album in "${albums[@]}"; do
 	mkdir -p "${out}/${album}"
