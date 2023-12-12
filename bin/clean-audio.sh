@@ -19,8 +19,8 @@ fi
 
 [ -z "$lowpass" ] && lowpass=2500
 [ -z "$highpass" ] && highpass=300
-[ -z "$quality" ] && quality=9
-[ -z "$rate" ] && rate=11025
+[ -z "$quality" ] && quality=8
+[ -z "$rate" ] && rate=16000
 
 [ -n "$normalize" ] && af=',speechnorm=e=50:r=0.0001:l=1'
 [ -n "$volume" ] && af="$af,volume=$volume"
