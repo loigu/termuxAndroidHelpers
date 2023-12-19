@@ -24,11 +24,12 @@ size_diff()
 	expr $(get_size "$1") - $(get_size "$2")
 }
 
-export extra=-y
+[ -z "$extra" ] && extra=-y
+export extra
 
 cd "$src"
 alist=$(mktemp)
-find ./* -type d >"$alist"
+find . -type d >"$alist"
 albums=(); while read f;do albums+=( "$f" ); done<"$alist"
 for album in "${albums[@]}"; do
 	mkdir -p "${out}/${album}"
