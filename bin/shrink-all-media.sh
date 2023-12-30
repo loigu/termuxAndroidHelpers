@@ -4,6 +4,10 @@
 [ -z "$1" -o "$1" = '-h' ] && echo -e"$0 <srcdir> <dstdir>\n\tdefaults: srcdir=.; dstdir=../small" && exit 0
 basedir=$(pwd)
 
+bindir=$(readlink -f "$BASH_SOURCE")
+bindir=$(dirname "$bindir")
+source "${bindir}/common_include.sh"
+
 src="$1"
 out="$2"
 [ -z "$src" ] && src="$basedir"
@@ -39,9 +43,28 @@ for album in "${albums[@]}"; do
 	tracks=(); while read f;do tracks+=( "$f" ); done<"$alist"
 	for track in "${tracks[@]}"; do
 		ftrack="$album/$track"
-		otrack="${album}/${track%.*}.mp3"
-		echo -n "$ftrack:" 
-		if clean-audio.sh "${track}" "${out}/${otrack}" </dev/zero &>>debug.txt; then 
+		mt=$(media_type "${track}")
+		echo -n "$ftrack($mt):" 
+
+		case "${mt}" in
+			audio)
+				otrack="${album}/${track%.*}.mp3"
+				clean-audio.sh "${track}" "${out}/${otrack}" </dev/zero &>>debug.txt
+				res=$?
+			;;
+
+			video)
+				otrack="${album}/${track%.*}.mp4"
+				downscale_video.sh "${track}" "${otrack}" </dev/zero &>>debug.txt
+				res=$?
+			;;
+			# no image scaling yet
+			*)
+				cp "${track}" "${out}/${ftrack}"
+				res=$?
+			;;
+		esac
+		if [ "$res" = 0 ]; then
 			echo "$ftrack" >> "${out}/success"
 			echo -e "\tsuccess"
 			[ $(size_diff "${track}" "${out}/${otrack}") -gt $(($(get_size "${track}") / 10)) ] && echo "${ftrack}" >> "${out}/candidates"
