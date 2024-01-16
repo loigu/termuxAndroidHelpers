@@ -14,4 +14,4 @@ get=$(cat "$id" |json_prettyprint|grep download_url |cut -d '"' -f 4)
 name="${get##*ZipFileName=}"
 name=$(echo ${name%%\&*} | python3 -c "import sys; from urllib.parse import unquote; print(unquote(sys.stdin.read()));")
 
-wget "$get" -O "$name"
+wget "$get" -O "$name" && rm "$share" "$id"
