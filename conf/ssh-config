@@ -7,7 +7,7 @@ host ypc
 	Port 34212
 	User loki
 host fs
-	HostName filesrv1.fritz.box
+	HostName 192.168.0.137
 	User nanda
 	Port 22
 host fs-direct fsd

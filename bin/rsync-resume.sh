@@ -1,3 +1,3 @@
 #!/bin/bash
 
-rsync -avz -P --append-verify "$@"
+rsync -avz --compress-level=9 -P --append-verify "$@"

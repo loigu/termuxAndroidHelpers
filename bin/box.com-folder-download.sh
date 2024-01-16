@@ -10,7 +10,7 @@ id=$(html_prettyprint.py "$share" | grep postStreamData | sed -e 's/.*,"folder":
 
 wget "https://app.box.com/index.php?folder_id=${id}&q%5Bshared_item%5D%5Bshared_name%5D=${share}&rm=box_v2_zip_shared_folder" -O $id
 
-get=$(cat "$id" |json_pp|grep download_url |cut -d '"' -f 4)
+get=$(cat "$id" |json_prettyprint|grep download_url |cut -d '"' -f 4)
 name="${get##*ZipFileName=}"
 name=$(echo ${name%%\&*} | python3 -c "import sys; from urllib.parse import unquote; print(unquote(sys.stdin.read()));")
 

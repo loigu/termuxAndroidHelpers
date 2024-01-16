@@ -3,7 +3,7 @@
 export TERMUX_HELPERS="$HOME/termuxAndroidHelpers"
 [ -d "$TERMUX_HELPERS" ] || echo "WARNING: termux helpers not found" >&2
 
-export PATH="${PATH}:$TERMUX_HELPERS/bin:$TERMUX_HELPERS/shortcuts" # :$TERMUX_HELPERS/suttamerge"
+export PATH="${PATH}:~/bin:$TERMUX_HELPERS/bin:$TERMUX_HELPERS/shortcuts" # :$TERMUX_HELPERS/suttamerge"
 
 export SSH_AUTH_SOCK="$HOME/.ssh_agent.sock"
 
@@ -25,10 +25,4 @@ export -f git
 function ssh() { ssha-wrap "$(which ssh)" "$@"; }; export -f ssh
 function scp() { ssha-wrap "$(which scp)" "$@"; }; export -f scp
 function rsync() { ssha-wrap "$(which rsync)" "$@"; }; export -f rsync
-
-function json_prettyprint()
-{
-	python -m json.tool "$@"
-}
-export -f json_prettyprint
 
