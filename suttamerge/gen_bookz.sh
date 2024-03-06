@@ -199,7 +199,17 @@ function gen_epub()
 
 function gen_pdf()
 {
-	pandoc "$source" --toc --toc-depth=4 -o "${targ}" --shift-heading-level-by=-2 --top-level-division part --pdf-engine xelatex
+	pandoc --metadata-file="$res/pdf.yaml"  -M "subtitle=$(date '+%Y-%m-%d %H:%m')" --toc --toc-depth=4 -o "tipitaka_cesky.pdf"  --top-level-division part --pdf-engine xelatex \
+	anguttara-nikaya-cesky[0-9]*.docx \
+	digha-nikaya-cesky[0-9]*.docx \
+	'majjhima_nikaya česky 1 - 50 '[0-9]*.docx \
+	'majjhima_nikaya česky 51 - 100 '[0-9]*.docx \
+	'majjhima_nikaya česky 101 - 152 '[0-9]*.docx \
+	samyutta-nikaya-cesky[0-9]*.docx \
+	khuddakapatha.docx dhammapada.docx \
+	udana[0-9]*.docx itivuttaka.docx \
+	suttanipata-cesky[0-9]*.docx \
+	petavatthu-cesky[0-9]*.docx $extra
 }
 
 # check to see if this file is being run or sourced from another script
@@ -222,9 +232,9 @@ function gdocs_to_epub()
 	'majjhima_nikaya česky 101 - 152 '[0-9]*.docx \
 	samyutta-nikaya-cesky[0-9]*.docx \
 	khuddakapatha.docx dhammapada.docx \
-	udana.docx itivuttaka.docx \
+	udana[0-9]*.docx itivuttaka.docx \
 	suttanipata-cesky[0-9]*.docx \
-	petavatthu-cesky[0-9]*.docx "$@"
+	petavatthu-cesky[0-9]*.docx $extra
 }
 
 
@@ -242,8 +252,9 @@ function _main()
 		gen) gen_html ;;
 		html) join_html && source="$targ" ;;
 		epub) gen_epub ;;
-		gdocs) gdocs_to_epub "$@" ;;
-		*) gen_doc "$@" ;;
+		gdocs) gdocs_to_epub ;;
+		pdf) gen_pdf ;;
+		*) gen_doc ;;
 	esac
 	done
 }

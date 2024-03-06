@@ -26,3 +26,4 @@ function ssh() { ssha-wrap "$(which ssh)" "$@"; }; export -f ssh
 function scp() { ssha-wrap "$(which scp)" "$@"; }; export -f scp
 function rsync() { ssha-wrap "$(which rsync)" "$@"; }; export -f rsync
 
+. ~/.texrc

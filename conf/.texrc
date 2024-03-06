@@ -1,0 +1,8 @@
+export PATH="$PATH:$PREFIX/bin/texlive"
+export TEXMFROOT="$PREFIX/share/texlive"
+export TEXMFOS="$TEXMFROOT"
+export TEXMFDIST="$TEXMFROOT/texmf-dist"
+export TEXMFLOCAL="$TEXMFROOTtexmf-local"
+export TEXMFVAR="$HOME/.local/texlive2022/texmf-var"
+export TEXMFCONFIG="$HOME/.local/texlive2022/texmf-config"
+export TEXMFHOME="$HOME/.local/texmf"
