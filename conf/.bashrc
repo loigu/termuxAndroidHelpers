@@ -27,3 +27,21 @@ function scp() { ssha-wrap "$(which scp)" "$@"; }; export -f scp
 function rsync() { ssha-wrap "$(which rsync)" "$@"; }; export -f rsync
 
 . ~/.texrc
+
+function bp() { termux-battery-status |grep percentage|sed -e 's/[^0-9]*\([0-9]*\).*/\1/';}; export  -f bp;
+function battery-wait()
+{
+	p=80
+	[ -n "$1" ] && p="$1"
+	# termux-wake-lock
+	while sleep 60; do
+		if [ "$(bp)" -ge "$p" ]; then
+			termux-notification -c "battery > $p"
+			termux-tts-speak 'battery charged'
+			break
+		fi
+	done
+	# termux-wake-unlock
+} 
+export -f battery-wait
+
