@@ -1,18 +1,27 @@
 #!/bin/bash
 . ~/.bashrc
 
-function bp() { termux-battery-status |grep percentage|sed -e 's/[^0-9]*\([0-9]*\).*/\1/';}; export  -f bp;
+function bp() 
+{ 
+v	sed -e 's/.*percentage[^0-9]*\([0-9]*\).*/\1/'
+}
 
 function battery-wait()
 {
         p=80
         [ -n "$1" ] && p="$1"
 
-	termux-battery-status | grep -vi discharging && wl=y
+	x=$(termux-battery-status)
+	[ -z "$quiet" ] && echo $x >&2
 
-        [ "$wl" = y ] && termux-wake-lock
+	echo $x | grep -i discharging && termux-wake-lock && wl=y
+
         while sleep 60; do
-                if [ "$(bp)" -ge "$p" ]; then
+		x=$(termux-battery-status)
+		[ -z "$quiet" ] && echo $x >&2
+		bp=$(echo $x | sed -e 's/.*percentage[^0-9]*\([0-9]*\).*/\1/')
+
+                if [ "${bp}" -ge "$p" ]; then
                         termux-notification -c "battery > $p"
                         termux-tts-speak 'battery charged'
                         break
@@ -22,4 +31,4 @@ function battery-wait()
 }
 
 battery-wait "$@"
-
+read

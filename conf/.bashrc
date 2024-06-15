@@ -28,20 +28,12 @@ function rsync() { ssha-wrap "$(which rsync)" "$@"; }; export -f rsync
 
 . ~/.texrc
 
-function bp() { termux-battery-status |grep percentage|sed -e 's/[^0-9]*\([0-9]*\).*/\1/';}; export  -f bp;
-function battery-wait()
+function flip_coin()
 {
-	p=80
-	[ -n "$1" ] && p="$1"
-	# termux-wake-lock
-	while sleep 60; do
-		if [ "$(bp)" -ge "$p" ]; then
-			termux-notification -c "battery > $p"
-			termux-tts-speak 'battery charged'
-			break
-		fi
-	done
-	# termux-wake-unlock
-} 
-export -f battery-wait
+	[ -n "$1" ] && local count="$1" || local count=1
 
+	for f in $(seq 1 "$count"); do 
+		[ $RANDOM -ge 16383 ] && i=1 || i=0
+		echo $i
+	done
+}; export -f flip_coin
