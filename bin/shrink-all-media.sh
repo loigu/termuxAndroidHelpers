@@ -1,12 +1,29 @@
 #!/bin/bash
 # clean & shring all audio recordings in directory (to somewhere else)
-
-[ -z "$1" -o "$1" = '-h' ] && echo -e"$0 <srcdir> <dstdir>\n\tdefaults: srcdir=.; dstdir=../small" && exit 0
 basedir=$(pwd)
 
 bindir=$(readlink -f "$BASH_SOURCE")
 bindir=$(dirname "$bindir")
 source "${bindir}/common_include.sh"
+
+print_help() 
+{
+	echo -e "$0 <srcdir> <dstdir>\n\tdefaults: srcdir=.; dstdir=../small"
+	echo -e "see clean-audio.sh -h for other options"
+}
+
+while getopts  "hiH:l:q:b:v:p:x:" arg; do
+        case $arg in                                                      h) print_help; exit 0 ;;
+        i) export inplace=1 ;;                                            H) export highpass="$OPTARG" ;;
+        l) export lowpass="$OPTARG" ;;                                    q) export quality="$OPTARG" ;;
+	v) export volume="$OPTRG" ;;
+	b) export rate="$OPTARG" ;;   
+	p) export preset="$OPTARG" ;;
+	x) export extra="$OPTARG" ;;
+        *) echo "unknown arg $arg" >&2; print_help; exit 1 ;;             esac
+done                                                              shift $(($OPTIND - 1))
+
+[ -z "$1" ] && print_help && exit 1
 
 src="$1"
 out="$2"
