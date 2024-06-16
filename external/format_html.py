@@ -1,4 +1,4 @@
-#!/bin/python
+#!/bin/python3
 ##
 # This is a quick script that will format/indent HTML
 # HTML Tidy is often too destructive, especially with bad HTML, so we're using Beautiful Soup

@@ -9,6 +9,7 @@ bindir=$(dirname "$bindir")
 print_help() 
 {
 	echo -e "$0 <srcdir> <dstdir>\n\tdefaults: srcdir=.; dstdir=../small"
+	echo -e "\t-t audio|video force mt"
 	echo -e "see clean-audio.sh -h for other options"
 }
 
