@@ -1,0 +1,11 @@
+---
+title: Tipitaka česky
+creator:
+- role: author                                          
+  text: the Tathagata
+- role: translator
+  text: Ayya Bodhi
+rights: (C) 2024 Ayya Bodhi
+documentclass: book
+geometry: margin=1in
+papersize: a4
