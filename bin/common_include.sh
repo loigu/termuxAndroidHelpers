@@ -2,8 +2,8 @@
 
 function media_type()
 {
-	local ext="${1##*.}"
-	case "$ext" in
+	local e="${1##*.}"
+	case "$e" in
 		m4a)
 			echo audio
 			;;
@@ -12,4 +12,6 @@ function media_type()
 			;;
 	esac
 }
+
 export -f media_type
+

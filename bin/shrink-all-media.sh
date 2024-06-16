@@ -4,7 +4,7 @@ basedir=$(pwd)
 
 bindir=$(readlink -f "$BASH_SOURCE")
 bindir=$(dirname "$bindir")
-source "${bindir}/common_include.sh"
+. "${bindir}/common_include.sh"
 
 print_help() 
 {
@@ -12,16 +12,22 @@ print_help()
 	echo -e "see clean-audio.sh -h for other options"
 }
 
-while getopts  "hiH:l:q:b:v:p:x:" arg; do
-        case $arg in                                                      h) print_help; exit 0 ;;
-        i) export inplace=1 ;;                                            H) export highpass="$OPTARG" ;;
-        l) export lowpass="$OPTARG" ;;                                    q) export quality="$OPTARG" ;;
+while getopts  "hiH:l:q:b:v:p:x:t:" arg; do
+        case "$arg" in
+		h) print_help; exit 0 ;;
+        i) export inplace=1 ;;
+	H) export highpass="$OPTARG" ;;
+        l) export lowpass="$OPTARG" ;;
+	q) export quality="$OPTARG" ;;
 	v) export volume="$OPTRG" ;;
 	b) export rate="$OPTARG" ;;   
 	p) export preset="$OPTARG" ;;
 	x) export extra="$OPTARG" ;;
-        *) echo "unknown arg $arg" >&2; print_help; exit 1 ;;             esac
-done                                                              shift $(($OPTIND - 1))
+	t) export media="$OPTARG" ;;
+        *) echo "unknown arg $arg" >&2; print_help; exit 1 ;;
+	esac
+done
+shift "$(($OPTIND - 1))"
 
 [ -z "$1" ] && print_help && exit 1
 
@@ -61,6 +67,8 @@ for album in "${albums[@]}"; do
 	for track in "${tracks[@]}"; do
 		ftrack="$album/$track"
 		mt=$(media_type "${track}")
+		[ -n "$media" -a "$mt" = audio -o "$mt" = video ] && \
+			mt="$media"
 		echo -n "$ftrack($mt):" 
 
 		case "${mt}" in
