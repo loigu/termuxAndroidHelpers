@@ -72,12 +72,13 @@ for album in "${albums[@]}"; do
 
 			video)
 				otrack="${album}/${track%.*}.mp4"
-				downscale_video.sh "${track}" "${otrack}" </dev/zero &>>debug.txt
+				downscale_video.sh "${track}" "${out}/${otrack}" </dev/zero &>>debug.txt
 				res=$?
 			;;
 			# no image scaling yet
 			*)
-				cp "${track}" "${out}/${ftrack}"
+				otrack="${album}/${track}"
+				cp "${track}" "%{out}/${otrack}"
 				res=$?
 			;;
 		esac
