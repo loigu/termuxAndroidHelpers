@@ -37,3 +37,11 @@ function flip_coin()
 		echo $i
 	done
 }; export -f flip_coin
+
+function rand()
+{
+	# defaúlt 0-100
+	[ -n "$1" ] && p=$(( 32767 / "$1" )) || p=327
+	echo $(( $RANDOM / "$p" ))
+}
+export -f rand
