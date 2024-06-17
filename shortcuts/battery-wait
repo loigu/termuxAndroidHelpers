@@ -1,17 +1,31 @@
 #!/bin/bash
 . ~/.bashrc
 
+function print_help() 
+{
+	echo -e "$0 [-t max_temp] [-p percentage]"
+}
+        
+p=80
+mt=40
+
+while getopts  "ht:p:" arg; do
+        case $arg in
+        h) print_help; exit 0 ;;
+        t) mt="$OPTARG" ;;
+        p) p="$OPTARG" ;;
+        *) echo "unknown arg $arg" >&2; print_help; exit 1 ;;
+        esac
+done
+shift $(($OPTIND - 1))
+
 function get_val() 
 { 
 	sed -e "s/.*${1}[^0-9]*\([0-9]*\).*/\1/"
 }
-
+ 
 function battery-wait()
 {
-        p=80
-	mt=40
-        [ -n "$1" ] && p="$1"
-
 	x=$(termux-battery-status)
 	[ -z "$quiet" ] && echo $x >&2
 
