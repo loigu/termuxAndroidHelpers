@@ -1,14 +1,15 @@
 #!/bin/bash
 . ~/.bashrc
 
-function bp() 
+function get_val() 
 { 
-v	sed -e 's/.*percentage[^0-9]*\([0-9]*\).*/\1/'
+	sed -e "s/.*${1}[^0-9]*\([0-9]*\).*/\1/"
 }
 
 function battery-wait()
 {
         p=80
+	mt=40
         [ -n "$1" ] && p="$1"
 
 	x=$(termux-battery-status)
@@ -19,12 +20,17 @@ function battery-wait()
         while sleep 60; do
 		x=$(termux-battery-status)
 		[ -z "$quiet" ] && echo $x >&2
-		bp=$(echo $x | sed -e 's/.*percentage[^0-9]*\([0-9]*\).*/\1/')
+		bp=$(echo $x | get_val percentage)
+		t=$(echo $x | get_val temperature)
 
                 if [ "${bp}" -ge "$p" ]; then
                         termux-notification -c "battery > $p"
-                        termux-tts-speak 'battery charged'
+                        termux-tts-speak "battery charged to $bp"
                         break
+                fi
+
+ 	        if [ "${t}" -ge "$mt" ]; then
+                        termux-tts-speak "temp over $t"
                 fi
         done
         [ "$wl" = y ] && termux-wake-unlock
