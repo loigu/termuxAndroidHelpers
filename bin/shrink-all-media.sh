@@ -10,7 +10,7 @@ print_help()
 {
 	echo -e "$0 <srcdir> <dstdir>\n\tdefaults: srcdir=.; dstdir=../small"
 	echo -e "\t-t audio|video force mt"
-	echo -e "see clean-audio.sh -h for other options"
+	echo -e "see recode-media.sh -h for other options"
 }
 
 while getopts  "hiH:l:q:b:v:p:x:t:" arg; do
@@ -75,7 +75,7 @@ for album in "${albums[@]}"; do
 		case "${mt}" in
 			audio)
 				otrack="${album}/${track%.*}.mp3"
-				clean-audio.sh "${track}" "${out}/${otrack}" </dev/zero &>>debug.txt
+				recode-media.sh "${track}" "${out}/${otrack}" </dev/zero &>>debug.txt
 				res=$?
 			;;
 
