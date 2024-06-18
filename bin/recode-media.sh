@@ -10,6 +10,7 @@ function print_help()
 	echo -e "\t[-b] rate=$rate"
 	echo -e "\t[-i] inplace"
 	echo -e "\t[-x] extra="
+	echo -e "\t[-n] no filters (speeds up...)"
 	echo -e "\tnormalize=y ~ af=,speechnorm=e=50:r=0.0001:l=1"
 	echo -e "\t[-v] volume=2 ~ af=,volume=2"
 	echo -e "\tpresets... "
@@ -18,9 +19,10 @@ function print_help()
 	echo "$0 from [to]"
 }
 
-while getopts  "hiH:l:q:b:v:p:x:" arg; do
+while getopts  "hiH:l:q:b:v:p:x:n" arg; do
         case $arg in
         h) print_help; exit 0 ;;
+	n) export no_filtering=y
 	i) export inplace=1 ;; 
 	H) export highpass="$OPTARG" ;;
 	l) export lowpass="$OPTARG" ;;
@@ -78,8 +80,8 @@ fi
 #no video by default
 [ -z "$video" ] && video=-vn
 
-
-ffmpeg -nostdin ${extra} -loglevel warning -stats -i "${from}" -codec:a libmp3lame -ac 1 -ar ${rate} -q:a ${quality}  -map_metadata 0:s:0 -af "lowpass=f=${lowpass},highpass=f=${highpass}${af}" ${video} ${extra2} "${to}" </dev/zero
+[ -z  "$no_filtering" ] && af="lowpass=f=${lowpass},highpass=f=${highpass}${af}" || af=""
+ffmpeg -nostdin ${extra} -loglevel warning -stats -i "${from}" -codec:a libmp3lame -ac 1 -ar ${rate} -q:a ${quality}  -map_metadata 0:s:0 -af "${af}" ${video} ${extra2} "${to}" </dev/zero
 ret=$?
 
 [ "$?" = 0 -a "${inplace}" = 1 ] && mv "${to}" "${from}"
