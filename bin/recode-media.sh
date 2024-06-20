@@ -1,6 +1,20 @@
 #!/bin/bash
 # removes noise, cut high & low frequencies, shrinks to "voice" quality
 
+[ -z "$lowpass" ] && lowpass=2500
+[ -z "$highpass" ] && highpass=300
+[ -z "$quality" ] && quality=8
+[ -z "$rate" ] && rate=16000
+
+[ -n "$normalize" ] && af=',speechnorm=e=50:r=0.0001:l=1'
+[ -n "$volume" ] && af="$af,volume=$volume"
+
+#no video by default
+[ -z "$codec" ] && export codec=mp3
+[ -z "$video" ] && export video=-vn
+[ -z "$loglevel" ] && export loglevel=32
+
+
 function print_help()
 {
 	echo -e "\t[-h] help"
@@ -10,24 +24,30 @@ function print_help()
 	echo -e "\t[-b] rate=$rate"
 	echo -e "\t[-i] inplace"
 	echo -e "\t[-x] extra="
-	echo -e "\t[-n] no filters (speeds up...)"
-	echo -e "\tnormalize=y ~ af=,speechnorm=e=50:r=0.0001:l=1"
+	echo -e "\t[-n] no_filtering=-y (speeds up...)"
+	echo -e "\t[-S] quiet(er) - pass more times to silence more"
+	echo -e "\t[-N] normalize=y ~ af=,speechnorm=e=50:r=0.0001:l=1"
 	echo -e "\t[-v] volume=2 ~ af=,volume=2"
+	echo -e "\t[-c] codec (mp3 aac)"
+	echo -e "\t[-V] video=$video"
 	echo -e "\tpresets... "
 	echo -e "\t[-p]\tpreset= [ad|pannavudh]"
 
 	echo "$0 from [to]"
 }
 
-while getopts  "hiH:l:q:b:v:p:x:n" arg; do
+while getopts  "hNiSH:l:q:b:v:p:x:nV:" arg; do
         case $arg in
         h) print_help; exit 0 ;;
-	n) export no_filtering=y
+	n) export no_filtering=y ;;
 	i) export inplace=1 ;; 
+	S) loglevel=$(( $loglevel - 8 )) ;;
 	H) export highpass="$OPTARG" ;;
 	l) export lowpass="$OPTARG" ;;
 	q) export quality="$OPTARG" ;;
 	v) export volume="$OPTRG" ;;
+	V) export video="$OPTARG" ;;
+	N) export normalize="$OPTARG" ;;
 	b) export rate="$OPTARG" ;;
 	p) preset="$OPTARG" ;;
 	x) export extra="$OPTARG" ;;
@@ -36,11 +56,13 @@ while getopts  "hiH:l:q:b:v:p:x:n" arg; do
 done
 shift $(($OPTIND - 1))
 
+[ "$loglevel" -lt 32 ] && extra="$extra -nostats"
 [ -z "$1" ] && print_help && exit 1
 
 from="$1"
-bn=$(basename "${1%.*}").mp3
+bn=$(basename "${1}")
 dn=$(dirname "$1")
+[ "$video" = "-vn" ] && bn="${bn%.*}.mp3"
 
 to="$2"
 [ -n "$inplace" ] && to=""
@@ -48,9 +70,9 @@ to="$2"
 [ -z "${to}" ] && to="$dn/clean-$bn"
 [ -d "$to" ] && to="$to/$bn"
 
-if [ "${to##*.}" != mp3 ]; then
-	echo "invalid extension, changing to mp3" >&2
-	to="${to%%.*}.mp3" 
+if [ "$video" = "-vn" ]; then
+	[ "$codec" = aac ] && ext=m4a || ext=mp3
+	to="${to%.*}.${ext}" 
 fi
 
 # 200 - 2500 for a.ariya voice
@@ -68,20 +90,12 @@ if [ "$preset" = pannavudho ]; then
 	export rate=16000
 fi
 
+[ -z  "$no_filtering" ] && af="-af lowpass=f=${lowpass},highpass=f=${highpass}${af}" || af=""
 
-[ -z "$lowpass" ] && lowpass=2500
-[ -z "$highpass" ] && highpass=300
-[ -z "$quality" ] && quality=8
-[ -z "$rate" ] && rate=16000
+audio="-c:a libmp3lame -q:a ${quality}"
+ [ "$codec" = aac ] && audio="-c:a aac -b:a $(( 192 / ${quality} ))k -profile:a aac_low"
 
-[ -n "$normalize" ] && af=',speechnorm=e=50:r=0.0001:l=1'
-[ -n "$volume" ] && af="$af,volume=$volume"
-
-#no video by default
-[ -z "$video" ] && video=-vn
-
-[ -z  "$no_filtering" ] && af="lowpass=f=${lowpass},highpass=f=${highpass}${af}" || af=""
-ffmpeg -nostdin ${extra} -loglevel warning -stats -i "${from}" -codec:a libmp3lame -ac 1 -ar ${rate} -q:a ${quality}  -map_metadata 0:s:0 -af "${af}" ${video} ${extra2} "${to}" </dev/zero
+ffmpeg -nostdin ${extra} -loglevel $loglevel -i "${from}" ${audio} -ac 1 -ar ${rate} -map_metadata 0:s:0 ${af} ${video} ${extra2} "${to}" </dev/zero
 ret=$?
 
 [ "$?" = 0 -a "${inplace}" = 1 ] && mv "${to}" "${from}"
