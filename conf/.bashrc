@@ -37,3 +37,36 @@ function flip_coin()
 		echo $i
 	done
 }; export -f flip_coin
+
+function rand()
+{
+	# defaúlt 0-100
+	[ -n "$1" ] && p=$(( 32767 / "$1" )) || p=327
+	echo $(( $RANDOM / "$p" ))
+}
+export -f rand
+
+function frand()
+{
+	local r="-maxdepth 1"
+	OPTIND=1
+	while getopts "pr" arg "$@"; do
+        case $arg in
+        	p) export local pl=1 ;;
+	        r) r="" ;;
+		*) echo "unknown arg $arg (use -p -r)" >&2; print_help; return 1 ;;
+        esac
+	done
+	shift $(($OPTIND - 1))
+
+	local f="$1"
+	[ -z "$f" ] && f="./"
+	[ -d "$f" ] && t=$(mktemp) && find "$f" $r > "$t"  && f="$t"
+	n=$(rand $(wc -l "$f"))
+	res=$(head -n "$n" "$f" | tail -n 1)
+	[ -f "$t" ] && rm "$t"
+
+	echo "$res"
+	[ -f "$res" -a "$pl" = 1 ] && termux-share "$res"
+}
+export -f frand

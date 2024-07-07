@@ -10,19 +10,13 @@ print_help()
 {
 	echo -e "$0 <srcdir> <dstdir>\n\tdefaults: srcdir=.; dstdir=../small"
 	echo -e "\t-t audio|video force mt"
-	echo -e "see clean-audio.sh -h for other options"
+	echo -e "see recode-media.sh -h for used exports"
 }
 
-while getopts  "hiH:l:q:b:v:p:x:t:" arg; do
+while getopts  "hix:t:" arg; do
         case "$arg" in
-		h) print_help; exit 0 ;;
+	h) print_help; exit 0 ;;
         i) export inplace=1 ;;
-	H) export highpass="$OPTARG" ;;
-        l) export lowpass="$OPTARG" ;;
-	q) export quality="$OPTARG" ;;
-	v) export volume="$OPTRG" ;;
-	b) export rate="$OPTARG" ;;   
-	p) export preset="$OPTARG" ;;
 	x) export extra="$OPTARG" ;;
 	t) export media="$OPTARG" ;;
         *) echo "unknown arg $arg" >&2; print_help; exit 1 ;;
@@ -55,12 +49,16 @@ size_diff()
 [ -z "$extra" ] && extra=-y
 export extra
 
+[ -n "$inplace" ] && out="$src"
+
+# TODO: go paralell :-)
+#
 cd "$src"
 alist=$(mktemp)
 find . -type d >"$alist"
 albums=(); while read f;do albums+=( "$f" ); done<"$alist"
 for album in "${albums[@]}"; do
-	mkdir -p "${out}/${album}"
+	[ -z "$inplace" ] && mkdir -p "${out}/${album}"
 	cd "$src/$album"
 
 	find . -maxdepth 1 -type f >"$alist"
@@ -72,23 +70,28 @@ for album in "${albums[@]}"; do
 			mt="$media"
 		echo -n "$ftrack($mt):" 
 
+		otrack=""
 		case "${mt}" in
 			audio)
-				otrack="${album}/${track%.*}.mp3"
-				clean-audio.sh "${track}" "${out}/${otrack}" </dev/zero &>>debug.txt
+				[ -z "$inplace" ] && otrack="${album}/${track%.*}.mp3"
+				recode-media.sh -S "${track}" "${out}/${otrack}" </dev/zero &>>debug.txt
 				res=$?
 			;;
 
 			video)
-				otrack="${album}/${track%.*}.mp4"
+				[ -z "$inplace" ] && otrack="${album}/${track%.*}.mp4"
 				downscale_video.sh "${track}" "${out}/${otrack}" </dev/zero &>>debug.txt
 				res=$?
 			;;
 			# no image scaling yet
 			*)
-				otrack="${album}/${track}"
-				cp "${track}" "${out}/${otrack}"
-				res=$?
+				if [ -z "$inplace" ]; then
+					otrack="${album}/${track}"
+					cp "${track}" "${out}/${otrack}"
+					res=$?
+				else
+					res=0
+				fi
 			;;
 		esac
 		if [ "$res" = 0 ]; then

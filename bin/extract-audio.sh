@@ -18,5 +18,5 @@ if [ -z "${to}" ]; then
 fi
 
 export extra
-clean-audio.sh "$from" "$to"
+recode-media.sh "$from" "$to"
 
