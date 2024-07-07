@@ -87,7 +87,7 @@ for album in "${albums[@]}"; do
 			# no image scaling yet
 			*)
 				otrack="${album}/${track}"
-				cp "${track}" "%{out}/${otrack}"
+				cp "${track}" "${out}/${otrack}"
 				res=$?
 			;;
 		esac
