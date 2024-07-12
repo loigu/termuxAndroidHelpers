@@ -24,7 +24,7 @@ function print_help()
 	echo -e "\t[-b] rate=$rate"
 	echo -e "\t[-i] inplace"
 	echo -e "\t[-x] extra="
-	echo -e "\t[-n] no_filtering=-y (speeds up...)"
+	echo -e "\t[-n] no_filtering=y (speeds up...)"
 	echo -e "\t[-S] quiet(er) - pass more times to silence more"
 	echo -e "\t[-N] normalize=y ~ af=,speechnorm=e=50:r=0.0001:l=1"
 	echo -e "\t[-v] volume=2 ~ af=,volume=2"
@@ -36,7 +36,7 @@ function print_help()
 	echo "$0 from [to]"
 }
 
-while getopts  "hNiSH:l:q:b:v:p:x:nV:" arg; do
+while getopts  "hNiSH:c:l:q:b:v:p:x:nV:" arg; do
         case $arg in
         h) print_help; exit 0 ;;
 	n) export no_filtering=y ;;
@@ -46,6 +46,7 @@ while getopts  "hNiSH:l:q:b:v:p:x:nV:" arg; do
 	l) export lowpass="$OPTARG" ;;
 	q) export quality="$OPTARG" ;;
 	v) export volume="$OPTRG" ;;
+	c) export codec="$OPTARG" ;;
 	V) export video="$OPTARG" ;;
 	N) export normalize="$OPTARG" ;;
 	b) export rate="$OPTARG" ;;

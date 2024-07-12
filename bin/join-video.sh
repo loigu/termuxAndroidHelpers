@@ -1,5 +1,7 @@
 #! /bin/bash
 # join video files together
+# ts adjustment (24fps)
+# -vsync drop -i "concat:join.webm|2.webm" -bsf "setts=ts=N*42"
 
 if [ -z "$1" -o "$#" -lt 3 ]; then
 	echo "extra=y $0 [-k] <out> <first> <second> [...]"
