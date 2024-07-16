@@ -3,7 +3,7 @@
 flist="$1"
 shift
 [ -z "$flist" -o "$flist" = "-h" ] && \
-	echo "$0 flist <recode-opts" && exit 1
+	echo "[paralell=6] $0 flist <recode-opts>" && exit 1
 
 export def_opts="-S -S"
 function recode_single()
@@ -16,11 +16,20 @@ function recode_single()
 	fi
 }
 
+if [ -d "$flist" ]; then
+	t=$(mktemp)
+	find "$flist" -iname "*.mp3" -o -iname "*.m4a" >"$t"
+	flist="$t"
+fi
+
+[ -z "$paralell" ] && export paralell=6
 i=1
 while read f; do  
-	[ $i -gt 6 ] && wait -n
+	[ "$i" -gt "$paralell" ] && wait -n
 	recode_single "$@" "$f" & 
-	i=$(( $i + 1))
-done < $flist
+	i=$(( $i + 1 ))
+done < "$flist"
 
 wait
+[ -f "$t" ] && rm "$t"
+
