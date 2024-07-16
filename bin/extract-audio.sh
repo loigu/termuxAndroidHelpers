@@ -7,7 +7,7 @@ to="$2"
 if [ -z "$from" ] || [ "$1" = '-h' ] ; then
 	echo $(basename "$0") from [to]
 	echo subscript extras:
-	clean-audio.sh -h
+	recode-media.sh -h
 	exit 1
 fi
 
