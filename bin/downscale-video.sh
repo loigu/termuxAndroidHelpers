@@ -24,10 +24,10 @@ fi
 [ -z "$vb" ] && vb=600k
 [ -z "$res" ] && res=854:-1
 
-vo="-codec:v libx264 -tune zerolatency -preset slow -profile:v high -b:v ${vb} -maxrate ${v}b -bufsize 15000k -pix_fmt yuv420p -vf fps=fps=20,scale=$res -g 30 -bf 2" 
+vo="-codec:v libx264 -tune zerolatency -preset slow -profile:v high -b:v ${vb} -maxrate ${vb} -bufsize 15000k -pix_fmt yuv420p -vf fps=fps=20,scale=$res -g 30 -bf 2" 
 
-ffmpeg -nostdin -y -i "$I" ${vo} -pass 1 -an -f mp4 ${extra} /dev/null || exit $?
+ffmpeg -nostdin -y -i "$I" ${vo} -pass 1 -f mp4 -an  ${extra} /dev/null || exit $?
 
 # ffmpeg -nostdin -i "$I" ${extra} -codec:v libx264 -tune zerolatency -preset slow -profile:v high -b:v $vb -maxrate $vb -bufsize 15000k -pix_fmt yuv420p -vf fps=fps=20,scale=$res -pass 2 -movflags +faststart -g 30 -bf 2 -c:a aac -b:a 32k -ac 1 -ar 16000 -profile:a aac_low ${extra} "$O"
 
-"${bindir}/recode-media.sh" -v "${vo} -pass 2 -movflags +faststart" "$I" "$O"
+"${bindir}/recode-media.sh" -V "${vo} -pass 2 -movflags +faststart" "$I" "$O"
