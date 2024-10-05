@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export PS1='\A:\[\e[0;32m\]\w\[\e[0m\] '
+
 export TERMUX_HELPERS="$HOME/termuxAndroidHelpers"
 [ -d "$TERMUX_HELPERS" ] || echo "WARNING: termux helpers not found" >&2
 
@@ -40,8 +42,10 @@ function flip_coin()
 
 function rand()
 {
-	# defaúlt 0-100
-	[ -n "$1" ] && p=$(( 32767 / "$1" )) || p=327
+	for f in $(seq 1 10); do RANDOM=$RANDOM; done
+
+	# default 0-100
+	[ -n "$1" ] && p=$(( 32767 / "$1" )) || p=328
 	echo $(( $RANDOM / "$p" ))
 }
 export -f rand
