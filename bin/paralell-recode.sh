@@ -8,6 +8,7 @@ shift
 export def_opts="-S -S"
 function recode_single()
 {
+	echo "starting $f ..."
 	recode-media.sh ${def_opts} "$@"
 	if [ $? -eq 0 ]; then
 		echo "$f: success"
