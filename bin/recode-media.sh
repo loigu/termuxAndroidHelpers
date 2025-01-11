@@ -99,7 +99,7 @@ audio="-c:a libmp3lame -q:a ${quality}"
 ffmpeg -nostdin ${extra} -loglevel $loglevel -i "${from}" ${audio} -ac 1 -ar ${rate} -map_metadata 0:s:0 ${af} ${video} ${extra2} "${to}" </dev/zero
 ret=$?
 
-if [ "$?" = 0 -a "${inplace}" = 1 ]; then
+if [ "$ret" = 0 -a "${inplace}" = 1 ]; then
 	mv "${to}" "${from}"
 	fe="${from%.*}.${ext}"
 	[ "$fe" != "$from" ] && mv "$from" "$fe"

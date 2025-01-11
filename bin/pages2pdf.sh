@@ -6,4 +6,4 @@ shift
 	echo "$(basename $0) out.pdf images..." && \
 	exit 1
 
-convert "$@" -page a4 "$out"
+magick convert "$@" -page a4 "$out"

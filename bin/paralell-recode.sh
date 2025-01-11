@@ -12,8 +12,10 @@ function recode_single()
 	recode-media.sh ${def_opts} "$@"
 	if [ $? -eq 0 ]; then
 		echo -e "_SUCC:\t$f"
+		return 0
 	else
 		echo -e "FAIL:\t$f"
+		return 1
 	fi
 }
 
