@@ -5,7 +5,7 @@ export PS1='\A:\[\e[0;32m\]\w\[\e[0m\] '
 export TERMUX_HELPERS="$HOME/termuxAndroidHelpers"
 [ -d "$TERMUX_HELPERS" ] || echo "WARNING: termux helpers not found" >&2
 
-export PATH="${PATH}:~/bin:$TERMUX_HELPERS/bin:~/.shortcuts" # :$TERMUX_HELPERS/suttamerge"
+export PATH="${PATH}:~/bin:$TERMUX_HELPERS/bin:$TERMUX_HELPERS/yt-bin:~/.shortcuts" # :$TERMUX_HELPERS/suttamerge"
 
 export SSH_AUTH_SOCK="$HOME/.ssh_agent.sock"
 
