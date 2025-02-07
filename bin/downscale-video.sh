@@ -22,7 +22,7 @@ fi
 
 
 [ -z "$vb" ] && vb=600k
-[ -z "$res" ] && res=854:-1
+[ -z "$res" ] && res=-1:-1
 
 passlog=$(mktemp -u ./ffmpeglogXXXX)
 
