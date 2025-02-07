@@ -28,7 +28,7 @@ function print_help()
 	echo -e "\t[-S] quiet(er) - pass more times to silence more"
 	echo -e "\t[-N] normalize=y ~ af=,speechnorm=e=50:r=0.0001:l=1"
 	echo -e "\t[-v] volume=2 ~ af=,volume=2"
-	echo -e "\t[-c] codec (mp3 aac)"
+	echo -e "\t[-c] codec (mp3 aac copy)"
 	echo -e "\t[-V] video=$video"
 	echo -e "\tpresets... "
 	echo -e "\t[-p]\tpreset= [ad|pannavudh]"
@@ -93,8 +93,21 @@ fi
 
 [ -z  "$no_filtering" ] && af="-af lowpass=f=${lowpass},highpass=f=${highpass}${af}" || af=""
 
-audio="-c:a libmp3lame -q:a ${quality}"
- [ "$codec" = aac ] && audio="-c:a aac -b:a $(( 192 / ${quality} ))k -profile:a aac_low"
+case "$codec" in
+	aac)
+		audio="-c:a aac -b:a $(( 192 / ${quality} ))k -profile:a aac_low"
+		;;
+	copy)
+		audio="-c:a copy"
+		;;
+	mp3)
+		audio="-c:a libmp3lame -q:a ${quality}"
+		;;
+	*)
+		echo "unknown audio codec $codec" >&2
+		exit 1
+		;;
+esac
 
 ffmpeg -nostdin ${extra} -loglevel $loglevel -i "${from}" ${audio} -ac 1 -ar ${rate} -map_metadata 0:s:0 ${af} ${video} ${extra2} "${to}" </dev/zero
 ret=$?

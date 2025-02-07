@@ -80,7 +80,7 @@ for album in "${albums[@]}"; do
 
 			video)
 				[ -z "$inplace" ] && otrack="${album}/${track%.*}.mp4"
-				downscale_video.sh "${track}" "${out}/${otrack}" </dev/zero &>>debug.txt
+				downscale-video.sh "${track}" "${out}/${otrack}" </dev/zero &>>debug.txt
 				res=$?
 			;;
 			# no image scaling yet
