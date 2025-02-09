@@ -1,6 +1,8 @@
 #!/bin/bash
 
-d=$(dirname "$BASH_SOURCE")
+s=$(readlink -f "$BASH_SOURCE")
+d=$(dirname "$s")
+
 . "$d/common_include.sh"
 
 flist="$1"
@@ -8,7 +10,7 @@ shift
 [ -z "$flist" -o "$flist" = "-h" ] && \
 	echo "[paralell=6] $0 flist <recode-opts>" && exit 1
 
-[-z "$loglevel" ] && export loglevel=16
+[ -z "$loglevel" ] && export loglevel=16
 
 function recode_single()
 {
@@ -41,8 +43,10 @@ function recode_single()
 
 	if [ $res -eq 0 ]; then
 		echo -e "_SUCC:\t$f"
+		[ "$loglevel" -gt 16 ] && echo "$f" >>success
 	else
 		echo -e "_FAIL:\t$f"
+		echo "$f" >>failed
 	fi
 	return $res
 }
