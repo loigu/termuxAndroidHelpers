@@ -3,21 +3,26 @@
 
 function print_help() 
 {
-	echo -e "$0 [-t max_temp] [-p percentage]"
+	echo -e "$0 [-v volume] [-t max_temp] [-p percentage] [-n]"
 }
         
 p=80
-mt=40
+mt=37
+s=60
 
-while getopts  "ht:p:" arg; do
+while getopts  "hnt:p:s:v:" arg; do
         case $arg in
         h) print_help; exit 0 ;;
+	n) no_lock=y ;;
         t) mt="$OPTARG" ;;
         p) p="$OPTARG" ;;
+	s) s="$OPTARG" ;;
+	v) volume="$OPTARG" ;;
         *) echo "unknown arg $arg" >&2; print_help; exit 1 ;;
         esac
 done
 shift $(($OPTIND - 1))
+[ -n "$1" -a "$mt" = 80 ] && mt="$1"
 
 function get_val() 
 { 
@@ -29,9 +34,10 @@ function battery-wait()
 	x=$(termux-battery-status)
 	[ -z "$quiet" ] && echo $x >&2
 
-	echo $x | grep -i discharging && termux-wake-lock && wl=y
+	echo $x | grep -i discharging && \
+		[ -z "$no_lock" ] && termux-wake-lock && wl=y
 
-        while sleep 60; do
+        while sleep $s; do
 		x=$(termux-battery-status)
 		[ -z "$quiet" ] && echo $x >&2
 		bp=$(echo $x | get_val percentage)
@@ -39,16 +45,17 @@ function battery-wait()
 
                 if [ "${bp}" -ge "$p" ]; then
                         termux-notification -c "battery > $p"
-                        termux-tts-speak "battery charged to $bp"
+			[ "$volume" -gt 0 ] && play.sh -v "$volume" /storage/emulated/0/Ringtones/schwe_gong_3x.mp3
+                        termux-tts-speak -s "NOTIFICATION" "battery charged to $bp"
                         break
                 fi
 
  	        if [ "${t}" -ge "$mt" ]; then
-                        termux-tts-speak "temp over $t"
+                        termux-tts-speak "temp at $t"
                 fi
         done
         [ "$wl" = y ] && termux-wake-unlock
 }
 
-battery-wait "$@"
+battery-wait 
 read

@@ -7,6 +7,6 @@ mkdir -p 'done' 'shrunk'
 
 ls -1 *.mp3 *.m4a *.opus 2>/dev/null | while read f; do
 	echo "$f:"
-	clean-audio.sh "$f" "shrunk/" </dev/null  && \
+	recode-media.sh "$f" "shrunk/" </dev/null  && \
 		mv "$f" "done/"
 done

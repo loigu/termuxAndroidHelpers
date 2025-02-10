@@ -1,2 +1,2 @@
 #!/bin/bash
-ssh nanda@filesrv1 
+ssh -a nanda@filesrv1 

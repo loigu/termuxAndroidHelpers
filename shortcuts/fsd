@@ -1,4 +1,4 @@
 #!/bin/bash
 
-ssh fs-direct "$@"
+ssh -a fs-direct "$@"
 
