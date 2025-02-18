@@ -1,12 +1,14 @@
 #!/bin/bash
 # resize image
 
+# split vertically: -crop 50%x100%
+# 
 if [ -z "$1" ]; then
 	echo "$(basename $0) from to
 	from = dir ~ converts all to '\$to/\$(basename \$from)'
 	to = -i in place
 	export quality=$quality
-	export res=$res
+	export res=$res (1200x-1, etc)
 	export method=$method (use '-adaptive-resize' for text, for photo use '-resize')
 	extra='-rotate 270'
 	"
@@ -39,7 +41,7 @@ function conv_it()
 		[ -d "$base" ] || mkdir -p "$base"
 	fi
 
-	convert "$from"  $method $res -quality $quality "$to"
+	magick "$from"  $method $res -quality $quality "$to"
 	local res="$?"
 	if [ "$res" = 0 -a "$2" = "-i" ]; then 
 		mv "$to" "$from" 
