@@ -2,6 +2,7 @@
 # resize image
 
 # split vertically: -crop 50%x100%
+# remove 50pixels from all sides -shave 50
 # 
 if [ -z "$1" ]; then
 	echo "$(basename $0) from to
@@ -10,7 +11,7 @@ if [ -z "$1" ]; then
 	export quality=$quality
 	export res=$res (1200x-1, etc)
 	export method=$method (use '-adaptive-resize' for text, for photo use '-resize')
-	extra='-rotate 270'
+	extra='-rotate 270 -shave 50'
 	"
 	exit 0
 fi
@@ -22,6 +23,7 @@ fi
 from=$(readlink -f "$1")
 to="$2"
 [ "$to" != -i ] && to=$(readlink -f "$2")
+[ -d "$to" ] && ff=$(basename "$from") && to="$to/$ff"
 
 bindir=$(readlink -f "$BASH_SOURCE")
 bindir=$(dirname "$bindir")
@@ -41,7 +43,7 @@ function conv_it()
 		[ -d "$base" ] || mkdir -p "$base"
 	fi
 
-	magick "$from"  $method $res -quality $quality "$to"
+	magick "$from" ${extra} $method $res -quality $quality "$to"
 	local res="$?"
 	if [ "$res" = 0 -a "$2" = "-i" ]; then 
 		mv "$to" "$from" 

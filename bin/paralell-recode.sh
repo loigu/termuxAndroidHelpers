@@ -28,14 +28,17 @@ function recode_single()
 	case "${mt}" in
 		audio)
                         recode-media.sh "$@" "${track}" </dev/zero &>>"$log"
-                                res=$?
+                        res=$?
                         ;;
 		video)
 			downscale-video.sh "${track}"  </dev/zero &>>"$log"
-                                res=$?
+                        res=$?
                         ;;
-                        # no image scaling yet
-                        *)
+		image)
+			resize-img.sh "$track" "$@"
+			res=$?
+			;;
+                *)
 				echo "unknown media type for $track" >&2
 				res=1;
                         ;;
