@@ -3,7 +3,7 @@
 
 function print_help()
 {
-	echo $(basename "$0") '<infile> <time>'
+	echo $(basename "$0") '<infile> <time> [time2 ...]'
 	echo $(basename "$0") '-m <infile> <outfile_prefix> <counter_start> <time1> [time2 time3 ...]'
 }
 
@@ -28,11 +28,10 @@ if [ "$1" = '-m' ]; then
 	shift 3
 else
 	in="$1"
-	st="$2"
 
 	outPrefix="${in%.*}"
 	suffix="${in##*.}"
-	shift 2
+	shift 
 fi
 
 trackBegin=0
