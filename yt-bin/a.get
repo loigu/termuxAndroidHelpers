@@ -1,8 +1,8 @@
 #!/bin/bash
 
 [ "$1" = -f ] && force=1 && shift
-id=$(echo "$1" sed -e 's/.*\?v=\([^&]*\).*/\1/')
-[ -z "$force" ] && grep '$id' ~/downloaded && echo "already downloaded ($id)" && exit 1
+id=$(echo "$1" |sed -e 's/.*\?v=\([^&]*\).*/\1/')
+[ -z "$force" ] && grep "$id" ~/downloaded && echo "already downloaded ($id)" && exit 1
 
 yt-dlp -c -f "worstaudio[protocol=https]" --no-playlist --embed-metadata --embed-chapters "$@" && echo "$id" >> ~/downloaded
 
