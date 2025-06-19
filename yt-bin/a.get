@@ -1,8 +1,11 @@
 #!/bin/bash
 
+[ -z "$lang" ] && lang=default
+[ -z "$format" ] && format="worstaudio[protocol=https][language=$lang]"
+
 [ "$1" = -f ] && force=1 && shift
 id=$(echo "$1" |sed -e 's/.*\?v=\([^&]*\).*/\1/')
 [ -z "$force" ] && grep "$id" ~/downloaded && echo "already downloaded ($id)" && exit 1
 
-yt-dlp -c -f "worstaudio[protocol=https]" --no-playlist --embed-metadata --embed-chapters "$@" && echo "$id" >> ~/downloaded
+yt-dlp -c -f "$format" --no-playlist --embed-metadata --embed-chapters "$@" && echo "$id" >> ~/downloaded
 
