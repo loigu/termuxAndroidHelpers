@@ -1,2 +1,7 @@
 #!/bin/bash
-yt-dlp -c -f worstaudio[protocol=https] --yes-playlist --embed-metadata --embed-chapters  "$@"
+
+# script conf                                                 CANONIC_SOURCE=$(readlink -f "${BASH_SOURCE}")
+export SCRIPT_DIR=$(dirname "${CANONIC_SOURCE}")
+
+export follow_playlist="--yes-playlist"
+"{$SCRIPT_DIR}/a.get" "$@"

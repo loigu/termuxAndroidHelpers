@@ -1,11 +1,44 @@
 #!/bin/bash
 
-[ -z "$format" ] && format="worstaudio[protocol=https][format_note*=original]"
-[ -z "$frag" ] && frag=20
+is_downloaded()
+{
+	grep "$1" ~/downloaded
+}
 
-[ "$1" = -f ] && force=1 && shift
-id=$(echo "$1" |sed -e 's/.*\?v=\([^&]*\).*/\1/')
-[ -z "$force" ] && grep "$id" ~/downloaded && echo "already downloaded ($id) pass -f " && exit 1
+get_one()
+{
+	local id=$(echo "$1" |sed -e 's/.*\?v=\([^&]*\).*/\1/')
+	[ -z "$force" ] && is_downloaded "$id" && echo "already downloaded, pass -f to force download" >&2 && return 1
 
-yt-dlp -c -f "$format" -N $frag --no-playlist --embed-metadata --embed-chapters "$@" && echo "$id" >> ~/downloaded
+		yt-dlp -c -f "$format" -N "$frag" $follow_playlist --embed-metadata --embed-chapters "$1" && echo "$id" >> ~/downloaded
+}
+
+_is_sourced()
+{
+        # https://unix.stackexchange.com/a/215279
+        [ "${#FUNCNAME[@]}" -ge 2 ] \
+        && [ "${FUNCNAME[0]}" = '_is_sourced' ] \
+        && [ "${FUNCNAME[1]}" = 'source' ]
+}
+
+print_help()
+{
+	echo -e "[format=139 frag=20 follow_playlist=--yes-playlist extra=...]\n\t$0 [-h] [-f] url1 [url2...]"
+}
+
+[ -z "$format" ] && export format="worstaudio[protocol=https][format_note*=original]"
+[ -z "$frag" ] && export frag=20
+[ -z "$follow_playlist" ] && export follow_playlist="--no-playlist"
+
+if ! _is_sourced; then
+	[ "$1" = -h -o -z "$1" ] && print_help && exit 0
+	[ "$1" = -f ] && force=1 && shift
+
+	ret=0
+	for url in "$@"; do
+		get_one "$url" || ret=1
+	done
+
+	exit $ret
+fi
 
