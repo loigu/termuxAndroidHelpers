@@ -9,6 +9,7 @@ function print_help()
 p=80
 mt=37
 s=60
+volume=0
 
 while getopts  "hnt:p:s:v:" arg; do
         case $arg in
@@ -51,11 +52,15 @@ function battery-wait()
                 fi
 
  	        if [ "${t}" -ge "$mt" ]; then
-                        termux-tts-speak "temp at $t"
+                        termux-tts-speak -s "NOTIFICATION" "temp at $t"
                 fi
         done
         [ "$wl" = y ] && termux-wake-unlock
 }
 
 battery-wait 
-read
+
+while sleep 60; do
+	play.sh /storage/emulated/0/Ringtones/schwe_gong_once.mp3
+done
+
