@@ -5,14 +5,30 @@ is_downloaded()
 	grep "$1" ~/downloaded
 }
 
-get_one()
+
+format_fallback_get()
 {
-	local id=$(echo "$1" |sed -e 's/.*\?v=\([^&]*\).*/\1/')
-	[ -z "$force" ] && is_downloaded "$id" && echo "already downloaded, pass -f to force download" >&2 && return 1
 
 	expr match "$format" '.*https.*' &>/dev/null || \
 		extra="$extra --progress-delta 5"
-	yt-dlp -c -f "$format" -N $frag $follow_playlist --embed-metadata --embed-chapters $extra "$1" && echo "$id" >> ~/downloaded
+
+	yt-dlp -c -f "$format" -N "$frag" $follow_playlist --embed-metadata --embed-chapters $extra "$1" && return 0
+	
+	fallback_format=$(echo $format | sed -e 's/original/Default/')
+	yt-dlp -c -f "$fallback_format" -N "$frag" $follow_playlist --embed-metadata --embed-chapters $extra "$1" && return 0
+
+	fallback_format=$(echo $fallback_format | sed -e 's/\[protocol=https\]//')
+	yt-dlp -c -f "$fallback_format" -N "$frag" $follow_playlist --embed-metadata --embed-chapters --progress-delta 5 $extra "$1" && return 0
+
+}
+
+get_one()
+{
+	local id=$(echo "$1" |sed -e 's/.*\?v=\([^&]*\).*/\1/')
+	[ -z "$force" ] && is_downloaded "$id" && echo "already downloaded, pass -f to force download" >&2 && return 2
+	
+	format_fallback_get && echo "$id" >> ~/downloaded 
+
 }
 
 _is_sourced()
@@ -29,7 +45,8 @@ print_help()
 }
 
 [ -z "$format" ] && export format="worstaudio[protocol=https][format_note*=original]"
-[ -z "$frag" ] && export frag='40'
+
+[ -z "$frag" ] && export frag=40
 [ -z "$follow_playlist" ] && export follow_playlist="--no-playlist"
 
 if ! _is_sourced; then
