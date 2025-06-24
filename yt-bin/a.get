@@ -10,7 +10,9 @@ get_one()
 	local id=$(echo "$1" |sed -e 's/.*\?v=\([^&]*\).*/\1/')
 	[ -z "$force" ] && is_downloaded "$id" && echo "already downloaded, pass -f to force download" >&2 && return 1
 
-		yt-dlp -c -f "$format" -N "$frag" $follow_playlist --embed-metadata --embed-chapters "$1" && echo "$id" >> ~/downloaded
+	expr match "$format" '.*https.*' &>/dev/null || \
+		extra="$extra --progress-delta 5"
+	yt-dlp -c -f "$format" -N $frag $follow_playlist --embed-metadata --embed-chapters $extra "$1" && echo "$id" >> ~/downloaded
 }
 
 _is_sourced()
@@ -23,11 +25,11 @@ _is_sourced()
 
 print_help()
 {
-	echo -e "[format=139 frag=20 follow_playlist=--yes-playlist extra=...]\n\t$0 [-h] [-f] url1 [url2...]"
+	echo -e "[format=139 frag='40' follow_playlist=--yes-playlist extra=...]\n\t$0 [-h] [-f] url1 [url2...]"
 }
 
 [ -z "$format" ] && export format="worstaudio[protocol=https][format_note*=original]"
-[ -z "$frag" ] && export frag=20
+[ -z "$frag" ] && export frag='40'
 [ -z "$follow_playlist" ] && export follow_playlist="--no-playlist"
 
 if ! _is_sourced; then
