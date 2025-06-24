@@ -45,7 +45,7 @@ function battery-wait()
 		t=$(echo $x | get_val temperature)
 
                 if [ "${bp}" -ge "$p" ]; then
-                        termux-notification -c "battery > $p"
+                        termux-notification -c "battery at $bp"
 			[ "$volume" -gt 0 ] && play.sh -v "$volume" /storage/emulated/0/Ringtones/schwe_gong_3x.mp3
                         termux-tts-speak -s "NOTIFICATION" "battery charged to $bp"
                         break
@@ -60,7 +60,9 @@ function battery-wait()
 
 battery-wait 
 
-while sleep 60; do
+read -t 0 -e ''
+while ! read -t 60; do
 	play.sh /storage/emulated/0/Ringtones/schwe_gong_once.mp3
+	termux-battery-status
 done
 
