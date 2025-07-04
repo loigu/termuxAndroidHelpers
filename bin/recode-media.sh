@@ -95,10 +95,11 @@ fi
 
 case "$codec" in
 	aac)
-		audio="-c:a aac -b:a $(( 192 / ${quality} ))k -profile:a aac_low"
+		audio="-c:a aac -b:a $(( 192 / ${quality} ))k -profile:a aac_main"
 		;;
 	copy)
 		audio="-c:a copy"
+		af=''
 		;;
 	mp3)
 		audio="-c:a libmp3lame -q:a ${quality}"

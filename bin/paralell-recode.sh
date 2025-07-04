@@ -62,6 +62,7 @@ fi
 
 [ -z "$paralell" ] && export paralell=6
 i=1
+[ "$flist" = '-' ] && flist='/proc/self/fd/0'
 while read f; do  
 	[ "$i" -gt "$paralell" ] && wait -n
 	recode_single "$f" "$@" & 
