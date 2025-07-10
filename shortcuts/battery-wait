@@ -3,7 +3,7 @@
 
 function print_help() 
 {
-	echo -e "$0 [-v volume] [-t max_temp] [-p percentage] [-n]"
+	echo -e "$0 [-v volume] [-t max_temp] [-p percentage] [-s sec] [-n]\n\t-n don't lock\n\t-s sec refresh delay"
 }
         
 p=80
