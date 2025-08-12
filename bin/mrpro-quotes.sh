@@ -8,9 +8,9 @@ if [ "$1" = '-h' ] || [ ! -f "$from" ]; then
 	exit 1
 fi
 
-#TODO: join multiline
 7z e -y "$from" '*/4.tag' && \
-        echo 'SELECT book,filename,bookmark,note,original from
- notes;' | sqlite3 4.tag > "$to" && \
+	echo "SELECT '#@#',book,filename,bookmark,note,original from notes;" | \
+		sqlite3 4.tag | tr '\n' ' ' | tr -d '\r' | \
+		sed -e 's/#@#|/\n/'g  > "$to" && \
         rm 4.tag
 
