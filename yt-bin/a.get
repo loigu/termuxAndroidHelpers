@@ -13,7 +13,7 @@ get_one()
 	local fallback_format=$(echo $format | sed -e 's/original/Default/')
 	fallback_format="$fallback_format/$(echo $fallback_format | sed -e 's/\[protocol=https\]//')"
 
-	yt-dlp -c -f "$format/$fallback_format" -N "$frag" --progress-delta 2 $follow_playlist --embed-metadata --embed-chapters $extra "$1" && \
+	yt-dlp -c -f "$format/$fallback_format/wa" -N "$frag" --progress-delta 2 $follow_playlist --embed-metadata --embed-chapters $extra "$1" && \
 		echo "$id" >> ~/downloaded
 }
 
