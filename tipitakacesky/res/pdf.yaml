@@ -5,6 +5,8 @@ creator:
   text: the Tathagata
 - role: translator
   text: Ayya Bodhi
+- role: sources
+  text: aktuální verze https://bit.ly/tipitakacesky
 rights: (C) 2024 Ayya Bodhi
 documentclass: book
 geometry: margin=1in
