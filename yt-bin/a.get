@@ -10,10 +10,9 @@ get_one()
 	local id=$(echo "$1" |sed -e 's/.*\?v=\([^&]*\).*/\1/')
 	[ -z "$force" ] && is_downloaded "$id" && echo "already downloaded, pass -f to force download" >&2 && return 2
 	
-	local fallback_format=$(echo $format | sed -e 's/original/Default/')
-	fallback_format="$fallback_format/$(echo $fallback_format | sed -e 's/\[protocol=https\]//')"
+	[-z "$vf" ] && local format="$af" || local format="($vf)+($af)"
 
-	yt-dlp -c -f "$format/$fallback_format/wa" -N "$frag" --progress-delta 2 $follow_playlist --embed-metadata --embed-chapters $extra "$1" && \
+	yt-dlp -c -f "$format" -N "$frag" --progress-delta 2 $follow_playlist --embed-metadata --embed-chapters $extra "$1" && \
 		echo "$id" >> ~/downloaded
 }
 
@@ -27,10 +26,10 @@ _is_sourced()
 
 print_help()
 {
-	echo -e "[format=139 frag='40' follow_playlist=--yes-playlist extra=...]\n\t$0 [-h] [-f] url1 [url2...]"
+	echo -e "[af=139 vf=239 frag=40 follow_playlist=--yes-playlist extra=...]\n\t$0 [-h] [-f] url1 [url2...]"
 }
 
-[ -z "$format" ] && export format="wa[protocol=https][format_note*=original]"
+[ -z "$af" ] && export af="wa[protocol=https][format_note*=original]/wa[protocol=https][format_note*=Defailt]/wa[format_note*=original]/wa[format_note*=Default]/wa"
 
 [ -z "$frag" ] && export frag=40
 [ -z "$follow_playlist" ] && export follow_playlist="--no-playlist"
