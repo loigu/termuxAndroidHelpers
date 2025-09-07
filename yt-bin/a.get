@@ -10,7 +10,7 @@ get_one()
 	local id=$(echo "$1" |sed -e 's/.*\?v=\([^&]*\).*/\1/')
 	[ -z "$force" ] && is_downloaded "$id" && echo "already downloaded, pass -f to force download" >&2 && return 2
 	
-	[-z "$vf" ] && local format="$af" || local format="($vf)+($af)"
+	[ -z "$vf" ] && local format="$af" || local format="($vf)+($af)"
 
 	yt-dlp -c -f "$format" -N "$frag" --progress-delta 2 $follow_playlist --embed-metadata --embed-chapters $extra "$1" && \
 		echo "$id" >> ~/downloaded
