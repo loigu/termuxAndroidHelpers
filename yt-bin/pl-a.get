@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# script conf                                                 CANONIC_SOURCE=$(readlink -f "${BASH_SOURCE}")
+# script conf
+CANONIC_SOURCE=$(readlink -f "${BASH_SOURCE}")
 export SCRIPT_DIR=$(dirname "${CANONIC_SOURCE}")
 
 export follow_playlist="--yes-playlist"
-"{$SCRIPT_DIR}/a.get" "$@"
+"${SCRIPT_DIR}/a.get" "$@"
