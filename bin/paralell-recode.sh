@@ -10,6 +10,15 @@ shift
 [ -z "$flist" -o "$flist" = "-h" ] && \
 	echo "[paralell=6] $0 flist <recode-opts>" && exit 1
 
+if [ -d "$flist" ]; then
+	fdir="$flist"
+	odir="$PWD"
+	flist=$(tempfile -d "$fdir")
+	cd "$fdir"
+	ls -1 *.webm *.m4a *.mp4 > "$flist"
+fi
+	
+
 [ -z "$loglevel" ] && export loglevel=16
 
 function recode_single()
@@ -70,5 +79,9 @@ while read f; do
 done < "$flist"
 
 wait
-[ -f "$t" ] && rm "$t"
+
+if [ -d "$fdir" ]; then
+       	rm "$flist"
+	cd "$odir"
+fi
 
