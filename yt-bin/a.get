@@ -5,6 +5,16 @@ is_downloaded()
 	grep "$1" ~/downloaded
 }
 
+recode_one()
+{
+	local name=$(find . -maxdepth 1 -regex ".*\[${1}\]\.[^.]*" -print -quit)
+	[ ! -f "$name" ] && echo "_FAIL: can't find $1 ($name), not recoding" >&2 && return 1
+
+	echo "_START: $name"
+	af='' vf='' recode-media.sh -S "$inplace" "$name"
+	[ "$?" = 0 ] && echo "_SUCC: $name" >&2 || echo "_FAIL: $name" >&2
+}
+
 get_one()
 {
 	local id=$(echo "$1" |sed -e 's/.*\?v=\([^&]*\).*/\1/')
@@ -14,6 +24,7 @@ get_one()
 
 	yt-dlp -c -f "$format" -N "$frag" --progress-delta 2 $follow_playlist --embed-metadata --embed-chapters $extra "$1" && \
 		echo "$id" >> ~/downloaded
+	[ "$recode" = y ] && recode_one "$id" &
 }
 
 _is_sourced()
@@ -26,7 +37,23 @@ _is_sourced()
 
 print_help()
 {
-	echo -e "[af=139 vf=239 frag=40 follow_playlist=--yes-playlist extra=...]\n\t$0 [-h] [-f] url1 [url2...]"
+	echo -e "[af=139 vf=239 frag=40 follow_playlist=--yes-playlist extra=...]\n\t$0 [-h] [-ri] [-f] url1 [url2...]"
+}
+
+parse_args()
+{
+	while getopts  "frhi" arg; do
+		case $arg in
+			h) print_help; exit 0 ;;
+			f) export force=y ;;
+			r) export recode=y ;;
+			i) export inplace='-i' ;;
+			*) echo "unknown arg $arg" >&2
+			   print_help
+			   exit 1 ;;
+		esac
+	done
+	shift $(($OPTIND - 1))
 }
 
 [ -z "$af" ] && export af="wa[protocol=https][format_note*=original]/wa[protocol=https][format_note*=Defailt]/wa[format_note*=original]/wa[format_note*=Default]/wa"
@@ -35,8 +62,7 @@ print_help()
 [ -z "$follow_playlist" ] && export follow_playlist="--no-playlist"
 
 if ! _is_sourced; then
-	[ "$1" = -h -o -z "$1" ] && print_help && exit 0
-	[ "$1" = -f ] && force=1 && shift
+	parse_args "$@"
 
 	ret=0
 	for url in "$@"; do
