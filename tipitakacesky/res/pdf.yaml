@@ -4,10 +4,10 @@ creator:
 - role: author                                          
   text: the Tathagata
 - role: translator
-  text: Ayya Bodhi
+  text: Ayya Bodhi, bhikkhu Vinītha, Bhikkhu Gavésakó, Štěpán Chromovský, Miroslav Rozehnal, Josef Marx, Nanda bhikkhu
 - role: sources
   text: aktuální verze https://bit.ly/tipitakacesky
-rights: (C) 2024 Ayya Bodhi
+rights: (C) 2025 Ayya Bodhi
 documentclass: book
 geometry: margin=1in
 papersize: a4
