@@ -13,8 +13,8 @@ shift
 if [ -d "$flist" ]; then
 	fdir="$flist"
 	odir="$PWD"
-	flist=$(tempfile -d "$fdir")
-	cd "$fdir"
+	cd "$fdir"	
+	flist=$(mktemp -p . pr.XXXXXX)
 	ls -1 *.webm *.m4a *.mp4 > "$flist"
 fi
 	
