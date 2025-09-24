@@ -1,19 +1,8 @@
 #!/bin/bash
 # removes noise, cut high & low frequencies, shrinks to "voice" quality
 
-[ -z "$lowpass" ] && lowpass=2500
-[ -z "$highpass" ] && highpass=300
-[ -z "$quality" ] && quality=8
-[ -z "$rate" ] && rate=16000
-
-[ -n "$normalize" ] && af=',speechnorm=e=50:r=0.0001:l=1'
-[ -n "$volume" ] && af="$af,volume=$volume"
-
-#no video by default
-[ -z "$codec" ] && export codec=mp3
-[ -z "$video" ] && export video=-vn
-[ -z "$loglevel" ] && export loglevel=32
-
+#don't inherit audio filters
+af=''
 
 function print_help()
 {
@@ -56,6 +45,21 @@ while getopts  "hNiSH:c:l:q:b:v:p:x:nV:" arg; do
         esac
 done
 shift $(($OPTIND - 1))
+
+
+[ -z "$lowpass" ] && lowpass=2500
+[ -z "$highpass" ] && highpass=300
+[ -z "$quality" ] && quality=8
+[ -z "$rate" ] && rate=16000
+
+[ -n "$normalize" ] && af=',speechnorm=e=50:r=0.0001:l=1'
+[ -n "$volume" ] && af="$af,volume=$volume"
+
+#no video by default
+[ -z "$codec" ] && export codec=mp3
+[ -z "$video" ] && export video=-vn
+[ -z "$loglevel" ] && export loglevel=32
+
 
 [ "$loglevel" -lt 32 ] && extra="$extra -nostats"
 [ -z "$1" ] && print_help && exit 1

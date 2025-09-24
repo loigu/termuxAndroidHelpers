@@ -7,7 +7,11 @@ bindir=$(readlink -f "$BASH_SOURCE")                              bindir=$(dirna
 
 I="$1"
 O="$2"
-if [ -z "$inplace" ]; then
+if [ -n "$inplace" -o "$O" = '-i' ]; then
+	d=$(dirname "$I")
+	f=$(basename "$I")
+	O=$(mktemp -p "$d" "tmp-XXXXXX-${f%%.*}.mp4")
+else
 	if [ -z "$O" ]; then
 		d=$(dirname "$I")
 		f=$(basename "$I")
@@ -20,7 +24,6 @@ if [ -z "$inplace" ]; then
 	fi
 fi
 
-
 [ -z "$vb" ] && vb=600k
 [ -z "$res" ] && res=-1:-1
 
@@ -32,4 +35,18 @@ ffmpeg -nostdin -y -i "$I" ${vo} -pass 1 -f mp4 -an  ${extra} /dev/null || exit 
 
 # ffmpeg -nostdin -i "$I" ${extra} -codec:v libx264 -tune zerolatency -preset slow -profile:v high -b:v $vb -maxrate $vb -bufsize 15000k -pix_fmt yuv420p -vf fps=fps=20,scale=$res -pass 2 -movflags +faststart -g 30 -bf 2 -c:a aac -b:a 32k -ac 1 -ar 16000 -profile:a aac_low ${extra} "$O"
 
-"${bindir}/recode-media.sh" -V "${vo} -pass 2 -movflags +faststart" "$I" "$O" && rm $passlog-[0-9].log
+inplace='' "${bindir}/recode-media.sh" -V "${vo} -pass 2 -movflags +faststart" "$I" "$O"
+ret=$?
+
+if [ "$ret" = 0 ]; then
+	rm $passlog-[0-9].log
+
+	if [ -n "$inplace" ]; then
+		rm "$I"
+		mv "$O" "${I%%.*}.mp4"
+		ret=$?
+	fi
+fi
+
+exit $ret
+
