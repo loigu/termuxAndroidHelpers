@@ -10,9 +10,10 @@ recode_one()
 	local name=$(find . -maxdepth 1 -regex ".*\[${1}\]\.[^.]*" -print -quit)
 	[ ! -f "$name" ] && echo "_FAIL: can't find $1 ($name), not recoding" >&2 && return 1
 
-	echo "_START: $name"
+	echo -e "\n\t_START: $name\n"
+	# don't pass on formats/filters
 	af='' vf='' recode-media.sh -S "$inplace" "$name"
-	[ "$?" = 0 ] && echo "_SUCC: $name" >&2 || echo "_FAIL: $name" >&2
+	[ "$?" = 0 ] && echo -e "\n\t_SUCC: $name\n" >&2 || echo -e "\n\t_FAIL: $name\n" >&2
 }
 
 get_one()
