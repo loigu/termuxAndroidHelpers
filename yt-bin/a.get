@@ -41,9 +41,13 @@ print_help()
 	echo -e "[af=139 vf=239 frag=40 follow_playlist=--yes-playlist extra=...]\n\t$0 [-h] [-ri] [-f] url1 [url2...]"
 }
 
-parse_args()
-{
-	while getopts  "frhi" arg; do
+[ -z "$af" ] && export af="wa[protocol=https][format_note*=original]/wa[protocol=https][format_note*=Defailt]/wa[format_note*=original]/wa[format_note*=Default]/wa"
+
+[ -z "$frag" ] && export frag=40
+[ -z "$follow_playlist" ] && export follow_playlist="--no-playlist"
+
+if ! _is_sourced; then
+		while getopts  "frhi" arg; do
 		case $arg in
 			h) print_help; exit 0 ;;
 			f) export force=y ;;
@@ -55,15 +59,6 @@ parse_args()
 		esac
 	done
 	shift $(($OPTIND - 1))
-}
-
-[ -z "$af" ] && export af="wa[protocol=https][format_note*=original]/wa[protocol=https][format_note*=Defailt]/wa[format_note*=original]/wa[format_note*=Default]/wa"
-
-[ -z "$frag" ] && export frag=40
-[ -z "$follow_playlist" ] && export follow_playlist="--no-playlist"
-
-if ! _is_sourced; then
-	parse_args "$@"
 
 	ret=0
 	for url in "$@"; do
