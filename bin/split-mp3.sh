@@ -3,8 +3,8 @@
 
 function print_help()
 {
-	echo $(basename "$0") '<infile> <time> [time2 ...]'
-	echo $(basename "$0") '-m <infile> <outfile_prefix> <counter_start> <time1> [time2 time3 ...]'
+	echo $(basename "$0") '[extra=-y] <infile> <time> [time2 ...]'
+	echo $(basename "$0") '[-m outfile_prefix counter_start] <infile> <time1> [time2 time3 ...]'
 }
 
 if [ "$1" = '-h' -o -z "$1" ]; then
@@ -20,29 +20,30 @@ function print_fname()
 
 if [ "$1" = '-m' ]; then
 	shift
-	in="$1"
-	outPrefix="$2"
+	in="$3"
+	outPrefix="$1"
 	suffix="${in##*.}"
 
-	i="$3"
+	i="$2"
 	shift 3
 else
 	in="$1"
 
 	outPrefix="${in%.*}"
 	suffix="${in##*.}"
+	i=0
 	shift 
 fi
 
 trackBegin=0
 	
 for end in $*; do
-	ffmpeg -nostdin ${extra} -i "$in" -codec copy -ss "$trackBegin" -to "$end" "$(print_fname $i)"
+	ffmpeg -nostdin ${extra} -i "$in" -c:a copy -ss "$trackBegin" -to "$end" "$(print_fname $i)" </dev/zero
 
 	i=$(expr $i + 1)
 	trackBegin="$end"
 done
 
 out=$(print_fname $i)
-ffmpeg -nostdin ${extra} -i "$in" -codec copy -ss "$trackBegin" "$out"
+ffmpeg -nostdin ${extra} -i "$in" -c:a copy -ss "$trackBegin" "$out" </dev/zero
 
