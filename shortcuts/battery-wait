@@ -3,17 +3,19 @@
 
 function print_help() 
 {
-	echo -e "$0 [-v volume] [-t max_temp] [-p percentage] [-s sec] [-n]\n\t-n don't lock\n\t-s sec refresh delay"
+	echo -e "$0 [-v volume] [-t max_temp] [-p percentage] [-s sec] [-nV]\n\t-n don't lock\n\t-s sec refresh delay\n\t-V verbose"
 }
         
 p=80
 mt=37
 s=60
 volume=0
+quiet=1
 
-while getopts  "hnt:p:s:v:" arg; do
+while getopts  "hnt:p:s:v:V" arg; do
         case $arg in
         h) print_help; exit 0 ;;
+	V) quiet='' ;;
 	n) no_lock=y ;;
         t) mt="$OPTARG" ;;
         p) p="$OPTARG" ;;
@@ -34,6 +36,15 @@ function battery-wait()
 {
 	x=$(termux-battery-status)
 	[ -z "$quiet" ] && echo $x >&2
+	start_bp=$(echo $x|get_val percentage)
+	start_time=$(date +%s)
+	t=$(echo $x | get_val temperature)
+	current=$(echo $x | get_val current)
+
+	msg="battery $start_bp, temp $t, current $current"
+	echo $msg
+	termux-notification -i 42 -t charging --alert-once --ongoing -c "$msg"
+
 
 	echo $x | grep -i discharging && \
 		[ -z "$no_lock" ] && termux-wake-lock && wl=y
@@ -43,6 +54,22 @@ function battery-wait()
 		[ -z "$quiet" ] && echo $x >&2
 		bp=$(echo $x | get_val percentage)
 		t=$(echo $x | get_val temperature)
+		current=$(echo $x | get_val current)
+	
+		now=$(date +%s)
+		running=$(( $now - $start_time ))
+		fill=$(( $bp - $start_bp ))
+		remaining=$(( $p - $bp ))
+		if [ $fill -gt 0 ]; then
+			rt=$(( $remaining * $running / $fill )) 
+			m=$(( $rt / 60 ))
+			se=$(( $rt % 60 ))
+		else
+			m="n/a"
+			se="n/a"
+		fi
+		msg="$fill in $running sec, finish cca in $m min $se sec, temp $t, current $current"
+		echo $msg; termux-notification -i 42 -t charging --alert-once --ongoing -c "$msg"
 
                 if [ "${bp}" -ge "$p" ]; then
                         termux-notification -c "battery at $bp"
@@ -57,6 +84,7 @@ function battery-wait()
         done
         [ "$wl" = y ] && termux-wake-unlock
 }
+
 
 battery-wait 
 
