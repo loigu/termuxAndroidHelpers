@@ -10,6 +10,8 @@ def print_tag(d, f):
         cls=d.get("class")
         i=d.get("id")
         content=d.get("content")
+        if pli == 'n' and 'pali' in cls:
+            return
         print(f"<{tag} id='{i}' class='{cls}'>{content}", file=f, end="")
         if "data" in d:
             iter(d.get("data"), f)
@@ -53,6 +55,10 @@ def print_footer(f):
 
 j=open(sys.argv[1], 'r')
 out=open(sys.argv[2], 'w')
+if len(sys.argv) > 3:
+    pli=sys.argv[3]
+else:
+    pli='y'
 
 data=json.load(j).get("data")
 print_header(out, get_title(data))
