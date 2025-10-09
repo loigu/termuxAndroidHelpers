@@ -68,7 +68,7 @@ function battery-wait()
 			m="n/a"
 			se="n/a"
 		fi
-		msg="$fill in $running sec, finish cca in $m min $se sec, temp $t, current $current"
+		msg="$fill in $(( $running / 60 )) min $(( $running % 60 )) sec, finish cca in $m min $se sec, temp $t, current $current"
 		echo $msg; termux-notification -i 42 -t charging --alert-once --ongoing -c "$msg"
 
                 if [ "${bp}" -ge "$p" ]; then
