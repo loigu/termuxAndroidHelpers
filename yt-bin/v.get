@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# script conf
+CANONIC_SOURCE=$(readlink -f "${BASH_SOURCE}")
+export SCRIPT_DIR=$(dirname "${CANONIC_SOURCE}")
+
+[ -z "$vf" ] && export vf='bv[vbr<=301]'
+"${SCRIPT_DIR}/a.get" "$@"
