@@ -30,5 +30,5 @@ done
 wait $pids
 
 sort -k 2 --parallel=$parallel "$2".[0-9]* > "$2"
-[ -z "$debug" ] && rm flist "$2".[0-9]*
+[ -z "$debug" ] && rm "$flist" "$2".[0-9]*
 

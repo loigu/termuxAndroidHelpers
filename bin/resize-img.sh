@@ -4,7 +4,7 @@
 # split vertically: -crop 50%x100%
 # remove 50pixels from all sides -shave 50
 # 
-if [ -z "$1" ]; then
+if [ -z "$1" -o "$1" = -h ]; then
 	echo "$(basename $0) from to
 	from = dir ~ converts all to '\$to/\$(basename \$from)'
 	to = -i in place
