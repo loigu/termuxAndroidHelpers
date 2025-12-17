@@ -1,8 +1,12 @@
 #!/bin/bash
 # downscale video to lower res & bitrate
-bindir=$(readlink -f "$BASH_SOURCE")                              bindir=$(dirname "$bindir")
+bindir=$(readlink -f "$BASH_SOURCE")
+export bindir=$(dirname "$bindir")
 
-[ -z "$1" -o "$1" = "-h" ] && echo "[inplace=1]vb=600k;res=854:-1; $0 <in> [out>]" && exit
+[ -z "$vb" ] && vb=600k
+[ -z "$res" ] && res=-1:-1
+
+[ -z "$1" -o "$1" = "-h" ] && echo -e "[inplace=1]vb=${vb};res=${res}; $0 <in> [out]\n\t+ audio exports for recode-media.sh" && exit
 
 
 I="$1"
@@ -23,9 +27,6 @@ else
 	       O="${O%%.*}.mp4"
 	fi
 fi
-
-[ -z "$vb" ] && vb=600k
-[ -z "$res" ] && res=-1:-1
 
 passlog=$(mktemp -u ./ffmpeglogXXXX)
 

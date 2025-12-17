@@ -11,19 +11,30 @@ function print_help()
 	echo -e "\t[-l] lowpass=$lowpass"
 	echo -e "\t[-q] quality=$quality"
 	echo -e "\t[-b] rate=$rate"
-	echo -e "\t[-i] inplace"
+	echo -e "\t[-i] inplace=1"
 	echo -e "\t[-x] extra="
 	echo -e "\t[-n] no_filtering=y (speeds up...)"
 	echo -e "\t[-S] quiet(er) - pass more times to silence more"
 	echo -e "\t[-N] normalize=y ~ af=,speechnorm=e=50:r=0.0001:l=1"
 	echo -e "\t[-v] volume=2 ~ af=,volume=2"
-	echo -e "\t[-c] codec (mp3 aac copy)"
+	echo -e "\t[-c] codec=$codec (mp3 aac copy)"
 	echo -e "\t[-V] video=$video"
 	echo -e "\tpresets... "
 	echo -e "\t[-p]\tpreset= [ad|pannavudh]"
 
 	echo "$0 from [to]"
 }
+
+[ -z "$lowpass" ] && lowpass=2500
+[ -z "$highpass" ] && highpass=300
+[ -z "$quality" ] && quality=8
+[ -z "$rate" ] && rate=16000
+
+#no video by default
+[ -z "$codec" ] && codec=mp3
+[ -z "$video" ] && video=-vn
+[ -z "$loglevel" ] && loglevel=32
+
 
 while getopts  "hNiSH:c:l:q:b:v:p:x:nV:" arg; do
         case $arg in
@@ -46,20 +57,8 @@ while getopts  "hNiSH:c:l:q:b:v:p:x:nV:" arg; do
 done
 shift $(($OPTIND - 1))
 
-
-[ -z "$lowpass" ] && lowpass=2500
-[ -z "$highpass" ] && highpass=300
-[ -z "$quality" ] && quality=8
-[ -z "$rate" ] && rate=16000
-
 [ -n "$normalize" ] && af=',speechnorm=e=50:r=0.0001:l=1'
 [ -n "$volume" ] && af="$af,volume=$volume"
-
-#no video by default
-[ -z "$codec" ] && export codec=mp3
-[ -z "$video" ] && export video=-vn
-[ -z "$loglevel" ] && export loglevel=32
-
 
 [ "$loglevel" -lt 32 ] && extra="$extra -nostats"
 [ -z "$1" ] && print_help && exit 1
