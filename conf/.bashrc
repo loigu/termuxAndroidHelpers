@@ -1,6 +1,7 @@
 #!/bin/bash
 
 export PS1='\A:\[\e[0;32m\]\w\[\e[0m\] '
+export EDITOR=vim
 
 export TERMUX_HELPERS="$HOME/termuxAndroidHelpers"
 [ -d "$TERMUX_HELPERS" ] || echo "WARNING: termux helpers not found" >&2
