@@ -1,5 +1,5 @@
 #!/bin/bash
 
 . ~/.bashrc
-flip_coin
+flip_coin "$@"
 read
