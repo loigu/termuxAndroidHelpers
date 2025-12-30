@@ -11,8 +11,9 @@ recode_one()
 	[ ! -f "$name" ] && echo "_FAIL: can't find $1 ($name), not recoding" >&2 && return 1
 
 	echo -e "\n\t_START: $name\n"
+	[ -n "$vf" ] && vid='-V "-c:v copy"' || vid=''
 	# don't pass on formats/filters
-	af='' vf='' recode-media.sh -S "$inplace" "$name"
+	af='' vf='' recode-media.sh ${vid} -S "$inplace" "$name"
 	[ "$?" = 0 ] && echo -e "\n\t_SUCC: $name\n" >&2 || echo -e "\n\t_FAIL: $name\n" >&2
 }
 
