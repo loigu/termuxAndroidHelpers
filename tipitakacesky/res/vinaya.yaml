@@ -1,0 +1,16 @@
+---
+title: Vinaya - příběhy 
+creator:
+- role: author                                          
+  text: the Tathagata
+- role: translator
+  text: Nanda bhikkhu
+- role: sources
+  text: aktuální verze https://bit.ly/tipitakacesky
+rights: (C) 2025 Nanda bhikkhu
+  # fontfamily: libertinus
+lang: cs-CZ
+block-headings: true
+  # documentclass: book
+indent: true
+papersize: a4

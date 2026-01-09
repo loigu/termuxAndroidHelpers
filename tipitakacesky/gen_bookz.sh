@@ -211,6 +211,12 @@ function gen_pdf()
 	suttanipata-cesky[0-9]*.docx \
 	theraghata-cesky[0-9]*.docx \
 	petavatthu-cesky[0-9]*.docx $extra
+
+	pandoc --toc --toc-depth=4 --top-level-division part --pdf-engine xelatex \
+		--metadata-file="$res/vinaya.yaml"  -M "subtitle=$(date '+%Y-%m-%d %H:%m')" \
+		--css="$res/book.css" -o vinaya-pribehy.pdf \
+		vinaya_pitaka-pribehy[0-9]*.docx $extra
+		
 }
 
 function gen_print_pdf()
@@ -268,7 +274,7 @@ function _is_sourced()
 
 function gdocs_to_epub()
 {
-	pandoc  --metadata-file="$res/metadata.yaml"  -M "subtitle=$(date '+%Y-%m-%d %H:%m')" --epub-cover-image="$res/cover.jpg" --css="$res/book.css" -o tipitaka_cesky.epub \
+	pandoc --toc-depth=4 --metadata-file="$res/metadata.yaml"  -M "subtitle=$(date '+%Y-%m-%d %H:%m')" --epub-cover-image="$res/cover.jpg" --css="$res/book.css" -o tipitaka_cesky.epub \
 	anguttara-nikaya-cesky[0-9]*.docx \
 	digha-nikaya-cesky[0-9]*.docx \
 	'majjhima_nikaya česky 1 - 50 '[0-9]*.docx \
@@ -280,6 +286,10 @@ function gdocs_to_epub()
 	suttanipata-cesky[0-9]*.docx \
 	theraghata-cesky[0-9]*.docx \
 	petavatthu-cesky[0-9]*.docx $extra
+
+	pandoc --toc-depth=4 --metadata-file="$res/vinaya.yaml"  -M "subtitle=$(date '+%Y-%m-%d %H:%m')" \
+		--css="$res/book.css" -o vinaya-pribehy.epub \
+		vinaya_pitaka-pribehy[0-9]*.docx $extra
 }
 
 
