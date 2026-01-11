@@ -20,5 +20,5 @@ for i in $(seq 1 $#); do
 	colist="$colist$in.ts"
 done
 
-ffmpeg ${extra} -i "concat:$colist" -c copy -bsf:a aac_adtstoasc "$out"
+ffmpeg ${extra} -i "concat:$colist" -c copy "$out" # -bsf:a aac_adtstoasc "$out"
 [ -z "$keep" ] && rm -f $(echo $colist | tr '|' ' ')
