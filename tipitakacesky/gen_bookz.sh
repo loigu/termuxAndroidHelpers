@@ -4,37 +4,14 @@
 script_dir=$(dirname "${BASH_SOURCE}")
 res="$script_dir/res"
 
+# check to see if this file is being run or sourced from another script
 
-function gen_doc()
+function _is_sourced()
 {
-	pandoc "$source" --toc --toc-depth=4 --metadata-file="$res/metadata.yaml" -o "${targ}"
-}
-
-function gen_epub()
-{
-	pandoc --toc --toc-depth=4  --metadata-file="${res}/metadata.yaml" --metadata "subtitle: export $(date +%y-%m-%d)" -M "subtitle='aktuální verze: https://bit.ly/tipitakacesky'"  --epub-cover-image="$res/cover.jpg" --css="$res/book.css" -o "${targ}" "$source"
-}
-
-function gen_pdf()
-{
-	pandoc --metadata-file="$res/pdf.yaml"  -M "subtitle=$(date '+%Y-%m-%d %H:%m')" --toc --toc-depth=4 -o "tipitaka_cesky.pdf"  --top-level-division part --pdf-engine xelatex \
-	anguttara-nikaya-cesky[0-9]*.docx \
-	digha-nikaya-cesky[0-9]*.docx \
-	'majjhima_nikaya česky 1 - 50 '[0-9]*.docx \
-	'majjhima_nikaya česky 51 - 100 '[0-9]*.docx \
-	'majjhima_nikaya česky 101 - 152 '[0-9]*.docx \
-	samyutta-nikaya-cesky[0-9]*.docx \
-	khuddakapatha.docx dhammapada.docx \
-	udana[0-9]*.docx itivuttaka.docx \
-	suttanipata-cesky[0-9]*.docx \
-	theraghata-cesky[0-9]*.docx \
-	petavatthu-cesky[0-9]*.docx $extra
-
-	pandoc --toc --toc-depth=4 --top-level-division part --pdf-engine xelatex \
-		--metadata-file="$res/vinaya.yaml"  -M "subtitle=$(date '+%Y-%m-%d %H:%m')" \
-		--css="$res/book.css" -o vinaya-pribehy.pdf \
-		vinaya_pitaka-pribehy[0-9]*.docx $extra
-		
+        # https://unix.stackexchange.com/a/215279
+        [ "${#FUNCNAME[@]}" -ge 2 ] \
+        && [ "${FUNCNAME[0]}" = '_is_sourced' ] \
+	&& [ "${FUNCNAME[1]}" = 'source' ]
 }
 
 function gen_print_pdf()
@@ -43,7 +20,7 @@ function gen_print_pdf()
 		fn=$(echo $s |tr '[:upper:]' '[:lower:]')
 		pandoc --metadata-file="$res/pdf.yaml" \
 			-M "title=$s nikaya česky" \
-			-M "subtitle=$(date '+%Y-%m-%d %H:%m')" \
+			-M "subtitle=$now" \
 			--toc --toc-depth=4 \
 			-o "${fn}_nikaya_cesky.pdf" \
 			--top-level-division part --pdf-engine xelatex \
@@ -54,7 +31,7 @@ function gen_print_pdf()
 	fn=$(echo $s |tr '[:upper:]' '[:lower:]')
 	pandoc --metadata-file="$res/pdf.yaml" \
 		-M "title=$s nikaya česky" \
-		-M "subtitle=$(date '+%Y-%m-%d %H:%m')" \
+		-M "subtitle=$now" \
 		--toc --toc-depth=4 \
 		-o "${fn}_nikaya_cesky.pdf" \
 		--top-level-division part --pdf-engine xelatex \
@@ -67,7 +44,7 @@ function gen_print_pdf()
 	fn=$(echo $s |tr '[:upper:]' '[:lower:]')
 	pandoc 	--metadata-file="$res/pdf.yaml" \
 		-M "title=$s nikaya česky" \
-		-M "subtitle=$(date '+%Y-%m-%d %H:%m')" \
+		-M "subtitle=$now" \
 		--toc --toc-depth=4 \
 		-o "${fn}_nikaya_cesky.pdf" \
 		--top-level-division part --pdf-engine xelatex \
@@ -79,52 +56,81 @@ function gen_print_pdf()
 		$extra
 }
 
-
-# check to see if this file is being run or sourced from another script
-
-function _is_sourced()
+function gen_tipitaka()
 {
-        # https://unix.stackexchange.com/a/215279
-        [ "${#FUNCNAME[@]}" -ge 2 ] \
-        && [ "${FUNCNAME[0]}" = '_is_sourced' ] \
-	&& [ "${FUNCNAME[1]}" = 'source' ]
+
+	for t in $type; do
+	case "$t" in
+		epub) pandoc --toc-depth=4 --metadata-file="$res/metadata.yaml" \
+		-M "subtitle=$now" --epub-cover-image="$res/cover.jpg" --css="$res/book.css" \
+		-o tipitaka_cesky.epub \
+		anguttara-nikaya-cesky[0-9]*.docx \
+		digha-nikaya-cesky[0-9]*.docx \
+		'majjhima_nikaya česky 1 - 50 '[0-9]*.docx \
+		'majjhima_nikaya česky 51 - 100 '[0-9]*.docx \
+		'majjhima_nikaya česky 101 - 152 '[0-9]*.docx \
+		samyutta-nikaya-cesky[0-9]*.docx \
+		khuddakapatha.docx dhammapada.docx \
+		udana[0-9]*.docx itivuttaka.docx \
+		suttanipata-cesky[0-9]*.docx \
+		theraghata-cesky[0-9]*.docx \
+		petavatthu-cesky[0-9]*.docx $extra
+		;;
+
+		pdf) pandoc --toc --toc-depth=4 --metadata-file="$res/pdf.yaml" \
+		--top-level-division part --pdf-engine xelatex \
+		-M "subtitle=$now" \
+		-o "tipitaka_cesky.pdf" \
+		anguttara-nikaya-cesky[0-9]*.docx \
+		digha-nikaya-cesky[0-9]*.docx \
+		'majjhima_nikaya česky 1 - 50 '[0-9]*.docx \
+		'majjhima_nikaya česky 51 - 100 '[0-9]*.docx \
+		'majjhima_nikaya česky 101 - 152 '[0-9]*.docx \
+		samyutta-nikaya-cesky[0-9]*.docx \
+		khuddakapatha.docx dhammapada.docx \
+		udana[0-9]*.docx itivuttaka.docx \
+		suttanipata-cesky[0-9]*.docx \
+		theraghata-cesky[0-9]*.docx \
+		petavatthu-cesky[0-9]*.docx $extra
+		;;
+	esac
+	done
 }
 
-function gdocs_to_epub()
+function gen_vinaya()
 {
-	pandoc --toc-depth=4 --metadata-file="$res/metadata.yaml"  -M "subtitle=$(date '+%Y-%m-%d %H:%m')" --epub-cover-image="$res/cover.jpg" --css="$res/book.css" -o tipitaka_cesky.epub \
-	anguttara-nikaya-cesky[0-9]*.docx \
-	digha-nikaya-cesky[0-9]*.docx \
-	'majjhima_nikaya česky 1 - 50 '[0-9]*.docx \
-	'majjhima_nikaya česky 51 - 100 '[0-9]*.docx \
-	'majjhima_nikaya česky 101 - 152 '[0-9]*.docx \
-	samyutta-nikaya-cesky[0-9]*.docx \
-	khuddakapatha.docx dhammapada.docx \
-	udana[0-9]*.docx itivuttaka.docx \
-	suttanipata-cesky[0-9]*.docx \
-	theraghata-cesky[0-9]*.docx \
-	petavatthu-cesky[0-9]*.docx $extra
-
-	pandoc --toc-depth=4 --metadata-file="$res/vinaya.yaml"  -M "subtitle=$(date '+%Y-%m-%d %H:%m')" \
+	for t in $type; do
+	case "$t" in
+		epub) pandoc --toc-depth=4 --metadata-file="$res/vinaya.yaml"  -M "subtitle=$now" \
 		--css="$res/book.css" -o vinaya-pribehy.epub \
 		vinaya_pitaka-pribehy[0-9]*.docx $extra
+		;;
+		
+		pdf) pandoc --toc --toc-depth=4 --top-level-division part --pdf-engine xelatex \
+		--metadata-file="$res/vinaya.yaml"  -M "subtitle=$now" \
+		--css="$res/book.css" -o vinaya-pribehy.pdf \
+		vinaya_pitaka-pribehy[0-9]*.docx $extra
+		;;
+	esac
+	done
 }
 
+function print_help()
+{
+	echo "type='$type' $0 [tipitaka|vinaya]"
+}
+
+[ -z "$type" ] && type="pdf epub"
+now=$(date '+%Y-%m-%d %H:%M')
 
 function _main()
 {
 	for targ in "$@"; do
-		ext="${targ##*.}"
-		[ -z "$source" ] && source="${targ%%.*}.html"
-
-	case "$ext" in
-		gen) gen_html ;;
-		html) join_html && source="$targ" ;;
-		epub) gen_epub ;;
-		gdocs) gdocs_to_epub ;;
-		pdf) gen_pdf ;;
+	case "$targ" in
+		vinaya) gen_vinaya ;;
 		print) gen_print_pdf ;;
-		*) gen_doc ;;
+		tipitaka) gen_tipitaka ;;
+		*|-h) print_help; exit 1 ;;
 	esac
 	done
 }
