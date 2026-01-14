@@ -1,5 +1,14 @@
 #!/bin/bash
 
+function _is_sourced()
+{
+	# https://unix.stackexchange.com/a/215279
+	[ "${#FUNCNAME[@]}" -ge 2 ] \
+        && [ "${FUNCNAME[0]}" = '_is_sourced' ] \
+	&& [ "${FUNCNAME[1]}" = 'source' ]
+}
+export -f _is_sourced
+
 function media_type()
 {
 	local e="${1##*.}"
