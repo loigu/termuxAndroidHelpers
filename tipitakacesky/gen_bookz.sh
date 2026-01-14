@@ -1,7 +1,8 @@
 #!/bin/bash
 #
 
-script_dir=$(dirname "${BASH_SOURCE}")
+script_dir=$(readlink -f "${BASH_SOURCE}")
+script_dir=$(dirname "$script_dir")
 res="$script_dir/res"
 
 # check to see if this file is being run or sourced from another script
@@ -130,13 +131,18 @@ function _main()
 		vinaya) gen_vinaya ;;
 		print) gen_print_pdf ;;
 		tipitaka) gen_tipitaka ;;
-		*|-h) print_help; exit 1 ;;
+		*|-h) print_help; return 1;;
 	esac
 	done
 }
 
 if ! _is_sourced; then
+	opw="$PWD"
+	cd ~/books/sutty/czech/ayya_bodhi/gdocs/
 	_main "$@"
+	ret=$?
+	cd "$opw"
+	exit $ret
 fi
 
 # arr=()
