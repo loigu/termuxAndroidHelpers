@@ -104,13 +104,13 @@ function gen_vinaya()
 	case "$t" in
 		epub) pandoc --toc-depth=4 --metadata-file="$res/vinaya.yaml"  -M "subtitle=$now" \
 		--css="$res/book.css" -o vinaya-pribehy.epub \
-		vinaya_pitaka-pribehy[0-9]*.docx $extra
+		'Vinaya pitaka - příběhy'[0-9]*.docx $extra
 		;;
 		
 		pdf) pandoc --toc --toc-depth=4 --top-level-division part --pdf-engine xelatex \
 		--metadata-file="$res/vinaya.yaml"  -M "subtitle=$now" \
 		--css="$res/book.css" -o vinaya-pribehy.pdf \
-		vinaya_pitaka-pribehy[0-9]*.docx $extra
+		'Vinaya pitaka - příběhy'[0-9]*.docx $extra
 		;;
 	esac
 	done
