@@ -29,7 +29,8 @@ function ssh() { ssha-wrap "$(which ssh)" "$@"; }; export -f ssh
 function scp() { ssha-wrap "$(which scp)" "$@"; }; export -f scp
 function rsync() { ssha-wrap "$(which rsync)" "$@"; }; export -f rsync
 
-. ~/.texrc
+# apparently not needed now (2026-02)
+#. ~/.texrc
 
 function flip_coin()
 {
