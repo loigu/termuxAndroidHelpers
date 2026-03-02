@@ -31,7 +31,7 @@ if [ -d "$flist" ]; then
 	flist="$tfl"
 fi
 
-export pattern='small-$to'
+export pattern='small-$f'
 [ -n "$2" ] && export pattern="$2"
 
 for i in $(seq $parallel); do
