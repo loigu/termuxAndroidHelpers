@@ -7,4 +7,7 @@ if [ "$1" = "all" ]; then
 fi
 
 fmtutil --sys --all
+
+# rebuild  TeX Filename Database (FNDB) - might help when xelatex can't find for example soul.sty, while the package IS installed
 texhash
+
