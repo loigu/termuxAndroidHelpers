@@ -2,7 +2,7 @@
 
 [ -z "$parallel" ] && parallel=6
 
-[  "$1" = -h -o -z "$1"] && echo -e "[export res=...] [parallel=$parallel debug=1] $0 [flist|dir] <-i|pattern>\n\tpattern ~ ${f%%.jpg}.png / small-$f / etc" && exit 1 
+[  "$1" = -h -o -z "$1" ] && echo -e "[export res=...] [parallel=$parallel debug=1] $0 [flist|dir] <-i|pattern>\n\tpattern ~ ${f%%.jpg}.png / small-$f / etc" && exit 1 
 
 # wait -np pid
 #
