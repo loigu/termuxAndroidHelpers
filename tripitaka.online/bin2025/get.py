@@ -23,8 +23,8 @@ def get_file(path, id, name):
 
 def iter_tree(tree, path, i):
     #label - name
-    # children -> is dir
     if 'children' in tree:
+        # children -> is dir
         path=os.path.join(path, f"{i:03} " + tree.get("label").strip().translate(tr))
         os.makedirs(path, exist_ok=True)
         print(f"dir {path}")
