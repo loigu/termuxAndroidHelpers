@@ -7,12 +7,19 @@ import urllib.request
 
 tr = str.maketrans('', '', '\n\r') # The third argument specifies characters to delete
 
+
 def get_file(path, id, name):
     try:
-        urllib.request.urlretrieve('https://tripitaka.online/sutta/live/sutta/' + id, os.path.join(path, name) + '.json')
-        print(f"sutta {name}")
+        u = f'https://tripitaka.online/sutta/live/sutta/{id}'
+        f = os.path.join(path, f"{name}.json")
+
+        if not os.path.isfile(f) or force:
+            urllib.request.urlretrieve(u, f)
+            print(f"sutta {name}")
+        else:
+            print(f"sutta {name} - {f} already downloaded")
     except Exception as e:
-        print (f"error with {path}/{id}: {e}", file=sys.stderr)
+        print (f"error with {name} - {path}/{id}: {e}", file=sys.stderr)
 
 def iter_tree(tree, path, i):
     #label - name
@@ -31,8 +38,16 @@ def iter_tree(tree, path, i):
     else:
         print(path + " " + tree.get("label") + " no children no data!", file=sys.stderr)
 
-i=1
+force = os.getenv('force', '0') == '1'
+
+if not os.path.isfile('menu.json') or force:
+    urllib.request.urlretrieve('https://tripitaka.online/sutta/live/menu', 'menu.json')
+else:
+    print("using cached menu.json")
+
 data = json.load( open('menu.json', 'r') )
+
+i=1
 for nik in data.get('data'):
     iter_tree(nik, './json', i)
     i=i+1
