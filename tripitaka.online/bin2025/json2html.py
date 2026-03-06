@@ -2,6 +2,7 @@
 
 import json
 import sys
+import os
 import collections.abc
 
 def print_tag(d, f):
@@ -10,7 +11,7 @@ def print_tag(d, f):
         cls=d.get("class")
         i=d.get("id")
         content=d.get("content")
-        if pli == 'n' and 'pali' in cls:
+        if not pli and 'pali' in cls:
             return
         print(f"<{tag} id='{i}' class='{cls}'>{content}", file=f, end="")
         if "data" in d:
@@ -18,10 +19,42 @@ def print_tag(d, f):
 
         print(f"</{tag}>", file=f)
 
+def print_start(name, desc, f):
+    print(f"<{h} id='2 {name}' class='sutta-title'>{name}</{h}>", file=f, end="")
+    print(f"<p id='3 {name}' class='sutta-title'>{desc}<br/></p>", file=f, end="")
 
 def iter(d, f):
+    header=True
+
+    htags=("h1", "h2", "h3", "h4")
+    p1 = None
+    p2 = None
+    desc = ""
     for t in d:
-        print_tag(t,f)
+        if header:
+            ''' parse & print header first'''
+            tag=t.get("tag")
+            c=t.get("class")
+            content=t.get("content")
+            
+            if 'sutta-title' in c or tag in htags:
+                ''' still in book / vagga ... '''
+                p2 = p1
+                p1 = content
+                desc += content + "<br/>"
+            else:
+                ''' finished headers '''
+                if p2 == None:
+                    print (f"error with {fn}: only one title found", file=sys.stderr)
+                else:
+                    p1 = f"{p1} - {p2}"
+                print_start(p1, f"{desc}", f)
+                header = False
+                print_tag(t, f)
+
+        else:
+            '''content of the sutta'''
+            print_tag(t,f)
 
 def get_title(d):
     '''
@@ -47,6 +80,10 @@ def get_title(d):
     return f"{name} ({section})"
 
 def print_header(f, title):
+    '''
+    .sinhala-text   {{font-weight: bold;}}\n\
+    '''
+
     print(f"<!DOCTYPE html>\n\
 <html lang='si'>\n\
 <head>\n\
@@ -54,7 +91,6 @@ def print_header(f, title):
     <title>{title}</title>\n\
     <style>\n\
         .sutta-title    {{font-weight: bold;}}\n\
-       <!-- .sinhala-text   {{font-weight: bold;}} -->\n\
         .pali-text    {{font-style: italic;}}\n\
         .gatha-pali-text {{font-style: italic;}}\n\
     </style>\n\
@@ -65,16 +101,26 @@ def print_footer(f):
     print('</body></html>', file=f)
 
 j=open(sys.argv[1], 'r')
-out=open(sys.argv[2], 'w')
-if len(sys.argv) > 3:
-    pli=sys.argv[3]
+
+if sys.argv[2] == '-':
+    out=sys.stdout
 else:
-    pli='y'
+    out=open(sys.argv[2], 'w')
+
+pli = os.getenv('pli', '0') == '1'
+standalone = os.getenv('standalone', '1') == '1'
+if standalone:
+    h = 'h1'
+else:
+    h = os.getenv('header_tag', 'h1')
 
 data=json.load(j).get("data")
-print_header(out, get_title(data))
+
+if standalone:
+    print_header(out, get_title(data))
 iter(data, out)
-print_footer(out)
+if standalone:
+    print_footer(out)
 
 out.close()
 
