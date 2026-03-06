@@ -24,17 +24,27 @@ def iter(d, f):
         print_tag(t,f)
 
 def get_title(d):
-    h=""
+    '''
+    < h1 id = ' 3 ' class = ' sutta - title ' > saṁyutta nikāya < / h1 > 
+    < h1 id = ' 4 ' class = ' sutta - title ' > khandhaka vaggō < / h1 >
+     < h2 id = ' 5 ' class = ' sutta - title ' > 4.1.5 . vēdanā suttaṁ < / h2 > 
+     < h3 id = ' 6 ' class = ' sutta - title ' > 4.1.5 . vin̆dīm gæna vadāḷa desuma < / h3 >
+    '''
+    name=""
+    section=""
     for t in d:
         tag=t.get("tag")
-        if tag == "h1":
-            if h == "":
-                h = t.get("content")
+        c=t.get("class")
+        if tag == 'h3':
+            name=t.get('content')
+        elif c == 'sutta-title':
+            if section == "":
+                section = t.get("content")
             else:
-                h += '-' + t.get("content")
+                section += ' - ' + t.get("content")
         else:
             break
-    return h
+    return f"{name} ({section})"
 
 def print_header(f, title):
     print(f"<!DOCTYPE html>\n\
