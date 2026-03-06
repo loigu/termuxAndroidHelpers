@@ -7,6 +7,8 @@ export SCRIPT_DIR=$(dirname "$SCRIPT_PATH")
 
 [ "$1" = -h ] && echo "gen_html=1 gen_epub=0 $(basename '$1')" && exit 1
 
+# TODO: pandoc strips css from <head> for epub
+now=$(date '+%Y-%m-%d')
 export standalone=0
 export pli=1
 for pli in 1 0; do
@@ -15,11 +17,12 @@ for pli in 1 0; do
 003 sn 5 \n\
 004 an 4' | while read di name hi; do
 		[ $pli = 1 ] && name="$name-pli"
+		echo "$name:"
 		name="$name-sin.html"
 		dir=$(ls -d $di*)
 		export header_tag="h${hi}"
-		[ "$gen_html" = 1 ] && "$SCRIPT_DIR/iter_dir.sh" "$dir" "$name"
-		[ "$gen_epub" = 1 ] && pandoc --toc-depth $hi "$name" -M "title=${dir#[0-9]* }" -o "${name%%.html}.epub"
+		[ "$gen_html" = 1 ] && "$SCRIPT_DIR/iter_dir.sh" "$dir" "$name" && echo -e "\thtml ok"
+		[ "$gen_epub" = 1 ] && pandoc --toc-depth $(( $hi - 1 )) --shift-heading-level-by=-1 -M "subtitle=export $now" -o "${name%%.html}.epub"  "$name" && echo -e "\tepub ok"
 	done
 
 	# 005 khuddaka nikāya:
@@ -34,12 +37,13 @@ for pli in 1 0; do
 008 thag 4\n\
 009 thig 3' | while read di name hi; do
 		[ $pli = 1 ] && name="$name-pli"
+		echo "$name:"
 		name="../$name-sin.html"
 		dir=$(ls -d $di*)
 		title="${dir#[0-9]* }"
 		export header_tag="h${hi}"
-		[ "$gen_html" = 1 ] && "$SCRIPT_DIR/iter_dir.sh" "$dir" "$name"
-		[ "$gen_epub" = 1 ] && pandoc --toc-depth $hi "$name" -M "${title}" -o "${name%%.html}.epub"
+		[ "$gen_html" = 1 ] && "$SCRIPT_DIR/iter_dir.sh" "$dir" "$name" && echo -e "\thtml ok"
+		[ "$gen_epub" = 1 ] && pandoc --toc-depth $hi "$name" -M "${title}" -o "${name%%.html}.epub" && echo -e "\tepub ok"
 	done
 	cd ..
 done

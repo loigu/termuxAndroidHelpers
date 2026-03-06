@@ -44,11 +44,14 @@ function process_file()
 function process_dir()
 {
 	local dir="$2"
+	local header="$dir"
 	local path="$1/$2"
 	local level="$3"
 
+	[ "$level" = 1 ] && header="${header#[0-9]* }"
+
 	if [ "${standalone}" != "1" ]; then
-		echo -e "\n\n<h${level} id='${dir}' class='sutta-title'>${dir#[0-9]* }</h${level}>\n"
+		echo -e "\n\n<h${level} id='${dir}' class='sutta-title'>${header}</h${level}>\n"
 	else
 		mkdir -p "${outprefix}/$path"
 	fi

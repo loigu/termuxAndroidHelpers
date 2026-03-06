@@ -5,9 +5,10 @@ import sys
 import os
 import collections.abc
 
+''' TODO: pandoc epub strips class from paragraps '''
 header_tags=('h1', 'h2', 'h3', 'h4', 'h5')
 def print_tag(d, f):
-   if "tag" in d:
+    if "tag" in d:
         tag=d.get("tag")
         cls=d.get("class")
         i=d.get("id")
