@@ -53,7 +53,8 @@ def print_header(f, title):
     <meta charset='UTF-8'>\n\
     <title>{title}</title>\n\
     <style>\n\
-        .sinhala-text   {{font-weight: bold;}}\n\
+        .sutta-title    {{font-weight: bold;}}\n\
+       <!-- .sinhala-text   {{font-weight: bold;}} -->\n\
         .pali-text    {{font-style: italic;}}\n\
         .gatha-pali-text {{font-style: italic;}}\n\
     </style>\n\
