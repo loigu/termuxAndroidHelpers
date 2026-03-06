@@ -5,6 +5,7 @@ import sys
 import os
 import collections.abc
 
+header_tags=('h1', 'h2', 'h3', 'h4', 'h5')
 def print_tag(d, f):
    if "tag" in d:
         tag=d.get("tag")
@@ -13,6 +14,12 @@ def print_tag(d, f):
         content=d.get("content")
         if not pli and 'pali' in cls:
             return
+
+        if tag in header_tags:
+            tag=sub_h
+            cls += " sutta-title"
+            print(f"warning: header tag in sutta body {fn}", file=sys.stderr)
+
         print(f"<{tag} id='{i}' class='{cls}'>{content}", file=f, end="")
         if "data" in d:
             iter(d.get("data"), f)
@@ -20,8 +27,8 @@ def print_tag(d, f):
         print(f"</{tag}>", file=f)
 
 def print_start(name, desc, f):
-    print(f"<{h} id='2 {name}' class='sutta-title'>{name}</{h}>", file=f, end="")
-    print(f"<p id='3 {name}' class='sutta-title'>{desc}<br/></p>", file=f, end="")
+    print(f"<{h} id='2 {name}' class='sutta-title'>{name}</{h}>", file=f)
+    print(f"<p id='3 {name}' class='sutta-title'>{desc}<br/></p>", file=f)
 
 def iter(d, f):
     header=True
@@ -100,7 +107,8 @@ def print_header(f, title):
 def print_footer(f):
     print('</body></html>', file=f)
 
-j=open(sys.argv[1], 'r')
+fn=sys.argv[1]
+j=open(fn, 'r')
 
 if sys.argv[2] == '-':
     out=sys.stdout
@@ -113,6 +121,7 @@ if standalone:
     h = 'h1'
 else:
     h = os.getenv('header_tag', 'h1')
+sub_h = "h" + str(int(h[1]) + 1)
 
 data=json.load(j).get("data")
 
