@@ -6,17 +6,14 @@ SCRIPT_DIR=$(dirname "$SCRIPT_PATH")
 function print_header()
 {
 	local title="$1"
-#					<!-- .sinhala-text   {font-weight: bold;} -->\n\
-
 	echo -e "<!DOCTYPE html>\n\
 		<html lang='si'>\n\
 			<head>\n\
 				<meta charset='UTF-8'>\n\
 				<title>${title}</title>\n\
-				<style>\n\
-					.sutta-title    {font-weight: bold;}\n\
-					.pali-text    {font-style: italic;}\n\
-					.gatha-pali-text {font-style: italic;}\n\
+				<style>\n"
+	cat "$SCRIPT_DIR/style.css"
+	echo -e "
 				</style>\n\
 			</head>\n\
 			<body>\n"
@@ -82,7 +79,7 @@ fi
 
 in="${1%%/}"
 if [ "${standalone}" = "1" ]; then
-	outprefix="$2"
+	outprefix=$(readlink -f "$2")
 	process_dir . "$in" 1
 else
 	print_header "${in#[0-9]* }" > "$2"

@@ -7,7 +7,7 @@ export SCRIPT_DIR=$(dirname "$SCRIPT_PATH")
 
 [ "$1" = -h ] && echo "gen_html=1 gen_epub=0 $(basename '$1')" && exit 1
 
-# TODO: pandoc strips css from <head> for epub
+# TODO: pdf - out sort font spec for sinhala - xelatex
 now=$(date '+%Y-%m-%d')
 export standalone=0
 export pli=1
@@ -22,7 +22,7 @@ for pli in 1 0; do
 		dir=$(ls -d $di*)
 		export header_tag="h${hi}"
 		[ "$gen_html" = 1 ] && "$SCRIPT_DIR/iter_dir.sh" "$dir" "$name" && echo -e "\thtml ok"
-		[ "$gen_epub" = 1 ] && pandoc --toc-depth $(( $hi - 1 )) --shift-heading-level-by=-1 -M "subtitle=export $now" -o "${name%%.html}.epub"  "$name" && echo -e "\tepub ok"
+		[ "$gen_epub" = 1 ] && pandoc -c "$SCRIPT_DIR/style.css" --toc-depth $(( $hi - 1 )) --shift-heading-level-by=-1 -M "subtitle=export $now" -o "${name%%.html}.epub"  "$name" && echo -e "\tepub ok"
 	done
 
 	# 005 khuddaka nikāya:

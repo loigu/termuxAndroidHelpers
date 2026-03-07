@@ -5,7 +5,6 @@ import sys
 import os
 import collections.abc
 
-''' TODO: pandoc epub strips class from paragraps '''
 header_tags=('h1', 'h2', 'h3', 'h4', 'h5')
 def print_tag(d, f):
     if "tag" in d:
@@ -16,7 +15,10 @@ def print_tag(d, f):
         if not pli and 'pali' in cls:
             return
 
-        if tag in header_tags:
+        ''' pandoc epub strips class from paragraps -> shift to <div> '''
+        if tag == 'p':
+            tag='div'
+        elif tag in header_tags:
             tag=sub_h
             cls += " sutta-title"
             print(f"warning: header tag in sutta body {fn}", file=sys.stderr)
@@ -29,7 +31,7 @@ def print_tag(d, f):
 
 def print_start(name, desc, f):
     print(f"<{h} id='2 {name}' class='sutta-title'>{name}</{h}>", file=f)
-    print(f"<p id='3 {name}' class='sutta-title'>{desc}<br/></p>", file=f)
+    print(f"<div id='3 {name}' class='sutta-title'>{desc}<br/></div>", file=f)
 
 def iter(d, f):
     header=True
@@ -90,6 +92,7 @@ def get_title(d):
 def print_header(f, title):
     '''
     .sinhala-text   {{font-weight: bold;}}\n\
+            TODO: source from.style.css
     '''
 
     print(f"<!DOCTYPE html>\n\
