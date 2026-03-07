@@ -1,0 +1,12 @@
+---
+title: Tipitaka česky
+creator:
+- role: author                                          
+  text: the Tathagata
+- role: translator
+  text: Maha Maumevnava
+documentclass: book
+geometry: margin=1in
+papersize: a4
+toc-title: පටුන
+mainfont: Noto Sans Sinhala

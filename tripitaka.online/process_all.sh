@@ -21,8 +21,20 @@ for pli in 1 0; do
 		name="$name-sin.html"
 		dir=$(ls -d $di*)
 		export header_tag="h${hi}"
-		[ "$gen_html" = 1 ] && "$SCRIPT_DIR/iter_dir.sh" "$dir" "$name" && echo -e "\thtml ok"
-		[ "$gen_epub" = 1 ] && pandoc -c "$SCRIPT_DIR/style.css" --toc-depth $(( $hi - 1 )) --shift-heading-level-by=-1 -M "subtitle=export $now" -o "${name%%.html}.epub"  "$name" && echo -e "\tepub ok"
+		[ "$gen_html" = 1 ] && \
+			"$SCRIPT_DIR/iter_dir.sh" "$dir" "$name" && echo -e "\thtml ok"
+		[ "$gen_epub" = 1 ] && \
+			pandoc -c "$SCRIPT_DIR/style.css" --toc-depth $(( $hi - 1 )) --shift-heading-level-by=-1 -M "subtitle=export $now" -o "${name%%.html}.epub"  "$name" && echo -e "\tepub ok"
+		[ "$gen_pdf" = 1 ] && \
+			pandoc --metadata-file="$SCRIPT_DIR/pdf.yaml" \
+			-c "$SCRIPT_DIR/style.css" \
+			--toc --toc-depth $(( $hi - 1 )) \
+			--shift-heading-level-by=-1 \
+			-M "subtitle=$now" \
+			--top-level-division part \
+			--pdf-engine=xelatex \
+			-o "${name%%.html}.pdf"  "$name" && \
+			echo "pdf ok"
 	done
 
 	# 005 khuddaka nikāya:
@@ -43,8 +55,19 @@ for pli in 1 0; do
 		title="${dir#[0-9]* }"
 		export header_tag="h${hi}"
 		[ "$gen_html" = 1 ] && "$SCRIPT_DIR/iter_dir.sh" "$dir" "$name" && echo -e "\thtml ok"
-		[ "$gen_epub" = 1 ] && pandoc --toc-depth $hi "$name" -M "${title}" -o "${name%%.html}.epub" && echo -e "\tepub ok"
-	done
+		[ "$gen_epub" = 1 ] && \
+			pandoc -c "$SCRIPT_DIR/style.css" --toc-depth $(( $hi - 1 )) --shift-heading-level-by=-1  -M "subtitle=export $now" "$name"  -o "${name%%.html}.epub" && echo -e "\tepub ok"
+		[ "$gen_pdf" = 1 ] && \
+			pandoc --metadata-file="$SCRIPT_DIR/pdf.yaml" \
+			-c "$SCRIPT_DIR/stxle.css" \
+			--toc --toc-depth $(( $hi - 1 )) \
+			--shift-heading-level-by=-1 \
+			-M "subtitle=$now" \
+			--top-level-division part \
+			--pdf-engine=xelatex \
+			-o "${name%%.html}.pdf"  "$name" && \
+			echo "pdf ok"
+		done
 	cd ..
 done
 
