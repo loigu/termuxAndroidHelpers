@@ -11,6 +11,7 @@ rights: (C) 2026 Nanda bhikkhu
   # fontfamily: libertinus
 lang: cs-CZ
 block-headings: true
-  # documentclass: book
+documentclass: book
+toc-title: Obsah
 indent: true
 papersize: a4
